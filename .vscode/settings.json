@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        ".cache": true,
+        ".vs": true,
+        "**/node_modules": true
+    }
+}

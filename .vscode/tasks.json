@@ -1,0 +1,29 @@
+{
+	// Vedere https://go.microsoft.com/fwlink/?LinkId=733558 
+	// per la documentazione relativa al formato tasks.json
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"problemMatcher": [
+				{
+					"pattern": [
+						{
+							"regexp": "Gatsby may not be installed",
+							"file": 1,
+							"location": 2,
+							"message": 3
+						}
+					]
+				}, "$node-sass"
+			],
+			
+		},
+		{
+			"type": "npm",
+			"script": "develop",
+			"problemMatcher": []
+		}
+	]
+}
