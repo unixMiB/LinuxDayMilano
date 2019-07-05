@@ -1,10 +1,6 @@
-# Gatsby Starter Kowalski7cc
+# Linux Day Milano
 
-## Kowalski7cc's custom Gatsby 2 Starter
-
-[![Kowalski7cc](https://www.gravatar.com/avatar/639b49e90b01549341e2cb157dc3caf4)](https://kowalski7cc.xyz/)
-
-You can find a demo [HERE](https://gatsby-starter-kowalski7cc.netlify.com)
+## LDMI Official Website
 
 ## What is included
 
@@ -31,6 +27,7 @@ You can find a demo [HERE](https://gatsby-starter-kowalski7cc.netlify.com)
 ## Set Up Your Development Environment
 
 Before starting you will need the following software:
+
 - [Node.js](https://www.gatsbyjs.org/tutorial/part-zero/#install-nodejs)
 - [Git](https://www.gatsbyjs.org/tutorial/part-zero/#install-git)
 - [Gatsby-cli](https://www.gatsbyjs.org/tutorial/part-zero/#using-the-gatsby-cli)
