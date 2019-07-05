@@ -4,6 +4,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import watch from '../assets/watch.png'
 import talks from '../assets/talk-subscription.png'
+import ear from '../assets/ear-piece.png'
 
 const IndexPage = () => (
   <Layout>
@@ -55,10 +56,10 @@ const IndexPage = () => (
       </section>
       <section id="schedule">
         <Row>
-          <Col>
-            <img className="inspire" src={talks} />
-          </Col>
-          <Col xs style={{ minWidth: '300px' }}>
+          <div className="inspire">
+            <img src={talks} style={{ maxWidth: '400px', paddingRight: '2rem' }} />
+          </div>
+          <div className="text" style={{ minWidth: '300px' }}>
             <h2>CALL FOR PAPERS</h2>
             <p>
               Vuoi proporci un tuo talk? Vorresti approfondire un argomento?
@@ -72,11 +73,35 @@ const IndexPage = () => (
               Scrivici una mail al nostro indirizzo:<br /><br />
               <Button size="lg" variant="success" href="mailto:unixmib@gmail.com?subject=Proposta talk Linux Day: Titolo proposta"><FontAwesomeIcon icon="envelope" /> unixmib@gmail.com</Button>
             </p>
-          </Col>
+          </div>
         </Row>
-
-
       </section>
+      {/* <section id="sponsors">
+
+      </section> */}
+      <section id="contattaci">
+        <Container>
+          <Row>
+            <div id="ear">
+              <img src={ear} />
+            </div>
+            <div class="text front">
+              <h3>Contatti</h3>
+              <ul>
+                <li><FontAwesomeIcon icon="envelope" /> unixmib@gmail.com</li>
+                <li><FontAwesomeIcon icon="map-marked-alt" /> Università Milano Bicocca</li>
+                <li><FontAwesomeIcon icon="chevron-right" /> Via Bicocca degli Arcimboldi 8</li>
+                <li><FontAwesomeIcon icon="chevron-right" /> Edificio U7</li>
+                <li><FontAwesomeIcon icon="chevron-right" /> 20126 Milano MI</li>
+              </ul>
+            </div>
+          </Row>
+        </Container>
+      </section>
+      <footer>
+        Quest'opera è distribuita con Licenza Creative Commons Attribuzione - <span>Condividi allo stesso modo 4.0 Internazionale</span> - unix<span className="unixmib">MiB</span> 2019
+      </footer>
+
     </main>
   </Layout >
 )

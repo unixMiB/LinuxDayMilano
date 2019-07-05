@@ -94,11 +94,71 @@
 
     &#schedule {
       background-color: #75b46e;
-      padding: 2.5rem;
+      padding: 4 2.5rem;
       .inspire {
+        left: 2.5rem;
+        position: absolute;
         max-width: 400px;
-        
+        @media (max-width: 992px) {
+          visibility: hidden;
+        }
+      }
+      .text {
+        padding-left: 30rem;
+        @media (max-width: 992px) {
+          padding-left: 4rem;
+        }
+      }
+      .hide-col {
+        @media (max-width: 768px) {
+          visibility: hidden;
+        }
       }
     }
+
+    // &#sponsors {
+
+    // }
+
+    &#contattaci {
+      background-color: #f7ab24;
+      color: $black;
+
+      #ear {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @media (max-width: 900px) {
+          visibility: hidden;
+        }
+      }
+
+      .text {
+        padding-left: 25rem;
+        @media (max-width: 900px) {
+          padding: 0 2.5rem 0
+        }
+        ul {
+          list-style-type: none;
+        }
+      }
+
+      .front {
+        z-index: 999;
+      }
+    }
+  }
+
+  footer {
+    color: white;
+    background-color: #212121;
+    text-align: center;
+    padding: 2rem 2.5rem 2rem;
+    span {
+      color: $ldmi;
+    }
+    span.unixmib {
+        color: $unixmib;
+      }
   }
 }
