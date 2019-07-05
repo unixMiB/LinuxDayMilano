@@ -1,13 +1,12 @@
 #index {
   #hero {
     @include cover-background('../assets/hero.jpg', true);
-    top: 3rem;
-    padding: 2.5rem;
-    // margin-top: 3.9rem;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    // top: 3rem;
+    padding: 3rem 2.5rem 5rem 2.5rem;
 
+    // margin-top: 3.9rem;
+    width: 100%;
+    color: white;
     .container {
       margin-top: 15hv;
       vertical-align: center;
@@ -29,24 +28,42 @@
         font-family: 'Noto Sans', sans-serif;
         font-weight: bold;
       }
+
+      span.unixmib {
+        color: $unixmib;
+      }
     }
 
     .subtitle {
       @include tshadow;
       color: white;
     }
+
+    .scroll {
+      margin-top: 4em;
+    }
   }
 
   section {
     margin: 0 auto;
     padding: 2rem 0.5rem;
+    color: white;
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding: 70px 0 100px;
+
+    span {
+      color: $ldmi;
+    }
 
     h2 {
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       display: inline-block;
       font-weight: lighter;
       font-size: 2.25rem;
-      line-height: 1.1rem;
     }
 
     .faicon {
@@ -70,6 +87,17 @@
         color: $ldmi;
         font-size: 1.5rem;
         line-height: 1.3rem;
+      }
+    }
+
+    @import 'index/explore';
+
+    &#schedule {
+      background-color: #75b46e;
+      padding: 2.5rem;
+      .inspire {
+        max-width: 400px;
+        
       }
     }
   }

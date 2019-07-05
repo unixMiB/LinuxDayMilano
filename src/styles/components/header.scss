@@ -1,17 +1,29 @@
 #navbar {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
   .brand {
     font-weight: bold;
-    span{
+    span {
       color: $ldmi;
+    }
+    .logo {
+      margin-bottom: 0.2em;
     }
   }
 }
 
 // .navbar {
-//   display: flex;
+//
 //   align-items: center;
 //   // padding: 0.5rem 1rem;
-//   position: fixed;
+//
 
 //   @media (max-width: 768px) {
 //     position: static;
