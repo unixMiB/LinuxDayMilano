@@ -12,6 +12,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-brotli',
+      options: {
+        extensions: ['css', 'html', 'js', 'svg']
+      }
+    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-manifest',
