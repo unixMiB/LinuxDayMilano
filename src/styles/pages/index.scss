@@ -107,6 +107,7 @@
         padding-left: 30rem;
         @media (max-width: 992px) {
           padding-left: 4rem;
+          padding-right: 2rem;
         }
       }
       .hide-col {
@@ -128,14 +129,14 @@
         position: absolute;
         left: 0;
         top: 0;
-        @media (max-width: 900px) {
+        @media (max-width: 992px) {
           visibility: hidden;
         }
       }
 
       .text {
-        padding-left: 25rem;
-        @media (max-width: 900px) {
+        padding-left: 35rem;
+        @media (max-width: 992px) {
           padding: 0 2.5rem 0
         }
         ul {

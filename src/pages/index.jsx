@@ -59,8 +59,8 @@ const IndexPage = () => (
           <div className="inspire">
             <img src={talks} style={{ maxWidth: '400px', paddingRight: '2rem' }} />
           </div>
-          <div className="text" style={{ minWidth: '300px' }}>
-            <h2>CALL FOR PAPERS</h2>
+          <div className="text">
+            < h2 > CALL FOR PAPERS</h2>
             <p>
               Vuoi proporci un tuo talk? Vorresti approfondire un argomento?
           <ul>
@@ -80,23 +80,21 @@ const IndexPage = () => (
 
       </section> */}
       <section id="contattaci">
-        <Container>
-          <Row>
-            <div id="ear">
-              <img src={ear} />
-            </div>
-            <div class="text front">
-              <h3>Contatti</h3>
-              <ul>
-                <li><FontAwesomeIcon icon="envelope" /> unixmib@gmail.com</li>
-                <li><FontAwesomeIcon icon="map-marked-alt" /> Università Milano Bicocca</li>
-                <li><FontAwesomeIcon icon="chevron-right" /> Via Bicocca degli Arcimboldi 8</li>
-                <li><FontAwesomeIcon icon="chevron-right" /> Edificio U7</li>
-                <li><FontAwesomeIcon icon="chevron-right" /> 20126 Milano MI</li>
-              </ul>
-            </div>
-          </Row>
-        </Container>
+        <Row>
+          <div id="ear">
+            <img src={ear} />
+          </div>
+          <div class="text front">
+            <h3>Contatti</h3>
+            <ul>
+              <li><FontAwesomeIcon icon="envelope" /> unixmib@gmail.com</li>
+              <li><FontAwesomeIcon icon="map-marked-alt" /> Università Milano Bicocca</li>
+              <li><FontAwesomeIcon icon="chevron-right" /> Via Bicocca degli Arcimboldi 8</li>
+              <li><FontAwesomeIcon icon="chevron-right" /> Edificio U7</li>
+              <li><FontAwesomeIcon icon="chevron-right" /> 20126 Milano MI</li>
+            </ul>
+          </div>
+        </Row>
       </section>
       <footer>
         Quest'opera è distribuita con Licenza Creative Commons Attribuzione - <span>Condividi allo stesso modo 4.0 Internazionale</span> - unix<span className="unixmib">MiB</span> 2019
