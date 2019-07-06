@@ -24,7 +24,7 @@ const IndexPage = () => (
           <br />
           <FontAwesomeIcon icon="chevron-right" /> Edificio U7
           <br />
-          <Button className="scroll" variant="warning">
+          <Button href="/#explore" className="scroll" variant="warning">
             Scopri di più
           </Button>
         </p>

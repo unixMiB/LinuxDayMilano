@@ -13,7 +13,7 @@ const Header = ({ siteData }) => (
         backgroundColor: siteData.theme,
       }}
     >
-      <Navbar.Brand style={{ maxWidth: '5rem' }} className="brand" href="/">
+      <Navbar.Brand style={{ maxWidth: '5rem' }} className="brand" href="/#index">
         <Logo className="logo" /> LD<span>MI</span> 2019
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -22,11 +22,11 @@ const Header = ({ siteData }) => (
         className="justify-content-end"
       >
         <Nav>
-          <Nav.Link href="/index#evento">Evento</Nav.Link>
-          <Nav.Link href="/index#programma">Call for papers</Nav.Link>
+          <Nav.Link href="/#explore">Evento</Nav.Link>
+          <Nav.Link href="/#schedule">Call for papers</Nav.Link>
           {/* <Nav.Link href="/index#programma">Programma</Nav.Link> */}
-          <Nav.Link href="/index#programma">Sponsors</Nav.Link>
-          <Nav.Link href="/index#programma">Contatti</Nav.Link>
+          <Nav.Link href="/#sponsors">Sponsors</Nav.Link>
+          <Nav.Link href="/#contattaci">Contatti</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
