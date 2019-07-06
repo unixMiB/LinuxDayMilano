@@ -25,6 +25,7 @@
   .text {
     @media (min-width: 610px) {
       min-width: 600px;
+      padding-left: 2.5rem;
     }
     @media (min-width: 991px) {
       padding-left: 10rem;
