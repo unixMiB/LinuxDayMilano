@@ -16,10 +16,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Kowalski7cc',
-        short_name: 'Kowalski',
+        name: 'Linux Day Milano',
+        short_name: 'LDMI',
         start_url: '/',
-        description: 'Kowalski7cc Gatsby starter',
+        description: 'Manifestazione italiana dedicata a GNU/Linux',
         background_color: '#ffffff',
         theme_color: '#343a40',
         display: 'standalone',
