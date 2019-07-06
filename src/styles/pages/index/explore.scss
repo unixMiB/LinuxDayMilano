@@ -4,7 +4,7 @@
   padding: 100px 2.5rem 150px;
 
   @media (max-width: 767px) {
-    background-size:cover
+    background-size: cover;
   }
 
   .watch {
@@ -113,84 +113,70 @@
     width: 1px;
   }
 
-
-/* md */
-@media (min-width: 992px) and (max-width: 1199px) {
-  
-  #countdown li {
-    margin-right: 30px;
+  /* md */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #countdown li {
+      margin-right: 30px;
+    }
   }
 
-}
-
-/* sm */
-@media (min-width: 768px) and (max-width: 991px) {
-
- 
- #countdown li {
-  margin-right: 15px;
- }
-
-
-}
-
-/* xs */
-@media (max-width: 767px) { 
-
-  #countdown li {
-    font-size: 14px;
-    margin-right:35px;
-    width:inherit;
+  /* sm */
+  @media (min-width: 768px) and (max-width: 991px) {
+    #countdown li {
+      margin-right: 15px;
+    }
   }
 
-  #countdown li span {
-    font-size: 24px;
-    height: 60px;
-    line-height: 60px;
-    width: 60px;
+  /* xs */
+  @media (max-width: 767px) {
+    #countdown li {
+      font-size: 14px;
+      margin-right: 35px;
+      width: inherit;
+    }
+
+    #countdown li span {
+      font-size: 24px;
+      height: 60px;
+      line-height: 60px;
+      width: 60px;
+    }
+
+    #countdown li:before,
+    #countdown li:after {
+      top: 25px;
+    }
   }
 
-  #countdown li:before, 
-  #countdown li:after {
-    top:25px;
+  /* XS Portrait */
+  @media (max-width: 479px) {
+    /* Explore */
+    #explore {
+      background-size: cover;
+    }
+
+    #explore h2 {
+      float: inherit;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    #countdown li {
+      font-size: 14px;
+      margin-right: 15px;
+      width: 45px;
+    }
+
+    #countdown li span {
+      font-size: 20px;
+      height: 45px;
+      line-height: 45px;
+      width: 45px;
+    }
+
+    #countdown li:before,
+    #countdown li:after {
+      top: 18px;
+    }
   }
-
-
-}
-
-/* XS Portrait */
-@media (max-width: 479px) {
-
-
-  /* Explore */
-  #explore {
-    background-size:cover;
-  }
-
-  #explore h2 {
-    float: inherit;
-    font-size: 30px;
-    margin-bottom: 30px;
-  }  
-
-  #countdown li {
-    font-size: 14px;
-    margin-right: 15px;
-    width: 45px;
-  }
-
-  #countdown li span {
-    font-size: 20px;
-    height: 45px;
-    line-height: 45px;
-    width: 45px;
-  }
-
-  #countdown li:before, 
-  #countdown li:after {
-    top: 18px
-  }
-
-
-}
 }

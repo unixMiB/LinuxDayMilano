@@ -32,5 +32,5 @@ library.add(
   faClock,
   faMapMarkedAlt,
   faChevronRight,
-  faEnvelope
+  faEnvelope,
 )
