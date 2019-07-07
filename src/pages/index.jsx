@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Button, Container, Row } from 'react-bootstrap'
+import { Button, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import watch from '../assets/watch.png'
 import talks from '../assets/talk-subscription.png'

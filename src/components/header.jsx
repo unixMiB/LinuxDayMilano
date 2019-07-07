@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 import Logo from '../assets/logo_simple.svg'
 
 const Header = ({ siteData }) => (
