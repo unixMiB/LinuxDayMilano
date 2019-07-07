@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Button, Container, Row, Col } from 'react-bootstrap'
+import { Button, Container, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import watch from '../assets/watch.png'
 import talks from '../assets/talk-subscription.png'
@@ -31,36 +31,35 @@ const IndexPage = () => (
         </p>
       </div>
       <section id="explore">
-        <Container>
-          <Row>
-            <div className="watch">
-              <img src={watch} />
-            </div>
-            <div class="col-md-offset-1 front text">
-              <p>
-                <h2>
-                  IL LINUX DAY <span>MILANO</span> SI SVOLGERÀ
-                  <br />
-                  <span>SABATO 26 OTTOBRE 2019</span>
-                </h2>
+        <Row>
+          <div className="watch">
+            <img alt="" role="presentation" src={watch} />
+          </div>
+          {/* <div class="col-md-offset-1 front text"> */}
+          <div class="front text">
+            <p>
+              <h2>
+                IL LINUX DAY <span>MILANO</span> SI SVOLGERÀ
                 <br />
-                Torna la principale manifestazione italiana dedicata a
-                GNU/Linux, al software libero, alla cultura aperta e alla
-                condivisione.
-                <br />
-                <span>
-                  Questa edizione è dedicata al mondo dell'educazione Open
-                  Source
-                </span>
-              </p>
-            </div>
-          </Row>
-        </Container>
+                <span>SABATO 26 OTTOBRE 2019</span>
+              </h2>
+              <br />
+              Torna la principale manifestazione italiana dedicata a GNU/Linux,
+              al software libero, alla cultura aperta e alla condivisione.
+              <br />
+              <span>
+                Questa edizione è dedicata al mondo dell'educazione Open Source
+              </span>
+            </p>
+          </div>
+        </Row>
       </section>
       <section id="schedule">
         <Row>
           <div className="inspire">
             <img
+              alt=""
+              role="presentation"
               src={talks}
               style={{ maxWidth: '400px', paddingRight: '2rem' }}
             />
@@ -101,7 +100,7 @@ const IndexPage = () => (
       <section id="contattaci">
         <Row>
           <div id="ear">
-            <img src={ear} />
+            <img alt="" role="presentation" src={ear} />
           </div>
           <div class="text front">
             <h3>Contatti</h3>

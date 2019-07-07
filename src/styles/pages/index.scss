@@ -2,7 +2,13 @@
   #hero {
     @include cover-background('../assets/hero.jpg', true);
     // top: 3rem;
-    padding: 3rem 2.5rem 5rem 2.5rem;
+    @media (min-width: 992px) {
+      padding: 3rem 4rem 5rem;
+    }
+
+    @media (max-width: 991px) {
+      padding: 3rem 3rem 5rem;
+    }
 
     // margin-top: 3.9rem;
     width: 100%;
@@ -46,7 +52,7 @@
 
   section {
     margin: 0 auto;
-    padding: 2rem 0.5rem;
+    padding: 4rem 0.5rem;
     color: white;
     background-position: center bottom;
     background-size: contain;
@@ -90,7 +96,43 @@
       }
     }
 
-    @import 'index/explore';
+    &#explore {
+      background-color: #c34c39;
+      background-image: url(../assets/event-bg.jpg);
+      padding: 100px 3rem 150px 1.5rem;
+
+      @media (max-width: 767px) {
+        background-size: cover;
+      }
+
+      .watch {
+        left: 0;
+        top: 15%;
+        position: absolute;
+        z-index: 1;
+
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: -8%;
+        }
+
+        @media (max-width: 767px) {
+          visibility: hidden;
+        }
+      }
+
+      .text {
+        @media (max-width: 991px) {
+          padding-left: 2.5rem;
+        }
+        @media (min-width: 992px) {
+          padding-left: 10rem;
+        }
+      }
+
+      .front {
+        z-index: 999;
+      }
+    }
 
     &#schedule {
       background-color: #75b46e;
