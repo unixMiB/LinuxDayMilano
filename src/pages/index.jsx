@@ -105,28 +105,29 @@ const IndexPage = () => (
           <div class="text front">
             <h3>Contatti</h3>
             <ul>
-              <li>
+              <li title="Indirizzo di posta">
                 <FontAwesomeIcon icon="envelope" />{' '}
                 <a href="mailto:unixmib@gmail.com">unixmib@gmail.com</a>
               </li>
-              <li>
-                <FontAwesomeIcon icon="globe" />{' '}
-                <a href="https://unixmib.github.io">
+              <li title="Sito web">
+                <FontAwesomeIcon
+                  icon="globe" />{' '}
+                <a href="https://unixmib.github.io" title="Sito web">
                   https://unixmib.github.io
                 </a>
               </li>
-              <li>
+              <li title="Luogo dell'evento">
                 <FontAwesomeIcon icon="map-marked-alt" /> Università Milano
                 Bicocca
               </li>
-              <li>
+              <li title="Luogo dell'evento">
                 <FontAwesomeIcon icon="chevron-right" /> Via Bicocca degli
                 Arcimboldi 8
               </li>
-              <li>
+              <li title="Luogo dell'evento">
                 <FontAwesomeIcon icon="chevron-right" /> Edificio U7
               </li>
-              <li>
+              <li title="Luogo dell'evento">
                 <FontAwesomeIcon icon="chevron-right" /> 20126 Milano MI
               </li>
             </ul>
