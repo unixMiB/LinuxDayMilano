@@ -41,7 +41,7 @@ const IndexPage = () => (
                 <h2>
                   IL LINUX DAY <span>MILANO</span> SI SVOLGERÀ
                   <br />
-                  <span>SABATO 27 OTTOBRE 2018</span>
+                  <span>SABATO 27 OTTOBRE 2019</span>
                 </h2>
                 <br />
                 Torna la principale manifestazione italiana dedicata a
@@ -108,6 +108,9 @@ const IndexPage = () => (
             <ul>
               <li>
                 <FontAwesomeIcon icon="envelope" /> unixmib@gmail.com
+              </li>
+              <li>
+                <FontAwesomeIcon icon="globe" /> https://unixmib.github.io
               </li>
               <li>
                 <FontAwesomeIcon icon="map-marked-alt" /> Università Milano
