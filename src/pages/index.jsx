@@ -135,7 +135,7 @@ const IndexPage = () => (
       </section>
       <footer>
         Quest'opera è distribuita con Licenza Creative Commons Attribuzione -{' '}
-        <span>Condividi allo stesso modo 4.0 Internazionale</span> - unix
+        <span className="ldmi">Condividi allo stesso modo 4.0 Internazionale</span> - unix
         <span className="unixmib">MiB</span> 2019
       </footer>
     </main>
