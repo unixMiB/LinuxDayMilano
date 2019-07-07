@@ -6,7 +6,7 @@
       padding: 3rem 4rem 5rem;
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 991.98px) {
       padding: 3rem 3rem 5rem;
     }
 
@@ -18,7 +18,7 @@
       vertical-align: center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.98px) {
       margin-top: 0;
     }
 
@@ -101,7 +101,7 @@
       background-image: url(../assets/event-bg.jpg);
       padding: 100px 3rem 150px 1.5rem;
 
-      @media (max-width: 767px) {
+      @media (max-width: 767.98px) {
         background-size: cover;
       }
 
@@ -111,21 +111,24 @@
         position: absolute;
         z-index: 1;
 
-        @media (max-width: 991px) and (min-width: 768px) {
+        @media (max-width: 991.98px) and (min-width: 768px) {
           left: -8%;
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 767.98px) {
           visibility: hidden;
         }
       }
 
       .text {
-        @media (max-width: 991px) {
+        @media (max-width: 991.98px) {
           padding-left: 2.5rem;
         }
         @media (min-width: 992px) {
           padding-left: 10rem;
+        }
+        @media (min-width: 1200px) {
+          padding-left: 25rem;
         }
       }
 
@@ -141,19 +144,19 @@
         left: 2.5rem;
         position: absolute;
         max-width: 400px;
-        @media (max-width: 992px) {
+        @media (max-width: 991.98px) {
           visibility: hidden;
         }
       }
       .text {
         padding-left: 30rem;
-        @media (max-width: 992px) {
+        @media (max-width: 991.98px) {
           padding-left: 4rem;
           padding-right: 4rem;
         }
       }
       .hide-col {
-        @media (max-width: 768px) {
+        @media (max-width: 767.98px) {
           visibility: hidden;
         }
       }
@@ -181,14 +184,14 @@
         position: absolute;
         left: 0;
         top: 0;
-        @media (max-width: 992px) {
+        @media (max-width: 991.98px) {
           visibility: hidden;
         }
       }
 
       .text {
         padding-left: 35rem;
-        @media (max-width: 992px) {
+        @media (max-width: 991.98px) {
           padding: 0 4rem 0;
         }
         ul {
