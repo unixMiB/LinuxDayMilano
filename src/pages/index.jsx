@@ -17,7 +17,7 @@ const IndexPage = () => (
           <h3 class="title">
             unix<span className="unixmib">MiB</span>
           </h3>
-          <FontAwesomeIcon icon="calendar" /> Sabato 27 Ottobre
+          <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
           <br />
           <FontAwesomeIcon icon="clock" /> Ore 9:30
           <br />
@@ -41,7 +41,7 @@ const IndexPage = () => (
                 <h2>
                   IL LINUX DAY <span>MILANO</span> SI SVOLGERÀ
                   <br />
-                  <span>SABATO 27 OTTOBRE 2019</span>
+                  <span>SABATO 26 OTTOBRE 2019</span>
                 </h2>
                 <br />
                 Torna la principale manifestazione italiana dedicata a
