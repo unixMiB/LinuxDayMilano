@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  color: $link-dark;
+}
+
 a.anchor {
   display: block;
   position: relative;

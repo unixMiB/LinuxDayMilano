@@ -107,10 +107,14 @@ const IndexPage = () => (
             <h3>Contatti</h3>
             <ul>
               <li>
-                <FontAwesomeIcon icon="envelope" /> unixmib@gmail.com
+                <FontAwesomeIcon icon="envelope" />{' '}
+                <a href="mailto:unixmib@gmail.com">unixmib@gmail.com</a>
               </li>
               <li>
-                <FontAwesomeIcon icon="globe" /> https://unixmib.github.io
+                <FontAwesomeIcon icon="globe" />{' '}
+                <a href="https://unixmib.github.io">
+                  https://unixmib.github.io
+                </a>
               </li>
               <li>
                 <FontAwesomeIcon icon="map-marked-alt" /> Università Milano
