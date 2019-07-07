@@ -5,3 +5,15 @@
  */
 
 // You can delete this file if you're not using it
+
+exports.createPages = ({ boundActionCreators, graphql }) => {
+  const { createRedirect } = boundActionCreators
+
+  createRedirect({
+    fromPath: 'https://linuxdaymilano.netlify.com/*',
+    toPath: 'https://linuxdaymilano.org/:splat',
+    redirectInBrowser: true,
+    isPermanent: true,
+    force: true,
+  })
+}
