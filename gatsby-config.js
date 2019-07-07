@@ -35,6 +35,17 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
+        appName: 'Linux Day Milano',
+        appDescription: 'Manifestazione italiana dedicata a GNU/Linux',
+        dir: 'auto',
+        lang: 'it-IT',
+        background: '#fffffa',
+        theme_color: '#343a40',
+        display: 'standalone',
+        orientation: 'any',
+        start_url: '/',
+        version: '1.0',
+
         logo: './src/assets/favicon.png',
         icons: {
           android: true,
