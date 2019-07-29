@@ -48,7 +48,7 @@ const IndexPage = () => (
               al software libero, alla cultura aperta e alla condivisione.
               <br />
               <span>
-                Questa edizione è dedicata al mondo dell'educazione Open Source
+                Questa edizione è dedicata al mondo dell'Intelligenza Artificiale
               </span>
             </p>
           </div>
@@ -71,7 +71,7 @@ const IndexPage = () => (
               <ul>
                 <li>Linux, software e hardware Open Source</li>
                 <li>Programmazione e tecniche di sviluppo</li>
-                <li>Open Source nel mondo dell'educazione</li>
+                <li>Open Source nel mondo dell'Intelligenza Artificiale</li>
                 <li>Alternative open a software proprietari</li>
                 <li>... e molto altro ancora!</li>
               </ul>
