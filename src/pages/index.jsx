@@ -85,6 +85,11 @@ const IndexPage = () => (
               >
                 <FontAwesomeIcon icon="envelope" /> unixmib@gmail.com
               </Button>
+              <br />
+              <br />
+              <b>
+                La Call for Paper chiuderà alle ore 23:59 (UTC/GMT + 2) del giorno 1 Ottobre 2019
+             </b>
             </p>
           </div>
         </Row>
