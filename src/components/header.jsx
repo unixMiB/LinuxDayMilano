@@ -27,9 +27,9 @@ const Header = ({ siteData }) => (
       >
         <Nav>
           <Nav.Link href="/#explore">Evento</Nav.Link>
-          <Nav.Link href="/#schedule">Call for papers</Nav.Link>
+          <Nav.Link href="/#schedule">Programma</Nav.Link>
           {/* <Nav.Link href="/index#programma">Programma</Nav.Link> */}
-          {/* <Nav.Link href="/#sponsors">Sponsors</Nav.Link> */}
+          <Nav.Link href="/#sponsors">Sponsors</Nav.Link>
           <Nav.Link href="/#contattaci">Contatti</Nav.Link>
         </Nav>
       </Navbar.Collapse>

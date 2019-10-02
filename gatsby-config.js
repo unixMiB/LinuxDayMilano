@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'Linux Day Milano 2019',
@@ -30,6 +31,13 @@ module.exports = {
         theme_color: '#343a40',
         display: 'standalone',
         icon: './src/assets/favicon.png',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'brands',
+        path: path.join(__dirname, 'src', 'assets', 'brands'),
       },
     },
     // {

@@ -1,12 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Button, Row } from 'react-bootstrap'
+import { Button, Row, Container, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import watch from '../assets/watch.png'
 import talks from '../assets/talk-subscription.png'
 import ear from '../assets/ear-piece.png'
+import Img from 'gatsby-image'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <main id="index">
       <div id="hero">
@@ -48,7 +49,8 @@ const IndexPage = () => (
               al software libero, alla cultura aperta e alla condivisione.
               <br />
               <span>
-                Questa edizione è dedicata al mondo dell'Intelligenza Artificiale
+                Questa edizione è dedicata al mondo dell'Intelligenza
+                Artificiale
               </span>
             </p>
           </div>
@@ -65,9 +67,17 @@ const IndexPage = () => (
             />
           </div>
           <div className="text">
-            <h2> CALL FOR PAPERS</h2>
+            <h2>PROGRAMMA</h2>
             <p>
-              Vuoi proporci un tuo talk? Vorresti approfondire un argomento?
+              <b>
+                Il nostro team di pinguini sta finendo di preparare il programma
+                della giornata
+              </b>
+              <br />
+              <br />
+              Rimani agiornato per scoprire di più sui seguenti argomenti:
+              <br />
+              <br />
               <ul>
                 <li>Linux, software e hardware Open Source</li>
                 <li>Programmazione e tecniche di sviluppo</li>
@@ -75,37 +85,34 @@ const IndexPage = () => (
                 <li>Alternative open a software proprietari</li>
                 <li>... e molto altro ancora!</li>
               </ul>
-              <br />
-              <br />
-{/*
-               Scrivici una mail al nostro indirizzo:
-              <br />
-              <br />
-              <Button
-                size="lg"
-                variant="success"
-                href="mailto:unixmib@gmail.com?subject=Proposta talk Linux Day: Titolo proposta"
-              >
-                <FontAwesomeIcon icon="envelope" /> unixmib@gmail.com
-              </Button>
-              <br />
-              <br /> 
-*/}
-              <b>
-                La Call for Paper chiuderà alle ore 23:59 (UTC/GMT + 2) del giorno 1 Ottobre 2019
-             </b>
             </p>
+            <br />
+            <Button disabled="true" variant="warning">
+              Guarda il programma
+            </Button>
           </div>
         </Row>
       </section>
-      {/* <section id="sponsors">
-        <Row>
+
+      <section id="sponsors">
+        <Container>
           <div className="text">
-            <h2>Sponsors</h2>
-            <p>Placeholder</p>
+            <h2>SPONSORS</h2>
           </div>
-        </Row>
-      </section> */}
+          <div class="row">
+            {data.allFile.nodes.map(item => {
+              return (
+                <div class="col-sm-6 col-lg-4 pb-4">
+                  <a href={item.publicURL} title={item.name}>
+                    <Img width="5rem" fluid={item.childImageSharp.fluid} />
+                  </a>
+                </div>
+              )
+            })}
+          </div>
+        </Container>
+      </section>
+
       <section id="contattaci">
         <Row>
           <div id="ear">
@@ -119,8 +126,7 @@ const IndexPage = () => (
                 <a href="mailto:unixmib@gmail.com">unixmib@gmail.com</a>
               </li>
               <li title="Sito web">
-                <FontAwesomeIcon
-                  icon="globe" />{' '}
+                <FontAwesomeIcon icon="globe" />{' '}
                 <a href="https://unixmib.github.io" title="Sito web">
                   https://unixmib.github.io
                 </a>
@@ -145,11 +151,30 @@ const IndexPage = () => (
       </section>
       <footer>
         Quest'opera è distribuita con Licenza Creative Commons Attribuzione -{' '}
-        <span className="ldmi">Condividi allo stesso modo 4.0 Internazionale</span> - unix
+        <span className="ldmi">
+          Condividi allo stesso modo 4.0 Internazionale
+        </span>{' '}
+        - unix
         <span className="unixmib">MiB</span> 2019
       </footer>
     </main>
   </Layout>
 )
+
+export const query = graphql`
+  {
+    allFile(filter: { sourceInstanceName: { eq: "brands" } }) {
+      nodes {
+        name
+        publicURL
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
