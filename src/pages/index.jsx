@@ -75,6 +75,8 @@ const IndexPage = () => (
                 <li>Alternative open a software proprietari</li>
                 <li>... e molto altro ancora!</li>
               </ul>
+              <br />
+              <br />
 {/*
                Scrivici una mail al nostro indirizzo:
               <br />
