@@ -75,7 +75,7 @@ const IndexPage = () => (
                 <li>Alternative open a software proprietari</li>
                 <li>... e molto altro ancora!</li>
               </ul>
-<!--
+{/*
                Scrivici una mail al nostro indirizzo:
               <br />
               <br />
@@ -88,7 +88,7 @@ const IndexPage = () => (
               </Button>
               <br />
               <br /> 
--->
+*/}
               <b>
                 La Call for Paper chiuderà alle ore 23:59 (UTC/GMT + 2) del giorno 1 Ottobre 2019
              </b>
