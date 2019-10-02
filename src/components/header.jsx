@@ -29,7 +29,7 @@ const Header = ({ siteData }) => (
           <Nav.Link href="/#explore">Evento</Nav.Link>
           <Nav.Link href="/#schedule">Programma</Nav.Link>
           {/* <Nav.Link href="/index#programma">Programma</Nav.Link> */}
-          <Nav.Link href="/#sponsors">Sponsors</Nav.Link>
+          {/* <Nav.Link href="/#sponsors">Sponsors</Nav.Link> */}
           <Nav.Link href="/#contattaci">Contatti</Nav.Link>
         </Nav>
       </Navbar.Collapse>

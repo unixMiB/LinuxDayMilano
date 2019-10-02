@@ -94,7 +94,7 @@ const IndexPage = ({ data }) => (
         </Row>
       </section>
 
-      <section id="sponsors">
+      {/* <section id="sponsors">
         <Container>
           <div className="text">
             <h2>SPONSORS</h2>
@@ -111,7 +111,7 @@ const IndexPage = ({ data }) => (
             })}
           </div>
         </Container>
-      </section>
+      </section> */}
 
       <section id="contattaci">
         <Row>
