@@ -75,7 +75,8 @@ const IndexPage = () => (
                 <li>Alternative open a software proprietari</li>
                 <li>... e molto altro ancora!</li>
               </ul>
-              Scrivici una mail al nostro indirizzo:
+<!--
+               Scrivici una mail al nostro indirizzo:
               <br />
               <br />
               <Button
@@ -86,7 +87,8 @@ const IndexPage = () => (
                 <FontAwesomeIcon icon="envelope" /> unixmib@gmail.com
               </Button>
               <br />
-              <br />
+              <br /> 
+-->
               <b>
                 La Call for Paper chiuderà alle ore 23:59 (UTC/GMT + 2) del giorno 1 Ottobre 2019
              </b>
