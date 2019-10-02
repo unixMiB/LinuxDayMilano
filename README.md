@@ -42,8 +42,7 @@ gatsby develop
 
 ## Todo
 
-- Add AMP support
-- Add markdown/blog support
+- Add LDMI19 program
 
 ## How to build
 
