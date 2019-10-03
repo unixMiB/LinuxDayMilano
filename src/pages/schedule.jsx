@@ -43,7 +43,8 @@ const schedule = [
     time: '11:45',
     talks: [
       {
-        title: 'Titolo davvero molto lungo che probabilmente dovrebbe andare a capo',
+        title:
+          'Titolo davvero molto lungo che probabilmente dovrebbe andare a capo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
       },
@@ -78,7 +79,8 @@ const schedule = [
         author: 'Autore - Azienda',
       },
     ],
-  },{
+  },
+  {
     time: '15:00',
     talks: [
       {
@@ -139,7 +141,14 @@ export default () => (
             Linux Day Milano <span>2019</span>
           </h1>
           <h3 class="title">
-            unix<span className="unixmib">MiB</span>
+            <small>organizzato da</small>{' '}
+            <a
+              href="//unixmib.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              unix<span className="unixmib">MiB</span>
+            </a>
           </h3>
           <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
           <br />
@@ -156,9 +165,7 @@ export default () => (
             return (
               <Row className="pb-4">
                 <Col sm={1} className="pb-4 mr-2">
-                  <h5>
-                    {i.time}
-                  </h5>
+                  <h5>{i.time}</h5>
                 </Col>
                 {i.talks.map(t => {
                   return (

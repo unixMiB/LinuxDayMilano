@@ -16,9 +16,16 @@ const IndexPage = ({ data }) => (
             Linux Day Milano <span>2019</span>
           </h1>
           <h3 class="title">
-            <small>organizzato da</small> <a href="//unixmib.github.io" target="_blank"  rel="noopener noreferrer">unix<span className="unixmib">MiB</span></a>
+            <small>organizzato da</small>{' '}
+            <a
+              href="//unixmib.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              unix<span className="unixmib">MiB</span>
+            </a>
           </h3>
-          <br/>
+          <br />
           <div className="subtitle">
             <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
             <br />
@@ -53,7 +60,7 @@ const IndexPage = ({ data }) => (
               <br />
               <span>
                 L'edizione 2019 è dedicata al mondo dell'Intelligenza
-                Artificiale. 
+                Artificiale.
               </span>
             </p>
           </div>
@@ -73,9 +80,9 @@ const IndexPage = ({ data }) => (
             <div className="col text">
               <h2>PROGRAMMA</h2>
               <p>
-                <b style={{'font-size':'1.25rem'}}>
-                  Il nostro team di pinguini sta terminando il programma
-                  del Linux Day, ricontrolla fra qualche giorno.
+                <b style={{ 'font-size': '1.25rem' }}>
+                  Il nostro team di pinguini sta terminando il programma del
+                  Linux Day, ricontrolla fra qualche giorno.
                 </b>
                 <br />
                 <br />
@@ -84,7 +91,7 @@ const IndexPage = ({ data }) => (
                 <br />
                 <ul>
                   <li>Linux, software e hardware Open Source</li>
-                  <li>Machine Learning e Intelligenza Artificiale</li> 
+                  <li>Machine Learning e Intelligenza Artificiale</li>
                   <li>Open Source nel mondo dell'Intelligenza Artificiale</li>
                   <li>Alternative open a software proprietari</li>
                   <li>Programmazione e tecniche di sviluppo</li>
