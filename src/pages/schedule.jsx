@@ -135,8 +135,8 @@ const schedule = [
 export default () => (
   <Layout>
     <main id="index">
-      <div id="hero">
-        <p>
+    <div id="hero">
+        <Container>
           <h1 class="title">
             Linux Day Milano <span>2019</span>
           </h1>
@@ -150,14 +150,18 @@ export default () => (
               unix<span className="unixmib">MiB</span>
             </a>
           </h3>
-          <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
           <br />
-          <FontAwesomeIcon icon="clock" /> Ore 9:30
-          <br />
-          <FontAwesomeIcon icon="map-marked-alt" /> Università Milano Bicocca
-          <br />
-          <FontAwesomeIcon icon="chevron-right" /> Edificio U7
-        </p>
+          <div className="subtitle">
+            <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
+            <br />
+            <FontAwesomeIcon icon="clock" /> Ore 9:30
+            <br />
+            <FontAwesomeIcon icon="map-marked-alt" /> Università Milano Bicocca
+            <br />
+            <FontAwesomeIcon icon="chevron-right" /> Edificio U7
+            <br />
+          </div>
+        </Container>
       </div>
       <section style={{ color: 'black' }}>
         <Container>
