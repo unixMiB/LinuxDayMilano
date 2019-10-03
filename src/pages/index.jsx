@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => (
               </ul>
             </p>
             <br />
-            <Button disabled="true" variant="warning">
+            <Button href="/programma" disabled="true" variant="warning">
               Guarda il programma
             </Button>
           </div>
