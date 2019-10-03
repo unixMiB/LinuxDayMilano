@@ -216,6 +216,10 @@
       .text {
         font-size: 1.25rem;
         padding-left: 35rem;
+        @include media-breakpoint-down(md) {
+          padding: 0 6rem;
+        }
+
         @include media-breakpoint-down(sm) {
           padding: 0 2rem;
         }
