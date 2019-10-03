@@ -17,7 +17,7 @@ const Header = ({ siteData }) => (
         <Navbar.Brand
           style={{ maxWidth: '5rem' }}
           className="brand"
-          href="/#index"
+          href="/"
         >
           <Logo className="logo" /> LD<span>MI</span> 2019
         </Navbar.Brand>

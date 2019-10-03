@@ -135,7 +135,7 @@ const schedule = [
 export default () => (
   <Layout>
     <main id="index">
-    <div id="hero">
+      <div id="hero">
         <Container>
           <h1 class="title">
             Linux Day Milano <span>2019</span>
