@@ -11,25 +11,28 @@ const IndexPage = ({ data }) => (
   <Layout>
     <main id="index">
       <div id="hero">
-        <p>
+        <Container>
           <h1 class="title">
             Linux Day Milano <span>2019</span>
           </h1>
           <h3 class="title">
-            unix<span className="unixmib">MiB</span>
+            <small>organizzato da</small> <a href="//unixmib.github.io" target="_blank"  rel="noopener noreferrer">unix<span className="unixmib">MiB</span></a>
           </h3>
-          <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
-          <br />
-          <FontAwesomeIcon icon="clock" /> Ore 9:30
-          <br />
-          <FontAwesomeIcon icon="map-marked-alt" /> Università Milano Bicocca
-          <br />
-          <FontAwesomeIcon icon="chevron-right" /> Edificio U7
-          <br />
-          <Button href="/#explore" className="scroll" variant="warning">
+          <br/>
+          <div className="subtitle">
+            <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
+            <br />
+            <FontAwesomeIcon icon="clock" /> Ore 9:30
+            <br />
+            <FontAwesomeIcon icon="map-marked-alt" /> Università Milano Bicocca
+            <br />
+            <FontAwesomeIcon icon="chevron-right" /> Edificio U7
+            <br />
+          </div>
+          <Button href="/#explore" className="scroll btn-lg" variant="warning">
             Scopri di più
           </Button>
-        </p>
+        </Container>
       </div>
       <section id="explore">
         <Row>
@@ -49,60 +52,63 @@ const IndexPage = ({ data }) => (
               al software libero, alla cultura aperta e alla condivisione.
               <br />
               <span>
-                Questa edizione è dedicata al mondo dell'Intelligenza
-                Artificiale
+                L'edizione 2019 è dedicata al mondo dell'Intelligenza
+                Artificiale. 
               </span>
             </p>
           </div>
         </Row>
       </section>
       <section id="schedule">
-        <Row>
-          <div className="inspire">
-            <img
-              alt=""
-              role="presentation"
-              src={talks}
-              style={{ maxWidth: '400px', paddingRight: '2rem' }}
-            />
-          </div>
-          <div className="text">
-            <h2>PROGRAMMA</h2>
-            <p>
-              <b>
-                Il nostro team di pinguini sta finendo di preparare il programma
-                della giornata
-              </b>
+        <Container>
+          <Row>
+            <div className="col-sm inspire">
+              <img
+                className="img-fluid"
+                alt=""
+                role="presentation"
+                src={talks}
+              />
+            </div>
+            <div className="col text">
+              <h2>PROGRAMMA</h2>
+              <p>
+                <b style={{'font-size':'1.25rem'}}>
+                  Il nostro team di pinguini sta terminando il programma
+                  del Linux Day, ricontrolla fra qualche giorno.
+                </b>
+                <br />
+                <br />
+                Per ora ecco qualche indizio:
+                <br />
+                <br />
+                <ul>
+                  <li>Linux, software e hardware Open Source</li>
+                  <li>Machine Learning e Intelligenza Artificiale</li> 
+                  <li>Open Source nel mondo dell'Intelligenza Artificiale</li>
+                  <li>Alternative open a software proprietari</li>
+                  <li>Programmazione e tecniche di sviluppo</li>
+                  <li>... e molto altro ancora!</li>
+                </ul>
+              </p>
               <br />
-              <br />
-              Rimani aggiornato per scoprire di più sui seguenti argomenti:
-              <br />
-              <br />
-              <ul>
-                <li>Linux, software e hardware Open Source</li>
-                <li>Programmazione e tecniche di sviluppo</li>
-                <li>Open Source nel mondo dell'Intelligenza Artificiale</li>
-                <li>Alternative open a software proprietari</li>
-                <li>... e molto altro ancora!</li>
-              </ul>
-            </p>
-            <br />
-            <Button disabled="true" variant="warning">
-              Guarda il programma
-            </Button>
-          </div>
-        </Row>
+              <Button href="#" className="btn-lg" variant="warning">
+                Guarda il programma
+              </Button>
+            </div>
+          </Row>
+        </Container>
       </section>
-
-      {/* <section id="sponsors">
+      {/*
+      <section id="sponsors">
         <Container>
           <div className="text">
-            <h2>SPONSORS</h2>
+            <h2>SPONSORS Linux Day Milano</h2>
           </div>
           <div class="row">
             {data.allFile.nodes.map(item => {
               return (
-                <div class="col-sm-6 col-lg-4 pb-4">
+                <div class="col-sm-6 col-lg-3 pb-3">
                   <a href={item.publicURL} title={item.name}>
                     <Img width="5rem" fluid={item.childImageSharp.fluid} />
                   </a>
@@ -111,15 +117,15 @@ const IndexPage = ({ data }) => (
             })}
           </div>
         </Container>
-      </section> */}
-
+      </section>
+      */}
       <section id="contattaci">
         <Row>
           <div id="ear">
             <img alt="" role="presentation" src={ear} />
           </div>
           <div class="text front">
-            <h3>Contatti</h3>
+            <h3>Contatta l'organizzazione</h3>
             <ul>
               <li title="Indirizzo di posta">
                 <FontAwesomeIcon icon="envelope" />{' '}
@@ -128,7 +134,7 @@ const IndexPage = ({ data }) => (
               <li title="Sito web">
                 <FontAwesomeIcon icon="globe" />{' '}
                 <a href="https://unixmib.github.io" title="Sito web">
-                  https://unixmib.github.io
+                  unixmib.github.io
                 </a>
               </li>
               <li title="Luogo dell'evento">

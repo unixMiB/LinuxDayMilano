@@ -1,22 +1,17 @@
 #index {
   #hero {
     @include cover-background('../assets/hero.jpg', true);
-    // top: 3rem;
     @include media-breakpoint-up(lg) {
       padding: 3rem 4rem 5rem;
     }
 
     @include media-breakpoint-down(md) {
-      padding: 3rem 3rem 5rem;
+      padding: 2rem 1rem;
     }
 
-    // margin-top: 3.9rem;
     width: 100%;
+
     color: white;
-    .container {
-      margin-top: 15hv;
-      vertical-align: center;
-    }
 
     @include media-breakpoint-down(sm) {
       margin-top: 0;
@@ -38,11 +33,22 @@
       span.unixmib {
         color: $unixmib;
       }
+      a {
+        color: white;
+      }
+      small {
+        font-size: 0.9rem;
+      }
+
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
     }
 
     .subtitle {
       @include tshadow;
       color: white;
+      font-size: 1.25rem;
     }
 
     .scroll {
@@ -59,7 +65,6 @@
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-    padding: 70px 0 100px;
 
     span {
       color: $ldmi;
@@ -99,10 +104,10 @@
     &#explore {
       background-color: #c34c39;
       background-image: url(../assets/event-bg.jpg);
-      padding: 100px 3rem 150px 1.5rem;
+      padding: 5rem 1rem;
 
       @include media-breakpoint-down(sm) {
-        background-size: cover;
+        padding: 2rem 1rem;
       }
 
       .watch {
@@ -121,6 +126,7 @@
       }
 
       .text {
+        font-size: 1.25rem;
         @include media-breakpoint-down(md) {
           padding-left: 2.5rem;
         }
@@ -140,20 +146,32 @@
 
     &#schedule {
       background-color: #75b46e;
-      padding: 4 2.5rem;
+      padding: 5rem 1rem;
+
+      @include media-breakpoint-down(sm) {
+        padding: 2rem 1rem;
+      }
+
       .inspire {
-        left: 2.5rem;
-        position: absolute;
+        display: inline-block;
+        margin-right: 2.5rem;
         max-width: 400px;
         @include media-breakpoint-down(md) {
-          visibility: hidden;
+          display: none;
         }
       }
       .text {
-        padding-left: 30rem;
+        font-size: 1.25rem;
         @include media-breakpoint-down(md) {
           padding-left: 4rem;
           padding-right: 4rem;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 0 1rem;
+        }
+
+        a[href="#"] {
+          display: none;
         }
       }
       .hide-col {
@@ -173,7 +191,8 @@
       position: relative;
 
       .text {
-        padding: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
       }
     }
 
@@ -182,7 +201,7 @@
       color: $black;
 
       a {
-        color: $link-dark;
+        color: white;
       }
 
       #ear {
@@ -195,12 +214,15 @@
       }
 
       .text {
+        font-size: 1.25rem;
         padding-left: 35rem;
-        @include media-breakpoint-down(md) {
-          padding: 0 4rem 0;
+        @include media-breakpoint-down(sm) {
+          padding: 0 2rem;
         }
+
         ul {
           list-style-type: none;
+          padding: 0;
         }
       }
 
