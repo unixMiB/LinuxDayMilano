@@ -75,7 +75,7 @@ const IndexPage = ({ data }) => (
               </b>
               <br />
               <br />
-              Rimani agiornato per scoprire di più sui seguenti argomenti:
+              Rimani aggiornato per scoprire di più sui seguenti argomenti:
               <br />
               <br />
               <ul>
