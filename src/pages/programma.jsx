@@ -43,7 +43,7 @@ const schedule = [
     time: '11:45',
     talks: [
       {
-        title: 'Titolo',
+        title: 'Titolo davvero molto lungo che probabilmente dovrebbe andare a capo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
       },
@@ -155,7 +155,7 @@ export default () => (
           {schedule.map(i => {
             return (
               <Row className="pb-4">
-                <Col sm={1} className="pb-4">
+                <Col sm={1} className="pb-4 mr-2">
                   <h5>
                     {i.time}
                   </h5>
@@ -164,7 +164,7 @@ export default () => (
                   return (
                     <Col sm className="pb-4">
                       <div
-                        className="border"
+                        className="border h-100"
                         style={{
                           //   border: '1px solid #e2e2e2',
                           padding: '1rem',
