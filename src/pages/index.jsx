@@ -115,7 +115,7 @@ const IndexPage = ({ data }) => (
           <div class="row">
             {data.allFile.nodes.map(item => {
               return (
-                <div class="col-6 col-sm-3 col-md-3 col-lg-2 pb-3">
+                <div class="col-6 col-sm-4 col-md-3 pb-3">
                   {/* <a href={item.publicURL} title={item.name}> */}
                     <Img width="5rem" fluid={item.childImageSharp.fluid} />
                   {/* </a> */}
