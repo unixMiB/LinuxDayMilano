@@ -27,8 +27,8 @@ module.exports = {
         short_name: 'LDMI',
         start_url: '/',
         description: 'Manifestazione italiana dedicata a GNU/Linux',
-        background_color: '#ffffff',
-        theme_color: '#343a40',
+        background_color: '#343a40',
+        theme_color: '#ffb600',
         display: 'standalone',
         icon: './src/assets/favicon.png',
       },
@@ -88,7 +88,7 @@ module.exports = {
       options: {
         useMozJpeg: true,
         stripMetadata: true,
-        defaultQuality: 70,
+        defaultQuality: 80,
       },
     },
     'gatsby-transformer-sharp',
@@ -99,7 +99,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 600,
+              maxWidth: 1000,
               linkImagesToOriginal: true,
               sizeByPixelDensity: true,
               quality: 70,

@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
+exports.createPages = ({ boundActionCreators }) => {
   const { createRedirect } = boundActionCreators
 
   createRedirect({

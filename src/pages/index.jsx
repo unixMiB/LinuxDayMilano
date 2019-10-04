@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Button, Row, Container, Col } from 'react-bootstrap'
+import { Button, Row, Container } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import watch from '../assets/watch.png'
 import talks from '../assets/talk-subscription.png'
@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
           <h3 class="title">
             <small>organizzato da</small>{' '}
             <a
-              href="//unixmib.github.io"
+              href="https://unixmib.netlify.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -106,7 +106,7 @@ const IndexPage = ({ data }) => (
           </Row>
         </Container>
       </section>
-      {/*
+      
       <section id="sponsors">
         <Container>
           <div className="text">
@@ -115,17 +115,17 @@ const IndexPage = ({ data }) => (
           <div class="row">
             {data.allFile.nodes.map(item => {
               return (
-                <div class="col-sm-6 col-lg-3 pb-3">
-                  <a href={item.publicURL} title={item.name}>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 pb-3">
+                  {/* <a href={item.publicURL} title={item.name}> */}
                     <Img width="5rem" fluid={item.childImageSharp.fluid} />
-                  </a>
+                  {/* </a> */}
                 </div>
               )
             })}
           </div>
         </Container>
       </section>
-      */}
+     
       <section id="contattaci">
         <Row>
           <div id="ear">
