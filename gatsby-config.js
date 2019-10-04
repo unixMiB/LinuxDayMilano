@@ -7,7 +7,7 @@ module.exports = {
     keywords:
       'Linux Day, Milano, 2019, GNU, GNU/Linux, Open Source, Software Libero, Condivisione',
     author: 'Linux Day Milano 2019',
-    theme: '#343a40',
+    theme: '#ffb600',
     navbarVariant: 'dark',
     siteUrl: 'http://linuxdaymilano.org/',
   },
@@ -27,7 +27,7 @@ module.exports = {
         short_name: 'LDMI',
         start_url: '/',
         description: 'Manifestazione italiana dedicata a GNU/Linux',
-        background_color: '#343a40',
+        background_color: '#ffb600',
         theme_color: '#ffb600',
         display: 'standalone',
         icon: './src/assets/favicon.png',
