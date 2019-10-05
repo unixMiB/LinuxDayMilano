@@ -106,7 +106,7 @@ const IndexPage = ({ data }) => (
           </Row>
         </Container>
       </section>
-      
+
       <section id="sponsors">
         <Container>
           <div className="text">
@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => (
               return (
                 <div class="col-6 col-sm-4 col-md-3 pb-3">
                   {/* <a href={item.publicURL} title={item.name}> */}
-                    <Img width="5rem" fluid={item.childImageSharp.fluid} />
+                  <Img width="5rem" fluid={item.childImageSharp.fluid} />
                   {/* </a> */}
                 </div>
               )
@@ -125,7 +125,7 @@ const IndexPage = ({ data }) => (
           </div>
         </Container>
       </section>
-     
+
       <section id="contattaci">
         <Row>
           <div id="ear">

@@ -14,11 +14,7 @@ const Header = ({ siteData }) => (
       }}
     >
       <Container>
-        <Navbar.Brand
-          style={{ maxWidth: '5rem' }}
-          className="brand"
-          href="/"
-        >
+        <Navbar.Brand style={{ maxWidth: '5rem' }} className="brand" href="/">
           <Logo className="logo" /> LD<span>MI</span> 2019
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -29,7 +25,7 @@ const Header = ({ siteData }) => (
           <Nav>
             <Nav.Link href="/#explore">Evento</Nav.Link>
             <Nav.Link href="/#schedule">Programma</Nav.Link>
-            {/* <Nav.Link href="/#sponsors">Sponsors</Nav.Link> */}
+            <Nav.Link href="/#sponsors">Sponsors</Nav.Link>
             <Nav.Link href="/#contattaci">Contatti</Nav.Link>
           </Nav>
         </Navbar.Collapse>
