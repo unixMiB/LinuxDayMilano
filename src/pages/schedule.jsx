@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Button, Modal } from 'react-bootstrap'
 
 const schedule = [
   {
@@ -132,15 +132,113 @@ const schedule = [
   },
 ]
 
+class DetailView extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      show: false,
+      title: "Titolo talk",
+      author: "Relatore",
+      description: "Breve descrizione del talk"
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      show: true,
+      title: nextProps.title,
+      author: nextProps.author,
+      description: nextProps.description
+    })
+  }
+
+  render() {
+    return (
+      <Modal show={this.state.show} onHide={()=>{this.setState({show:false})}} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            {this.state.title}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>{this.state.description}</h4>
+          <p>
+            {this.state.author}
+          </p>
+        </Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
+    )
+  }
+}
+
+class Talks extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      required: {
+        title: 'Titolo',
+        description: 'Descrizione',
+        author: 'Autore',
+      }
+    }
+    this.replaceModalItem = this.replaceModalItem.bind(this)
+  }
+
+  replaceModalItem(item) {
+    this.setState({
+      required: item
+    })
+  }
+
+  render() {
+    let modalData = this.state.required
+    return (
+      <Container>
+        {schedule.map(i => {
+          return (
+            <Row className="pb-4">
+              <Col sm={1} className="pb-4 mr-2">
+                <h5>{i.time}</h5>
+              </Col>
+              {i.talks.map((t) => {
+                return (
+                  <Col sm className="pb-4">
+                    <div
+                      onClick={()=>this.replaceModalItem(t)}
+                      className="event border h-100"
+                      style={{
+                        padding: '1rem',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <h3>{t.title}</h3>
+                      <h6>{t.description}</h6>
+                      <div>{t.author}</div>
+                    </div>
+                  </Col>
+                )
+              })}
+            </Row>
+          )
+        })}
+        <DetailView
+        title={modalData.title} author={modalData.author} description={modalData.description}/>
+      </Container>
+    )
+  }
+}
+
 export default () => (
   <Layout>
     <main id="index">
       <div id="hero">
         <Container>
-          <h1 class="title">
+          <h1 className="title">
             Linux Day Milano <span>2019</span>
           </h1>
-          <h3 class="title">
+          <h3 className="title">
             <small>organizzato da</small>{' '}
             <a
               href="//unixmib.github.io"
@@ -164,34 +262,7 @@ export default () => (
         </Container>
       </div>
       <section style={{ color: 'black' }}>
-        <Container>
-          {schedule.map(i => {
-            return (
-              <Row className="pb-4">
-                <Col sm={1} className="pb-4 mr-2">
-                  <h5>{i.time}</h5>
-                </Col>
-                {i.talks.map(t => {
-                  return (
-                    <Col sm className="pb-4">
-                      <div
-                        className="border h-100"
-                        style={{
-                          //   border: '1px solid #e2e2e2',
-                          padding: '1rem',
-                        }}
-                      >
-                        <h3>{t.title}</h3>
-                        <h6>{t.description}</h6>
-                        <h7>{t.author}</h7>
-                      </div>
-                    </Col>
-                  )
-                })}
-              </Row>
-            )
-          })}
-        </Container>
+        <Talks />
       </section>
     </main>
   </Layout>
