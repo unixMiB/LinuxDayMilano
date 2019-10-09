@@ -1,7 +1,12 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Container, Row, Col, Button, Modal } from 'react-bootstrap'
+import { Container, Row, Col, Modal, Button } from 'react-bootstrap'
+
+const aula_ia = "Ux-xx"
+const aula_ot= "Ux-yy"
+const aula_mix= "Ux-zz"
+
 
 const schedule = [
   {
@@ -9,8 +14,10 @@ const schedule = [
     talks: [
       {
         title: 'Keynote',
-        description: "Introduzione al Linux Day e all'Intelligenza Artificiale",
+        description: "Apertura del Linux Day e introduzione all'Intelligenza Artificiale",
         author: 'Daniele Barcella, Ilaria Battiston - unixMiB',
+        room: aula_ia,
+        duration: '60 min'
       },
     ],
   },
@@ -21,11 +28,22 @@ const schedule = [
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ia,
+        duration: '60 min'
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ot,
+        duration: '60 min'
+      },
+      {
+        title: 'Titolo',
+        description: 'Descrizione',
+        author: 'Autore - Azienda',
+        room: aula_mix,
+        duration: '60 min'
       },
     ],
   },
@@ -36,6 +54,8 @@ const schedule = [
         title: 'Pausa caffé',
         description: '',
         author: '',
+        room: '',
+        duration: '15 min'
       },
     ],
   },
@@ -47,11 +67,22 @@ const schedule = [
           'Titolo davvero molto lungo che probabilmente dovrebbe andare a capo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ia,
+        duration: '60 min'
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ot,
+        duration: '60 min'
+      },
+      {
+        title: 'Titolo',
+        description: 'Descrizione',
+        author: 'Autore - Azienda',
+        room: aula_mix,
+        duration: '60 min'
       },
     ],
   },
@@ -60,8 +91,10 @@ const schedule = [
     talks: [
       {
         title: 'Pausa pranzo',
-        description: '',
+        description: 'Una breve pausa per rinfrescare la mente',
         author: '',
+        room: '',
+        duration: '1 ora e 15 min'
       },
     ],
   },
@@ -72,11 +105,22 @@ const schedule = [
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ia,
+        duration: '60 min'
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ot,
+        duration: '60 min'
+      },
+      {
+        title: 'Titolo',
+        description: 'Descrizione',
+        author: 'Autore - Azienda',
+        room: aula_mix,
+        duration: '60 min'
       },
     ],
   },
@@ -87,11 +131,22 @@ const schedule = [
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ia,
+        duration: '60 min'
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ot,
+        duration: '60 min'
+      },
+      {
+        title: 'Titolo',
+        description: 'Descrizione',
+        author: 'Autore - Azienda',
+        room: aula_mix,
+        duration: '60 min'
       },
     ],
   },
@@ -100,8 +155,10 @@ const schedule = [
     talks: [
       {
         title: 'Pausa caffé',
-        description: '',
+        description: 'Una breve pausa per rinfrescare la mente',
         author: '',
+        room: '',
+        duration: '60 min'
       },
     ],
   },
@@ -112,11 +169,22 @@ const schedule = [
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ia,
+        duration: '60 min'
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
+        room: aula_ot,
+        duration: '60 min'
+      },
+      {
+        title: 'Titolo',
+        description: 'Descrizione',
+        author: 'Autore - Azienda',
+        room: aula_mix,
+        duration: '60 min'
       },
     ],
   },
@@ -127,6 +195,8 @@ const schedule = [
         title: 'Chiusura',
         description: '',
         author: '',
+        room: '',
+        duration: '60 min'
       },
     ],
   },
@@ -139,7 +209,9 @@ class DetailView extends React.Component {
       show: false,
       title: "Titolo talk",
       author: "Relatore",
-      description: "Breve descrizione del talk"
+      description: "Breve descrizione del talk",
+      room: "Aula",
+      duration: "Durata intervento"
     }
   }
 
@@ -148,7 +220,9 @@ class DetailView extends React.Component {
       show: true,
       title: nextProps.title,
       author: nextProps.author,
-      description: nextProps.description
+      description: nextProps.description,
+      room: nextProps.room,
+      duration: nextProps.duration
     })
   }
 
@@ -161,12 +235,19 @@ class DetailView extends React.Component {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>{this.state.description}</h4>
-          <p>
+          <p>{this.state.description}</p>
+          <br/>
+          <h6>
             {this.state.author}
-          </p>
+          </h6>
+          <Row>
+            <Col>Durata: {this.state.duration}</Col>
+            <Col className="text-right">Aula: {this.state.room}</Col>
+          </Row>
         </Modal.Body>
-        <Modal.Footer></Modal.Footer>
+        <Modal.Footer>
+          <Button variant="warning" onClick={()=>{this.setState({show:false})}}>Chiudi</Button>
+        </Modal.Footer>
       </Modal>
     )
   }
@@ -181,6 +262,8 @@ class Talks extends React.Component {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore',
+        room: 'Aula',
+        duration: 'Durata'
       }
     }
     this.replaceModalItem = this.replaceModalItem.bind(this)
@@ -213,9 +296,12 @@ class Talks extends React.Component {
                         cursor: 'pointer',
                       }}
                     >
-                      <h3>{t.title}</h3>
-                      <h6>{t.description}</h6>
-                      <div>{t.author}</div>
+                      <h4>{t.title}</h4>
+                      <h6>{t.author}</h6>
+                      <Row>
+                        <Col>{t.duration}</Col>
+                        <Col className="text-right">{t.room}</Col>
+                      </Row>
                     </div>
                   </Col>
                 )
@@ -224,7 +310,7 @@ class Talks extends React.Component {
           )
         })}
         <DetailView
-        title={modalData.title} author={modalData.author} description={modalData.description}/>
+        title={modalData.title} author={modalData.author} description={modalData.description} room={modalData.room} duration={modalData.duration}/>
       </Container>
     )
   }
