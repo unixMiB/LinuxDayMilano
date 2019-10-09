@@ -3,10 +3,9 @@ import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap'
 
-const aula_ia = "Ux-xx"
-const aula_ot= "Ux-yy"
-const aula_mix= "Ux-zz"
-
+const aula_ia = 'Ux-xx'
+const aula_ot = 'Ux-yy'
+const aula_mix = 'Ux-zz'
 
 const schedule = [
   {
@@ -14,10 +13,11 @@ const schedule = [
     talks: [
       {
         title: 'Keynote',
-        description: "Apertura del Linux Day e introduzione all'Intelligenza Artificiale",
+        description:
+          "Apertura del Linux Day e introduzione all'Intelligenza Artificiale",
         author: 'Daniele Barcella, Ilaria Battiston - unixMiB',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -25,25 +25,26 @@ const schedule = [
     time: '10:30',
     talks: [
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'Intelligenza a livello umano o abilità a livello animale?',
+        description:
+          'L’intervento sintetizza lo stato di avanzamento dell’Intelligenza Artificiale, con particolare attenzione ai recenti sviluppi nell’ambito del Deep Learning, un sottoinsieme dell’Intelligenza Artificiale che ha visto tre pionieri del settore ricevere il premio Turing 2018. Si cerca di analizzare criticamente cosa sia stato effettivamente raggiunto, cosa sia a portata di mano e cosa sia ancora molto lontano dalle nostre attuali conoscenze.',
+        author: 'Fabio Stella - Università Milano Bicocca',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'Open Hardware, Software Libero e Stampa 3D attrattori "Farfalla" del PowerPC Notebook project',
+        description: '',
+        author: 'Roberto Innocenti',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'PHP: un linguaggio, come tanti, vivo grazie alle community Open source',
+        description: 'Le licenze libere per il software possono salvare un linguaggio di programmazione? La risposta è si! Un esempio è il PHP, un linguaggio dato per morto diverse volte ma che è sempre nei primi posto per utilizzo.',
+        author: 'Matteo Enna',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -55,7 +56,7 @@ const schedule = [
         description: '',
         author: '',
         room: '',
-        duration: '15 min'
+        duration: '15 min',
       },
     ],
   },
@@ -64,25 +65,25 @@ const schedule = [
     talks: [
       {
         title:
-          'Titolo davvero molto lungo che probabilmente dovrebbe andare a capo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+          'Vettorizzazione: a hands-on approach in Python',
+        description: "Sapevi che il progresso nel campo del ML non è legato solo all'invenzione di nuovi algoritmi, ma anche all'introduzione di nuove tecnologie come la vettorizzazione? Scopriamo cos'è con semplici esempi in Python!",
+        author: 'Davide Riva',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: "Joomla! - Privacy Tool Suite: Come difendere la privacy e l'individualità degli utenti del tuo sito web in pieno rispetto del GDPR",
+        description: 'Rispetto alla durata del talk concordata sarà possibile mostrare solo la parte di Provacy Tool Suite o anche come installare il Content Managment System da zero (devo fare una prova sulla durata della parte Privacy Tool Suite).',
+        author: 'Luca Racchetti',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'Programmazione e tecniche di sviluppo',
+        description: "Esploriamo metodi di sviluppodel software, occupandoci di DevOps in particolare e includendo un po' di storia del free software e dell'open source.",
+        author: 'Fabio Mora',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -94,7 +95,7 @@ const schedule = [
         description: 'Una breve pausa per rinfrescare la mente',
         author: '',
         room: '',
-        duration: '1 ora e 15 min'
+        duration: '1 ora e 15 min',
       },
     ],
   },
@@ -102,25 +103,25 @@ const schedule = [
     time: '14:00',
     talks: [
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'Machine Data - Machines are talking. Are you listening?',
+        description: 'Analisi dei machine-data ovvero dei dati generati dalle macchine al fine di semplificare le attività di operations, troubleshooting e anche le attività BAU (Business As Usual).',
+        author: 'Francesco Fresta - Azienda',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'Diritto alla riparazione e free software - impatto sulle emissioni di CO2',
+        description: "",
+        author: 'Savino Curci - PC Officina',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'How to virtualize in containers',
+        description: 'Linux containers are everywhere. But what if your workflow still requires virtual machines? Some applications can not be easily containerized. But do we need to bother? Come to learn how to run and monitor both types of workloads together on a single distributed platform. The KubeVirt - virtualization addon for Kubernetes will be introduced.',
+        author: 'Marek Libra',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -128,25 +129,25 @@ const schedule = [
     time: '15:00',
     talks: [
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'The AI Winter (Working Title)',
+        description: "Un viaggio alla scoperta della storia dell'intelligenza artificiale, a partire dalle speranze dei pionieri dell'informatica fino alla fine del secolo scorso, tramite un'analisi delle architetture hardware del software e dei carichi di lavoro, molto diversi da quelli a cui siamo abituati oggi.",
+        author: 'Jacopo Maltagliati',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
+        title: "Linee Guida su Acquisizione e Riuso di Software per le PA, le novità dell'ultima versione in vigore dal 9 maggio 2019",
         description: 'Descrizione',
-        author: 'Autore - Azienda',
+        author: 'Italo Vignoli - Azienda',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'BiBirra: Deep image retrieval for beer recognition',
+        description: "Raccontando lo sviluppo di una applicazione in grado di riconoscere una birra da una foto della bottiglia, sarà descritto il processo che porta da un'idea all'implementazione di un modello di Machine Learning.Si analizzeranno i problemi più comuni e come scegliere tra le possibili soluzioni.",
+        author: 'ML Milan',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -158,7 +159,7 @@ const schedule = [
         description: 'Una breve pausa per rinfrescare la mente',
         author: '',
         room: '',
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -166,25 +167,25 @@ const schedule = [
     time: '16:15',
     talks: [
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'The art of Machine Learning',
+        description: "Cosa possono avere in comune un quadro battuto all'asta da Christie's per 435.000$ e la colonna sonora di un videogioco di esplorazione interplanetaria? Esiste qualcosa che collega Van Gogh, Rembrandt e la teoria dei giochi? Entrambe queste domande possono finire sotto un'altra macro domanda: \"È possibile creare con l'intelligenza artificiale?\" In questo talk veranno presentate alcune applicazioni del machine learning ad arti visive e musica elettronica, di come le reti neurali artificiali si stanno facendo strada all'interno dei processi creativi uscendo dai laboratori di ricerca per entrare nei musei, nelle case d'aste, nelle nostre cuffie e sui palchi di festival musicali internazionali.",
+        author: 'Luca Carcano',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
+        title: 'The Dark side of AI',
+        description: '',
+        author: 'Marco Schiaffino',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -196,7 +197,7 @@ const schedule = [
         description: '',
         author: '',
         room: '',
-        duration: '60 min'
+        duration: '',
       },
     ],
   },
@@ -207,11 +208,11 @@ class DetailView extends React.Component {
     super(props)
     this.state = {
       show: false,
-      title: "Titolo talk",
-      author: "Relatore",
-      description: "Breve descrizione del talk",
-      room: "Aula",
-      duration: "Durata intervento"
+      title: 'Titolo talk',
+      author: 'Relatore',
+      description: 'Breve descrizione del talk',
+      room: 'Aula',
+      duration: 'Durata intervento',
     }
   }
 
@@ -222,13 +223,21 @@ class DetailView extends React.Component {
       author: nextProps.author,
       description: nextProps.description,
       room: nextProps.room,
-      duration: nextProps.duration
+      duration: nextProps.duration,
     })
   }
 
   render() {
     return (
-      <Modal show={this.state.show} onHide={()=>{this.setState({show:false})}} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+      <Modal
+        show={this.state.show}
+        onHide={() => {
+          this.setState({ show: false })
+        }}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             {this.state.title}
@@ -236,17 +245,22 @@ class DetailView extends React.Component {
         </Modal.Header>
         <Modal.Body>
           <p>{this.state.description}</p>
-          <br/>
-          <h6>
-            {this.state.author}
-          </h6>
+          <br />
+          <h6>{this.state.author}</h6>
           <Row>
             <Col>Durata: {this.state.duration}</Col>
             <Col className="text-right">Aula: {this.state.room}</Col>
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="warning" onClick={()=>{this.setState({show:false})}}>Chiudi</Button>
+          <Button
+            variant="warning"
+            onClick={() => {
+              this.setState({ show: false })
+            }}
+          >
+            Chiudi
+          </Button>
         </Modal.Footer>
       </Modal>
     )
@@ -263,15 +277,15 @@ class Talks extends React.Component {
         description: 'Descrizione',
         author: 'Autore',
         room: 'Aula',
-        duration: 'Durata'
-      }
+        duration: 'Durata',
+      },
     }
     this.replaceModalItem = this.replaceModalItem.bind(this)
   }
 
   replaceModalItem(item) {
     this.setState({
-      required: item
+      required: item,
     })
   }
 
@@ -285,11 +299,11 @@ class Talks extends React.Component {
               <Col sm={1} className="pb-4 mr-2">
                 <h5>{i.time}</h5>
               </Col>
-              {i.talks.map((t) => {
+              {i.talks.map(t => {
                 return (
                   <Col sm className="pb-4">
                     <div
-                      onClick={()=>this.replaceModalItem(t)}
+                      onClick={() => this.replaceModalItem(t)}
                       className="event border h-100"
                       style={{
                         padding: '1rem',
@@ -297,6 +311,7 @@ class Talks extends React.Component {
                       }}
                     >
                       <h4>{t.title}</h4>
+                      <br/>
                       <h6>{t.author}</h6>
                       <Row>
                         <Col>{t.duration}</Col>
@@ -310,7 +325,12 @@ class Talks extends React.Component {
           )
         })}
         <DetailView
-        title={modalData.title} author={modalData.author} description={modalData.description} room={modalData.room} duration={modalData.duration}/>
+          title={modalData.title}
+          author={modalData.author}
+          description={modalData.description}
+          room={modalData.room}
+          duration={modalData.duration}
+        />
       </Container>
     )
   }
