@@ -7,6 +7,7 @@ const aula_ia = "Ux-xx"
 const aula_ot= "Ux-yy"
 const aula_mix= "Ux-zz"
 
+const enable = false;
 
 const schedule = [
   {
@@ -316,6 +317,17 @@ class Talks extends React.Component {
   }
 }
 
+function Placeholder(props) {
+  return(
+    <div>
+      <Container>
+        <h1>Presto disponibile</h1>
+        <h6>Il nostro team di pinguini sta terminando il programma del Linux Day, ricontrolla fra qualche giorno.</h6>
+      </Container>
+    </div>
+  )
+}
+
 export default () => (
   <Layout>
     <main id="index">
@@ -348,7 +360,7 @@ export default () => (
         </Container>
       </div>
       <section style={{ color: 'black' }}>
-        <Talks />
+        {enable ? <Talks /> : <Placeholder/>}
       </section>
     </main>
   </Layout>
