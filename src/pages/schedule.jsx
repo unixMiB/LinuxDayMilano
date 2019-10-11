@@ -3,11 +3,11 @@ import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap'
 
-const aula_ia = "Ux-xx"
-const aula_ot= "Ux-yy"
-const aula_mix= "Ux-zz"
+const aula_ia = 'Ux-xx'
+const aula_ot = 'Ux-yy'
+const aula_mix = 'Ux-zz'
 
-const enable = false;
+const enable = false
 
 const schedule = [
   {
@@ -15,10 +15,11 @@ const schedule = [
     talks: [
       {
         title: 'Keynote',
-        description: "Apertura del Linux Day e introduzione all'Intelligenza Artificiale",
+        description:
+          "Apertura del Linux Day e introduzione all'Intelligenza Artificiale",
         author: 'Daniele Barcella, Ilaria Battiston - unixMiB',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -30,21 +31,21 @@ const schedule = [
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -56,7 +57,7 @@ const schedule = [
         description: '',
         author: '',
         room: '',
-        duration: '15 min'
+        duration: '15 min',
       },
     ],
   },
@@ -69,21 +70,21 @@ const schedule = [
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -95,7 +96,7 @@ const schedule = [
         description: 'Una breve pausa per rinfrescare la mente',
         author: '',
         room: '',
-        duration: '1 ora e 15 min'
+        duration: '1 ora e 15 min',
       },
     ],
   },
@@ -107,21 +108,21 @@ const schedule = [
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -133,21 +134,21 @@ const schedule = [
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -159,7 +160,7 @@ const schedule = [
         description: 'Una breve pausa per rinfrescare la mente',
         author: '',
         room: '',
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -171,21 +172,21 @@ const schedule = [
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ia,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_ot,
-        duration: '60 min'
+        duration: '60 min',
       },
       {
         title: 'Titolo',
         description: 'Descrizione',
         author: 'Autore - Azienda',
         room: aula_mix,
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -197,7 +198,7 @@ const schedule = [
         description: '',
         author: '',
         room: '',
-        duration: '60 min'
+        duration: '60 min',
       },
     ],
   },
@@ -208,11 +209,11 @@ class DetailView extends React.Component {
     super(props)
     this.state = {
       show: false,
-      title: "Titolo talk",
-      author: "Relatore",
-      description: "Breve descrizione del talk",
-      room: "Aula",
-      duration: "Durata intervento"
+      title: 'Titolo talk',
+      author: 'Relatore',
+      description: 'Breve descrizione del talk',
+      room: 'Aula',
+      duration: 'Durata intervento',
     }
   }
 
@@ -223,13 +224,21 @@ class DetailView extends React.Component {
       author: nextProps.author,
       description: nextProps.description,
       room: nextProps.room,
-      duration: nextProps.duration
+      duration: nextProps.duration,
     })
   }
 
   render() {
     return (
-      <Modal show={this.state.show} onHide={()=>{this.setState({show:false})}} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+      <Modal
+        show={this.state.show}
+        onHide={() => {
+          this.setState({ show: false })
+        }}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             {this.state.title}
@@ -237,17 +246,22 @@ class DetailView extends React.Component {
         </Modal.Header>
         <Modal.Body>
           <p>{this.state.description}</p>
-          <br/>
-          <h6>
-            {this.state.author}
-          </h6>
+          <br />
+          <h6>{this.state.author}</h6>
           <Row>
             <Col>Durata: {this.state.duration}</Col>
             <Col className="text-right">Aula: {this.state.room}</Col>
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="warning" onClick={()=>{this.setState({show:false})}}>Chiudi</Button>
+          <Button
+            variant="warning"
+            onClick={() => {
+              this.setState({ show: false })
+            }}
+          >
+            Chiudi
+          </Button>
         </Modal.Footer>
       </Modal>
     )
@@ -264,15 +278,15 @@ class Talks extends React.Component {
         description: 'Descrizione',
         author: 'Autore',
         room: 'Aula',
-        duration: 'Durata'
-      }
+        duration: 'Durata',
+      },
     }
     this.replaceModalItem = this.replaceModalItem.bind(this)
   }
 
   replaceModalItem(item) {
     this.setState({
-      required: item
+      required: item,
     })
   }
 
@@ -286,11 +300,11 @@ class Talks extends React.Component {
               <Col sm={1} className="pb-4 mr-2">
                 <h5>{i.time}</h5>
               </Col>
-              {i.talks.map((t) => {
+              {i.talks.map(t => {
                 return (
                   <Col sm className="pb-4">
                     <div
-                      onClick={()=>this.replaceModalItem(t)}
+                      onClick={() => this.replaceModalItem(t)}
                       className="event border h-100"
                       style={{
                         padding: '1rem',
@@ -311,18 +325,26 @@ class Talks extends React.Component {
           )
         })}
         <DetailView
-        title={modalData.title} author={modalData.author} description={modalData.description} room={modalData.room} duration={modalData.duration}/>
+          title={modalData.title}
+          author={modalData.author}
+          description={modalData.description}
+          room={modalData.room}
+          duration={modalData.duration}
+        />
       </Container>
     )
   }
 }
 
 function Placeholder(props) {
-  return(
+  return (
     <div>
       <Container>
         <h1>Presto disponibile</h1>
-        <h6>Il nostro team di pinguini sta terminando il programma del Linux Day, ricontrolla fra qualche giorno.</h6>
+        <h6>
+          Il nostro team di pinguini sta terminando il programma del Linux Day,
+          ricontrolla fra qualche giorno.
+        </h6>
       </Container>
     </div>
   )
@@ -360,7 +382,7 @@ export default () => (
         </Container>
       </div>
       <section style={{ color: 'black' }}>
-        {enable ? <Talks /> : <Placeholder/>}
+        {enable ? <Talks /> : <Placeholder />}
       </section>
     </main>
   </Layout>
