@@ -6,8 +6,8 @@
 
 // You can delete this file if you're not using it
 
-exports.createPages = ({ boundActionCreators }) => {
-  const { createRedirect } = boundActionCreators
+exports.createPages = ({ actions }) => {
+  const { createRedirect } = actions
 
   createRedirect({
     fromPath: 'https://linuxdaymilano.netlify.com/*',
