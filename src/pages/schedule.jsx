@@ -338,7 +338,7 @@ class Talks extends React.Component {
 
 function Placeholder(props) {
   return (
-    <div>
+    <div id="schedule-placeholder">
       <Container>
         <h1>Presto disponibile</h1>
         <h6>

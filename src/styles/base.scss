@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important
+}
+
 a.anchor {
   display: block;
   position: relative;
@@ -20,4 +24,12 @@ a.anchor {
 
 .event:hover {
   background-color: #d7d7d7;
+}
+
+.dark {
+  background-color: $gray-900;
+  color: $gray-100;
+  #schedule-placeholder {
+    color: $gray-100;
+  }
 }

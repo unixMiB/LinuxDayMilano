@@ -19,6 +19,7 @@ module.exports = {
         extensions: ['css', 'html', 'js', 'svg'],
       },
     },
+    'gatsby-plugin-dark-mode',
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-manifest',
