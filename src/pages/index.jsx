@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
           <h3 class="title">
             <small>organizzato da</small>{' '}
             <a
-              href="https://unixmib.netlify.com/"
+              href="https://unixmib.org/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -140,8 +140,8 @@ const IndexPage = ({ data }) => (
               </li>
               <li title="Sito web">
                 <FontAwesomeIcon icon="globe" />{' '}
-                <a href="https://unixmib.github.io" title="Sito web">
-                  unixmib.github.io
+                <a href="https://unixmib.org" title="Sito web">
+                  unixmib.org
                 </a>
               </li>
               <li title="Luogo dell'evento">

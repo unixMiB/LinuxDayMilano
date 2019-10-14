@@ -361,7 +361,7 @@ export default () => (
           <h3 className="title">
             <small>organizzato da</small>{' '}
             <a
-              href="//unixmib.github.io"
+              href="https://unixmib.org"
               target="_blank"
               rel="noopener noreferrer"
             >
