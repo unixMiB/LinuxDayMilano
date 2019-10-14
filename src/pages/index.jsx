@@ -12,10 +12,10 @@ const IndexPage = ({ data }) => (
     <main id="index">
       <div id="hero">
         <Container>
-          <h1 class="title">
+          <h1 className="title">
             Linux Day Milano <span>2019</span>
           </h1>
-          <h3 class="title">
+          <h3 className="title">
             <small>organizzato da</small>{' '}
             <a
               href="https://unixmib.org/"
@@ -46,8 +46,8 @@ const IndexPage = ({ data }) => (
           <div className="watch">
             <img alt="" role="presentation" src={watch} />
           </div>
-          {/* <div class="col-md-offset-1 front text"> */}
-          <div class="front text">
+          {/* <div className="col-md-offset-1 front text"> */}
+          <div className="front text">
             <p>
               <h2>
                 IL LINUX DAY <span>MILANO</span> SI SVOLGERÀ
@@ -112,10 +112,10 @@ const IndexPage = ({ data }) => (
           <div className="text">
             <h2>SPONSORS Linux Day Milano</h2>
           </div>
-          <div class="row">
+          <div className="row">
             {data.allFile.nodes.map(item => {
               return (
-                <div class="col-6 col-sm-4 col-md-3 pb-3">
+                <div className="col-6 col-sm-4 col-md-3 pb-3">
                   {/* <a href={item.publicURL} title={item.name}> */}
                   <Img width="5rem" fluid={item.childImageSharp.fluid} />
                   {/* </a> */}
@@ -131,7 +131,7 @@ const IndexPage = ({ data }) => (
           <div id="ear">
             <img alt="" role="presentation" src={ear} />
           </div>
-          <div class="text front">
+          <div className="text front">
             <h3>Contatta l'organizzazione</h3>
             <ul>
               <li title="Indirizzo di posta">
