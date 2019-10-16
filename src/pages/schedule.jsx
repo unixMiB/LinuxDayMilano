@@ -213,7 +213,7 @@ class DetailView extends React.Component {
       title: 'Titolo talk',
       author: 'Relatore',
       description: 'Breve descrizione del talk',
-      room: 'Aula',
+      room: '',
       duration: 'Durata intervento',
     }
   }
@@ -251,7 +251,8 @@ class DetailView extends React.Component {
           <h6>{this.state.author}</h6>
           <Row>
             <Col>Durata: {this.state.duration}</Col>
-            <Col className="text-right">Aula: {this.state.room}</Col>
+            {/* <Col className="text-right">Aula: {this.state.room}</Col> */}
+            <Col className="text-right">{this.state.room === '' ? '' : 'Aula: ' + this.state.room}</Col>
           </Row>
         </Modal.Body>
         <Modal.Footer>
@@ -299,7 +300,7 @@ class Talks extends React.Component {
           return (
             <Row className="pb-4">
               <Col sm={1} className="pb-4 mr-2">
-                <h5>{i.time}</h5>
+                <h5 className="schedule-time">{i.time}</h5>
               </Col>
               {i.talks.map(t => {
                 return (

@@ -27,9 +27,25 @@ a.anchor {
 }
 
 .dark {
+  .schedule-time {
+  color: $gray-100;
+  }
+
+  .modal-content {
+    background-color: $gray-900;
+  }
+
   background-color: $gray-900;
   color: $gray-100;
   #schedule-placeholder {
     color: $gray-100;
+  }
+
+  .event {
+    color: $gray-100
+  }
+
+  .event:hover {
+  background-color: $gray-600;
   }
 }
