@@ -299,12 +299,12 @@ class Talks extends React.Component {
         {schedule.map(i => {
           return (
             <Row className="pb-4">
-              <Col sm={1} className="pb-4 mr-2">
+              <Col lg={1} md={12} className="pb-4 mr-2">
                 <h5 className="schedule-time">{i.time}</h5>
               </Col>
               {i.talks.map(t => {
                 return (
-                  <Col sm className="pb-4">
+                  <Col sm={12} md className="pb-4">
                     <div
                       onClick={() => this.replaceModalItem(t)}
                       className="event border h-100"
