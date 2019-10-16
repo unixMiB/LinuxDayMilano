@@ -81,12 +81,11 @@ const IndexPage = ({ data }) => (
               <h2>PROGRAMMA</h2>
               <p>
                 <b style={{ 'font-size': '1.25rem' }}>
-                  Il nostro team di pinguini sta terminando il programma del
-                  Linux Day, ricontrolla fra qualche giorno.
+                  Il programma dettagliato della giornata è finalmente disponibile!
                 </b>
                 <br />
                 <br />
-                Per ora ecco qualche indizio:
+                Ecco in breve alcuni dei nostri talk:
                 <br />
                 <br />
                 <ul>
@@ -99,7 +98,7 @@ const IndexPage = ({ data }) => (
                 </ul>
               </p>
               <br />
-              <Button href="#" className="btn-lg" variant="warning">
+              <Button href="/schedule" className="btn-lg" variant="warning">
                 Guarda il programma
               </Button>
             </div>
