@@ -175,13 +175,13 @@ const schedule = [
         room: aula_ia,
         duration: '60 min',
       },
-      {
-        title: 'Titolo',
-        description: 'Descrizione',
-        author: 'Autore - Azienda',
-        room: aula_ot,
-        duration: '60 min',
-      },
+      // {
+      //   title: 'Titolo',
+      //   description: 'Descrizione',
+      //   author: 'Autore - Azienda',
+      //   room: aula_ot,
+      //   duration: '60 min',
+      // },
       {
         title: 'The Dark side of AI',
         description: '',
