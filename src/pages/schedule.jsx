@@ -313,7 +313,7 @@ class Talks extends React.Component {
                         cursor: 'pointer',
                       }}
                     >
-                      <Row><Col><h4>{t.title}</h4></Col></Row>
+                      <Row><Col><h5>{t.title}</h5></Col></Row>
                       <Row className="mt-2"><Col><h6>{t.author}</h6></Col></Row>
                       <Row className="flex-grow-1 mt-3 align-items-end">
                         <Col className="text-left">{t.duration}</Col>
