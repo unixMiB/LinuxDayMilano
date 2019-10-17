@@ -68,7 +68,7 @@ const schedule = [
       {
         title: 'Machine Data - Machines are talking. Are you listening?',
         description: 'Analisi dei machine-data ovvero dei dati generati dalle macchine al fine di semplificare le attività di operations, troubleshooting e anche le attività BAU (Business As Usual).',
-        author: 'Francesco Fresta - Azienda',
+        author: 'Francesco Fresta',
         room: aula_ia,
         duration: '60 min',
       },
@@ -140,7 +140,7 @@ const schedule = [
       {
         title: "Linee Guida su Acquisizione e Riuso di Software per le PA, le novità dell'ultima versione in vigore dal 9 maggio 2019",
         description: 'Descrizione',
-        author: 'Italo Vignoli - Azienda',
+        author: 'Italo Vignoli',
         room: aula_ot,
         duration: '60 min',
       },
@@ -178,7 +178,7 @@ const schedule = [
       // {
       //   title: 'Titolo',
       //   description: 'Descrizione',
-      //   author: 'Autore - Azienda',
+      //   author: 'Autore',
       //   room: aula_ot,
       //   duration: '60 min',
       // },
@@ -307,17 +307,16 @@ class Talks extends React.Component {
                   <Col sm={12} md className="pb-4">
                     <div
                       onClick={() => this.replaceModalItem(t)}
-                      className="event border h-100"
+                      className="event border h-100 d-flex flex-column"
                       style={{
                         padding: '1rem',
                         cursor: 'pointer',
                       }}
                     >
-                      <h4>{t.title}</h4>
-                      <br/>
-                      <h6>{t.author}</h6>
-                      <Row>
-                        <Col>{t.duration}</Col>
+                      <Row><Col><h4>{t.title}</h4></Col></Row>
+                      <Row className="mt-2"><Col><h6>{t.author}</h6></Col></Row>
+                      <Row className="flex-grow-1 mt-3 align-items-end">
+                        <Col className="text-left">{t.duration}</Col>
                         <Col className="text-center">{t.room}</Col>
                         <Col className="text-right"><FontAwesomeIcon sm={true} icon="info-circle"/></Col>
                       </Row>
