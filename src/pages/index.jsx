@@ -81,7 +81,8 @@ const IndexPage = ({ data }) => (
               <h2>PROGRAMMA</h2>
               <p>
                 <b style={{ 'font-size': '1.25rem' }}>
-                  Il programma dettagliato della giornata è finalmente disponibile!
+                  Il programma dettagliato della giornata è finalmente
+                  disponibile!
                 </b>
                 <br />
                 <br />

@@ -8,7 +8,7 @@ html {
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.8) !important
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 a.anchor {
@@ -28,7 +28,7 @@ a.anchor {
 
 .dark {
   .schedule-time {
-  color: $gray-100;
+    color: $gray-100;
   }
 
   .modal-content {
@@ -42,10 +42,10 @@ a.anchor {
   }
 
   .event {
-    color: $gray-100
+    color: $gray-100;
   }
 
   .event:hover {
-  background-color: $gray-600;
+    background-color: $gray-600;
   }
 }
