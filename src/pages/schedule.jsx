@@ -27,10 +27,10 @@ const schedule = [
     time: '10:30',
     talks: [
       {
-        title: 'Intelligenza a livello umano o abilità a livello animale?',
+        title: 'Machine Data - Machines are talking. Are you listening?',
         description:
-          'L’intervento sintetizza lo stato di avanzamento dell’Intelligenza Artificiale, con particolare attenzione ai recenti sviluppi nell’ambito del Deep Learning, un sottoinsieme dell’Intelligenza Artificiale che ha visto tre pionieri del settore ricevere il premio Turing 2018. Si cerca di analizzare criticamente cosa sia stato effettivamente raggiunto, cosa sia a portata di mano e cosa sia ancora molto lontano dalle nostre attuali conoscenze.',
-        author: 'Fabio Stella - Università Milano Bicocca',
+          'Analisi dei machine-data ovvero dei dati generati dalle macchine al fine di semplificare le attività di operations, troubleshooting e anche le attività BAU (Business As Usual).',
+        author: 'Francesco Fresta',
         room: aula_ia,
         duration: '60 min',
       },
@@ -68,10 +68,10 @@ const schedule = [
     time: '11:45',
     talks: [
       {
-        title: 'Machine Data - Machines are talking. Are you listening?',
+        title: 'Intelligenza a livello umano o abilità a livello animale?',
         description:
-          'Analisi dei machine-data ovvero dei dati generati dalle macchine al fine di semplificare le attività di operations, troubleshooting e anche le attività BAU (Business As Usual).',
-        author: 'Francesco Fresta',
+          'L’intervento sintetizza lo stato di avanzamento dell’Intelligenza Artificiale, con particolare attenzione ai recenti sviluppi nell’ambito del Deep Learning, un sottoinsieme dell’Intelligenza Artificiale che ha visto tre pionieri del settore ricevere il premio Turing 2018. Si cerca di analizzare criticamente cosa sia stato effettivamente raggiunto, cosa sia a portata di mano e cosa sia ancora molto lontano dalle nostre attuali conoscenze.',
+        author: 'Fabio Stella - Università Milano Bicocca',
         room: aula_ia,
         duration: '60 min',
       },
