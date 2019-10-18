@@ -159,7 +159,7 @@ const schedule = [
         title: 'BiBirra: Deep image retrieval for beer recognition',
         description:
           "Raccontando lo sviluppo di una applicazione in grado di riconoscere una birra da una foto della bottiglia, sarà descritto il processo che porta da un'idea all'implementazione di un modello di Machine Learning.Si analizzeranno i problemi più comuni e come scegliere tra le possibili soluzioni.",
-        author: 'ML Milan',
+        author: 'Matteo Ronchetti - ML Milan',
         room: aula_mix,
         duration: '60 min',
       },
@@ -173,7 +173,7 @@ const schedule = [
         description: 'Una breve pausa per rinfrescare la mente',
         author: '',
         room: '',
-        duration: '60 min',
+        duration: '15 min',
       },
     ],
   },
