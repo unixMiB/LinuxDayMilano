@@ -57,7 +57,7 @@ const schedule = [
     talks: [
       {
         title: 'Pausa caffé',
-        description: '',
+        description: 'Una breve pausa per rinfrescare la mente',
         author: '',
         room: '',
         duration: '15 min',
@@ -100,7 +100,7 @@ const schedule = [
     talks: [
       {
         title: 'Pausa pranzo',
-        description: 'Una breve pausa per rinfrescare la mente',
+        description: 'Una pausa per rinfrescare la mente',
         author: '',
         room: '',
         duration: '1 ora e 15 min',
