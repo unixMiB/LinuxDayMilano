@@ -37,13 +37,13 @@ const schedule = [
       {
         title:
           'Open Hardware, Software Libero e Stampa 3D attrattori "Farfalla" del PowerPC Notebook project',
-        description: '',
+        description: 'Un modesto progetto Open Hardware di una scheda madre PowerPC per notebook  portato avanti da volontari e autofinanziato potrebbe generare indirettamente importanti cambiamenti nell\'industria dell\' elettronica, inducendo un "Effetto Farfalla". Open Hardware, Software Libero e Stampa 3D hanno rimescolato le carte del cambiamento nell\'industria elettronica; sono un\'opportunità per decentralizzare e democratizzare la produzione elettronica, il sapere e distribuire uniformemente i fattori di vantaggio che generano. Vedremo esempi concreti come la progettazione della scheda madre OSWH PowerPC Notebook con licenza Open Hardware Cern, la creazione pacchetti Debian PowerPC a 64 bit e l\'uso di Blender e FreeCad per la progettazione dello chassis Open Hardware.',
         author: 'Roberto Innocenti',
         room: aula_ot,
         duration: '60 min',
       },
       {
-        title: 'Programmazione e tecniche di sviluppo',
+        title: 'La Unix Way e i metodi per produrre software',
         description:
           "Esploriamo metodi di sviluppodel software, occupandoci di DevOps in particolare e includendo un po' di storia del free software e dell'open source.",
         author: 'Fabio Mora',
@@ -188,13 +188,13 @@ const schedule = [
         room: aula_ia,
         duration: '60 min',
       },
-      // {
-      //   title: 'Titolo',
-      //   description: 'Descrizione',
-      //   author: 'Autore',
-      //   room: aula_ot,
-      //   duration: '60 min',
-      // },
+      {
+        title: 'I formati aperti e standard',
+        description: '',
+        author: 'Enio Gemmo',
+        room: aula_ot,
+        duration: '60 min',
+      },
       {
         title: 'The Dark side of AI',
         description: '',
