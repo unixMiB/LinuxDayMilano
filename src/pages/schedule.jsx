@@ -121,7 +121,7 @@ const schedule = [
       {
         title:
           'Diritto alla riparazione e free software - impatto sulle emissioni di CO2',
-        description: '',
+        description: 'Nessuna descrizione disponibile',
         author: 'Savino Curci - PC Officina',
         room: aula_ot,
         duration: '60 min',
@@ -150,7 +150,7 @@ const schedule = [
       {
         title:
           "Linee Guida su Acquisizione e Riuso di Software per le PA, le novità dell'ultima versione in vigore dal 9 maggio 2019",
-        description: 'Descrizione',
+        description: 'Nessuna descrizione disponibile',
         author: 'Italo Vignoli',
         room: aula_ot,
         duration: '60 min',
@@ -190,14 +190,14 @@ const schedule = [
       },
       {
         title: 'I formati aperti e standard',
-        description: '',
+        description: 'Nessuna descrizione disponibile',
         author: 'Enio Gemmo',
         room: aula_ot,
         duration: '60 min',
       },
       {
         title: 'The Dark side of AI',
-        description: '',
+        description: 'Nessuna descrizione disponibile',
         author: 'Marco Schiaffino',
         room: aula_mix,
         duration: '60 min',
@@ -209,7 +209,7 @@ const schedule = [
     talks: [
       {
         title: 'Chiusura',
-        description: '',
+        description: 'Chisura della giornata',
         author: '',
         room: '',
         duration: '',
