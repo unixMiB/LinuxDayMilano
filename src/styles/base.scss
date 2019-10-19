@@ -33,6 +33,10 @@ a.anchor {
 
   .modal-content {
     background-color: $gray-900;
+
+    button.close {
+      color: white;
+    }
   }
 
   background-color: $gray-900;
