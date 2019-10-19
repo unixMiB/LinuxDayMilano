@@ -111,9 +111,9 @@ const schedule = [
     time: '14:00',
     talks: [
       {
-        title: 'The AI Winter (Working Title)',
+        title: 'Weaving a story',
         description:
-          "Un viaggio alla scoperta della storia dell'intelligenza artificiale, a partire dalle speranze dei pionieri dell'informatica fino alla fine del secolo scorso, tramite un'analisi delle architetture hardware del software e dei carichi di lavoro, molto diversi da quelli a cui siamo abituati oggi.",
+          "Retrospettiva sull'intelligenza artificale e sulle tecnologie che l'hanno resa possibile, a partire dalle speranze dei pionieri dell'informatica fino alla fine del secolo scorso, tramite un'analisi delle architetture hardware del software e dei carichi di lavoro, molto diversi da quelli a cui siamo abituati oggi.",
         author: 'Jacopo Maltagliati',
         room: aula_ia,
         duration: '60 min',
