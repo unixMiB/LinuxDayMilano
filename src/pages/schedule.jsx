@@ -191,7 +191,7 @@ const schedule = [
       },
       {
         title: 'I formati aperti e standard',
-        description: 'Nessuna descrizione disponibile',
+        description: 'La differenza tra De jure e De facto',
         author: 'Enio Gemmo',
         room: aula_ot,
         duration: '60 min',
