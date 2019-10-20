@@ -45,7 +45,7 @@ const schedule = [
       {
         title: 'La Unix Way e i metodi per produrre software',
         description:
-          "Esploriamo metodi di sviluppodel software, occupandoci di DevOps in particolare e includendo un po' di storia del free software e dell'open source.",
+          "Scrivere applicazioni per mestiere non è più una disciplina individuale da molte decadi: piuttosto è un gioco di squadra, team. William Deming, celebre statistico, dimostrò che il 90% dei risultati ottenuti in azienda sono determinati da processi e metodi in uso, ancor prima che dalle prestazioni individuali: il "genio" individuale è sopravvalutato. Oggi la tecnologia rappresenta una grande opportunità per le imprese ma coniugarne lo sviluppo all'agilità e all'affidabilità dei processi non è facile. Negli anni metodi e metodologie sono evoluti radicalmente, ma il Free Software e l'Open Source hanno sempre regalato contributi determinanti. Con l'acronimo KISS (Keep It Simple and Stupid) si evoca un modo di fare software antico: la Unix Way. Declinata oggi nel mondo Linux da migliaia di tecnici e organizzazioni, include assunti come modularità, semplicità, composizione e chiarezza nel fare. Tra gli esempi? GNU/Linux, e git. Una panoramica sui metodi, dalla Crisi del Software degli anni '60 fino ai metodi Agili e DevOps.",
         author: 'Fabio Mora',
         room: aula_mix,
         duration: '60 min',
