@@ -80,7 +80,7 @@ const schedule = [
         title:
           "Joomla! - Privacy Tool Suite: Come difendere la privacy e l'individualità degli utenti del tuo sito web in pieno rispetto del GDPR",
         description:
-          'Rispetto alla durata del talk concordata sarà possibile mostrare solo la parte di Provacy Tool Suite o anche come installare il Content Managment System da zero (devo fare una prova sulla durata della parte Privacy Tool Suite).',
+          "Come difendere la privacy e l'individualità degli utenti del tuo sito web in pieno rispetto del GDPR",
         author: 'Luca Racchetti',
         room: aula_ot,
         duration: '60 min',
