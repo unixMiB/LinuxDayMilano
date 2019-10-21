@@ -151,7 +151,7 @@ const schedule = [
       {
         title:
           "Linee Guida su Acquisizione e Riuso di Software per le PA, le novità dell'ultima versione in vigore dal 9 maggio 2019",
-        description: 'Nessuna descrizione disponibile',
+        description: 'Una sintesi delle principali novità che emergono da una lettura critica delle Linee Guida su Acquisizione e Riuso di Software per le PA. Perché si tratta di un documento importante, per il software open source e per i formati standard e aperti. Cosa fare, e come farlo, per comunicare e sfruttare i vantaggi delle linee guida per la comunità open source.',
         author: 'Italo Vignoli',
         room: aula_ot,
         duration: '60 min',
