@@ -198,7 +198,7 @@ const schedule = [
       },
       {
         title: 'The Dark side of AI',
-        description: 'Nessuna descrizione disponibile',
+        description: 'L’intelligenza artificiale e le sue applicazioni promettono meraviglie per il prossimo futuro. Ma a quale prezzo? Per quali scopi e come vengono applicati gli algoritmi di AI oggi? Viaggio in un mondo che fa (anche) paura.',
         author: 'Marco Schiaffino',
         room: aula_mix,
         duration: '60 min',
