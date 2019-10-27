@@ -20,6 +20,7 @@ const schedule = [
         author: 'Daniele Barcella, Ilaria Battiston - unixMiB',
         room: aula_ia,
         duration: '60 min',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Keynote%20-%20Daniele%20Barcella.%20Ilaria%20Battiston.pdf',
       },
     ],
   },
@@ -33,6 +34,7 @@ const schedule = [
         author: 'Francesco Fresta',
         room: aula_ia,
         duration: '60 min',
+        slides: '',
       },
       {
         title:
@@ -42,6 +44,7 @@ const schedule = [
         author: 'Roberto Innocenti',
         room: aula_ot,
         duration: '60 min',
+        slides: '',
       },
       {
         title: 'La Unix Way e i metodi per produrre software',
@@ -50,6 +53,7 @@ const schedule = [
         author: 'Fabio Mora',
         room: aula_mix,
         duration: '60 min',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/La%20Unix%20Way%20e%20i%20metodi%20per%20produrre%20software%20-%20Fabio%20Mora.pdf',
       },
     ],
   },
@@ -75,6 +79,7 @@ const schedule = [
         author: 'Fabio Stella - Università Milano Bicocca',
         room: aula_ia,
         duration: '60 min',
+        slides: '',
       },
       {
         title:
@@ -84,6 +89,7 @@ const schedule = [
         author: 'Luca Racchetti',
         room: aula_ot,
         duration: '60 min',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Joomla!%20Privacy%20Tool%20Suite%20-%20Luca%20Racchetti.pdf',
       },
       {
         title:
@@ -93,6 +99,7 @@ const schedule = [
         author: 'Matteo Enna',
         room: aula_mix,
         duration: '60 min',
+        slides: '',
       },
     ],
   },
@@ -118,6 +125,7 @@ const schedule = [
         author: 'Jacopo Maltagliati',
         room: aula_ia,
         duration: '60 min',
+        slides: '',
       },
       {
         title:
@@ -126,6 +134,7 @@ const schedule = [
         author: 'Savino Curci - PC Officina',
         room: aula_ot,
         duration: '60 min',
+        slides: '',
       },
       {
         title: 'How to virtualize in containers',
@@ -134,6 +143,7 @@ const schedule = [
         author: 'Marek Libra',
         room: aula_mix,
         duration: '60 min',
+        slides: '',
       },
     ],
   },
@@ -147,6 +157,7 @@ const schedule = [
         author: 'Davide Riva',
         room: aula_ia,
         duration: '60 min',
+        slides: '',
       },
       {
         title:
@@ -155,6 +166,7 @@ const schedule = [
         author: 'Italo Vignoli',
         room: aula_ot,
         duration: '60 min',
+        slides: '',
       },
       {
         title: 'BiBirra: Deep image retrieval for beer recognition',
@@ -163,6 +175,7 @@ const schedule = [
         author: 'Matteo Ronchetti - ML Milan',
         room: aula_mix,
         duration: '60 min',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/BiBirra%2C%20deep%20image%20retrieval%20for%20beer%20recognition%20-%20Matteo%20Ronchetti%20-%20ML%20Milan.pdf',
       },
     ],
   },
@@ -188,6 +201,7 @@ const schedule = [
         author: 'Luca Carcano',
         room: aula_ia,
         duration: '60 min',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20art%20of%20Machine%20Learning%20-%20Luca%20Carcano.pdf',
       },
       {
         title: 'I formati aperti e standard',
@@ -195,6 +209,7 @@ const schedule = [
         author: 'Enio Gemmo',
         room: aula_ot,
         duration: '60 min',
+        slides: '',
       },
       {
         title: 'The Dark side of AI',
@@ -202,6 +217,7 @@ const schedule = [
         author: 'Marco Schiaffino',
         room: aula_mix,
         duration: '60 min',
+        slides: '',
       },
     ],
   },
@@ -229,6 +245,7 @@ class DetailView extends React.Component {
       description: 'Breve descrizione del talk',
       room: '',
       duration: 'Durata intervento',
+      slides: ''
     }
   }
 
@@ -240,6 +257,7 @@ class DetailView extends React.Component {
       description: nextProps.description,
       room: nextProps.room,
       duration: nextProps.duration,
+      slides: nextProps.slides
     })
   }
 
@@ -272,6 +290,7 @@ class DetailView extends React.Component {
           </Row>
         </Modal.Body>
         <Modal.Footer>
+          {this.state.slides===''?'':<Button target="_blank" href={this.state.slides} variant="warning"><FontAwesomeIcon icon='download'/> Slides</Button>}
           <Button
             variant="warning"
             onClick={() => {
@@ -297,6 +316,7 @@ class Talks extends React.Component {
         author: 'Autore',
         room: 'Aula',
         duration: 'Durata',
+        slides: ''
       },
     }
     this.replaceModalItem = this.replaceModalItem.bind(this)
@@ -359,6 +379,7 @@ class Talks extends React.Component {
           description={modalData.description}
           room={modalData.room}
           duration={modalData.duration}
+          slides={modalData.slides}
         />
       </Container>
     )

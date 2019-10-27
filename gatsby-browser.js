@@ -20,6 +20,7 @@ import {
   faMapMarkedAlt,
   faChevronRight,
   faEnvelope,
+  faDownload,
   faGlobe,
 } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -29,6 +30,7 @@ library.add(
   faFlag,
   faInfoCircle,
   faWrench,
+  faDownload,
   faBullhorn,
   faShoppingBag,
   faCalendar,
