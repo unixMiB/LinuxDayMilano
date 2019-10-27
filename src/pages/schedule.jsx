@@ -79,7 +79,7 @@ const schedule = [
         author: 'Fabio Stella - Università Milano Bicocca',
         room: aula_ia,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Intelligenza%20a%20livello%20umano%20o%20abilit%C3%A0%20a%20livello%20animale%20-%20Fabio%20Stella%20-%20Universit%C3%A0%20Milano%20Bicocca.pdf',
       },
       {
         title:
@@ -157,7 +157,7 @@ const schedule = [
         author: 'Davide Riva',
         room: aula_ia,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Vettorizzazione%2C%20a%20hands-on%20approach%20in%20Python%20-%20Davide%20Riva.pdf',
       },
       {
         title:
