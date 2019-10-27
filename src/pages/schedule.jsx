@@ -290,7 +290,7 @@ class DetailView extends React.Component {
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          {this.state.slides===''?'':<Button target="_blank" href={this.state.slides} variant="warning"><FontAwesomeIcon icon='download'/> Slides</Button>}
+          {(this.state.slides ==='' || this.state.slides==null)?'':<Button target="_blank" href={this.state.slides} variant="warning"><FontAwesomeIcon icon='download'/> Slides</Button>}
           <Button
             variant="warning"
             onClick={() => {
