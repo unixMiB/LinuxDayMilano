@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Button, Row, Container } from 'react-bootstrap'
+import { Button, Row, Container, Alert } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import watch from '../assets/watch.png'
 import talks from '../assets/talk-subscription.png'
@@ -26,6 +26,7 @@ const IndexPage = ({ data }) => (
             </a>
           </h3>
           <br />
+          <Alert variant="warning">Finalmente disponibili le slide al download (aggiornamento in corso)! <Alert.Link href="/schedule">Apri il programma della giornata</Alert.Link></Alert>
           <div className="subtitle">
             <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
             <br />
@@ -49,10 +50,10 @@ const IndexPage = ({ data }) => (
           {/* <div className="col-md-offset-1 front text"> */}
           <div className="front text">
             <p>
-              <h2>
-                IL LINUX DAY <span>MILANO</span> SI SVOLGERÀ
+              <h2 style={{textTransform: 'uppercase'}}>
+                Il Linux Day <span>Milano</span> si è svolto
                 <br />
-                <span>SABATO 26 OTTOBRE 2019</span>
+                <span>Sabato 26 Ottobre 2019</span>
               </h2>
               <br />
               Torna la principale manifestazione italiana dedicata a GNU/Linux,
@@ -81,8 +82,7 @@ const IndexPage = ({ data }) => (
               <h2>PROGRAMMA</h2>
               <p>
                 <b style={{ 'font-size': '1.25rem' }}>
-                  Il programma dettagliato della giornata è finalmente
-                  disponibile!
+                  Il programma dettagliato della giornata, insieme alle slide, è disponibile online.
                 </b>
                 <br />
                 <br />

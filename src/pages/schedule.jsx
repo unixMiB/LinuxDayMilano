@@ -343,7 +343,7 @@ class Talks extends React.Component {
                   <Col sm={12} md className="pb-4">
                     <div
                       onClick={() => this.replaceModalItem(t)}
-                      className="event border h-100 d-flex flex-column"
+                      className="event border rounded h-100 d-flex flex-column"
                       style={{
                         padding: '1rem',
                         cursor: 'pointer',
