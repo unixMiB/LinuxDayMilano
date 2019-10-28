@@ -99,7 +99,7 @@ const schedule = [
         author: 'Matteo Enna',
         room: aula_mix,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/PHP%2C%20un%20linguaggio%20come%20tanti%2C%20vivo%20grazie%20alle%20community%20Open%20source%20-%20Matteo%20Enna.pdf',
       },
     ],
   },
