@@ -34,7 +34,7 @@ const schedule = [
         author: 'Francesco Fresta',
         room: aula_ia,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Machine%20Data%20-%20Machines%20are%20talking.%20Are%20you%20listening%20-%20Francesco%20Fresta.pdf',
       },
       {
         title:
@@ -134,7 +134,7 @@ const schedule = [
         author: 'Savino Curci - PC Officina',
         room: aula_ot,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Diritto%20alla%20riparazione%20e%20free%20software%20-%20Savino%20Curci%20-%20PC%20Officina.pdf',
       },
       {
         title: 'How to virtualize in containers',
@@ -157,7 +157,7 @@ const schedule = [
         author: 'Davide Riva',
         room: aula_ia,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Vettorizzazione%2C%20a%20hands-on%20approach%20in%20Python%20-%20Davide%20Riva.pdf',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Vettorizzazione%2C%20a%20hands-on%20approach%20in%20Python%20-%20Davide%20Riva.odp',
       },
       {
         title:
@@ -166,7 +166,7 @@ const schedule = [
         author: 'Italo Vignoli',
         room: aula_ot,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Linee%20Guida%20su%20Acquisizione%20e%20Riuso%20di%20Software%20per%20le%20PA%20-%20Italo%20Vignoli.pdf',
       },
       {
         title: 'BiBirra: Deep image retrieval for beer recognition',
@@ -209,7 +209,7 @@ const schedule = [
         author: 'Enio Gemmo',
         room: aula_ot,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/I%20formati%20aperti%20e%20standard%20-%20Enio%20Gemmo.odp',
       },
       {
         title: 'The Dark side of AI',
