@@ -41,10 +41,10 @@ const schedule = [
           'Open Hardware, Software Libero e Stampa 3D attrattori "Farfalla" del PowerPC Notebook project',
         description:
           "Un modesto progetto Open Hardware di una scheda madre PowerPC per notebook  portato avanti da volontari e autofinanziato potrebbe generare indirettamente importanti cambiamenti nell'industria dell' elettronica, inducendo un \"Effetto Farfalla\". Open Hardware, Software Libero e Stampa 3D hanno rimescolato le carte del cambiamento nell'industria elettronica; sono un'opportunità per decentralizzare e democratizzare la produzione elettronica, il sapere e distribuire uniformemente i fattori di vantaggio che generano. Vedremo esempi concreti come la progettazione della scheda madre OSWH PowerPC Notebook con licenza Open Hardware Cern, la creazione pacchetti Debian PowerPC a 64 bit e l'uso di Blender e FreeCad per la progettazione dello chassis Open Hardware.",
-        author: 'Roberto Innocenti',
+        author: 'Roberto Innocenti - Power Progress Community',
         room: aula_ot,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/PowerPC%20Notebook%20project%20-%20Roberto%20Innocenti%20-%20Power%20Progress%20Community.pdf',
       },
       {
         title: 'La Unix Way e i metodi per produrre software',
