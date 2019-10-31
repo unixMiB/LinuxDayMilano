@@ -143,7 +143,7 @@ const schedule = [
         author: 'Marek Libra',
         room: aula_mix,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/How%20to%20virtualize%20in%20containers%20-%20Marek%20Libra.pdf',
       },
     ],
   },
