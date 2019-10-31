@@ -217,7 +217,7 @@ const schedule = [
         author: 'Marco Schiaffino',
         room: aula_mix,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20Dark%20side%20of%20AI%20-%20Marco%20Schiaffino.pdf',
       },
     ],
   },
