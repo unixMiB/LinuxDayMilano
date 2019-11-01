@@ -125,7 +125,7 @@ const schedule = [
         author: 'Jacopo Maltagliati',
         room: aula_ia,
         duration: '60 min',
-        slides: '',
+        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Weaving%20a%20Story%20-%20Jacopo%20Maltagliati.pptx',
       },
       {
         title:
