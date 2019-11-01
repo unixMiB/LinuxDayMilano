@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
             </a>
           </h3>
           <br />
-          <Alert variant="warning">Finalmente disponibili le slide al download (aggiornamento in corso)! <Alert.Link href="/schedule">Apri il programma della giornata</Alert.Link></Alert>
+          <Alert variant="warning">Finalmente disponibili le slide al download! <Alert.Link href="/schedule">Apri il programma della giornata</Alert.Link></Alert>
           <div className="subtitle">
             <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
             <br />
