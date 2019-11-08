@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import 'bootstrap/scss/bootstrap.scss'
 import './src/styles/main.scss'
 
 import { library } from '@fortawesome/fontawesome-svg-core'

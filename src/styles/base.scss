@@ -11,6 +11,24 @@ html {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  .brand {
+    font-weight: bold;
+    span {
+      color: $ldmi;
+    }
+    .logo {
+      margin-bottom: 0.2em;
+    }
+  }
+}
+
 a.anchor {
   display: block;
   position: relative;
@@ -51,5 +69,18 @@ a.anchor {
 
   .event:hover {
     background-color: $gray-600;
+  }
+}
+
+footer {
+  color: white;
+  background-color: #212121;
+  text-align: center;
+  padding: 2rem 2.5rem 2rem;
+  span.ldmi {
+    color: $ldmi;
+  }
+  span.unixmib {
+    color: $unixmib;
   }
 }

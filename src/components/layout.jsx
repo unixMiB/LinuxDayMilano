@@ -1,47 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-            description
-            theme
-            keywords
-            author
-            navbarVariant
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'theme-color', content: data.site.siteMetadata.theme },
-            {
-              name: 'description',
-              content: data.site.siteMetadata.description,
-            },
-            { name: 'author', content: data.site.siteMetadata.author },
-            { name: 'keywords', content: data.site.siteMetadata.keywords },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
-        <Header siteData={data.site.siteMetadata} />
-        {children}
-      </>
-    )}
-  />
+  <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+    <Header />
+    <div className="container-fluid flex-grow-1" style={{ padding: 0 }}>
+      {children}
+    </div>
+    <footer className="text-center align align-middle">
+      Quest'opera è distribuita con Licenza Creative Commons Attribuzione -{' '}
+      <span className="ldmi">
+        Condividi allo stesso modo 4.0 Internazionale
+      </span>{' '}
+      - unix
+      <span className="unixmib">MiB</span> 2019
+    </footer>
+  </div>
 )
 
 Layout.propTypes = {

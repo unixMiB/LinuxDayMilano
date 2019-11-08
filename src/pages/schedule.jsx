@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap'
+import SEO from '../components/seo'
 
 const aula_ia = 'U7-03'
 const aula_ot = 'U7-04'
@@ -20,7 +21,8 @@ const schedule = [
         author: 'Daniele Barcella, Ilaria Battiston - unixMiB',
         room: aula_ia,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Keynote%20-%20Daniele%20Barcella.%20Ilaria%20Battiston.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Keynote%20-%20Daniele%20Barcella.%20Ilaria%20Battiston.pdf',
       },
     ],
   },
@@ -34,7 +36,8 @@ const schedule = [
         author: 'Francesco Fresta',
         room: aula_ia,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Machine%20Data%20-%20Machines%20are%20talking.%20Are%20you%20listening%20-%20Francesco%20Fresta.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Machine%20Data%20-%20Machines%20are%20talking.%20Are%20you%20listening%20-%20Francesco%20Fresta.pdf',
       },
       {
         title:
@@ -44,7 +47,8 @@ const schedule = [
         author: 'Roberto Innocenti - Power Progress Community',
         room: aula_ot,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/PowerPC%20Notebook%20project%20-%20Roberto%20Innocenti%20-%20Power%20Progress%20Community.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/PowerPC%20Notebook%20project%20-%20Roberto%20Innocenti%20-%20Power%20Progress%20Community.pdf',
       },
       {
         title: 'La Unix Way e i metodi per produrre software',
@@ -53,7 +57,8 @@ const schedule = [
         author: 'Fabio Mora',
         room: aula_mix,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/La%20Unix%20Way%20e%20i%20metodi%20per%20produrre%20software%20-%20Fabio%20Mora.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/La%20Unix%20Way%20e%20i%20metodi%20per%20produrre%20software%20-%20Fabio%20Mora.pdf',
       },
     ],
   },
@@ -79,7 +84,8 @@ const schedule = [
         author: 'Fabio Stella - Università Milano Bicocca',
         room: aula_ia,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Intelligenza%20a%20livello%20umano%20o%20abilit%C3%A0%20a%20livello%20animale%20-%20Fabio%20Stella%20-%20Universit%C3%A0%20Milano%20Bicocca.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Intelligenza%20a%20livello%20umano%20o%20abilit%C3%A0%20a%20livello%20animale%20-%20Fabio%20Stella%20-%20Universit%C3%A0%20Milano%20Bicocca.pdf',
       },
       {
         title:
@@ -89,7 +95,8 @@ const schedule = [
         author: 'Luca Racchetti',
         room: aula_ot,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Joomla!%20Privacy%20Tool%20Suite%20-%20Luca%20Racchetti.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Joomla!%20Privacy%20Tool%20Suite%20-%20Luca%20Racchetti.pdf',
       },
       {
         title:
@@ -99,7 +106,8 @@ const schedule = [
         author: 'Matteo Enna',
         room: aula_mix,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/PHP%2C%20un%20linguaggio%20come%20tanti%2C%20vivo%20grazie%20alle%20community%20Open%20source%20-%20Matteo%20Enna.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/PHP%2C%20un%20linguaggio%20come%20tanti%2C%20vivo%20grazie%20alle%20community%20Open%20source%20-%20Matteo%20Enna.pdf',
       },
     ],
   },
@@ -125,16 +133,19 @@ const schedule = [
         author: 'Jacopo Maltagliati',
         room: aula_ia,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Weaving%20a%20Story%20-%20Jacopo%20Maltagliati.pptx',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Weaving%20a%20Story%20-%20Jacopo%20Maltagliati.pptx',
       },
       {
         title:
           'Diritto alla riparazione e free software - impatto sulle emissioni di CO2',
-        description: "Il diritto alla riparazione #RightToRepair è, l'ultimo tra i \"nuovi diritti\" e deriva da quelli che Stefano Rodotà indicava come conseguenza delle \"pacifiche rivoluzioni del Novecento, delle donne, degli ecologisti, della scienza e della tecnica\". Si intende come diritto alla riparazione la rimozione di tutti gli ostacoli che, spesso, rendono impossibile riparare un oggetto di nostra proprietà, si va dalla mancata disponibilità di parti di ricambio a prezzi ragionevoli, alla impossibilità di aprire un dispositivo o un apparecchio per poterlo riparare a causa di parti termosaldate, viti che si possono solo stringere etc. etc. Intorno alla riparazione sono nate iniziative come i Restart Party o i Repair Cafè, feste della riparazione comunitaria e condivisa, come amano chiamarla in Gran Bretagna gli inventori di questa formula, e a partire da questo movimento si è sviluppata recentemente una intensa attività di lobby a livello europeo che ha già conseguito dei risultati legislativi. Il movimento per il diritto alla riparazione è strettamente connesso con il movimento di lotta ai cambiamenti climatici e il punto di collegamento è proprio la lunghezza della vita dei nostri dispositivi, ogni anno di vita guadagnato si può tradurre in un mancato incremento di CO2 emessa. Il software libero gioca in questa prospettiva un ruolo importantissimo nel porre un freno alla cultura usa e getta, rendendo utilizzabili PC desktop e portatili altrimenti destinati ad essere smaltiti in ricicleria pur essendo perfettamente funzionanti.",
+        description:
+          'Il diritto alla riparazione #RightToRepair è, l\'ultimo tra i "nuovi diritti" e deriva da quelli che Stefano Rodotà indicava come conseguenza delle "pacifiche rivoluzioni del Novecento, delle donne, degli ecologisti, della scienza e della tecnica". Si intende come diritto alla riparazione la rimozione di tutti gli ostacoli che, spesso, rendono impossibile riparare un oggetto di nostra proprietà, si va dalla mancata disponibilità di parti di ricambio a prezzi ragionevoli, alla impossibilità di aprire un dispositivo o un apparecchio per poterlo riparare a causa di parti termosaldate, viti che si possono solo stringere etc. etc. Intorno alla riparazione sono nate iniziative come i Restart Party o i Repair Cafè, feste della riparazione comunitaria e condivisa, come amano chiamarla in Gran Bretagna gli inventori di questa formula, e a partire da questo movimento si è sviluppata recentemente una intensa attività di lobby a livello europeo che ha già conseguito dei risultati legislativi. Il movimento per il diritto alla riparazione è strettamente connesso con il movimento di lotta ai cambiamenti climatici e il punto di collegamento è proprio la lunghezza della vita dei nostri dispositivi, ogni anno di vita guadagnato si può tradurre in un mancato incremento di CO2 emessa. Il software libero gioca in questa prospettiva un ruolo importantissimo nel porre un freno alla cultura usa e getta, rendendo utilizzabili PC desktop e portatili altrimenti destinati ad essere smaltiti in ricicleria pur essendo perfettamente funzionanti.',
         author: 'Savino Curci - PC Officina',
         room: aula_ot,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Diritto%20alla%20riparazione%20e%20free%20software%20-%20Savino%20Curci%20-%20PC%20Officina.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Diritto%20alla%20riparazione%20e%20free%20software%20-%20Savino%20Curci%20-%20PC%20Officina.pdf',
       },
       {
         title: 'How to virtualize in containers',
@@ -143,7 +154,8 @@ const schedule = [
         author: 'Marek Libra',
         room: aula_mix,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/How%20to%20virtualize%20in%20containers%20-%20Marek%20Libra.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/How%20to%20virtualize%20in%20containers%20-%20Marek%20Libra.pdf',
       },
     ],
   },
@@ -157,16 +169,19 @@ const schedule = [
         author: 'Davide Riva',
         room: aula_ia,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Vettorizzazione%2C%20a%20hands-on%20approach%20in%20Python%20-%20Davide%20Riva.odp',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Vettorizzazione%2C%20a%20hands-on%20approach%20in%20Python%20-%20Davide%20Riva.odp',
       },
       {
         title:
           "Linee Guida su Acquisizione e Riuso di Software per le PA, le novità dell'ultima versione in vigore dal 9 maggio 2019",
-        description: 'Una sintesi delle principali novità che emergono da una lettura critica delle Linee Guida su Acquisizione e Riuso di Software per le PA. Perché si tratta di un documento importante, per il software open source e per i formati standard e aperti. Cosa fare, e come farlo, per comunicare e sfruttare i vantaggi delle linee guida per la comunità open source.',
+        description:
+          'Una sintesi delle principali novità che emergono da una lettura critica delle Linee Guida su Acquisizione e Riuso di Software per le PA. Perché si tratta di un documento importante, per il software open source e per i formati standard e aperti. Cosa fare, e come farlo, per comunicare e sfruttare i vantaggi delle linee guida per la comunità open source.',
         author: 'Italo Vignoli',
         room: aula_ot,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Linee%20Guida%20su%20Acquisizione%20e%20Riuso%20di%20Software%20per%20le%20PA%20-%20Italo%20Vignoli.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Linee%20Guida%20su%20Acquisizione%20e%20Riuso%20di%20Software%20per%20le%20PA%20-%20Italo%20Vignoli.pdf',
       },
       {
         title: 'BiBirra: Deep image retrieval for beer recognition',
@@ -175,7 +190,8 @@ const schedule = [
         author: 'Matteo Ronchetti - ML Milan',
         room: aula_mix,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/BiBirra%2C%20deep%20image%20retrieval%20for%20beer%20recognition%20-%20Matteo%20Ronchetti%20-%20ML%20Milan.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/BiBirra%2C%20deep%20image%20retrieval%20for%20beer%20recognition%20-%20Matteo%20Ronchetti%20-%20ML%20Milan.pdf',
       },
     ],
   },
@@ -201,7 +217,8 @@ const schedule = [
         author: 'Luca Carcano',
         room: aula_ia,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20art%20of%20Machine%20Learning%20-%20Luca%20Carcano.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20art%20of%20Machine%20Learning%20-%20Luca%20Carcano.pdf',
       },
       {
         title: 'I formati aperti e standard',
@@ -209,15 +226,18 @@ const schedule = [
         author: 'Enio Gemmo',
         room: aula_ot,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/I%20formati%20aperti%20e%20standard%20-%20Enio%20Gemmo.odp',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/I%20formati%20aperti%20e%20standard%20-%20Enio%20Gemmo.odp',
       },
       {
         title: 'The Dark side of AI',
-        description: 'L’intelligenza artificiale e le sue applicazioni promettono meraviglie per il prossimo futuro. Ma a quale prezzo? Per quali scopi e come vengono applicati gli algoritmi di AI oggi? Viaggio in un mondo che fa (anche) paura.',
+        description:
+          'L’intelligenza artificiale e le sue applicazioni promettono meraviglie per il prossimo futuro. Ma a quale prezzo? Per quali scopi e come vengono applicati gli algoritmi di AI oggi? Viaggio in un mondo che fa (anche) paura.',
         author: 'Marco Schiaffino',
         room: aula_mix,
         duration: '60 min',
-        slides: 'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20Dark%20side%20of%20AI%20-%20Marco%20Schiaffino.pdf',
+        slides:
+          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20Dark%20side%20of%20AI%20-%20Marco%20Schiaffino.pdf',
       },
     ],
   },
@@ -245,7 +265,7 @@ class DetailView extends React.Component {
       description: 'Breve descrizione del talk',
       room: '',
       duration: 'Durata intervento',
-      slides: ''
+      slides: '',
     }
   }
 
@@ -257,7 +277,7 @@ class DetailView extends React.Component {
       description: nextProps.description,
       room: nextProps.room,
       duration: nextProps.duration,
-      slides: nextProps.slides
+      slides: nextProps.slides,
     })
   }
 
@@ -290,7 +310,13 @@ class DetailView extends React.Component {
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          {(this.state.slides ==='' || this.state.slides==null)?'':<Button target="_blank" href={this.state.slides} variant="warning"><FontAwesomeIcon icon='download'/> Slides</Button>}
+          {this.state.slides === '' || this.state.slides == null ? (
+            ''
+          ) : (
+            <Button target="_blank" href={this.state.slides} variant="warning">
+              <FontAwesomeIcon icon="download" /> Slides
+            </Button>
+          )}
           <Button
             variant="warning"
             onClick={() => {
@@ -316,7 +342,7 @@ class Talks extends React.Component {
         author: 'Autore',
         room: 'Aula',
         duration: 'Durata',
-        slides: ''
+        slides: '',
       },
     }
     this.replaceModalItem = this.replaceModalItem.bind(this)
@@ -402,6 +428,7 @@ function Placeholder(props) {
 
 export default () => (
   <Layout>
+    <SEO title="Programma"/>
     <main id="index">
       <div id="hero">
         <Container>

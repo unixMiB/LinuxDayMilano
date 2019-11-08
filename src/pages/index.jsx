@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { Button, Row, Container, Alert } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,9 +7,11 @@ import watch from '../assets/watch.png'
 import talks from '../assets/talk-subscription.png'
 import ear from '../assets/ear-piece.png'
 import Img from 'gatsby-image'
+import SEO from '../components/seo'
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <SEO/>
     <main id="index">
       <div id="hero">
         <Container>
@@ -26,7 +29,12 @@ const IndexPage = ({ data }) => (
             </a>
           </h3>
           <br />
-          <Alert variant="warning">Finalmente disponibili le slide al download! <Alert.Link href="/schedule">Apri il programma della giornata</Alert.Link></Alert>
+          <Alert variant="warning">
+            Finalmente disponibili le slide al download!{' '}
+            <Alert.Link href="/schedule">
+              Apri il programma della giornata
+            </Alert.Link>
+          </Alert>
           <div className="subtitle">
             <FontAwesomeIcon icon="calendar" /> Sabato 26 Ottobre 2019
             <br />
@@ -50,7 +58,7 @@ const IndexPage = ({ data }) => (
           {/* <div className="col-md-offset-1 front text"> */}
           <div className="front text">
             <p>
-              <h2 style={{textTransform: 'uppercase'}}>
+              <h2 style={{ textTransform: 'uppercase' }}>
                 Il Linux Day <span>Milano</span> si è svolto
                 <br />
                 <span>Sabato 26 Ottobre 2019</span>
@@ -82,7 +90,8 @@ const IndexPage = ({ data }) => (
               <h2>PROGRAMMA</h2>
               <p>
                 <b style={{ 'font-size': '1.25rem' }}>
-                  Il programma dettagliato della giornata, insieme alle slide, è disponibile online.
+                  Il programma dettagliato della giornata, insieme alle slide, è
+                  disponibile online.
                 </b>
                 <br />
                 <br />
@@ -162,14 +171,6 @@ const IndexPage = ({ data }) => (
           </div>
         </Row>
       </section>
-      <footer>
-        Quest'opera è distribuita con Licenza Creative Commons Attribuzione -{' '}
-        <span className="ldmi">
-          Condividi allo stesso modo 4.0 Internazionale
-        </span>{' '}
-        - unix
-        <span className="unixmib">MiB</span> 2019
-      </footer>
     </main>
   </Layout>
 )

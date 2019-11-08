@@ -1,10 +1,17 @@
 import React from 'react'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>Page not found</h1>
-    <p>The page you are trying to open does not exist.</p>
+    <SEO title="Pagina non trovata"/>
+    <main>
+      <section className="py-5 text-center">
+        <h1>Pagina non trovata</h1>
+        <p>La pagina che stai cercando non esiste.</p>
+      </section>
+    </main>
+    
   </Layout>
 )
 

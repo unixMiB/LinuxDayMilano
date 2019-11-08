@@ -2,15 +2,15 @@ import React from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import Logo from '../assets/logo_simple.svg'
 
-const Header = ({ siteData }) => (
-  <>
+const Header = () => (
+  <header>
     <Navbar
       id="navbar"
       collapseOnSelect
-      expand="lg"
+      expand="md"
       variant="dark"
       style={{
-        backgroundColor: siteData.theme,
+        backgroundColor: 'inherit',
       }}
     >
       <Container>
@@ -31,7 +31,7 @@ const Header = ({ siteData }) => (
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  </>
+  </header>
 )
 
 export default Header
