@@ -1,259 +1,11 @@
 import React from 'react'
+import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap'
 import SEO from '../components/seo'
 
-const aula_ia = 'U7-03'
-const aula_ot = 'U7-04'
-const aula_mix = 'U7-05'
-
-const enable = true
-
-const schedule = [
-  {
-    time: '9:30',
-    talks: [
-      {
-        title: 'Keynote',
-        description:
-          "Apertura del Linux Day e introduzione all'Intelligenza Artificiale",
-        author: 'Daniele Barcella, Ilaria Battiston - unixMiB',
-        room: aula_ia,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Keynote%20-%20Daniele%20Barcella.%20Ilaria%20Battiston.pdf',
-      },
-    ],
-  },
-  {
-    time: '10:30',
-    talks: [
-      {
-        title: 'Machine Data - Machines are talking. Are you listening?',
-        description:
-          'Analisi dei machine-data ovvero dei dati generati dalle macchine al fine di semplificare le attività di operations, troubleshooting e anche le attività BAU (Business As Usual).',
-        author: 'Francesco Fresta',
-        room: aula_ia,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Machine%20Data%20-%20Machines%20are%20talking.%20Are%20you%20listening%20-%20Francesco%20Fresta.pdf',
-      },
-      {
-        title:
-          'Open Hardware, Software Libero e Stampa 3D attrattori "Farfalla" del PowerPC Notebook project',
-        description:
-          "Un modesto progetto Open Hardware di una scheda madre PowerPC per notebook  portato avanti da volontari e autofinanziato potrebbe generare indirettamente importanti cambiamenti nell'industria dell' elettronica, inducendo un \"Effetto Farfalla\". Open Hardware, Software Libero e Stampa 3D hanno rimescolato le carte del cambiamento nell'industria elettronica; sono un'opportunità per decentralizzare e democratizzare la produzione elettronica, il sapere e distribuire uniformemente i fattori di vantaggio che generano. Vedremo esempi concreti come la progettazione della scheda madre OSWH PowerPC Notebook con licenza Open Hardware Cern, la creazione pacchetti Debian PowerPC a 64 bit e l'uso di Blender e FreeCad per la progettazione dello chassis Open Hardware.",
-        author: 'Roberto Innocenti - Power Progress Community',
-        room: aula_ot,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/PowerPC%20Notebook%20project%20-%20Roberto%20Innocenti%20-%20Power%20Progress%20Community.pdf',
-      },
-      {
-        title: 'La Unix Way e i metodi per produrre software',
-        description:
-          "Scrivere applicazioni per mestiere non è più una disciplina individuale da molte decadi: piuttosto è un gioco di squadra, team. William Deming, celebre statistico, dimostrò che il 90% dei risultati ottenuti in azienda sono determinati da processi e metodi in uso, ancor prima che dalle prestazioni individuali: il \"genio\" individuale è sopravvalutato. Oggi la tecnologia rappresenta una grande opportunità per le imprese ma coniugarne lo sviluppo all'agilità e all'affidabilità dei processi non è facile. Negli anni metodi e metodologie sono evoluti radicalmente, ma il Free Software e l'Open Source hanno sempre regalato contributi determinanti. Con l'acronimo KISS (Keep It Simple and Stupid) si evoca un modo di fare software antico: la Unix Way. Declinata oggi nel mondo Linux da migliaia di tecnici e organizzazioni, include assunti come modularità, semplicità, composizione e chiarezza nel fare. Tra gli esempi? GNU/Linux, e git. Una panoramica sui metodi, dalla Crisi del Software degli anni '60 fino ai metodi Agili e DevOps.",
-        author: 'Fabio Mora',
-        room: aula_mix,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/La%20Unix%20Way%20e%20i%20metodi%20per%20produrre%20software%20-%20Fabio%20Mora.pdf',
-      },
-    ],
-  },
-  {
-    time: '11:30',
-    talks: [
-      {
-        title: 'Pausa caffé',
-        description: 'Una breve pausa per rinfrescare la mente',
-        author: '',
-        room: '',
-        duration: '15 min',
-      },
-    ],
-  },
-  {
-    time: '11:45',
-    talks: [
-      {
-        title: 'Intelligenza a livello umano o abilità a livello animale?',
-        description:
-          'L’intervento sintetizza lo stato di avanzamento dell’Intelligenza Artificiale, con particolare attenzione ai recenti sviluppi nell’ambito del Deep Learning, un sottoinsieme dell’Intelligenza Artificiale che ha visto tre pionieri del settore ricevere il premio Turing 2018. Si cerca di analizzare criticamente cosa sia stato effettivamente raggiunto, cosa sia a portata di mano e cosa sia ancora molto lontano dalle nostre attuali conoscenze.',
-        author: 'Fabio Stella - Università Milano Bicocca',
-        room: aula_ia,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Intelligenza%20a%20livello%20umano%20o%20abilit%C3%A0%20a%20livello%20animale%20-%20Fabio%20Stella%20-%20Universit%C3%A0%20Milano%20Bicocca.pdf',
-      },
-      {
-        title:
-          "Joomla! - Privacy Tool Suite: Come difendere la privacy e l'individualità degli utenti del tuo sito web in pieno rispetto del GDPR",
-        description:
-          "Come difendere la privacy e l'individualità degli utenti del tuo sito web in pieno rispetto del GDPR",
-        author: 'Luca Racchetti',
-        room: aula_ot,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Joomla!%20Privacy%20Tool%20Suite%20-%20Luca%20Racchetti.pdf',
-      },
-      {
-        title:
-          'PHP: un linguaggio, come tanti, vivo grazie alle community Open source',
-        description:
-          'Le licenze libere per il software possono salvare un linguaggio di programmazione? La risposta è si! Un esempio è il PHP, un linguaggio dato per morto diverse volte ma che è sempre nei primi posto per utilizzo.',
-        author: 'Matteo Enna',
-        room: aula_mix,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/PHP%2C%20un%20linguaggio%20come%20tanti%2C%20vivo%20grazie%20alle%20community%20Open%20source%20-%20Matteo%20Enna.pdf',
-      },
-    ],
-  },
-  {
-    time: '12:45',
-    talks: [
-      {
-        title: 'Pausa pranzo',
-        description: 'Una pausa per rinfrescare la mente',
-        author: '',
-        room: '',
-        duration: '1 ora e 15 min',
-      },
-    ],
-  },
-  {
-    time: '14:00',
-    talks: [
-      {
-        title: 'Weaving a story',
-        description:
-          "Retrospettiva sull'intelligenza artificale e sulle tecnologie che l'hanno resa possibile, a partire dalle speranze dei pionieri dell'informatica fino alla fine del secolo scorso, tramite un'analisi delle architetture hardware del software e dei carichi di lavoro, molto diversi da quelli a cui siamo abituati oggi.",
-        author: 'Jacopo Maltagliati',
-        room: aula_ia,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Weaving%20a%20Story%20-%20Jacopo%20Maltagliati.pptx',
-      },
-      {
-        title:
-          'Diritto alla riparazione e free software - impatto sulle emissioni di CO2',
-        description:
-          'Il diritto alla riparazione #RightToRepair è, l\'ultimo tra i "nuovi diritti" e deriva da quelli che Stefano Rodotà indicava come conseguenza delle "pacifiche rivoluzioni del Novecento, delle donne, degli ecologisti, della scienza e della tecnica". Si intende come diritto alla riparazione la rimozione di tutti gli ostacoli che, spesso, rendono impossibile riparare un oggetto di nostra proprietà, si va dalla mancata disponibilità di parti di ricambio a prezzi ragionevoli, alla impossibilità di aprire un dispositivo o un apparecchio per poterlo riparare a causa di parti termosaldate, viti che si possono solo stringere etc. etc. Intorno alla riparazione sono nate iniziative come i Restart Party o i Repair Cafè, feste della riparazione comunitaria e condivisa, come amano chiamarla in Gran Bretagna gli inventori di questa formula, e a partire da questo movimento si è sviluppata recentemente una intensa attività di lobby a livello europeo che ha già conseguito dei risultati legislativi. Il movimento per il diritto alla riparazione è strettamente connesso con il movimento di lotta ai cambiamenti climatici e il punto di collegamento è proprio la lunghezza della vita dei nostri dispositivi, ogni anno di vita guadagnato si può tradurre in un mancato incremento di CO2 emessa. Il software libero gioca in questa prospettiva un ruolo importantissimo nel porre un freno alla cultura usa e getta, rendendo utilizzabili PC desktop e portatili altrimenti destinati ad essere smaltiti in ricicleria pur essendo perfettamente funzionanti.',
-        author: 'Savino Curci - PC Officina',
-        room: aula_ot,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Diritto%20alla%20riparazione%20e%20free%20software%20-%20Savino%20Curci%20-%20PC%20Officina.pdf',
-      },
-      {
-        title: 'How to virtualize in containers',
-        description:
-          'Linux containers are everywhere. But what if your workflow still requires virtual machines? Some applications can not be easily containerized. But do we need to bother? Come to learn how to run and monitor both types of workloads together on a single distributed platform. The KubeVirt - virtualization addon for Kubernetes will be introduced.',
-        author: 'Marek Libra',
-        room: aula_mix,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/How%20to%20virtualize%20in%20containers%20-%20Marek%20Libra.pdf',
-      },
-    ],
-  },
-  {
-    time: '15:00',
-    talks: [
-      {
-        title: 'Vettorizzazione: a hands-on approach in Python',
-        description:
-          "Sapevi che il progresso nel campo del ML non è legato solo all'invenzione di nuovi algoritmi, ma anche all'introduzione di nuove tecnologie come la vettorizzazione? Scopriamo cos'è con semplici esempi in Python!",
-        author: 'Davide Riva',
-        room: aula_ia,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Vettorizzazione%2C%20a%20hands-on%20approach%20in%20Python%20-%20Davide%20Riva.odp',
-      },
-      {
-        title:
-          "Linee Guida su Acquisizione e Riuso di Software per le PA, le novità dell'ultima versione in vigore dal 9 maggio 2019",
-        description:
-          'Una sintesi delle principali novità che emergono da una lettura critica delle Linee Guida su Acquisizione e Riuso di Software per le PA. Perché si tratta di un documento importante, per il software open source e per i formati standard e aperti. Cosa fare, e come farlo, per comunicare e sfruttare i vantaggi delle linee guida per la comunità open source.',
-        author: 'Italo Vignoli',
-        room: aula_ot,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Linee%20Guida%20su%20Acquisizione%20e%20Riuso%20di%20Software%20per%20le%20PA%20-%20Italo%20Vignoli.pdf',
-      },
-      {
-        title: 'BiBirra: Deep image retrieval for beer recognition',
-        description:
-          "Raccontando lo sviluppo di una applicazione in grado di riconoscere una birra da una foto della bottiglia, sarà descritto il processo che porta da un'idea all'implementazione di un modello di Machine Learning.Si analizzeranno i problemi più comuni e come scegliere tra le possibili soluzioni.",
-        author: 'Matteo Ronchetti - ML Milan',
-        room: aula_mix,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/BiBirra%2C%20deep%20image%20retrieval%20for%20beer%20recognition%20-%20Matteo%20Ronchetti%20-%20ML%20Milan.pdf',
-      },
-    ],
-  },
-  {
-    time: '16:00',
-    talks: [
-      {
-        title: 'Pausa caffé',
-        description: 'Una breve pausa per rinfrescare la mente',
-        author: '',
-        room: '',
-        duration: '15 min',
-      },
-    ],
-  },
-  {
-    time: '16:15',
-    talks: [
-      {
-        title: 'The art of Machine Learning',
-        description:
-          "Cosa possono avere in comune un quadro battuto all'asta da Christie's per 435.000$ e la colonna sonora di un videogioco di esplorazione interplanetaria? Esiste qualcosa che collega Van Gogh, Rembrandt e la teoria dei giochi? Entrambe queste domande possono finire sotto un'altra macro domanda: \"È possibile creare con l'intelligenza artificiale?\" In questo talk veranno presentate alcune applicazioni del machine learning ad arti visive e musica elettronica, di come le reti neurali artificiali si stanno facendo strada all'interno dei processi creativi uscendo dai laboratori di ricerca per entrare nei musei, nelle case d'aste, nelle nostre cuffie e sui palchi di festival musicali internazionali.",
-        author: 'Luca Carcano',
-        room: aula_ia,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20art%20of%20Machine%20Learning%20-%20Luca%20Carcano.pdf',
-      },
-      {
-        title: 'I formati aperti e standard',
-        description: 'La differenza tra De jure e De facto',
-        author: 'Enio Gemmo',
-        room: aula_ot,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/I%20formati%20aperti%20e%20standard%20-%20Enio%20Gemmo.odp',
-      },
-      {
-        title: 'The Dark side of AI',
-        description:
-          'L’intelligenza artificiale e le sue applicazioni promettono meraviglie per il prossimo futuro. Ma a quale prezzo? Per quali scopi e come vengono applicati gli algoritmi di AI oggi? Viaggio in un mondo che fa (anche) paura.',
-        author: 'Marco Schiaffino',
-        room: aula_mix,
-        duration: '60 min',
-        slides:
-          'https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20Dark%20side%20of%20AI%20-%20Marco%20Schiaffino.pdf',
-      },
-    ],
-  },
-  {
-    time: '17:15',
-    talks: [
-      {
-        title: 'Chiusura',
-        description: 'Chisura della giornata',
-        author: '',
-        room: '',
-        duration: '',
-      },
-    ],
-  },
-]
+const enableSchedule = true
 
 class DetailView extends React.Component {
   constructor(props) {
@@ -334,8 +86,8 @@ class DetailView extends React.Component {
 class Talks extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = {
+      data: props.scheduleData,
       required: {
         title: 'Titolo',
         description: 'Descrizione',
@@ -358,7 +110,7 @@ class Talks extends React.Component {
     let modalData = this.state.required
     return (
       <Container>
-        {schedule.map(i => {
+        {this.state.data.map(i => {
           return (
             <Row className="pb-4">
               <Col lg={1} md={12} className="pb-4 mr-2">
@@ -426,9 +178,9 @@ function Placeholder(props) {
   )
 }
 
-export default () => (
+export default ({data}) => (
   <Layout>
-    <SEO title="Programma"/>
+    <SEO title="Programma" />
     <main id="index">
       <div id="hero">
         <Container>
@@ -459,8 +211,26 @@ export default () => (
         </Container>
       </div>
       <section style={{ color: 'black' }}>
-        {enable ? <Talks /> : <Placeholder />}
+        {enableSchedule ? <Talks scheduleData={data.allScheduleYaml.nodes}/> : <Placeholder />}
       </section>
     </main>
   </Layout>
 )
+
+export const query = graphql`
+  {
+    allScheduleYaml {
+      nodes {
+        talks {
+          title
+          slides
+          room
+          duration
+          description
+          author
+        }
+        time
+      }
+    }
+  }
+`

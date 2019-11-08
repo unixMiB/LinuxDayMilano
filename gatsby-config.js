@@ -21,6 +21,7 @@ module.exports = {
     },
     'gatsby-plugin-dark-mode',
     'gatsby-plugin-sass',
+    'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -39,6 +40,13 @@ module.exports = {
       options: {
         name: 'brands',
         path: path.join(__dirname, 'src', 'assets', 'brands'),
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: path.join(__dirname, 'src', 'data'),
       },
     },
     'gatsby-plugin-offline',

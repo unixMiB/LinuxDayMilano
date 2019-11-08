@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Header from './header'
 
 const Layout = ({ children }) => (
-  <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+  <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
     <Header />
     <div className="container-fluid flex-grow-1" style={{ padding: 0 }}>
       {children}

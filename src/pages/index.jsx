@@ -11,7 +11,7 @@ import SEO from '../components/seo'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO/>
+    <SEO />
     <main id="index">
       <div id="hero">
         <Container>
