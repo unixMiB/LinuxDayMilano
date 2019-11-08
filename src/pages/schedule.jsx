@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap'
@@ -178,7 +178,7 @@ function Placeholder(props) {
   )
 }
 
-export default ({data}) => (
+export default ({ data }) => (
   <Layout>
     <SEO title="Programma" />
     <main id="index">
@@ -211,7 +211,11 @@ export default ({data}) => (
         </Container>
       </div>
       <section style={{ color: 'black' }}>
-        {enableSchedule ? <Talks scheduleData={data.allScheduleYaml.nodes}/> : <Placeholder />}
+        {enableSchedule ? (
+          <Talks scheduleData={data.allScheduleYaml.nodes} />
+        ) : (
+          <Placeholder />
+        )}
       </section>
     </main>
   </Layout>
