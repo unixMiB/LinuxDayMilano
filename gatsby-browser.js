@@ -14,6 +14,7 @@ import {
   faBullhorn,
   faShoppingBag,
   faInfoCircle,
+  faVideo,
   faCalendar,
   faClock,
   faMapMarkedAlt,
@@ -25,6 +26,7 @@ import {
 import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(
   fab,
+  faVideo,
   faUsers,
   faFlag,
   faInfoCircle,

@@ -17,6 +17,7 @@
     room: U7-03
     duration: 60 min
     slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Machine%20Data%20-%20Machines%20are%20talking.%20Are%20you%20listening%20-%20Francesco%20Fresta.pdf
+    video: https://www.youtube.com/watch?v=FP14bgY27Rc
   - title: Open Hardware, Software Libero e Stampa 3D attrattori "Farfalla" del PowerPC
       Notebook project
     description: Un modesto progetto Open Hardware di una scheda madre PowerPC per
@@ -69,6 +70,7 @@
     room: U7-03
     duration: 60 min
     slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Intelligenza%20a%20livello%20umano%20o%20abilit%C3%A0%20a%20livello%20animale%20-%20Fabio%20Stella%20-%20Universit%C3%A0%20Milano%20Bicocca.pdf
+    video: https://www.youtube.com/watch?v=-dRgM8Gc-ZU
   - title: 'Joomla! - Privacy Tool Suite: Come difendere la privacy e l''individualità
       degli utenti del tuo sito web in pieno rispetto del GDPR'
     description: Come difendere la privacy e l'individualità degli utenti del tuo
@@ -102,6 +104,7 @@
     room: U7-03
     duration: 60 min
     slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Weaving%20a%20Story%20-%20Jacopo%20Maltagliati.pptx
+    video: https://www.youtube.com/watch?v=JVqR44i3tW4
   - title: Diritto alla riparazione e free software - impatto sulle emissioni di CO2
     description: 'Il diritto alla riparazione #RightToRepair è, l''ultimo tra i "nuovi
       diritti" e deriva da quelli che Stefano Rodotà indicava come conseguenza delle
@@ -147,6 +150,7 @@
     room: U7-03
     duration: 60 min
     slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/Vettorizzazione%2C%20a%20hands-on%20approach%20in%20Python%20-%20Davide%20Riva.odp
+    video: https://www.youtube.com/watch?v=kRnv2ihP3KE
   - title: Linee Guida su Acquisizione e Riuso di Software per le PA, le novità dell'ultima
       versione in vigore dal 9 maggio 2019
     description: Una sintesi delle principali novità che emergono da una lettura critica
@@ -188,6 +192,7 @@
     room: U7-03
     duration: 60 min
     slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202019/The%20art%20of%20Machine%20Learning%20-%20Luca%20Carcano.pdf
+    video: https://www.youtube.com/watch?v=jr5Sm0I9ckk
   - title: I formati aperti e standard
     description: La differenza tra De jure e De facto
     author: Enio Gemmo
