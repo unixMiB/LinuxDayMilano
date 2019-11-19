@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => (
           </h3>
           <br />
           <Alert variant="warning">
-            Finalmente disponibili le slide al download!{' '}
+            Finalmente disponibili le registrazioni e le slide al download!{' '}
             <Alert.Link href="/schedule">
               Apri il programma della giornata
             </Alert.Link>
@@ -55,7 +55,6 @@ const IndexPage = ({ data }) => (
           <div className="watch">
             <img alt="" role="presentation" src={watch} />
           </div>
-          {/* <div className="col-md-offset-1 front text"> */}
           <div className="front text">
             <p>
               <h2 style={{ textTransform: 'uppercase' }}>
