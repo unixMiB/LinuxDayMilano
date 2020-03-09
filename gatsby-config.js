@@ -28,7 +28,7 @@ module.exports = {
 				short_name: 'LDMI',
 				start_url: '/',
 				description: 'Manifestazione italiana dedicata a GNU/Linux',
-				background_color: '#343a40',
+				background_color: '#fee900',
 				theme_color: '#343a40',
 				display: 'standalone',
 				icon: './src/assets/favicon.svg'
