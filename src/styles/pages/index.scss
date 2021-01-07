@@ -1,246 +1,207 @@
 #index {
-	#hero {
-		@include cover-background('../assets/hero.jpg', true);
-		@include media-breakpoint-up(lg) {
-			padding: 3rem 4rem 5rem;
-		}
+  #hero {
+    @include cover-background("../assets/hero.jpg", true);
+    @include media-breakpoint-up(lg) {
+      padding: 3rem 4rem 5rem;
+    }
 
-		@include media-breakpoint-down(md) {
-			padding: 2rem 1rem;
-		}
+    @include media-breakpoint-down(md) {
+      padding: 2rem 1rem;
+    }
 
-		width: 100%;
+    width: 100%;
 
-		color: white;
+    color: white;
 
-		@include media-breakpoint-down(sm) {
-			margin-top: 0;
-		}
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+    }
 
-		.title {
-			@include tshadow;
-			span {
-				color: $ldmi;
-				font-family: 'Noto Sans', sans-serif;
-				font-weight: bold;
-			}
+    .title {
+      @include tshadow;
+      span {
+        color: $ldmi;
+        font-family: "Noto Sans", sans-serif;
+        font-weight: bold;
+      }
 
-			span.unixmib {
-				color: $unixmib;
-			}
-			a {
-				color: white;
-			}
-			small {
-				font-size: 0.9rem;
-			}
+      span.unixmib {
+        color: $unixmib;
+      }
+      a {
+        color: white;
+      }
+      small {
+        font-size: 0.9rem;
+      }
 
-			@include media-breakpoint-down(sm) {
-				text-align: center;
-			}
-		}
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+    }
 
-		h1.title {
-			color: white;
-			font-weight: bold;
-			//font-family: 'Noto Serif', serif;
-		}
+    h1.title {
+      color: white;
+      font-weight: bold;
+      //font-family: 'Noto Serif', serif;
+    }
 
-		h3.title {
-			color: white;
-			// font-size: 2.5rem;
-			font-weight: normal;
-			font-family: 'Noto Serif', serif;
-		}
+    h3.title {
+      color: white;
+      // font-size: 2.5rem;
+      font-weight: normal;
+      font-family: "Noto Serif", serif;
+    }
 
-		.subtitle {
-			@include tshadow;
-			color: white;
-			font-size: 1.25rem;
-		}
+    .subtitle {
+      @include tshadow;
+      color: white;
+      font-size: 1.25rem;
+    }
 
-		.scroll {
-			margin-top: 4em;
-		}
-	}
+    .scroll {
+      margin-top: 4em;
+    }
+  }
 
-	section {
-		margin: 0 auto;
-		padding: 4rem 0.5rem;
-		color: white;
-		background-position: center bottom;
-		background-size: contain;
-		background-repeat: no-repeat;
-		position: relative;
-		overflow: hidden;
+  section {
+    margin: 0 auto;
+    padding: 4rem 0.5rem;
+    color: white;
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 
-		span {
-			color: $ldmi;
-		}
+    span {
+      color: $ldmi;
+    }
 
-		h2 {
-			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-			display: inline-block;
-			font-weight: lighter;
-			font-size: 2.25rem;
-		}
+    h2 {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      font-weight: lighter;
+      font-size: 2.25rem;
+    }
 
-		.faicon {
-			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-			color: $black;
-			display: block;
-			font-size: 5rem;
-			margin: 0.5rem auto;
-			height: 5rem;
-		}
+    .faicon {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      color: $black;
+      display: block;
+      font-size: 5rem;
+      margin: 0.5rem auto;
+      height: 5rem;
+    }
 
-		.desc {
-			font-size: 1.5rem;
-			font-weight: lighter;
-			max-width: 90%;
-			margin: 0 auto;
+    .desc {
+      font-size: 1.5rem;
+      font-weight: lighter;
+      max-width: 90%;
+      margin: 0 auto;
 
-			.h2 {
-				display: inline-block;
-				font-weight: 500;
-				color: $ldmi;
-				font-size: 1.5rem;
-				line-height: 1.3rem;
-			}
-		}
+      .h2 {
+        display: inline-block;
+        font-weight: 500;
+        color: $ldmi;
+        font-size: 1.5rem;
+        line-height: 1.3rem;
+      }
+    }
 
-		&#explore {
-			background-color: #c34c39;
-			background-image: url(../assets/event-bg.jpg);
-			padding: 5rem 1rem;
+    &#explore {
+      background-color: #c34c39;
+      background-image: url(../assets/event-bg.jpg);
+      padding: 5rem 1rem;
 
-			@include media-breakpoint-down(sm) {
-				padding: 2rem 1rem;
-			}
+      @include media-breakpoint-down(sm) {
+        padding: 2rem 1rem;
+      }
 
-			.watch {
-				left: 0;
-				top: 3.5rem;
-				position: absolute;
-				z-index: 1;
+      .watch {
+        left: 0;
+        top: 3.5rem;
+        position: absolute;
+        z-index: 1;
 
-				@include media-breakpoint-only(md) {
-					left: -8%;
-				}
+        @include media-breakpoint-only(md) {
+          left: -8%;
+        }
 
-				@include media-breakpoint-down(sm) {
-					visibility: hidden;
-				}
-			}
+        @include media-breakpoint-down(sm) {
+          visibility: hidden;
+        }
+      }
 
-			.text {
-				font-size: 1.25rem;
-				@include media-breakpoint-down(md) {
-					padding-left: 2.5rem;
-				}
-				@include media-breakpoint-up(lg) {
-					padding-left: 10rem;
-				}
-				@include media-breakpoint-up(xl) {
-					padding-left: 25rem;
-				}
-				padding-right: 1rem;
-			}
+      .text {
+        font-size: 1.25rem;
+        @include media-breakpoint-down(md) {
+          padding-left: 2.5rem;
+        }
+        @include media-breakpoint-up(lg) {
+          padding-left: 10rem;
+        }
+        @include media-breakpoint-up(xl) {
+          padding-left: 25rem;
+        }
+        padding-right: 1rem;
+      }
 
-			.front {
-				z-index: 999;
-			}
-		}
+      .front {
+        z-index: 999;
+      }
+    }
 
-		&#schedule {
-			background-color: #75b46e;
-			padding: 5rem 1rem;
+    &#schedule {
+      background-color: #75b46e;
+      padding: 5rem 1rem;
 
-			@include media-breakpoint-down(sm) {
-				padding: 2rem 1rem;
-			}
+      @include media-breakpoint-down(sm) {
+        padding: 2rem 1rem;
+      }
 
-			.inspire {
-				display: inline-block;
-				margin-right: 2.5rem;
-				max-width: 400px;
-				@include media-breakpoint-down(md) {
-					display: none;
-				}
-			}
-			.text {
-				font-size: 1.25rem;
-				@include media-breakpoint-down(md) {
-					padding-left: 4rem;
-					padding-right: 4rem;
-				}
-				@include media-breakpoint-down(sm) {
-					padding: 0 1rem;
-				}
+      .inspire {
+        display: inline-block;
+        margin-right: 2.5rem;
+        max-width: 400px;
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+      .text {
+        font-size: 1.25rem;
+        @include media-breakpoint-down(md) {
+          padding-left: 4rem;
+          padding-right: 4rem;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 0 1rem;
+        }
 
-				a[href='#'] {
-					display: none;
-				}
-			}
-			.hide-col {
-				@include media-breakpoint-down(sm) {
-					visibility: hidden;
-				}
-			}
-		}
+        a[href="#"] {
+          display: none;
+        }
+      }
+      .hide-col {
+        @include media-breakpoint-down(sm) {
+          visibility: hidden;
+        }
+      }
+    }
 
-		&#sponsors {
-			background-color: #1881a2;
-			background-image: url('../assets/sponsor-bg.jpg');
-			background-position: 50% 0;
-			background-size: cover;
-			padding-top: 0;
-			background-repeat: no-repeat;
-			position: relative;
+    &#sponsors {
+      background-color: #1881a2;
+      background-image: url("../assets/sponsor-bg.jpg");
+      background-position: 50% 0;
+      background-size: cover;
+      padding-top: 0;
+      background-repeat: no-repeat;
+      position: relative;
 
-			.text {
-				padding-top: 4rem;
-				padding-bottom: 2rem;
-			}
-		}
-
-		&#contattaci {
-			background-color: #f7ab24;
-			color: $black;
-
-			a {
-				color: white;
-			}
-
-			#ear {
-				position: absolute;
-				left: 0;
-				top: 0;
-				@include media-breakpoint-down(md) {
-					visibility: hidden;
-				}
-			}
-
-			.text {
-				font-size: 1.25rem;
-				padding-left: 35rem;
-				@include media-breakpoint-down(md) {
-					padding: 0 6rem;
-				}
-
-				@include media-breakpoint-down(sm) {
-					padding: 0 2rem;
-				}
-
-				ul {
-					list-style-type: none;
-					padding: 0;
-				}
-			}
-
-			.front {
-				z-index: 999;
-			}
-		}
-	}
+      .text {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+      }
+    }
+  }
 }
