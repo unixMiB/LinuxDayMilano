@@ -2,7 +2,6 @@ const path = require("path");
 module.exports = {
   siteMetadata: {
     title: "Linux Day Milano",
-    shortTitle: "LDMI",
     description:
       "Manifestazione italiana dedicata a GNU/Linux, al software libero, alla cultura aperta e alla condivisione.",
     keywords:
