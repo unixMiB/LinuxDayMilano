@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import SEO from "../components/seo";
+import Hero from "../components/hero";
 
 class DetailView extends React.Component {
   constructor(props) {
@@ -54,24 +55,19 @@ class DetailView extends React.Component {
           <br />
           <h6>{this.state.author}</h6>
           <Row>
-            <Col>Durata: {this.state.duration}</Col>
-            {/* <Col className="text-right">Aula: {this.state.room}</Col> */}
+            <Col>{this.state.duration && "Durata: " + this.state.duration}</Col>
             <Col className='text-right'>
-              {this.state.room === "" ? "" : "Aula: " + this.state.room}
+              {this.state.room && "Aula: " + this.state.room}
             </Col>
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          {this.state.video === "" || this.state.video == null ? (
-            ""
-          ) : (
+          {!(this.state.video === "" || this.state.video == null) && (
             <Button target='_blank' href={this.state.video} variant='warning'>
               <FontAwesomeIcon icon='video' /> Video
             </Button>
           )}
-          {this.state.slides === "" || this.state.slides == null ? (
-            ""
-          ) : (
+          {!(this.state.slides === "" || this.state.slides == null) && (
             <Button target='_blank' href={this.state.slides} variant='warning'>
               <FontAwesomeIcon icon='download' /> Slides
             </Button>
@@ -177,39 +173,7 @@ export default ({ data }) => (
   <Layout>
     <SEO title='Programma' />
     <main id='index'>
-      <div id='hero'>
-        <Container>
-          <h1 className='title'>
-            Linux Day Milano{" "}
-            <span>{data.allSettingsYaml.nodes[0].settings.eventYear}</span>
-          </h1>
-          <h3 className='title'>
-            <small>organizzato da</small>{" "}
-            <a
-              href='https://unixmib.org'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              unix<span className='unixmib'>MiB</span>
-            </a>
-          </h3>
-          <br />
-          <div className='subtitle'>
-            <FontAwesomeIcon icon='calendar' />{" "}
-            {data.site.siteMetadata.event.text}
-            <br />
-            <FontAwesomeIcon icon='clock' /> Ore{" "}
-            {data.allSettingsYaml.nodes[0].settings.eventTime}
-            <br />
-            <FontAwesomeIcon icon='map-marked-alt' />{" "}
-            {data.allSettingsYaml.nodes[0].settings.contactsPlaceName}
-            <br />
-            <FontAwesomeIcon icon='chevron-right' />{" "}
-            {data.allSettingsYaml.nodes[0].settings.contactsPlaceBuilding}
-            <br />
-          </div>
-        </Container>
-      </div>
+      <Hero />
       <section style={{ color: "black" }}>
         <Container>
           <h2 className='mb-5'>Programma Linux Day Milano</h2>
@@ -250,20 +214,6 @@ export const query = graphql`
         switches {
           schedule
           cfp
-        }
-      }
-    }
-    allSettingsYaml {
-      nodes {
-        settings {
-          contactsPlaceBuilding
-          contactsPlaceName
-          eventTime
-          eventDateText: eventDate(
-            formatString: "dddd DD MMMM YYYY"
-            locale: "It"
-          )
-          eventYear: eventDate(formatString: "YYYY")
         }
       }
     }

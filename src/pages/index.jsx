@@ -2,53 +2,17 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { Button, Row, Col, Container } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import watch from "../assets/watch.png";
 import talks from "../assets/talk-subscription.png";
 import Img from "gatsby-image";
 import SEO from "../components/seo";
+import Hero from "../components/hero";
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO />
     <main id='index'>
-      <div id='hero'>
-        <Container>
-          <h1 style={{ textTransform: "uppercase" }} className='title'>
-            Linux Day Milano <span>{data.site.siteMetadata.event.year}</span>
-          </h1>
-          <h3 className='title'>
-            <small>organizzato da</small>{" "}
-            <a
-              title='Scopri di più su unixMiB'
-              href='https://unixmib.org/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              unix<span className='unixmib'>MiB</span>
-            </a>
-          </h3>
-
-          <div className='subtitle'>
-            <FontAwesomeIcon icon='calendar' />{" "}
-            {data.site.siteMetadata.event.text}
-            <br />
-            <FontAwesomeIcon icon='clock' /> Ore{" "}
-            {data.site.siteMetadata.event.time}
-            <br />
-            <FontAwesomeIcon icon='map-marked-alt' />{" "}
-            {data.allSettingsYaml.nodes[0].settings.contactsPlaceName}
-            <br />
-            <FontAwesomeIcon icon='chevron-right' />{" "}
-            {data.allSettingsYaml.nodes[0].settings.contactsPlaceBuilding}
-            <br />
-          </div>
-          <Button href='/#explore' className='scroll btn-lg' variant='warning'>
-            Scopri di più
-          </Button>
-        </Container>
-      </div>
-
+      <Hero small={true} />
       <section id='explore'>
         <Row>
           <div className='watch'>
@@ -203,20 +167,8 @@ export const query = graphql`
     allSettingsYaml {
       nodes {
         settings {
-          contactsEmail
-          contactsPlaceBuilding
-          contactsPlaceName
-          contactsPlaceStreet
-          contactsWebsite
-          eventTime
-          eventDate
-          text: eventDate(formatString: "dddd DD MMMM YYYY", locale: "It")
-          eventYear: eventDate(formatString: "YYYY")
-          programEnabled
           topic
           topicList
-          cfpEnabled
-          cfpUrl
         }
       }
     }
