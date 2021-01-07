@@ -77,14 +77,56 @@ a.anchor {
 }
 
 footer {
-  color: white;
-  background-color: #212121;
-  text-align: center;
-  padding: 2rem 2.5rem 2rem;
-  span.ldmi {
-    color: $ldmi;
+  section.section-license {
+    color: white;
+    background-color: #212121;
+    text-align: center;
+    padding: 2rem 2.5rem 2rem;
+    span.ldmi {
+      color: $ldmi;
+    }
+    span.unixmib {
+      color: $unixmib;
+    }
   }
-  span.unixmib {
-    color: $unixmib;
+
+  section#contattaci {
+    background-color: #f7ab24;
+    color: $black;
+
+    a {
+      color: white;
+    }
+
+    #ear {
+      position: relative;
+      height: 20rem;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      @include media-breakpoint-down(md) {
+        visibility: hidden;
+      }
+    }
+
+    .text {
+      font-size: 1.25rem;
+      @include media-breakpoint-down(md) {
+        padding: 0 6rem;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 2rem;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+    }
+
+    .front {
+      z-index: 999;
+    }
   }
 }
