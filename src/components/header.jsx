@@ -17,13 +17,6 @@ const Header = () => {
           }
         }
       }
-      allSettingsYaml {
-        nodes {
-          settings {
-            eventYear: eventDate(formatString: "YYYY")
-          }
-        }
-      }
     }
   `);
 
@@ -43,7 +36,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand style={{ maxWidth: "5rem" }} className='brand' href='/'>
-            <Logo className='logo' /> LD<span>MI</span> {year}
+            <Logo className='logo' /> LD<span>MI {year}</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse

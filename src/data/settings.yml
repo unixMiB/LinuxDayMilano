@@ -1,6 +1,4 @@
 - settings:
-    eventDate: 2020-10-24
-    eventTime: "9:30"
     topic: "al mondo dell'istruzione open source"
     topicList:
       - "Linux, software e hardware Open Source"
@@ -9,14 +7,3 @@
       - "Innovazione nel mondo dell'Open Source"
       - "L'apprendimento mediante il Do It Yourself"
       - "Programmazione e tecniche di sviluppo"
-
-    programEnabled: false
-    cfpEnabled: true
-    cfpUrl: https://forms.gle/koz5Hmo4mwqFvuB77
-
-    contactsEmail: "unixmib@gmail.com"
-    contactsWebsite: "https://unixmib.org"
-    contactsPlaceName: "Università Milano Bicocca"
-    contactsPlaceStreet: "Via Bicocca degli Arcimboldi 8"
-    contactsPlaceBuilding: "Edificio U7"
-    contactsPlaceCAP: "20126 Milano MI"

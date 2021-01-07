@@ -21,7 +21,7 @@ module.exports = {
     },
     callForPaper: {
       enabled: false,
-      link: null,
+      link: "https://forms.gle/koz5Hmo4mwqFvuB77",
     },
     contacts: {
       email: "unixmib@gmail.com",
