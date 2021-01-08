@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
 
 class DetailView extends React.Component {
   constructor(props) {
@@ -176,7 +177,13 @@ export default ({ data }) => (
       <Hero />
       <section style={{ color: "black" }}>
         <Container>
-          <h2 className='mb-5'>Programma Linux Day Milano</h2>
+          <ThemeToggler>
+            {({ theme }) => (
+              <h2 className={"mb-5" + (theme === "dark" ? " text-light" : "")}>
+                Programma della giornata
+              </h2>
+            )}
+          </ThemeToggler>
           <Talks scheduleData={data.allScheduleYaml.nodes} />
         </Container>
       </section>

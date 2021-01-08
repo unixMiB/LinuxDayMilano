@@ -59,9 +59,22 @@ const Hero = ({ small }) => {
           <br />
         </div>
         {small && (
-          <Button href='/#explore' className='scroll btn-lg' variant='warning'>
-            Scopri di più
-          </Button>
+          <>
+            <Button
+              href='/#explore'
+              className='scroll btn-lg'
+              variant='warning'
+            >
+              Scopri di più
+            </Button>{" "}
+            <Button
+              href='/schedule'
+              className='scroll btn-lg'
+              variant='warning'
+            >
+              Programma
+            </Button>
+          </>
         )}
       </Container>
     </div>
