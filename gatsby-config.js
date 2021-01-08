@@ -17,6 +17,7 @@ module.exports = {
     event: {
       date: new Date("2019-10-26"),
       time: "9:30",
+      topic: "al mondo dell'Intelligenza Artificiale",
     },
     callForPaper: {
       enabled: false,
