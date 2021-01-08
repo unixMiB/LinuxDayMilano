@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Row, Col, Modal, Button } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button, Dropdown } from "react-bootstrap";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
@@ -125,6 +125,7 @@ class Talks extends React.Component {
                 return (
                   <Col sm={12} md className='pb-4'>
                     <div
+                      onKeyPress={() => this.replaceModalItem(t)}
                       onClick={() => this.replaceModalItem(t)}
                       className='event border rounded h-100 d-flex flex-column'
                       style={{
@@ -170,26 +171,42 @@ class Talks extends React.Component {
   }
 }
 
-export default ({ data }) => (
-  <Layout>
-    <SEO title='Programma' />
-    <main id='index'>
-      <Hero />
-      <section style={{ color: "black" }}>
-        <Container>
-          <ThemeToggler>
-            {({ theme }) => (
-              <h2 className={"mb-5" + (theme === "dark" ? " text-light" : "")}>
-                Programma della giornata
-              </h2>
-            )}
-          </ThemeToggler>
-          <Talks scheduleData={data.schedulesYaml.schedule} />
-        </Container>
-      </section>
-    </main>
-  </Layout>
-);
+export default ({ data }) => {
+  const allSchedules = data.allSchedulesYaml.nodes;
+  return (
+    <Layout>
+      <SEO title='Programma' />
+      <main id='index'>
+        <Hero />
+        <section style={{ color: "black" }}>
+          <Container>
+            <div className='d-flex justify-content-between align-items-center'>
+              <ThemeToggler>
+                {({ theme }) => (
+                  <h2
+                    className={"mb-5" + (theme === "dark" ? " text-light" : "")}
+                  >
+                    Programma della giornata
+                  </h2>
+                )}
+              </ThemeToggler>
+              <Dropdown>
+                <Dropdown.Toggle>Anno {allSchedules[0]?.year}</Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {allSchedules.map((s) => (
+                    <Dropdown.Item>{s.year}</Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
+
+            <Talks scheduleData={data.schedulesYaml.schedule} />
+          </Container>
+        </section>
+      </main>
+    </Layout>
+  );
+};
 
 export const query = graphql`
   {
@@ -205,6 +222,24 @@ export const query = graphql`
           video
         }
         time
+      }
+    }
+
+    allSchedulesYaml(sort: { order: ASC, fields: year }) {
+      nodes {
+        year
+        schedule {
+          time
+          talks {
+            title
+            description
+            author
+            room
+            duration
+            slides
+            video
+          }
+        }
       }
     }
 
