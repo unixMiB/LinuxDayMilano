@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -173,6 +173,7 @@ class Talks extends React.Component {
 
 export default ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
+  const [sched, setSched] = useState(0);
   return (
     <Layout>
       <SEO title='Programma' />
@@ -180,27 +181,31 @@ export default ({ data }) => {
         <Hero />
         <section style={{ color: "black" }}>
           <Container>
-            <div className='d-flex justify-content-between align-items-center'>
-              <ThemeToggler>
-                {({ theme }) => (
-                  <h2
-                    className={"mb-5" + (theme === "dark" ? " text-light" : "")}
-                  >
+            <ThemeToggler>
+              {({ theme }) => (
+                <div className='d-flex justify-content-between align-items-center align-middle mb-5'>
+                  <h2 className={theme === "dark" ? " text-light" : ""}>
                     Programma della giornata
                   </h2>
-                )}
-              </ThemeToggler>
-              <Dropdown>
-                <Dropdown.Toggle>Anno {allSchedules[0]?.year}</Dropdown.Toggle>
-                <Dropdown.Menu>
-                  {allSchedules.map((s) => (
-                    <Dropdown.Item>{s.year}</Dropdown.Item>
-                  ))}
-                </Dropdown.Menu>
-              </Dropdown>
-            </div>
+                  <Dropdown>
+                    <Dropdown.Toggle
+                      variant={theme === "dark" ? "outline-warning" : "warning"}
+                    >
+                      Anno {allSchedules[sched]?.year}
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      {allSchedules.map((s, i) => (
+                        <Dropdown.Item key={i} onClick={() => setSched(i)}>
+                          {s.year}
+                        </Dropdown.Item>
+                      ))}
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+              )}
+            </ThemeToggler>
 
-            <Talks scheduleData={data.schedulesYaml.schedule} />
+            <Talks scheduleData={allSchedules[sched]?.schedule} />
           </Container>
         </section>
       </main>
