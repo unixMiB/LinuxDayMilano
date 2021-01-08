@@ -105,6 +105,10 @@ class Talks extends React.Component {
     this.replaceModalItem = this.replaceModalItem.bind(this);
   }
 
+  componentWillUnmount(a) {
+    console.log("Mounting Talsk: " + JSON.stringify(a));
+  }
+
   replaceModalItem(item) {
     this.setState({
       required: item,
@@ -173,7 +177,8 @@ class Talks extends React.Component {
 
 export default ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
-  const [sched, setSched] = useState(0);
+  const [schedData, setSchedData] = useState(allSchedules[0]);
+  console.log("schedData: " + JSON.stringify(schedData));
   return (
     <Layout>
       <SEO title='Programma' />
@@ -191,11 +196,16 @@ export default ({ data }) => {
                     <Dropdown.Toggle
                       variant={theme === "dark" ? "outline-warning" : "warning"}
                     >
-                      Anno {allSchedules[sched]?.year}
+                      Anno {schedData?.year}
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                       {allSchedules.map((s, i) => (
-                        <Dropdown.Item key={i} onClick={() => setSched(i)}>
+                        <Dropdown.Item
+                          key={i}
+                          onClick={() => {
+                            setSchedData(allSchedules[i]);
+                          }}
+                        >
                           {s.year}
                         </Dropdown.Item>
                       ))}
@@ -205,7 +215,7 @@ export default ({ data }) => {
               )}
             </ThemeToggler>
 
-            <Talks scheduleData={allSchedules[sched]?.schedule} />
+            <Talks scheduleData={schedData?.schedule} />
           </Container>
         </section>
       </main>
@@ -215,22 +225,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    schedulesYaml(year: { eq: 2019 }) {
-      schedule {
-        talks {
-          author
-          description
-          duration
-          room
-          slides
-          title
-          video
-        }
-        time
-      }
-    }
-
-    allSchedulesYaml(sort: { order: ASC, fields: year }) {
+    allSchedulesYaml(sort: { order: DESC, fields: year }) {
       nodes {
         year
         schedule {
