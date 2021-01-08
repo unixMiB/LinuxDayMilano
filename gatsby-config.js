@@ -79,8 +79,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "data",
-        path: path.join(__dirname, "src", "data"),
+        name: "schedules",
+        path: path.join(__dirname, "src", "schedules"),
       },
     },
     "gatsby-plugin-offline",

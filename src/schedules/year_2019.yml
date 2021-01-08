@@ -1,4 +1,5 @@
----
+year: 2019
+schedule:
 - time: "9:30"
   talks:
     - title: Keynote
