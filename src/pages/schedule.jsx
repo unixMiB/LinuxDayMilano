@@ -184,7 +184,7 @@ export default ({ data }) => (
               </h2>
             )}
           </ThemeToggler>
-          <Talks scheduleData={data.allScheduleYaml.nodes} />
+          <Talks scheduleData={data.schedulesYaml.schedule} />
         </Container>
       </section>
     </main>
@@ -193,20 +193,21 @@ export default ({ data }) => (
 
 export const query = graphql`
   {
-    allScheduleYaml {
-      nodes {
+    schedulesYaml(year: { eq: 2019 }) {
+      schedule {
         talks {
-          title
-          slides
-          room
-          duration
-          description
           author
+          description
+          duration
+          room
+          slides
+          title
           video
         }
         time
       }
     }
+
     site {
       siteMetadata {
         event {
