@@ -18,10 +18,15 @@ module.exports = {
       date: new Date("2019-10-26"),
       time: "9:30",
       topic: "al mondo dell'Intelligenza Artificiale",
-    },
-    callForPaper: {
-      enabled: false,
-      link: "https://forms.gle/koz5Hmo4mwqFvuB77",
+      cfp: "https://forms.gle/koz5Hmo4mwqFvuB77",
+      arguments: [
+        "Linux, software e hardware Open Source",
+        "Open Source nel mondo dell'istruzione",
+        "Alternative open a software proprietari",
+        "Innovazione nel mondo dell'Open Source",
+        "L'apprendimento mediante il Do It Yourself",
+        "Programmazione e tecniche di sviluppo",
+      ],
     },
     contacts: {
       email: "unixmib@gmail.com",

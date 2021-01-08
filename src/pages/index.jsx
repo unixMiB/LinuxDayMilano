@@ -60,17 +60,15 @@ const IndexPage = ({ data }) => {
                   <p>
                     <strong>Ecco in breve alcuni dei nostri talk:</strong>
                     <ul>
-                      {data.allSettingsYaml.nodes[0].settings.topicList.map(
-                        (topic) => {
-                          return <li>{topic}</li>;
-                        }
-                      )}
+                      {data.site.siteMetadata.event.arguments.map((topic) => {
+                        return <li>{topic}</li>;
+                      })}
                     </ul>
                   </p>
                   <br />
 
                   <Button
-                    href={data.allSettingsYaml.nodes[0].settings.cfpUrl}
+                    href={data.site.siteMetadata.event.cfp}
                     className='btn-lg'
                     variant='warning'
                   >
@@ -99,11 +97,9 @@ const IndexPage = ({ data }) => {
                   <p>
                     <strong>Ecco in breve alcuni dei nostri talk:</strong>
                     <ul>
-                      {data.allSettingsYaml.nodes[0].settings.topicList.map(
-                        (topic) => {
-                          return <li>{topic}</li>;
-                        }
-                      )}
+                      {data.site.siteMetadata.event.arguments.map((topic) => {
+                        return <li>{topic}</li>;
+                      })}
                     </ul>
                   </p>
                   <br />
@@ -160,6 +156,8 @@ export const query = graphql`
           time
           date
           topic
+          cfp
+          arguments
           text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
         }
         contacts {
@@ -169,14 +167,6 @@ export const query = graphql`
         switches {
           schedule
           cfp
-        }
-      }
-    }
-    allSettingsYaml {
-      nodes {
-        settings {
-          topic
-          topicList
         }
       }
     }
