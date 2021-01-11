@@ -175,10 +175,16 @@ class Talks extends React.Component {
   }
 }
 
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+
 export default ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
-  console.log("schedData: " + JSON.stringify(schedData));
+
+  if ("development" === activeEnv)
+    console.log("schedData: " + JSON.stringify(schedData));
+
   return (
     <Layout>
       <SEO title='Programma' />
