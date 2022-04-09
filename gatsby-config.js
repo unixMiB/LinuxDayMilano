@@ -5,19 +5,19 @@ module.exports = {
     description:
       "Manifestazione italiana dedicata a GNU/Linux, al software libero, alla cultura aperta e alla condivisione.",
     keywords:
-      "Linux Day, Milano, 2019, GNU, GNU/Linux, Open Source, Software Libero, Condivisione",
+      "Linux Day, Milano, 2022, GNU, GNU/Linux, Open Source, Software Libero, Condivisione",
     author: "unixMiB (https://unixmib.org)",
     theme: "#343a40",
     navbarVariant: "dark",
     siteUrl: "http://linuxdaymilano.org/",
     switches: {
-      schedule: true,
-      cfp: false,
+      schedule: false,
+      cfp: true,
     },
     event: {
-      date: new Date("2019-10-26"),
+      date: new Date("2022-10-22"),
       time: "9:30",
-      topic: "al mondo dell'Intelligenza Artificiale",
+      topic: "al placeholder",
       cfp: "https://forms.gle/koz5Hmo4mwqFvuB77",
       arguments: [
         "Linux, software e hardware Open Source",
@@ -47,14 +47,12 @@ module.exports = {
         extensions: ["css", "html", "js", "svg"],
       },
     },
-    "gatsby-plugin-dark-mode",
     {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("sass"),
       },
     },
-    "gatsby-plugin-preact",
     "gatsby-transformer-yaml",
     {
       resolve: "gatsby-plugin-manifest",
@@ -96,7 +94,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-react-svg",
     {
       resolve: "gatsby-plugin-sharp",
       options: {

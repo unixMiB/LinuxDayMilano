@@ -14,6 +14,9 @@ const Hero = ({ small }) => {
               time
               text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
             }
+            switches {
+              schedule
+            }
             contacts {
               website
               place {
@@ -36,15 +39,17 @@ const Hero = ({ small }) => {
           Linux Day Milano <span>{metadata.event.year}</span>
         </h1>
         <h3 className='title pb-3'>
-          <small>organizzato da</small>{" "}
-          <a
-            title='Scopri di più su unixMiB'
-            href={metadata.contacts.website}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            unix<span className='unixmib'>MiB</span>
-          </a>
+          <small>
+            organizzato da{" "}
+            <a
+              title='Scopri di più su unixMiB'
+              href={metadata.contacts.website}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              unix<span className='unixmib'>MiB</span>
+            </a>
+          </small>
         </h3>
         <div className='subtitle'>
           <FontAwesomeIcon icon='calendar' /> {metadata.event.text}
@@ -72,7 +77,9 @@ const Hero = ({ small }) => {
               className='scroll btn-lg'
               variant='warning'
             >
-              Programma
+              {metadata.switches.schedule
+                ? "Programma"
+                : "Programma precedente"}
             </Button>
           </>
         )}

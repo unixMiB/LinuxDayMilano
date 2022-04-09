@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col, Modal, Button, Dropdown } from "react-bootstrap";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
-import { ThemeToggler } from "gatsby-plugin-dark-mode";
 
 class DetailView extends React.Component {
   constructor(props) {
@@ -178,9 +177,27 @@ class Talks extends React.Component {
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
 
+const useThemeDetector = () => {
+  const getCurrentTheme = () =>
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
+  const mqListener = (e) => {
+    setIsDarkTheme(e.matches);
+  };
+
+  useEffect(() => {
+    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    darkThemeMq.addListener(mqListener);
+    return () => darkThemeMq.removeListener(mqListener);
+  }, []);
+  return isDarkTheme;
+};
+
 export default ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
+
+  const isDarkTheme = useThemeDetector();
 
   if ("development" === activeEnv)
     console.log("schedData: " + JSON.stringify(schedData));
@@ -192,34 +209,30 @@ export default ({ data }) => {
         <Hero />
         <section style={{ color: "black" }}>
           <Container>
-            <ThemeToggler>
-              {({ theme }) => (
-                <div className='d-flex justify-content-between align-items-center align-middle mb-5'>
-                  <h2 className={theme === "dark" ? " text-light" : ""}>
-                    Programma della giornata
-                  </h2>
-                  <Dropdown>
-                    <Dropdown.Toggle
-                      variant={theme === "dark" ? "outline-warning" : "warning"}
+            <div className='d-flex justify-content-between align-items-center align-middle mb-5'>
+              <h2 className={isDarkTheme ? " text-light" : ""}>
+                Programma della giornata
+              </h2>
+              <Dropdown>
+                <Dropdown.Toggle
+                  variant={isDarkTheme ? "outline-warning" : "warning"}
+                >
+                  Anno {schedData?.year}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {allSchedules.map((s, i) => (
+                    <Dropdown.Item
+                      key={i}
+                      onClick={() => {
+                        setSchedData(allSchedules[i]);
+                      }}
                     >
-                      Anno {schedData?.year}
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      {allSchedules.map((s, i) => (
-                        <Dropdown.Item
-                          key={i}
-                          onClick={() => {
-                            setSchedData(allSchedules[i]);
-                          }}
-                        >
-                          {s.year}
-                        </Dropdown.Item>
-                      ))}
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </div>
-              )}
-            </ThemeToggler>
+                      {s.year}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
 
             <Talks scheduleData={schedData?.schedule} />
           </Container>

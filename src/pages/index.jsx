@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import { Button, Row, Col, Container } from "react-bootstrap";
 import watch from "../assets/watch.png";
 import talks from "../assets/talk-subscription.png";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 
@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
             <Container>
               <Row>
                 <Col sm='4'>
-                  <img
+                  <GatsbyImage
                     className='img-fluid'
                     alt=''
                     role='presentation'
@@ -124,7 +124,10 @@ const IndexPage = ({ data }) => {
               {data.allFile.nodes.map((item) => {
                 return (
                   <div className='col-6 col-sm-4 col-md-3 pb-3'>
-                    <Img width='5rem' fluid={item.childImageSharp.fluid} />
+                    <GatsbyImage
+                      width='5rem'
+                      fluid={item.childImageSharp.gatsbyImageData}
+                    />
                   </div>
                 );
               })}
@@ -143,9 +146,14 @@ export const query = graphql`
         name
         publicURL
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
+          gatsbyImageData(
+            quality: 80
+            placeholder: NONE
+            layout: FULL_WIDTH
+            jpgOptions: { progressive: true }
+            formats: [WEBP, PNG]
+            avifOptions: { lossless: true }
+          )
         }
       }
     }

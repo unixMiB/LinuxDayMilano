@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <footer>
       <section id='contattaci'>
-        <Row>
+        <div>
           <div id='ear'>
             <img alt='' role='presentation' src={ear} />
           </div>
@@ -66,7 +66,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </Row>
+        </div>
       </section>
       <section className='section-license text-center align align-middle'>
         Quest'opera è distribuita con Licenza Creative Commons Attribuzione -{" "}

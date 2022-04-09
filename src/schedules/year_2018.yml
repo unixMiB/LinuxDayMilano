@@ -1,0 +1,36 @@
+year: 2018
+schedule:
+  - time: "9:30"
+    talks:
+      - title: Keynote
+        description: Vi diamo il benvenuto al Linux Day 2018
+        author: Daniele Barcella, Adrian Castro - unixMiB
+        room: U7-04
+        duration: 30 min
+  - time: "10:30"
+    talks:
+      - title: "Careables: oggetti che curano autoprogettati e opensource"
+        description: 'Quando si parla di soluzioni per l''healthcare, si pensa spesso a laboratori di ricerca di grandi aziende o start-up innovative. C''è una nuova categoria di oggetti, pensati dagli stessi utenti che li useranno, basati su opensource e tecnologie accessibili, sviluppati da communities: i "Careables". Il neologismo descrive proprio le soluzioni dal basso, emerse dall''esperienza quotidiana di chi vive con limitazioni fisiche e cerca soluzioni per le sue necessità, trasformando il suo ruolo da passivo (implicito nel termine "paziente") in attivo co-progettista. Tutto ciò è possibile grazie a tecnologie come stampa 3D, taglio laser, fresa CNC, Arduino, Raspberry Pi, la filosofia Opensource, spazi come i Fablab, il lavoro online e offline delle community e l''incontro di skills molto diverse tra loro. Durante la presentazione Enrico Bassi, coordinatore del fablab Opendot e referente del Meetup Milanese per la progettazione di Careables, spiegherà in cosa consiste il progetto, come partecipare e quali sono le sfide in corso'
+        author: Enrico Bassi - OpenDot
+        room: U7-04
+        duration: 60 min
+      - title: "Il Web fu fatto da amatori"
+        description: 'In un''intervista del 2012, Alan Kay, pioniere dell''informatica, affermò: "Internet è fatta così bene che la gente la considera una risorsa naturale, come l''oceano Pacifico, piuttosto che qualcosa di creato dall''uomo. [...] Il Web a confronto e'' uno scherzo. Il Web fu fatto da amatori." In un excursus che analizza la storia, e la preistoria, del Web da un punto di vista tecnologico, metterò queste affermazioni in prospettiva. Il materiale è oggetto del recente libro "The Web Was Done by Amateurs: A Reflection of One of the Largest Collective Systems Ever Engineered," edito da Springer-Nature, 2018.'
+        author: Marco Aiello
+        room: U7-05
+        duration: 60 min
+      - title: "Il fattore umano della cyber-security"
+        description: "Quali sono i reali rischi che corriamo quando navighiamo su Internet? Come agiscono i pirati informatici? Capire i meccanismi che si nascondono dietro il cyber-crimine è il primo modo per proteggersi"
+        author: Marco Schiaffino - SecurityInfo.it
+        room: U7-10
+        duration: 60 min
+      - title: "CAREABLES: OGGETTI CHE CURANO AUTOPROGETTATI E OPENSOURCE"
+        description: "Passi fatti dai volontari del progetto. I volontari sono appassionati di Software Libero, Open Hardware e di bene comune e stanno progettando un Notebook Open Hardware basato su GNU/LInux ed architettura PowerPC. Presenteranno un'anteprima dello schema elettrico della scheda madre che stanno tentando di rilasciare in tutte le sue parti come progetto libero. Aggiorneranno sui prossimi passi per raggiungere l'obiettivo."
+        author: Enrico Bassi - OpenDot
+        room: U7-11
+        duration: 60 min
+  - time: "11:30"
+    talks:
+      - title: Pausa caffé
+        description: Una breve pausa per rinfrescare la mente
+        duration: 15 min

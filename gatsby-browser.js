@@ -4,9 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import './src/styles/main.scss'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import "./src/styles/main.scss";
+import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faUsers,
   faFlag,
@@ -22,10 +21,10 @@ import {
   faEnvelope,
   faDownload,
   faGlobe,
-} from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { config } from '@fortawesome/fontawesome-svg-core'
-config.autoAddCss = false
+} from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 library.add(
   fab,
   faVideo,
@@ -41,5 +40,5 @@ library.add(
   faMapMarkedAlt,
   faChevronRight,
   faEnvelope,
-  faGlobe,
-)
+  faGlobe
+);
