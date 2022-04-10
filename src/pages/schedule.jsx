@@ -179,7 +179,8 @@ const activeEnv =
 
 const useThemeDetector = () => {
   const getCurrentTheme = () =>
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
+    //window.matchMedia("(prefers-color-scheme: dark)").matches;
+    false
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const mqListener = (e) => {
     setIsDarkTheme(e.matches);
