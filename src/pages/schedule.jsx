@@ -193,7 +193,7 @@ const useThemeDetector = () => {
   return isDarkTheme;
 };
 
-export default ({ data }) => {
+const Page = ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
 
@@ -281,3 +281,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Page;
