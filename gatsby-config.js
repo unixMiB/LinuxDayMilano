@@ -63,7 +63,7 @@ module.exports = {
         description: "Manifestazione italiana dedicata a GNU/Linux",
         background_color: "#fee900",
         theme_color: "#343a40",
-        display: "standalone",
+        display: "minimal-ui",
         icon: "./src/assets/favicon.svg",
       },
     },
