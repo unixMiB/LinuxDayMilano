@@ -120,7 +120,7 @@ const IndexPage = ({ data }) => {
                 Sponsors Linux Day Milano
               </h2>
             </div>
-            <div className='row'>
+            <Row>
               {data.allFile.nodes.map((item) => {
                 return (
                   <div className='col-6 col-sm-4 col-md-3 pb-3'>
@@ -131,7 +131,12 @@ const IndexPage = ({ data }) => {
                   </div>
                 );
               })}
-            </div>
+            </Row>
+            <Row className="">
+              <Col className="justify-content-center">
+                <Button>Diventa uno sponsor</Button>
+              </Col>
+            </Row>
           </Container>
         </section>
       </main>
