@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Hero = ({ small }) => {
@@ -64,7 +64,7 @@ const Hero = ({ small }) => {
           <br />
         </div>
         {small && (
-          <>
+          <div className="d-flex g-5">
             <Button
               href='/#explore'
               className='scroll btn-lg'
@@ -81,7 +81,7 @@ const Hero = ({ small }) => {
                 ? "Programma"
                 : "Programma precedente"}
             </Button>
-          </>
+          </div>
         )}
       </Container>
     </div>

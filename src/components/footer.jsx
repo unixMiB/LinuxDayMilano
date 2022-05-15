@@ -29,8 +29,8 @@ const Footer = () => {
   return (
     <footer>
       <section id='contattaci'>
-        <Container fluid>
-          <div className="d-flex justify-content-start gx-5">
+        <Container className="footer">
+          <div className="d-flex justify-content-start gx-md-5">
             <div style={{ overflow: "hidden", height: "20rem" }} className="d-md-block d-none">
               <img alt='' style={{ height: "400px", width: "382px" }} className="" role='presentation' src={ear} />
             </div>
