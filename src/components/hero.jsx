@@ -35,22 +35,23 @@ const Hero = ({ small }) => {
   return (
     <div id='hero'>
       <Container>
-        <h1 style={{ textTransform: "uppercase" }} className='title'>
+        <h1 style={{ textTransform: "uppercase" }} className='mb-0'>
           Linux Day Milano <span>{metadata.event.year}</span>
         </h1>
-        <h3 className='title pb-3'>
+        <h6 className='pb-3'>
           <small>
             organizzato da{" "}
             <a
               title='Scopri di più su unixMiB'
               href={metadata.contacts.website}
               target='_blank'
+              className="font-monospace unixmib text-white"
               rel='noopener noreferrer'
             >
               unix<span className='unixmib'>MiB</span>
             </a>
           </small>
-        </h3>
+        </h6>
         <div className='subtitle'>
           <FontAwesomeIcon icon='calendar' /> {metadata.event.text}
           <br />
@@ -64,17 +65,19 @@ const Hero = ({ small }) => {
           <br />
         </div>
         {small && (
-          <div className="d-flex g-5">
+          <div className="mt-5 gx-5 d-flex flex-wrap justify-content-start clearfix">
             <Button
               href='/#explore'
-              className='scroll btn-lg'
+              size="lg"
+              className="m-1"
               variant='warning'
             >
               Scopri di più
-            </Button>{" "}
+            </Button>
             <Button
               href='/schedule'
-              className='scroll btn-lg'
+              size="lg"
+              className="m-1"
               variant='warning'
             >
               {metadata.switches.schedule

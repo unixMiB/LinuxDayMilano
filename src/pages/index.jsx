@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
             <div className='watch'>
               <img alt='' height={"20rem"} className="img-fluid h-100" role='presentation' src={watch} />
             </div>
-            <Container className="front">
+            <Container className="front" style={{position: "sticky"}}>
               <div className="d-flex justify-content-center">
                 <p>
                   <h2 style={{ textTransform: "uppercase" }}>
@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
           <Container>
             <Row>
               <Col sm='4'>
-                <img alt='' className="img-fluid" role='presentation' src={talks} />
+                <img alt='' className="img-fluid mb-4 mb-sm-0" role='presentation' src={talks} />
               </Col>
               <Col sm='8'>
                 <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>

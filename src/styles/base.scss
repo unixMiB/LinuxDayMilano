@@ -6,6 +6,12 @@ html {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
+.unixmib {
+  span {
+    color: $unixmib;
+  }
+}
+
 a.anchor {
   display: block;
   position: relative;

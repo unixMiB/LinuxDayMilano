@@ -1,7 +1,8 @@
 #index {
   #hero {
     @include cover-background("../assets/hero.jpg", true);
-    @include media-breakpoint-up(lg) {
+
+    @include media-breakpoint-up(md) {
       padding: 3rem 4rem 5rem;
     }
 
@@ -21,12 +22,7 @@
       @include tshadow;
       span {
         color: $ldmi;
-        font-family: "Noto Sans", sans-serif;
         font-weight: bold;
-      }
-
-      span.unixmib {
-        color: $unixmib;
       }
       a {
         color: white;
@@ -43,14 +39,11 @@
     h1.title {
       color: white;
       font-weight: bold;
-      //font-family: 'Noto Serif', serif;
     }
 
     h3.title {
       color: white;
-      // font-size: 2.5rem;
       font-weight: normal;
-      font-family: "Noto Serif", serif;
     }
 
     .subtitle {
