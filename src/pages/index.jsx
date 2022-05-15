@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
         <section id='explore'>
           <div>
             <div className='watch'>
-              <img alt='' role='presentation' src={watch} />
+              <img alt='' height={"20rem"} className="img-fluid h-100" role='presentation' src={watch} />
             </div>
             <Container className="front">
               <div className="d-flex justify-content-center">
@@ -46,67 +46,42 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        {data.site.siteMetadata.switches.cfp && (
-          <section id='schedule'>
-            <Container>
-              <Row>
-                <Col sm='4'>
-                  <img alt='' className="img-fluid" role='presentation' src={talks} />
-                </Col>
-                <Col sm='8'>
-                  <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
-                  <p>
-                    <strong>Ecco in breve alcuni dei nostri talk:</strong>
-                    <ul>
-                      {data.site.siteMetadata.event.arguments.map((topic) => {
-                        return <li>{topic}</li>;
-                      })}
-                    </ul>
-                  </p>
-                  <br />
 
-                  <Button
-                    href={data.site.siteMetadata.event.cfp}
-                    className='btn-lg'
-                    variant='warning'
-                  >
-                    Presenta un intervento
-                  </Button>
-                </Col>
-              </Row>
-            </Container>
-          </section>
-        )}
-
-        {data.site.siteMetadata.switches.schedule && (
-          <section id='schedule'>
-            <Container>
-              <Row>
-                <Col sm='4'>
-                  <img
-                    alt=''
-                    src={talks} />
-                </Col>
-                <Col sm='8'>
-                  <h2 style={{ textTransform: "uppercase" }}>Programma</h2>
-                  <p>
-                    <strong>Ecco in breve alcuni dei nostri talk:</strong>
-                    <ul>
-                      {data.site.siteMetadata.event.arguments.map((topic) => {
-                        return <li>{topic}</li>;
-                      })}
-                    </ul>
-                  </p>
-                  <br />
-
+        <section id='schedule'>
+          <Container>
+            <Row>
+              <Col sm='4'>
+                <img alt='' className="img-fluid" role='presentation' src={talks} />
+              </Col>
+              <Col sm='8'>
+                <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
+                <p>
+                  <strong>Ecco in breve alcuni dei nostri talk:</strong>
+                  <ul>
+                    {data.site.siteMetadata.event.arguments.map((topic) => {
+                      return <li>{topic}</li>;
+                    })}
+                  </ul>
+                </p>
+                <br />
+                {data.site.siteMetadata.switches.cfp && (<Button
+                  href={data.site.siteMetadata.event.cfp}
+                  className='btn-lg'
+                  variant='warning'
+                >
+                  Presenta un intervento
+                </Button>
+                )}
+                {data.site.siteMetadata.switches.schedule && (
                   <Button href='/schedule' className='btn-lg' variant='warning'>
                     Guarda il programma
                   </Button>
-                </Col>
-              </Row>
-            </Container>
-          </section>
-        )}
+                )}
+
+              </Col>
+            </Row>
+          </Container>
+        </section>
 
         <section id='sponsors'>
           <Container>
@@ -129,7 +104,7 @@ const IndexPage = ({ data }) => {
             </Row>
             <Row className="">
               <Col className="justify-content-center">
-                <Button>Diventa uno sponsor</Button>
+                <Button className='btn-lg' variant='warning'>Diventa uno sponsor</Button>
               </Col>
             </Row>
           </Container>

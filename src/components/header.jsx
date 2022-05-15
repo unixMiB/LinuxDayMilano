@@ -47,7 +47,7 @@ const Header = () => {
             <Nav>
               <Nav.Link href='/#explore'>Evento</Nav.Link>
               {switches.cfp && (
-                <Nav.Link href='/#call-for-papers'>Call for papers</Nav.Link>
+                <Nav.Link href='/#schedule'>Call for papers</Nav.Link>
               )}
               {switches.schedule && (
                 <Nav.Link href='/#schedule'>Programma</Nav.Link>

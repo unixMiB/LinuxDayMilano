@@ -1,0 +1,38 @@
+footer {
+    section.section-license {
+        color: white;
+        background-color: #212121;
+        text-align: center;
+        padding: 2rem 2.5rem 2rem;
+
+        span.ldmi {
+            color: $ldmi;
+        }
+
+        span.unixmib {
+            color: $unixmib;
+        }
+    }
+
+    section#contattaci {
+        background-color: #f7ab24;
+        color: $black;
+
+        a {
+            color: white;
+        }
+
+        .ear {
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+
+            max-height: fit-content;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+}
