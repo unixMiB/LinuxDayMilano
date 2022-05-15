@@ -72,6 +72,7 @@ schedule:
         author: "Lorenzo Losa - Wikimedia Italia & FSFE Milano"
         description: "Settant'anni dopo la morte. Il diritto d'autore in Unione europea. Le leggi sul diritto d'autore sono una delle normative chiave che regolano la Rete e il libero scambio di informazioni. In Unione europea è in discussione una riforma del diritto d'autore; le recenti votazioni del Parlamento europeo a inizio luglio e inizio settembre sono state molto discusse, vedendo fra l'altro con l'oscuramento di Wikipedia. Nella bozza attuale non c'è traccia di molti miglioramenti che erano stati ipotizzati inizialmente, come garanzie maggiori per gli utenti e gli autori o una piena libertà di panorama, e al contempo trovano spazio l'istituzione di nuovi diritti in capo agli editori (articolo 11; soprannominato "tassa sui link") e l'introduzione di un obbligo di filtraggio preventivo dei contenuti caricati dagli utenti (articolo 13; soprannominato "macchina della censura"). Parleremo dello stato dei lavori, dei cambiamenti che ci aspettano e dell'impatto che hanno sull'uso quotidiano della Rete - e di cosa può ancora cambiare."
         room: U7-04
+        duration: 60 min
 
       - title: "Libera il tuo router!"
         author: Stefano Costa - FSFE Milano
