@@ -17,30 +17,33 @@ const IndexPage = ({ data }) => {
       <main id='index'>
         <Hero small={true} />
         <section id='explore'>
-          <Row>
+          <div>
             <div className='watch'>
               <img alt='' role='presentation' src={watch} />
             </div>
-            <div className='front text'>
-              <p>
-                <h2 style={{ textTransform: "uppercase" }}>
-                  Il Linux Day <span>Milano</span> si{" "}
-                  {isPast ? "è svolta" : "svolgerà"} il
+            <Container className="front">
+              <div className="d-flex justify-content-center">
+                <p>
+                  <h2 style={{ textTransform: "uppercase" }}>
+                    Il Linux Day <span>Milano</span> si{" "}
+                    {isPast ? "è svolta" : "svolgerà"} il
+                    <br />
+                    <span>{data.site.siteMetadata.event.text}</span>
+                  </h2>
                   <br />
-                  <span>{data.site.siteMetadata.event.text}</span>
-                </h2>
-                <br />
-                Torna la principale manifestazione italiana dedicata a
-                GNU/Linux, al software libero, alla cultura aperta e alla
-                condivisione.
-                <br />
-                <span>
-                  L'edizione {data.site.siteMetadata.event.year} è dedicata
-                  {" " + data.site.siteMetadata.event.topic}
-                </span>
-              </p>
-            </div>
-          </Row>
+                  Torna la principale manifestazione italiana dedicata a
+                  GNU/Linux, al software libero, alla cultura aperta e alla
+                  condivisione.
+                  <br />
+                  <span>
+                    L'edizione {data.site.siteMetadata.event.year} è dedicata
+                    {" " + data.site.siteMetadata.event.topic}
+                  </span>
+                </p>
+              </div>
+
+            </Container>
+          </div>
         </section>
 
         {data.site.siteMetadata.switches.cfp && (
@@ -48,12 +51,7 @@ const IndexPage = ({ data }) => {
             <Container>
               <Row>
                 <Col sm='4'>
-                  <GatsbyImage
-                    className='img-fluid'
-                    alt=''
-                    role='presentation'
-                    src={talks}
-                  />
+                  <img alt='' className="img-fluid" role='presentation' src={talks} />
                 </Col>
                 <Col sm='8'>
                   <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
@@ -86,11 +84,8 @@ const IndexPage = ({ data }) => {
               <Row>
                 <Col sm='4'>
                   <img
-                    className='img-fluid'
                     alt=''
-                    role='presentation'
-                    src={talks}
-                  />
+                    src={talks} />
                 </Col>
                 <Col sm='8'>
                   <h2 style={{ textTransform: "uppercase" }}>Programma</h2>

@@ -124,11 +124,11 @@
         position: absolute;
         z-index: 1;
 
-        @include media-breakpoint-only(md) {
+        @include media-breakpoint-down(xl) {
           left: -8%;
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           visibility: hidden;
         }
       }
@@ -148,7 +148,7 @@
       }
 
       .front {
-        z-index: 999;
+        z-index: 999 !important;
       }
     }
 

@@ -29,10 +29,11 @@ const Footer = () => {
   return (
     <footer>
       <section id='contattaci'>
-        <div>
-          <div id='ear'>
+        <div className="d-flex flex-row">
+          <div id='ear' className="me-5">
             <img alt='' role='presentation' src={ear} />
           </div>
+
           <div className='text front mt-5 ml-5'>
             <h3>Contatta l'organizzazione</h3>
             <ul>
