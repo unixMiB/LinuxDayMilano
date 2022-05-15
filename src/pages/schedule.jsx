@@ -56,7 +56,7 @@ class DetailView extends React.Component {
           <h6>{this.state.author}</h6>
           <Row>
             <Col>{this.state.duration && "Durata: " + this.state.duration}</Col>
-            <Col className='text-right'>
+            <Col className='text-end'>
               {this.state.room && "Aula: " + this.state.room}
             </Col>
           </Row>
@@ -147,9 +147,9 @@ class Talks extends React.Component {
                         </Col>
                       </Row>
                       <Row className='flex-grow-1 mt-3 align-items-end'>
-                        <Col className='text-left'>{t.duration}</Col>
+                        <Col className='text-start'>{t.duration}</Col>
                         <Col className='text-center'>{t.room}</Col>
-                        <Col className='text-right'>
+                        <Col className='text-end'>
                           <FontAwesomeIcon sm={true} icon='info-circle' />
                         </Col>
                       </Row>
