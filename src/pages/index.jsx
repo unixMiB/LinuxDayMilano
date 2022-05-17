@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import { Button, Row, Col, Container } from "react-bootstrap";
 import watch from "../assets/watch.png";
 import talks from "../assets/talk-subscription.png";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 
@@ -19,10 +19,16 @@ const IndexPage = ({ data }) => {
         <section id='explore'>
           <div>
             <div className='watch'>
-              <img alt='' height={"20rem"} className="img-fluid h-100" role='presentation' src={watch} />
+              <img
+                alt=''
+                height={"20rem"}
+                className='img-fluid h-100'
+                role='presentation'
+                src={watch}
+              />
             </div>
-            <Container className="front" style={{position: "sticky"}}>
-              <div className="d-flex justify-content-center">
+            <Container className='front' style={{ position: "sticky" }}>
+              <div className='d-flex justify-content-center'>
                 <p>
                   <h2 style={{ textTransform: "uppercase" }}>
                     Il Linux Day <span>Milano</span> si{" "}
@@ -35,23 +41,28 @@ const IndexPage = ({ data }) => {
                   GNU/Linux, al software libero, alla cultura aperta e alla
                   condivisione.
                   <br />
-                  <span>
-                    L'edizione {data.site.siteMetadata.event.year} è dedicata
-                    {" " + data.site.siteMetadata.event.topic}
-                  </span>
+                  {data.site.siteMetadata.event.topic && (
+                    <span>
+                      L'edizione {data.site.siteMetadata.event.year} è dedicata
+                      {" " + data.site.siteMetadata.event.topic}
+                    </span>
+                  )}
                 </p>
               </div>
-
             </Container>
           </div>
         </section>
-
 
         <section id='schedule'>
           <Container>
             <Row>
               <Col sm='4'>
-                <img alt='' className="img-fluid mb-4 mb-sm-0" role='presentation' src={talks} />
+                <img
+                  alt=''
+                  className='img-fluid mb-4 mb-sm-0'
+                  role='presentation'
+                  src={talks}
+                />
               </Col>
               <Col sm='8'>
                 <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
@@ -64,51 +75,56 @@ const IndexPage = ({ data }) => {
                   </ul>
                 </p>
                 <br />
-                {data.site.siteMetadata.switches.cfp && (<Button
-                  href={data.site.siteMetadata.event.cfp}
-                  className='btn-lg'
-                  variant='warning'
-                >
-                  Presenta un intervento
-                </Button>
+                {data.site.siteMetadata.switches.cfp && (
+                  <Button
+                    href={data.site.siteMetadata.event.cfp}
+                    className='btn-lg'
+                    variant='warning'
+                  >
+                    Presenta un intervento
+                  </Button>
                 )}
                 {data.site.siteMetadata.switches.schedule && (
                   <Button href='/schedule' className='btn-lg' variant='warning'>
                     Guarda il programma
                   </Button>
                 )}
-
               </Col>
             </Row>
           </Container>
         </section>
 
-        <section id='sponsors'>
-          <Container>
-            <div className='text'>
-              <h2 style={{ textTransform: "uppercase" }}>
-                Sponsors Linux Day Milano
-              </h2>
-            </div>
-            <Row>
-              {data.allFile.nodes.map((item) => {
-                return (
-                  <div className='col-6 col-sm-4 col-md-3 pb-3'>
-                    <GatsbyImage
-                      width='5rem'
-                      fluid={item.childImageSharp.gatsbyImageData}
-                    />
-                  </div>
-                );
-              })}
-            </Row>
-            <Row className="">
-              <Col className="justify-content-center">
-                <Button className='btn-lg' variant='warning'>Diventa uno sponsor</Button>
-              </Col>
-            </Row>
-          </Container>
-        </section>
+        {/* Don't show sponsors section if there are none and submission is closed */}
+        {(data.site.siteMetadata.switches.sponsor_submit ||
+          !!data.sponsors.nodes.length) && (
+          <section id='sponsors'>
+            <Container>
+              <div className='text'>
+                <h2 style={{ textTransform: "uppercase" }}>
+                  Sponsors Linux Day Milano
+                </h2>
+              </div>
+              <Row>
+                {data.sponsors.nodes.map((item) => {
+                  return (
+                    <div className='col-6 col-sm-4 col-md-3 pb-3'>
+                      <GatsbyImage width='5rem' image={getImage(item)} />
+                    </div>
+                  );
+                })}
+              </Row>
+              {data.site.siteMetadata.switches.sponsor_submit && (
+                <Row className=''>
+                  <Col className='justify-content-center'>
+                    <Button className='btn-lg' variant='warning'>
+                      Diventa uno sponsor
+                    </Button>
+                  </Col>
+                </Row>
+              )}
+            </Container>
+          </section>
+        )}
       </main>
     </Layout>
   );
@@ -116,7 +132,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allFile(filter: { sourceInstanceName: { eq: "brands" } }) {
+    sponsors: allFile(filter: { sourceInstanceName: { eq: "brands" } }) {
       nodes {
         name
         publicURL
@@ -126,7 +142,7 @@ export const query = graphql`
             placeholder: NONE
             layout: FULL_WIDTH
             jpgOptions: { progressive: true }
-            formats: [WEBP, PNG]
+            formats: [AUTO, WEBP, AVIF]
             avifOptions: { lossless: true }
           )
         }
@@ -150,6 +166,7 @@ export const query = graphql`
         switches {
           schedule
           cfp
+          sponsor_submit
         }
       }
     }
