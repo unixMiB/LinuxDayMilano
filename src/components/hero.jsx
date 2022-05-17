@@ -33,12 +33,12 @@ const Hero = ({ small }) => {
   const metadata = data.site.siteMetadata;
 
   return (
-    <div id='hero'>
+    <div className="hero">
       <Container>
-        <h1 style={{ textTransform: "uppercase" }} className='mb-0'>
-          Linux Day Milano <span>{metadata.event.year}</span>
+        <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
+          Linux Day Milano <span className="ldmi">{metadata.event.year}</span>
         </h1>
-        <h6 className='pb-3'>
+        <h6 className='pb-3 title'>
           <small>
             organizzato da{" "}
             <a
