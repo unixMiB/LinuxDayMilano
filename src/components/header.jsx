@@ -36,7 +36,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand style={{ maxWidth: "5rem" }} className='brand' href='/'>
-            <img src='Logo' aria-hidden='true' alt='' className='logo' /> LD
+            <img src={Logo} aria-hidden='true' alt='' className='logo' /> LD
             <span>MI {year}</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
