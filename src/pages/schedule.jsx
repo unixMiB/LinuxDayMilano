@@ -180,7 +180,7 @@ const activeEnv =
 const useThemeDetector = () => {
   const getCurrentTheme = () =>
     //window.matchMedia("(prefers-color-scheme: dark)").matches;
-    false
+    false;
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const mqListener = (e) => {
     setIsDarkTheme(e.matches);
@@ -214,25 +214,31 @@ const Page = ({ data }) => {
               <h2 className={isDarkTheme ? " text-light" : ""}>
                 Programma della giornata
               </h2>
-              <Dropdown>
-                <Dropdown.Toggle
-                  variant={isDarkTheme ? "outline-warning" : "warning"}
-                >
+              {data.site.siteMetadata.switches.year_switcher ? (
+                <Dropdown>
+                  <Dropdown.Toggle
+                    variant={isDarkTheme ? "outline-warning" : "warning"}
+                  >
+                    Anno {schedData?.year}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    {allSchedules.map((s, i) => (
+                      <Dropdown.Item
+                        key={i}
+                        onClick={() => {
+                          setSchedData(allSchedules[i]);
+                        }}
+                      >
+                        {s.year}
+                      </Dropdown.Item>
+                    ))}
+                  </Dropdown.Menu>
+                </Dropdown>
+              ) : (
+                <small className='d-none d-sm-block'>
                   Anno {schedData?.year}
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  {allSchedules.map((s, i) => (
-                    <Dropdown.Item
-                      key={i}
-                      onClick={() => {
-                        setSchedData(allSchedules[i]);
-                      }}
-                    >
-                      {s.year}
-                    </Dropdown.Item>
-                  ))}
-                </Dropdown.Menu>
-              </Dropdown>
+                </small>
+              )}
             </div>
 
             <Talks scheduleData={schedData?.schedule} />
@@ -277,6 +283,7 @@ export const query = graphql`
         switches {
           schedule
           cfp
+          year_switcher
         }
       }
     }
