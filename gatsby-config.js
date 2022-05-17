@@ -12,12 +12,14 @@ module.exports = {
     siteUrl: "http://linuxdaymilano.org/",
     switches: {
       schedule: false,
-      cfp: true,
+      cfp: false,
+      sponsor_submit: false,
+      year_switcher: false,
     },
     event: {
       date: new Date("2022-10-22"),
       time: "9:30",
-      topic: "al placeholder",
+      topic: null,
       cfp: "https://forms.gle/koz5Hmo4mwqFvuB77",
       arguments: [
         "Linux, software e hardware Open Source",

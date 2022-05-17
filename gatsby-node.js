@@ -17,3 +17,12 @@ exports.createPages = ({ actions }) => {
     force: true,
   })
 }
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type SiteSiteMetadataEvent implements Node {
+      topic: String
+    }
+  `
+  createTypes(typeDefs)
+}
