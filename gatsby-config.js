@@ -55,6 +55,12 @@ module.exports = {
         implementation: require("sass"),
       },
     },
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://linuxdaymilano.org/",
+      },
+    },
     "gatsby-transformer-yaml",
     {
       resolve: "gatsby-plugin-manifest",
@@ -62,6 +68,10 @@ module.exports = {
         name: "Linux Day Milano",
         short_name: "LDMI",
         start_url: "/",
+        lang: "it",
+        icon_options: {
+          purpose: "any maskable",
+        },
         description: "Manifestazione italiana dedicata a GNU/Linux",
         background_color: "#fee900",
         theme_color: "#343a40",
@@ -113,7 +123,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 1000,
+              maxWidth: 1920,
               linkImagesToOriginal: true,
               quality: 70,
               withWebp: true,
@@ -128,6 +138,12 @@ module.exports = {
       options: {
         headers: {
           "/sw.js": ["Cache-Control: no-cache"],
+          "/*": [
+            "Permissions-Policy: autoplay=(),camera=(),fullscreen=(self),geolocation=(),microphone=(),payment=()",
+            "Strict-Transport-Security: max-age=63072000; includeSubdomains; preload",
+            "X-Content-Type-Options: nosniff",
+            "Referrer-Policy: no-referrer",
+          ],
         },
         mergeSecurityHeaders: true,
         mergeLinkHeaders: true,
