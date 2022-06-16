@@ -14,7 +14,7 @@ module.exports = {
       schedule: false,
       cfp: false,
       sponsor_submit: false,
-      year_switcher: false,
+      year_switcher: true,
     },
     event: {
       date: new Date("2022-10-22"),
