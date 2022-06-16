@@ -56,7 +56,7 @@ npm run build
 
 ## Deploy to Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kowalski7cc/gatsby-starter-kowalski7cc)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/unixMiB/LinuxDayMilano)
 
 ## License
 
