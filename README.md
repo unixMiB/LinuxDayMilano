@@ -2,27 +2,11 @@
 
 ## LDMI Official Website
 
-## What is included
+Linux Day is the main Italian event dedicated to GNU / Linux, free software, open culture and sharing.
 
-- Gatsby 2 support!
-- Bootstrap + Reactstrap
-- Netlify
-- Progressive Web App
-  - Manifest
-  - Offline
-  - Icons
-- SEO
-  - Robots TXT
-  - Sitemap XML
-- SVG as React objects
-- MIT Licensed
-- HTML Helmet
-  - Lang tag for accessibility
-- Custom configs
-  - VSCode debug launcher
-  - Prettier format
-- FontAwesome
-- Custom components
+Common topics are Linux, Open Source software and hardware, Open Source in the world of education and as alternatives to proprietary software, learning through Do It Yourself and programming and development techniques
+
+Learn more at <https://linuxdaymilano.org/>
 
 ## Set Up Your Development Environment
 
@@ -31,18 +15,6 @@ Before starting you will need the following software:
 - [Node.js](https://www.gatsbyjs.org/tutorial/part-zero/#install-nodejs)
 - [Git](https://www.gatsbyjs.org/tutorial/part-zero/#install-git)
 - [Gatsby-cli](https://www.gatsbyjs.org/tutorial/part-zero/#using-the-gatsby-cli)
-
-## Create a new site with this template
-
-``` bash
-gatsby new my-awesome-site https://github.com/kowalski7cc/gatsby-starter-kowalski7cc
-cd my-awesome-site
-gatsby develop
-```
-
-## Todo
-
-- Add LDMI19 program
 
 ## How to build
 
@@ -56,7 +28,7 @@ npm run build
 
 ## Deploy to Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kowalski7cc/gatsby-starter-kowalski7cc)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/unixMiB/LinuxDayMilano)
 
 ## License
 
