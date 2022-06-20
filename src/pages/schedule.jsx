@@ -208,7 +208,7 @@ const Page = ({ data }) => {
               )}
             </div>
 
-            <Talks scheduleData={schedData?.schedule} />
+            <Talks scheduleData={schedData?.schedule} key={schedData?.schedule} />
           </Container>
         </section>
       </main>
