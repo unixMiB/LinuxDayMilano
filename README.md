@@ -1,7 +1,5 @@
 # Linux Day Milano
 
-## LDMI Official Website
-
 Linux Day is the main Italian event dedicated to GNU / Linux, free software, open culture and sharing.
 
 Common topics are Linux, Open Source software and hardware, Open Source in the world of education and as alternatives to proprietary software, learning through Do It Yourself and programming and development techniques
