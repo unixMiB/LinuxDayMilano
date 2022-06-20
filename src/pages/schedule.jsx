@@ -6,92 +6,13 @@ import { Container, Row, Col, Modal, Button, Dropdown } from "react-bootstrap";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 
-class DetailView extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false,
-      title: "Titolo talk",
-      author: "Relatore",
-      description: "Breve descrizione del talk",
-      room: "",
-      duration: "Durata intervento",
-      slides: "",
-      video: "",
-    };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      show: true,
-      title: nextProps.title,
-      author: nextProps.author,
-      description: nextProps.description,
-      room: nextProps.room,
-      duration: nextProps.duration,
-      slides: nextProps.slides,
-      video: nextProps.video,
-    });
-  }
-
-  render() {
-    return (
-      <Modal
-        show={this.state.show}
-        onHide={() => {
-          this.setState({ show: false });
-        }}
-        size='lg'
-        aria-labelledby='contained-modal-title-vcenter'
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id='contained-modal-title-vcenter'>
-            {this.state.title}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>{this.state.description}</p>
-          <br />
-          <h6>{this.state.author}</h6>
-          <Row>
-            <Col>{this.state.duration && "Durata: " + this.state.duration}</Col>
-            <Col className='text-end'>
-              {this.state.room && "Aula: " + this.state.room}
-            </Col>
-          </Row>
-        </Modal.Body>
-        <Modal.Footer>
-          {!(this.state.video === "" || this.state.video == null) && (
-            <Button target='_blank' href={this.state.video} variant='warning'>
-              <FontAwesomeIcon icon='video' /> Video
-            </Button>
-          )}
-          {!(this.state.slides === "" || this.state.slides == null) && (
-            <Button target='_blank' href={this.state.slides} variant='warning'>
-              <FontAwesomeIcon icon='download' /> Slides
-            </Button>
-          )}
-          <Button
-            variant='warning'
-            onClick={() => {
-              this.setState({ show: false });
-            }}
-          >
-            Chiudi
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    );
-  }
-}
-
 class Talks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: props.scheduleData,
       required: {
+        show: false,
         title: "Titolo",
         description: "Descrizione",
         author: "Autore",
@@ -104,13 +25,12 @@ class Talks extends React.Component {
     this.replaceModalItem = this.replaceModalItem.bind(this);
   }
 
-  componentWillUnmount(a) {
-    console.log("Mounting Talsk: " + JSON.stringify(a));
-  }
-
   replaceModalItem(item) {
     this.setState({
-      required: item,
+      required: {
+        ...item,
+        show: !this.state.required.show,
+      },
     });
   }
 
@@ -118,6 +38,62 @@ class Talks extends React.Component {
     let modalData = this.state.required;
     return (
       <>
+        <Modal
+          show={modalData.show}
+          onHide={() => {
+            this.setState({
+              required: {
+                ...modalData,
+                show: false,
+              },
+            });
+          }}
+          size='lg'
+          aria-labelledby='contained-modal-title-vcenter'
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id='contained-modal-title-vcenter'>
+              {modalData.title}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>{modalData.description}</p>
+            <br />
+            <h6>{modalData.author}</h6>
+            <Row>
+              <Col>{modalData.duration && "Durata: " + modalData.duration}</Col>
+              <Col className='text-end'>
+                {modalData.room && "Aula: " + modalData.room}
+              </Col>
+            </Row>
+          </Modal.Body>
+          <Modal.Footer>
+            {!(modalData.video === "" || modalData.video == null) && (
+              <Button target='_blank' href={modalData.video} variant='warning'>
+                <FontAwesomeIcon icon='video' /> Video
+              </Button>
+            )}
+            {!(modalData.slides === "" || modalData.slides == null) && (
+              <Button target='_blank' href={modalData.slides} variant='warning'>
+                <FontAwesomeIcon icon='download' /> Slides
+              </Button>
+            )}
+            <Button
+              variant='warning'
+              onClick={() => {
+                this.setState({
+                  required: {
+                    ...modalData,
+                    show: false,
+                  },
+                });
+              }}
+            >
+              Chiudi
+            </Button>
+          </Modal.Footer>
+        </Modal>
         {this.state.data.map((i) => {
           return (
             <Row className='pb-4'>
@@ -160,15 +136,6 @@ class Talks extends React.Component {
             </Row>
           );
         })}
-        <DetailView
-          title={modalData.title}
-          author={modalData.author}
-          description={modalData.description}
-          room={modalData.room}
-          duration={modalData.duration}
-          slides={modalData.slides}
-          video={modalData.video}
-        />
       </>
     );
   }
