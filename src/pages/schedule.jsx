@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Row, Col, Modal, Button, Dropdown } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Modal from "react-bootstrap/Modal";
+import Dropdown from "react-bootstrap/Dropdown";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 
@@ -208,7 +213,10 @@ const Page = ({ data }) => {
               )}
             </div>
 
-            <Talks scheduleData={schedData?.schedule} key={schedData?.schedule} />
+            <Talks
+              scheduleData={schedData?.schedule}
+              key={schedData?.schedule}
+            />
           </Container>
         </section>
       </main>
