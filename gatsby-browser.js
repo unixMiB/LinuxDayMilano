@@ -44,6 +44,7 @@ library.add(
 
 // import React
 const React = require("react")
+const ReactDOM = require('react-dom') 
 const Toast = require("react-bootstrap/Toast")
 const Button = require('react-bootstrap/Button')
 
@@ -58,5 +59,5 @@ export const onServiceWorkerUpdateReady = () => {
       </Toast.Body>
     </Toast>
   )
-  document.body.append(toast)
+  ReactDOM.render(toast, document.getElementById('app'));
 }
