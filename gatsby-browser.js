@@ -42,14 +42,21 @@ library.add(
   faGlobe
 );
 
-export const onServiceWorkerUpdateReady = () => {
-  // Change me to a react toast
+// import React
+const React = require("react")
+const Toast = require("react-bootstrap/Toast")
+const Button = require('react-bootstrap/Button')
 
-  const answer = window.confirm(
-    `This application has been updated. ` +
-      `Reload to display the latest version?`
+export const onServiceWorkerUpdateReady = () => {
+  const toast = (
+    <Toast bg="secondary">
+      <Toast.Body className='text-white'>
+        Una nuova versione della pagina è disponibile.
+        <Button onClick={() => { window.location.reload() }}
+          size="sm" className="text-uppercase"
+          variant="link">Aggiorna</Button>
+      </Toast.Body>
+    </Toast>
   )
-  if (answer === true) {
-    window.location.reload()
-  }
+  document.body.append(toast)
 }
