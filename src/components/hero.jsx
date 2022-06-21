@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Button, Container, Row } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Hero = ({ small }) => {
@@ -33,10 +34,10 @@ const Hero = ({ small }) => {
   const metadata = data.site.siteMetadata;
 
   return (
-    <div className="hero">
+    <div className='hero'>
       <Container>
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
-          Linux Day Milano <span className="ldmi">{metadata.event.year}</span>
+          Linux Day Milano <span className='ldmi'>{metadata.event.year}</span>
         </h1>
         <h6 className='pb-3 title'>
           <small>
@@ -45,7 +46,7 @@ const Hero = ({ small }) => {
               title='Scopri di più su unixMiB'
               href={metadata.contacts.website}
               target='_blank'
-              className="font-monospace unixmib text-white"
+              className='font-monospace unixmib text-white'
               rel='noopener noreferrer'
             >
               unix<span className='unixmib'>MiB</span>
@@ -65,19 +66,19 @@ const Hero = ({ small }) => {
           <br />
         </div>
         {small && (
-          <div className="mt-5 gx-5 d-flex flex-wrap justify-content-start clearfix">
+          <div className='mt-5 gx-5 d-flex flex-wrap justify-content-start clearfix'>
             <Button
               href='/#explore'
-              size="lg"
-              className="m-1"
+              size='lg'
+              className='m-1'
               variant='warning'
             >
               Scopri di più
             </Button>
             <Button
               href='/schedule'
-              size="lg"
-              className="m-1"
+              size='lg'
+              className='m-1'
               variant='warning'
             >
               {metadata.switches.schedule
