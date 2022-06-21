@@ -5,7 +5,7 @@
  */
 
 import "./src/styles/main.scss";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 import {
   faUsers,
   faFlag,
@@ -23,7 +23,6 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 library.add(
   fab,
@@ -42,3 +41,15 @@ library.add(
   faEnvelope,
   faGlobe
 );
+
+export const onServiceWorkerUpdateReady = () => {
+  // Change me to a react toast
+
+  const answer = window.confirm(
+    `This application has been updated. ` +
+      `Reload to display the latest version?`
+  )
+  if (answer === true) {
+    window.location.reload()
+  }
+}
