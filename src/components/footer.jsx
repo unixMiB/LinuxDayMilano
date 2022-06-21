@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Container from "react-bootstrap/Container";
-import ear from "../assets/ear-piece.png";
+import ear from "../assets/ear-piece.svg";
 
 const Footer = () => {
   const { site } = useStaticQuery(
@@ -29,12 +29,21 @@ const Footer = () => {
   return (
     <footer>
       <section id='contattaci'>
-        <Container className="footer">
-          <div className="d-flex justify-content-start gx-md-5">
-            <div style={{ overflow: "hidden", height: "20rem" }} className="d-md-block d-none">
-              <img alt='' style={{ height: "400px", width: "382px" }} className="" role='presentation' src={ear} />
+        <Container className='footer'>
+          <div className='d-flex justify-content-start gx-md-5'>
+            <div
+              style={{ overflow: "hidden", height: "20rem" }}
+              className='d-md-block d-none'
+            >
+              <img
+                alt=''
+                style={{ height: "400px", width: "382px" }}
+                className=''
+                role='presentation'
+                src={ear}
+              />
             </div>
-            <div className="my-5">
+            <div className='my-5'>
               <Container>
                 <h3>Contatta l'organizzazione</h3>
                 <ul>
@@ -46,7 +55,10 @@ const Footer = () => {
                   </li>
                   <li title='Sito web'>
                     <FontAwesomeIcon icon='globe' />{" "}
-                    <a href={site.siteMetadata.contacts.website} title='Sito web'>
+                    <a
+                      href={site.siteMetadata.contacts.website}
+                      title='Sito web'
+                    >
                       {site.siteMetadata.contacts.website}
                     </a>
                   </li>
