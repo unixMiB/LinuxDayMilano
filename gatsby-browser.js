@@ -59,5 +59,5 @@ export const onServiceWorkerUpdateReady = () => {
       </Toast.Body>
     </Toast>
   )
-  ReactDOM.render(toast, document.getElementById('app'));
+  ReactDOM.render(toast, document.getElementById('root'));
 }
