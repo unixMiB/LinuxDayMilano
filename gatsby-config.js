@@ -1,7 +1,22 @@
 const path = require("path");
+const fs = require('fs');
+
+function getCurrentBranchName(p = process.cwd()) {
+  const gitHeadPath = `${p}/.git/HEAD`;
+
+  return fs.existsSync(p) ?
+      fs.existsSync(gitHeadPath) ?
+          fs.readFileSync(gitHeadPath, 'utf-8').trim().split('/')[2] :
+          getCurrentBranchName(path.resolve(p, '..')) :
+      false
+}
+
+const branch = getCurrentBranchName() || "master"
+const prod = branch === 'master'
+
 module.exports = {
   siteMetadata: {
-    title: "Linux Day Milano",
+    title: prod ? "Linux Day Milano" : "Linux Day Milano (" + branch + ")",
     description:
       "Manifestazione italiana dedicata a GNU/Linux, al software libero, alla cultura aperta e alla condivisione.",
     keywords:
@@ -65,8 +80,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Linux Day Milano",
-        short_name: "LDMI",
+        name: prod ? "Linux Day Milano" : "Linux Day Milano (" + branch + ")",
+        short_name: prod ? "LDMI" : "LDMI λ",
         start_url: "/",
         lang: "it",
         icon_options: {
