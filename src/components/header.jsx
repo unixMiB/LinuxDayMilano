@@ -1,7 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import Logo from "../assets/logo_simple.svg";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Logo from "../assets/foot.svg";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -35,8 +38,15 @@ const Header = () => {
         }}
       >
         <Container>
-          <Navbar.Brand style={{ maxWidth: "5rem" }} className='brand' href='/'>
-            <img src={Logo} aria-hidden='true' alt='' className='logo' /> LD
+          <Navbar.Brand className='brand d-flex align-items-center' href='/'>
+            <img
+              src={Logo}
+              style={{ fontSize: "1.5em" }}
+              aria-hidden='true'
+              alt=''
+              className='logo me-2 svg-inline--fa'
+            />
+            LD
             <span>MI {year}</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
