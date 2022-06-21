@@ -97,6 +97,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
+        recachePages: [`/`, `/schedule`, `/404`],
         policy: [
           {
             userAgent: "*",
