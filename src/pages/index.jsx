@@ -12,7 +12,7 @@ import SEO from "../components/seo";
 import Hero from "../components/hero";
 
 const IndexPage = ({ data }) => {
-  const isPast = new Date(data.site.siteMetadata.event.date) < new Date();
+  const isPast = new Date(data.site.siteMetadata.event.date) <= new Date();
 
   return (
     <Layout>

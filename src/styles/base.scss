@@ -26,7 +26,13 @@ html {
 
 .unixmib {
   span {
-    color: $unixmib;
+    &.mib {
+      color: $unixmib;
+    }
+
+    &.unix {
+      font-family: var(--#{$variable-prefix}font-monospace);
+    }
   }
 }
 

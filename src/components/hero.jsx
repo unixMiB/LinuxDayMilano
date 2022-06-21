@@ -39,20 +39,21 @@ const Hero = ({ small }) => {
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
           Linux Day Milano <span className='ldmi'>{metadata.event.year}</span>
         </h1>
-        <h6 className='pb-3 title'>
+        <h4 className='pb-3 pb-sm-5 title'>
           <small>
             organizzato da{" "}
             <a
               title='Scopri di più su unixMiB'
               href={metadata.contacts.website}
               target='_blank'
-              className='font-monospace unixmib text-white'
+              className='unixmib text-white'
               rel='noopener noreferrer'
             >
-              unix<span className='unixmib'>MiB</span>
+              <span className='unix'>unix</span>
+              <span className='mib'>MiB</span>
             </a>
           </small>
-        </h6>
+        </h4>
         <div className='subtitle'>
           <FontAwesomeIcon icon='calendar' /> {metadata.event.text}
           <br />

@@ -131,7 +131,7 @@ class Talks extends React.Component {
                         <Col className='text-start'>{t.duration}</Col>
                         <Col className='text-center'>{t.room}</Col>
                         <Col className='text-end'>
-                          <FontAwesomeIcon sm={true} icon='info-circle' />
+                          <FontAwesomeIcon icon='info-circle' />
                         </Col>
                       </Row>
                     </div>
@@ -149,28 +149,9 @@ class Talks extends React.Component {
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
 
-const useThemeDetector = () => {
-  const getCurrentTheme = () =>
-    //window.matchMedia("(prefers-color-scheme: dark)").matches;
-    false;
-  const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
-  const mqListener = (e) => {
-    setIsDarkTheme(e.matches);
-  };
-
-  useEffect(() => {
-    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-    darkThemeMq.addListener(mqListener);
-    return () => darkThemeMq.removeListener(mqListener);
-  }, []);
-  return isDarkTheme;
-};
-
 const Page = ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
-
-  const isDarkTheme = useThemeDetector();
 
   if ("development" === activeEnv)
     console.log("schedData: " + JSON.stringify(schedData));
@@ -182,14 +163,16 @@ const Page = ({ data }) => {
         <Hero />
         <section style={{ color: "black" }}>
           <Container>
-            <div className='d-flex justify-content-between align-items-center align-middle mb-5'>
-              <h2 className={isDarkTheme ? " text-light" : ""}>
+            <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
+              <h2 className='text-md-left text-center'>
                 Programma della giornata
               </h2>
+              <hr />
               {data.site.siteMetadata.switches.year_switcher ? (
-                <Dropdown>
+                <Dropdown className='d-block d-md-inline'>
                   <Dropdown.Toggle
-                    variant={isDarkTheme ? "outline-warning" : "warning"}
+                    className='w-100 w-sm-auto'
+                    variant='warning'
                   >
                     Anno {schedData?.year}
                   </Dropdown.Toggle>
