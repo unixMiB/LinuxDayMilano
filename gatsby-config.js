@@ -24,7 +24,7 @@ module.exports = {
     author: "unixMiB (https://unixmib.org)",
     theme: "#343a40",
     navbarVariant: "dark",
-    siteUrl: "http://linuxdaymilano.org/",
+    siteUrl: "https://linuxdaymilano.org/",
     switches: {
       schedule: false,
       cfp: false,
