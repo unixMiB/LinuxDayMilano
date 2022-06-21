@@ -24,10 +24,10 @@ const IndexPage = ({ data }) => {
             <div className='watch'>
               <img
                 alt=''
-                height={"20rem"}
-                className='img-fluid h-100'
+                className='img-fluid'
                 role='presentation'
                 src={watch}
+                style={{ height: "316px", width: "256px" }}
               />
             </div>
             <Container className='front' style={{ position: "sticky" }}>
