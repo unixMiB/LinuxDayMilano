@@ -72,7 +72,7 @@ module.exports = {
         icon_options: {
           purpose: "any maskable",
         },
-        description: "Manifestazione italiana dedicata a GNU/Linux",
+        description: "Sito ufficiale del Linux Day Milano",
         background_color: "#fee900",
         theme_color: "#343a40",
         display: "minimal-ui",
