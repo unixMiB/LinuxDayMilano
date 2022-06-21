@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Col, Container, Row } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import ear from "../assets/ear-piece.png";
 
 const Footer = () => {
