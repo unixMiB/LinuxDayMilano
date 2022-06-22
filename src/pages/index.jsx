@@ -8,8 +8,13 @@ import Col from "react-bootstrap/Col";
 import watch from "../assets/watch.svg";
 import talks from "../assets/talk-subscription.png";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from "swiper";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
+
+import "swiper/css/pagination";
+import 'swiper/css';
 
 const IndexPage = ({ data }) => {
   const isPast = new Date(data.site.siteMetadata.event.date) <= new Date();
@@ -107,15 +112,31 @@ const IndexPage = ({ data }) => {
                   Sponsors Linux Day Milano
                 </h2>
               </div>
-              <Row>
+            </Container>
+            <Swiper
+                spaceBetween={20}
+                slidesPerView={4}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                loop={true}
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay, Pagination]}
+              >
                 {data.sponsors.nodes.map((item) => {
-                  return (
-                    <div className='col-6 col-sm-4 col-md-3 pb-3'>
-                      <GatsbyImage width='5rem' image={getImage(item)} />
-                    </div>
-                  );
-                })}
-              </Row>
+                    return (
+                        <SwiperSlide>
+                          <GatsbyImage width='5rem' image={getImage(item)} />
+                        </SwiperSlide>
+                    );
+                  })}
+            </Swiper>
+            <Container>
               {data.site.siteMetadata.switches.sponsor_submit && (
                 <Row className=''>
                   <Col className='justify-content-center'>
