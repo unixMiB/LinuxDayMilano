@@ -88,7 +88,7 @@ module.exports = {
           purpose: "any maskable",
         },
         description: "Sito ufficiale del Linux Day Milano",
-        background_color: "#fee900",
+        background_color: "#343a40",
         theme_color: "#343a40",
         display: "minimal-ui",
         icon: "./src/assets/favicon_foot.svg",
