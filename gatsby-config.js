@@ -91,7 +91,7 @@ module.exports = {
         background_color: "#fee900",
         theme_color: "#343a40",
         display: "minimal-ui",
-        icon: "./src/assets/favicon.svg",
+        icon: "./src/assets/favicon_foot.svg",
       },
     },
     {
