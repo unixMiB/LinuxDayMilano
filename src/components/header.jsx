@@ -30,7 +30,7 @@ const Header = () => {
       <Navbar
         id='navbar'
         collapseOnSelect
-        expand='md'
+        expand='sm'
         variant='dark'
         style={{
           backgroundColor: "inherit",
