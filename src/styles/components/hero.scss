@@ -1,5 +1,5 @@
 .hero {
-    @include cover-background("../assets/hero.jpg", true);
+    @include cover-background("../assets/images/hero.jpg", true);
 
     @include media-breakpoint-up(md) {
         padding: 3rem 4rem 5rem;

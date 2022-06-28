@@ -6,7 +6,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import watch from "../assets/watch.svg";
-import talks from "../assets/talk-subscription.png";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
@@ -60,11 +59,11 @@ const IndexPage = ({ data }) => {
           <Container>
             <Row>
               <Col sm='4'>
-                <img
+                <GatsbyImage 
                   alt=''
                   className='img-fluid mb-4 mb-sm-0'
                   role='presentation'
-                  src={talks}
+                  image={getImage(data.talk_subscription_image)}
                 />
               </Col>
               <Col sm='8'>
@@ -151,6 +150,23 @@ export const query = graphql`
         }
       }
     }
+
+    talk_subscription_image: file(
+      sourceInstanceName: {eq: "images"}
+      relativePath: {eq: "talk-subscription.png"}
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          quality: 80
+          placeholder: NONE
+          layout: FULL_WIDTH
+          jpgOptions: {progressive: true}
+          formats: [AUTO, WEBP, AVIF]
+          avifOptions: {lossless: true}
+        )
+      }
+    }
+
     site {
       siteMetadata {
         event {

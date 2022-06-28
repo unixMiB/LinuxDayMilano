@@ -46,7 +46,7 @@
 
     &#explore {
       background-color: #c34c39;
-      background-image: url(../assets/event-bg.jpg);
+      background-image: url(../assets/images/event-bg.jpg);
       padding: 5rem 1rem;
 
       @include media-breakpoint-down(sm) {
@@ -126,7 +126,7 @@
 
     &#sponsors {
       background-color: #1881a2;
-      background-image: url("../assets/sponsor-bg.jpg");
+      background-image: url("../assets/images/sponsor-bg.jpg");
       background-position: 50% 0;
       background-size: cover;
       padding-top: 0;
