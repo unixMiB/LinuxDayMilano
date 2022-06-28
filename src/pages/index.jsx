@@ -31,25 +31,30 @@ const IndexPage = ({ data }) => {
             </div>
             <Container className='front' style={{ position: "sticky" }}>
               <div className='d-flex justify-content-center'>
-                <p>
+                <div>
+                  {" "}
+                  {/* TODO FIX ME */}
                   <h2 style={{ textTransform: "uppercase" }}>
                     Il Linux Day <span>Milano</span> si{" "}
                     {isPast ? "è svolta" : "svolgerà"} il
                     <br />
                     <span>{data.site.siteMetadata.event.text}</span>
                   </h2>
-                  <br />
-                  Torna la principale manifestazione italiana dedicata a
-                  GNU/Linux, al software libero, alla cultura aperta e alla
-                  condivisione.
-                  <br />
-                  {data.site.siteMetadata.event.topic && (
-                    <span>
-                      L'edizione {data.site.siteMetadata.event.year} è dedicata
-                      {" " + data.site.siteMetadata.event.topic}
-                    </span>
-                  )}
-                </p>
+                  <p>
+                    Torna la principale manifestazione italiana dedicata a
+                    GNU/Linux, al software libero, alla cultura aperta e alla
+                    condivisione.<br/>
+                  Al Linux Day Milano potrai trovare tanti talk, presentazioni, workshop inerenti a tantissimi temi interessanti per gli appassionati di Linux, Software Libero, e tanto altro!</p>
+                  <p>
+                    {data.site.siteMetadata.event.topic && (
+                      <span>
+                        L'edizione {data.site.siteMetadata.event.year} è
+                        dedicata
+                        {" " + data.site.siteMetadata.event.topic}
+                      </span>
+                    )}
+                  </p>
+                </div>
               </div>
             </Container>
           </div>
@@ -59,7 +64,7 @@ const IndexPage = ({ data }) => {
           <Container>
             <Row>
               <Col sm='4'>
-                <GatsbyImage 
+                <GatsbyImage
                   alt=''
                   className='img-fluid mb-4 mb-sm-0'
                   role='presentation'
@@ -68,28 +73,55 @@ const IndexPage = ({ data }) => {
               </Col>
               <Col sm='8'>
                 <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
-                <p>
-                  <strong>Ecco in breve alcuni dei nostri talk:</strong>
-                  <ul>
-                    {data.site.siteMetadata.event.arguments.map((topic) => {
-                      return <li>{topic}</li>;
-                    })}
-                  </ul>
-                </p>
-                <br />
                 {data.site.siteMetadata.switches.cfp && (
-                  <Button
-                    href={data.site.siteMetadata.event.cfp}
-                    className='btn-lg'
-                    variant='warning'
-                  >
-                    Presenta un intervento
-                  </Button>
+                  <>
+                    <p>
+                      Abbiamo aperto la call-for-speakers! Ecco cosa devi sapere
+                      se vuoi presentare qualcosa al Linux Day Milano.
+                    </p>
+                    <p>
+                      Siamo interessati a tutti i generi di talk e presentazioni
+                      inerenti (anche in piccola parte) al mondo Linux, del
+                      Software Libero e dello Sviluppo Software Open Source.
+                    </p>
+                    <p>
+                      Alcuni argomenti che piacciono a chi viene al Linux Day:
+                      Linux, Software Libero, Sviluppo Software, Machine
+                      Learning, Big Data, Self-hosting, Privacy, Retro Gaming,
+                      Storia dell'informatica, Do It Yourself ...
+                    </p>
+                    <p>
+                      Sei anche il benvenuto se vuoi presentare un tuo progetto
+                      o mostrare una tua invenzione.
+                    </p>
+                    <p>Per tutti i dettagli prosegui al link qui sotto.</p>
+                    <Button
+                      href={data.site.siteMetadata.event.cfp}
+                      className='btn-lg'
+                      variant='warning'
+                    >
+                      Presenta un intervento
+                    </Button>
+                  </>
                 )}
                 {data.site.siteMetadata.switches.schedule && (
-                  <Button href='/schedule' className='btn-lg' variant='warning'>
-                    Guarda il programma
-                  </Button>
+                  <>
+                    <p>
+                      <strong>Ecco in breve alcuni dei nostri talk:</strong>
+                      <ul>
+                        {data.site.siteMetadata.event.arguments.map((topic) => {
+                          return <li>{topic}</li>;
+                        })}
+                      </ul>
+                    </p>{" "}
+                    <Button
+                      href='/schedule'
+                      className='btn-lg'
+                      variant='warning'
+                    >
+                      Guarda il programma
+                    </Button>
+                  </>
                 )}
               </Col>
             </Row>
@@ -109,7 +141,7 @@ const IndexPage = ({ data }) => {
               <Row>
                 {data.sponsors.nodes.map((item) => {
                   return (
-                    <div className='col-6 col-sm-4 col-md-3 pb-3'>
+                    <div className='col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
                       <GatsbyImage width='5rem' image={getImage(item)} />
                     </div>
                   );
@@ -152,17 +184,17 @@ export const query = graphql`
     }
 
     talk_subscription_image: file(
-      sourceInstanceName: {eq: "images"}
-      relativePath: {eq: "talk-subscription.png"}
+      sourceInstanceName: { eq: "images" }
+      relativePath: { eq: "talk-subscription.png" }
     ) {
       childImageSharp {
         gatsbyImageData(
           quality: 80
           placeholder: NONE
           layout: FULL_WIDTH
-          jpgOptions: {progressive: true}
+          jpgOptions: { progressive: true }
           formats: [AUTO, WEBP, AVIF]
-          avifOptions: {lossless: true}
+          avifOptions: { lossless: true }
         )
       }
     }

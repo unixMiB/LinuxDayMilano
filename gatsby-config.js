@@ -27,15 +27,15 @@ module.exports = {
     siteUrl: "https://linuxdaymilano.org/",
     switches: {
       schedule: false,
-      cfp: false,
+      cfp: true,
       sponsor_submit: false,
       year_switcher: true,
     },
     event: {
       date: new Date("2022-10-22"),
       time: "9:30",
-      topic: null,
-      cfp: "https://forms.gle/koz5Hmo4mwqFvuB77",
+      topic: "undefined <Aggiungere descrizione>",
+      cfp: "/404",
       arguments: [
         "Linux, software e hardware Open Source",
         "Open Source nel mondo dell'istruzione",
@@ -46,7 +46,7 @@ module.exports = {
       ],
     },
     contacts: {
-      email: "unixmib@gmail.com",
+      email: "info@unixmib.org",
       website: "https://unixmib.org",
       place: {
         name: "Università Milano Bicocca",
@@ -56,6 +56,7 @@ module.exports = {
       },
     },
   },
+  graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-react-helmet",
     {
