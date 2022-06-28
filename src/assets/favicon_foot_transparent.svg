@@ -27,11 +27,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:zoom="0.38128507"
-     inkscape:cx="-180.96696"
-     inkscape:cy="230.79844"
-     inkscape:window-width="1280"
-     inkscape:window-height="635"
+     inkscape:zoom="1.1735419"
+     inkscape:cx="79.247275"
+     inkscape:cy="266.71395"
+     inkscape:window-width="1920"
+     inkscape:window-height="995"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -66,7 +66,7 @@
     <g
        id="g7"
        style="clip-rule:evenodd;fill-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
-       transform="matrix(0.79321661,0,0,0.79321661,47.065875,52.936537)">
+       transform="matrix(1.1083306,0,0,1.1083306,-35.935495,-27.732648)">
       <path
          id="path9492"
          d="m 286.982,486.939 c 72.15,-9.541 52.991,-88.285 72.697,-153.766 C 379.997,265.664 466.378,163.742 433.062,124.258 394.186,78.184 364.734,100.63 342.351,85.272 319.968,69.914 307.009,23.841 256.353,25.022 c -50.657,1.182 -56.547,60.25 -78.931,60.25 -22.383,0 -55.369,-30.715 -83.642,23.628 -19.985,38.412 2.526,161.018 31.808,228.004 37.698,86.241 80.108,152.397 161.394,150.035 z" />

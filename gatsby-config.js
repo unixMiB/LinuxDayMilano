@@ -85,14 +85,14 @@ module.exports = {
         start_url: "/",
         lang: "it",
         icon_options: {
-          purpose: "any maskable",
+          purpose: "any",
           
         },
         description: "Sito ufficiale del Linux Day Milano",
         background_color: "#212529",
         theme_color: "#212529",
         display: "minimal-ui",
-        icon: "./src/assets/favicon_foot.svg",
+        icon: "./src/assets/favicon_foot_transparent.svg",
       },
     },
     {
