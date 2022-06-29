@@ -100,20 +100,21 @@ const IndexPage = ({ data }) => {
                       o mostrare una tua invenzione.
                     </p>
                     <p>Per tutti i dettagli prosegui al link qui sotto.</p>
-                    
-                      {data.site.siteMetadata.event.cfp
-                        ? <Button
+
+                    {data.site.siteMetadata.event.cfp ? (
+                      <Button
                         href={data.site.siteMetadata.event.cfp}
                         className='btn-lg'
                         variant='warning'
                         disabled
-                      >"Presenta un intervento"</Button>
-                        : <Button
-                        className='btn-lg'
-                        variant='warning'
-                        disabled
-                      >Presto disponibile</Button>}
-                    
+                      >
+                        "Presenta un intervento"
+                      </Button>
+                    ) : (
+                      <Button className='btn-lg' variant='warning' disabled>
+                        Presto disponibile
+                      </Button>
+                    )}
                   </>
                 )}
                 {data.site.siteMetadata.switches.schedule && (
