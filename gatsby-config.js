@@ -34,8 +34,8 @@ module.exports = {
     event: {
       date: new Date("2022-10-22"),
       time: "9:30",
-      topic: "undefined <Aggiungere descrizione>",
-      cfp: "/404",
+      topic: "all'undefined (Si, proprio undefined!)",
+      cfp: "",
       arguments: [
         "Linux, software e hardware Open Source",
         "Open Source nel mondo dell'istruzione",

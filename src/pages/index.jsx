@@ -43,8 +43,13 @@ const IndexPage = ({ data }) => {
                   <p>
                     Torna la principale manifestazione italiana dedicata a
                     GNU/Linux, al software libero, alla cultura aperta e alla
-                    condivisione.<br/>
-                  Al Linux Day Milano potrai trovare tanti talk, presentazioni, workshop inerenti a tantissimi temi interessanti per gli appassionati di Linux, Software Libero, e tanto altro!</p>
+                    condivisione.
+                    <br />
+                    Al Linux Day Milano potrai trovare tanti talk,
+                    presentazioni, workshop inerenti a tantissimi temi
+                    interessanti per gli appassionati di Linux, Software Libero,
+                    e tanto altro!
+                  </p>
                   <p>
                     {data.site.siteMetadata.event.topic && (
                       <span>
@@ -95,13 +100,20 @@ const IndexPage = ({ data }) => {
                       o mostrare una tua invenzione.
                     </p>
                     <p>Per tutti i dettagli prosegui al link qui sotto.</p>
-                    <Button
-                      href={data.site.siteMetadata.event.cfp}
-                      className='btn-lg'
-                      variant='warning'
-                    >
-                      Presenta un intervento
-                    </Button>
+                    
+                      {data.site.siteMetadata.event.cfp
+                        ? <Button
+                        href={data.site.siteMetadata.event.cfp}
+                        className='btn-lg'
+                        variant='warning'
+                        disabled
+                      >"Presenta un intervento"</Button>
+                        : <Button
+                        className='btn-lg'
+                        variant='warning'
+                        disabled
+                      >Presto disponibile</Button>}
+                    
                   </>
                 )}
                 {data.site.siteMetadata.switches.schedule && (
@@ -178,6 +190,10 @@ export const query = graphql`
             jpgOptions: { progressive: true }
             formats: [AUTO, WEBP, AVIF]
             avifOptions: { lossless: true }
+            webpOptions: { quality: 80 }
+            blurredOptions: { toFormat: AUTO }
+            pngOptions: { quality: 80 }
+            breakpoints: [128, 176, 216, 261, 306]
           )
         }
       }
@@ -192,9 +208,12 @@ export const query = graphql`
           quality: 80
           placeholder: NONE
           layout: FULL_WIDTH
-          jpgOptions: { progressive: true }
-          formats: [AUTO, WEBP, AVIF]
+          jpgOptions: { progressive: true, quality: 80 }
           avifOptions: { lossless: true }
+          webpOptions: { quality: 80 }
+          blurredOptions: { toFormat: AUTO }
+          pngOptions: { quality: 80 }
+          breakpoints: [156, 216, 296, 356, 416]
         )
       }
     }
