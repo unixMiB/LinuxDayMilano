@@ -171,7 +171,7 @@ module.exports = {
           ],
         },
         mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
+        //mergeLinkHeaders: true,
         mergeCachingHeaders: true,
       },
     },

@@ -142,8 +142,8 @@ const IndexPage = ({ data }) => {
         </section>
 
         {/* Don't show sponsors section if there are none and submission is closed */}
-        {(data.site.siteMetadata.switches.sponsor_submit ||
-          !!data.sponsors.nodes.length) && (
+        {/* (data.site.siteMetadata.switches.sponsor_submit ||
+          !!data.sponsors.nodes.length) */false && (
           <section id='sponsors'>
             <Container>
               <div className='text'>
