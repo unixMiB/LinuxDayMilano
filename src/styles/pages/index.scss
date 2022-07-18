@@ -1,69 +1,4 @@
 #index {
-  #hero {
-    @include cover-background("../assets/hero.jpg", true);
-    @include media-breakpoint-up(lg) {
-      padding: 3rem 4rem 5rem;
-    }
-
-    @include media-breakpoint-down(md) {
-      padding: 2rem 1rem;
-    }
-
-    width: 100%;
-
-    color: white;
-
-    @include media-breakpoint-down(sm) {
-      margin-top: 0;
-    }
-
-    .title {
-      @include tshadow;
-      span {
-        color: $ldmi;
-        font-family: "Noto Sans", sans-serif;
-        font-weight: bold;
-      }
-
-      span.unixmib {
-        color: $unixmib;
-      }
-      a {
-        color: white;
-      }
-      small {
-        font-size: 0.9rem;
-      }
-
-      @include media-breakpoint-down(sm) {
-        text-align: center;
-      }
-    }
-
-    h1.title {
-      color: white;
-      font-weight: bold;
-      //font-family: 'Noto Serif', serif;
-    }
-
-    h3.title {
-      color: white;
-      // font-size: 2.5rem;
-      font-weight: normal;
-      font-family: "Noto Serif", serif;
-    }
-
-    .subtitle {
-      @include tshadow;
-      color: white;
-      font-size: 1.25rem;
-    }
-
-    .scroll {
-      margin-top: 4em;
-    }
-  }
-
   section {
     margin: 0 auto;
     padding: 4rem 0.5rem;
@@ -111,7 +46,7 @@
 
     &#explore {
       background-color: #c34c39;
-      background-image: url(../assets/event-bg.jpg);
+      background-image: url(../assets/images/event-bg.jpg);
       padding: 5rem 1rem;
 
       @include media-breakpoint-down(sm) {
@@ -124,11 +59,11 @@
         position: absolute;
         z-index: 1;
 
-        @include media-breakpoint-only(md) {
+        @include media-breakpoint-down(xl) {
           left: -8%;
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           visibility: hidden;
         }
       }
@@ -148,7 +83,7 @@
       }
 
       .front {
-        z-index: 999;
+        z-index: 999 !important;
       }
     }
 
@@ -191,7 +126,7 @@
 
     &#sponsors {
       background-color: #1881a2;
-      background-image: url("../assets/sponsor-bg.jpg");
+      background-image: url("../assets/images/sponsor-bg.jpg");
       background-position: 50% 0;
       background-size: cover;
       padding-top: 0;

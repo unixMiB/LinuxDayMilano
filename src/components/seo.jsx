@@ -73,6 +73,10 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          name: "og:locale",
+          content: "it_IT",
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },

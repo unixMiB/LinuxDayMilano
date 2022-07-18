@@ -1,91 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Row, Col, Modal, Button, Dropdown } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Modal from "react-bootstrap/Modal";
+import Dropdown from "react-bootstrap/Dropdown";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
-import { ThemeToggler } from "gatsby-plugin-dark-mode";
-
-class DetailView extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false,
-      title: "Titolo talk",
-      author: "Relatore",
-      description: "Breve descrizione del talk",
-      room: "",
-      duration: "Durata intervento",
-      slides: "",
-      video: "",
-    };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      show: true,
-      title: nextProps.title,
-      author: nextProps.author,
-      description: nextProps.description,
-      room: nextProps.room,
-      duration: nextProps.duration,
-      slides: nextProps.slides,
-      video: nextProps.video,
-    });
-  }
-
-  render() {
-    return (
-      <Modal
-        show={this.state.show}
-        onHide={() => {
-          this.setState({ show: false });
-        }}
-        size='lg'
-        aria-labelledby='contained-modal-title-vcenter'
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id='contained-modal-title-vcenter'>
-            {this.state.title}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>{this.state.description}</p>
-          <br />
-          <h6>{this.state.author}</h6>
-          <Row>
-            <Col>{this.state.duration && "Durata: " + this.state.duration}</Col>
-            <Col className='text-right'>
-              {this.state.room && "Aula: " + this.state.room}
-            </Col>
-          </Row>
-        </Modal.Body>
-        <Modal.Footer>
-          {!(this.state.video === "" || this.state.video == null) && (
-            <Button target='_blank' href={this.state.video} variant='warning'>
-              <FontAwesomeIcon icon='video' /> Video
-            </Button>
-          )}
-          {!(this.state.slides === "" || this.state.slides == null) && (
-            <Button target='_blank' href={this.state.slides} variant='warning'>
-              <FontAwesomeIcon icon='download' /> Slides
-            </Button>
-          )}
-          <Button
-            variant='warning'
-            onClick={() => {
-              this.setState({ show: false });
-            }}
-          >
-            Chiudi
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    );
-  }
-}
 
 class Talks extends React.Component {
   constructor(props) {
@@ -93,6 +17,7 @@ class Talks extends React.Component {
     this.state = {
       data: props.scheduleData,
       required: {
+        show: false,
         title: "Titolo",
         description: "Descrizione",
         author: "Autore",
@@ -105,13 +30,12 @@ class Talks extends React.Component {
     this.replaceModalItem = this.replaceModalItem.bind(this);
   }
 
-  componentWillUnmount(a) {
-    console.log("Mounting Talsk: " + JSON.stringify(a));
-  }
-
   replaceModalItem(item) {
     this.setState({
-      required: item,
+      required: {
+        ...item,
+        show: !this.state.required.show,
+      },
     });
   }
 
@@ -119,6 +43,62 @@ class Talks extends React.Component {
     let modalData = this.state.required;
     return (
       <>
+        <Modal
+          show={modalData.show}
+          onHide={() => {
+            this.setState({
+              required: {
+                ...modalData,
+                show: false,
+              },
+            });
+          }}
+          size='lg'
+          aria-labelledby='contained-modal-title-vcenter'
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id='contained-modal-title-vcenter'>
+              {modalData.title}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>{modalData.description}</p>
+            <br />
+            <h6>{modalData.author}</h6>
+            <Row>
+              <Col>{modalData.duration && "Durata: " + modalData.duration}</Col>
+              <Col className='text-end'>
+                {modalData.room && "Aula: " + modalData.room}
+              </Col>
+            </Row>
+          </Modal.Body>
+          <Modal.Footer>
+            {!(modalData.video === "" || modalData.video == null) && (
+              <Button target='_blank' href={modalData.video} variant='warning'>
+                <FontAwesomeIcon icon='video' /> Video
+              </Button>
+            )}
+            {!(modalData.slides === "" || modalData.slides == null) && (
+              <Button target='_blank' href={modalData.slides} variant='warning'>
+                <FontAwesomeIcon icon='download' /> Slides
+              </Button>
+            )}
+            <Button
+              variant='warning'
+              onClick={() => {
+                this.setState({
+                  required: {
+                    ...modalData,
+                    show: false,
+                  },
+                });
+              }}
+            >
+              Chiudi
+            </Button>
+          </Modal.Footer>
+        </Modal>
         {this.state.data.map((i) => {
           return (
             <Row className='pb-4'>
@@ -148,10 +128,10 @@ class Talks extends React.Component {
                         </Col>
                       </Row>
                       <Row className='flex-grow-1 mt-3 align-items-end'>
-                        <Col className='text-left'>{t.duration}</Col>
+                        <Col className='text-start'>{t.duration}</Col>
                         <Col className='text-center'>{t.room}</Col>
-                        <Col className='text-right'>
-                          <FontAwesomeIcon sm={true} icon='info-circle' />
+                        <Col className='text-end'>
+                          <FontAwesomeIcon icon='info-circle' />
                         </Col>
                       </Row>
                     </div>
@@ -161,15 +141,6 @@ class Talks extends React.Component {
             </Row>
           );
         })}
-        <DetailView
-          title={modalData.title}
-          author={modalData.author}
-          description={modalData.description}
-          room={modalData.room}
-          duration={modalData.duration}
-          slides={modalData.slides}
-          video={modalData.video}
-        />
       </>
     );
   }
@@ -178,7 +149,7 @@ class Talks extends React.Component {
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
 
-export default ({ data }) => {
+const Page = ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
 
@@ -192,36 +163,43 @@ export default ({ data }) => {
         <Hero />
         <section style={{ color: "black" }}>
           <Container>
-            <ThemeToggler>
-              {({ theme }) => (
-                <div className='d-flex justify-content-between align-items-center align-middle mb-5'>
-                  <h2 className={theme === "dark" ? " text-light" : ""}>
-                    Programma della giornata
-                  </h2>
-                  <Dropdown>
-                    <Dropdown.Toggle
-                      variant={theme === "dark" ? "outline-warning" : "warning"}
-                    >
-                      Anno {schedData?.year}
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      {allSchedules.map((s, i) => (
-                        <Dropdown.Item
-                          key={i}
-                          onClick={() => {
-                            setSchedData(allSchedules[i]);
-                          }}
-                        >
-                          {s.year}
-                        </Dropdown.Item>
-                      ))}
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </div>
+            <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
+              <h2 className='text-md-left text-center'>
+                Programma della giornata
+              </h2>
+              <hr />
+              {data.site.siteMetadata.switches.year_switcher ? (
+                <Dropdown className='d-block d-md-inline'>
+                  <Dropdown.Toggle
+                    className='w-100 w-sm-auto'
+                    variant='warning'
+                  >
+                    Anno {schedData?.year}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    {allSchedules.map((s, i) => (
+                      <Dropdown.Item
+                        key={i}
+                        onClick={() => {
+                          setSchedData(allSchedules[i]);
+                        }}
+                      >
+                        {s.year}
+                      </Dropdown.Item>
+                    ))}
+                  </Dropdown.Menu>
+                </Dropdown>
+              ) : (
+                <small className='d-none d-sm-block'>
+                  Anno {schedData?.year}
+                </small>
               )}
-            </ThemeToggler>
+            </div>
 
-            <Talks scheduleData={schedData?.schedule} />
+            <Talks
+              scheduleData={schedData?.schedule}
+              key={schedData?.schedule}
+            />
           </Container>
         </section>
       </main>
@@ -263,8 +241,11 @@ export const query = graphql`
         switches {
           schedule
           cfp
+          year_switcher
         }
       }
     }
   }
 `;
+
+export default Page;

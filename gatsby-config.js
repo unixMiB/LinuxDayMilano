@@ -1,24 +1,41 @@
 const path = require("path");
+const fs = require('fs');
+
+function getCurrentBranchName(p = process.cwd()) {
+  const gitHeadPath = `${p}/.git/HEAD`;
+
+  return fs.existsSync(p) ?
+      fs.existsSync(gitHeadPath) ?
+          fs.readFileSync(gitHeadPath, 'utf-8').trim().split('/')[2] :
+          getCurrentBranchName(path.resolve(p, '..')) :
+      false
+}
+
+const branch = getCurrentBranchName() || "master"
+const prod = branch === 'master'
+
 module.exports = {
   siteMetadata: {
-    title: "Linux Day Milano",
+    title: prod ? "Linux Day Milano" : "Linux Day Milano (" + branch + ")",
     description:
       "Manifestazione italiana dedicata a GNU/Linux, al software libero, alla cultura aperta e alla condivisione.",
     keywords:
-      "Linux Day, Milano, 2019, GNU, GNU/Linux, Open Source, Software Libero, Condivisione",
+      "Linux Day, Milano, 2022, GNU, GNU/Linux, Open Source, Software Libero, Condivisione",
     author: "unixMiB (https://unixmib.org)",
     theme: "#343a40",
     navbarVariant: "dark",
-    siteUrl: "http://linuxdaymilano.org/",
+    siteUrl: "https://linuxdaymilano.org/",
     switches: {
-      schedule: true,
-      cfp: false,
+      schedule: false,
+      cfp: true,
+      sponsor_submit: false,
+      year_switcher: true,
     },
     event: {
-      date: new Date("2019-10-26"),
+      date: new Date("2022-10-22"),
       time: "9:30",
-      topic: "al mondo dell'Intelligenza Artificiale",
-      cfp: "https://forms.gle/koz5Hmo4mwqFvuB77",
+      topic: "all'undefined (Si, proprio undefined!)",
+      cfp: "https://survey.linux.it/295563",
       arguments: [
         "Linux, software e hardware Open Source",
         "Open Source nel mondo dell'istruzione",
@@ -29,7 +46,7 @@ module.exports = {
       ],
     },
     contacts: {
-      email: "unixmib@gmail.com",
+      email: "info@unixmib.org",
       website: "https://unixmib.org",
       place: {
         name: "Università Milano Bicocca",
@@ -39,6 +56,7 @@ module.exports = {
       },
     },
   },
+  graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-react-helmet",
     {
@@ -47,26 +65,35 @@ module.exports = {
         extensions: ["css", "html", "js", "svg"],
       },
     },
-    "gatsby-plugin-dark-mode",
     {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("sass"),
       },
     },
-    "gatsby-plugin-preact",
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://linuxdaymilano.org/",
+      },
+    },
     "gatsby-transformer-yaml",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Linux Day Milano",
-        short_name: "LDMI",
+        name: prod ? "Linux Day Milano" : "Linux Day Milano (" + branch + ")",
+        short_name: prod ? "LDMI" : "LDMI λ",
         start_url: "/",
-        description: "Manifestazione italiana dedicata a GNU/Linux",
-        background_color: "#fee900",
-        theme_color: "#343a40",
-        display: "standalone",
-        icon: "./src/assets/favicon.svg",
+        lang: "it",
+        icon_options: {
+          purpose: "any",
+          
+        },
+        description: "Sito ufficiale del Linux Day Milano",
+        background_color: "#212529",
+        theme_color: "#212529",
+        display: "minimal-ui",
+        icon: "./src/assets/favicon_foot_transparent.svg",
       },
     },
     {
@@ -74,6 +101,13 @@ module.exports = {
       options: {
         name: "brands",
         path: path.join(__dirname, "src", "assets", "brands"),
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: path.join(__dirname, "src", "assets", "images"),
       },
     },
     {
@@ -87,6 +121,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
+        recachePages: [`/`, `/schedule`, `/404`],
         policy: [
           {
             userAgent: "*",
@@ -96,7 +131,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-react-svg",
     {
       resolve: "gatsby-plugin-sharp",
       options: {
@@ -106,6 +140,7 @@ module.exports = {
       },
     },
     "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -113,9 +148,8 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 1000,
+              maxWidth: 1920,
               linkImagesToOriginal: true,
-              sizeByPixelDensity: true,
               quality: 70,
               withWebp: true,
             },
@@ -129,9 +163,15 @@ module.exports = {
       options: {
         headers: {
           "/sw.js": ["Cache-Control: no-cache"],
+          "/*": [
+            "Permissions-Policy: autoplay=(),camera=(),fullscreen=(self),geolocation=(),microphone=(),payment=()",
+            "Strict-Transport-Security: max-age=63072000; includeSubdomains; preload",
+            "X-Content-Type-Options: nosniff",
+            "Referrer-Policy: no-referrer",
+          ],
         },
         mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
+        //mergeLinkHeaders: true,
         mergeCachingHeaders: true,
       },
     },

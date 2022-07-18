@@ -1,34 +1,37 @@
-body {
-  background-color: $white;
-  color: $black;
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+.tinted {
+  color: $unixmib;
+}
+
+@mixin cover-background($imageUrl, $overlay) {
+  @if $overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url($imageUrl) no-repeat center center fixed;
+  } @else {
+    background: url($imageUrl) no-repeat center center fixed;
+  }
+  background-size: cover;
+}
+
+@mixin tshadow() {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .nav-link {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-header {
-  background-color: $gray-900;
-}
-
-.navbar {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-
-  .brand {
-    font-weight: bold;
-    span {
-      color: $ldmi;
+.unixmib {
+  span {
+    &.mib {
+      color: $unixmib;
     }
-    .logo {
-      margin-bottom: 0.2em;
+
+    &.unix {
+      font-family: var(--#{$variable-prefix}font-monospace);
     }
   }
 }
@@ -46,87 +49,4 @@ a.anchor {
 
 .event:hover {
   background-color: #d7d7d7;
-}
-
-.dark {
-  .schedule-time {
-    color: $gray-100;
-  }
-
-  .modal-content {
-    background-color: $gray-900;
-
-    button.close {
-      color: white;
-    }
-  }
-
-  background-color: $gray-900;
-  color: $gray-100;
-  #schedule-placeholder {
-    color: $gray-100;
-  }
-
-  .event {
-    color: $gray-100;
-  }
-
-  .event:hover {
-    background-color: $gray-600;
-  }
-}
-
-footer {
-  section.section-license {
-    color: white;
-    background-color: #212121;
-    text-align: center;
-    padding: 2rem 2.5rem 2rem;
-    span.ldmi {
-      color: $ldmi;
-    }
-    span.unixmib {
-      color: $unixmib;
-    }
-  }
-
-  section#contattaci {
-    background-color: #f7ab24;
-    color: $black;
-
-    a {
-      color: white;
-    }
-
-    #ear {
-      position: relative;
-      height: 20rem;
-      left: 0;
-      top: 0;
-      overflow: hidden;
-      @include media-breakpoint-down(md) {
-        visibility: hidden;
-      }
-    }
-
-    .text {
-      font-size: 1.25rem;
-      @include media-breakpoint-down(md) {
-        padding: 0 6rem;
-      }
-
-      @include media-breakpoint-down(sm) {
-        padding: 0 2rem;
-      }
-
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
-    }
-
-    .front {
-      z-index: 999;
-    }
-  }
 }

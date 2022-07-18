@@ -1,7 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import Logo from "../assets/logo_simple.svg";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Logo from "../assets/foot.svg";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -28,15 +30,23 @@ const Header = () => {
       <Navbar
         id='navbar'
         collapseOnSelect
-        expand='md'
+        expand='sm'
         variant='dark'
         style={{
           backgroundColor: "inherit",
         }}
       >
         <Container>
-          <Navbar.Brand style={{ maxWidth: "5rem" }} className='brand' href='/'>
-            <Logo className='logo' /> LD<span>MI {year}</span>
+          <Navbar.Brand className='brand d-flex align-items-center' href='/'>
+            <img
+              src={Logo}
+              style={{ fontSize: "1.5em" }}
+              aria-hidden='true'
+              alt=''
+              className='logo me-2 svg-inline--fa'
+            />
+            LD
+            <span>MI {year}</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse
@@ -46,7 +56,7 @@ const Header = () => {
             <Nav>
               <Nav.Link href='/#explore'>Evento</Nav.Link>
               {switches.cfp && (
-                <Nav.Link href='/#call-for-papers'>Call for papers</Nav.Link>
+                <Nav.Link href='/#schedule'>Call for papers</Nav.Link>
               )}
               {switches.schedule && (
                 <Nav.Link href='/#schedule'>Programma</Nav.Link>

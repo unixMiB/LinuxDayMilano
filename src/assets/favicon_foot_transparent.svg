@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512.0px"
+   height="512.0px"
+   viewBox="0 0 512.0 512.0"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="favicon_foot_transparent.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:export-filename="../../../../favicon_foot.png"
+   inkscape:export-xdpi="382.5"
+   inkscape:export-ydpi="382.5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview368"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="1.1735419"
+     inkscape:cx="79.247275"
+     inkscape:cy="266.71395"
+     inkscape:window-width="1920"
+     inkscape:window-height="995"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid374" />
+  </sodipodi:namedview>
+  <defs
+     id="defs363">
+    <radialGradient
+       id="_Radial3-3"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(413.086,128.759,-85.5751,274.543,197.068,156.472)">
+      <stop
+         offset="0"
+         style="stop-color:#ffb904;stop-opacity:1"
+         id="stop9-6" />
+      <stop
+         offset="1"
+         style="stop-color:#f89900;stop-opacity:1"
+         id="stop11-7" />
+    </radialGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g7"
+       style="clip-rule:evenodd;fill-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
+       transform="matrix(1.1083306,0,0,1.1083306,-35.935495,-27.732648)">
+      <path
+         id="path9492"
+         d="m 286.982,486.939 c 72.15,-9.541 52.991,-88.285 72.697,-153.766 C 379.997,265.664 466.378,163.742 433.062,124.258 394.186,78.184 364.734,100.63 342.351,85.272 319.968,69.914 307.009,23.841 256.353,25.022 c -50.657,1.182 -56.547,60.25 -78.931,60.25 -22.383,0 -55.369,-30.715 -83.642,23.628 -19.985,38.412 2.526,161.018 31.808,228.004 37.698,86.241 80.108,152.397 161.394,150.035 z" />
+      <path
+         id="path21800"
+         d="M 285.909,477.947 C 354.774,468.74 336.487,392.746 355.297,329.552 374.689,264.4 457.139,166.038 425.339,127.932 388.232,83.468 360.121,105.13 338.757,90.309 317.393,75.487 305.024,31.023 256.673,32.163 c -48.35,1.14 -53.972,58.146 -75.337,58.146 -21.364,0 -52.848,-29.643 -79.835,22.802 -19.075,37.071 2.411,155.395 30.36,220.042 35.982,83.228 76.462,147.075 154.048,144.794 z"
+         style="fill:url(#_Radial3-3)" />
+    </g>
+  </g>
+</svg>

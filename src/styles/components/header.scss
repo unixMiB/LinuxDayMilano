@@ -1,0 +1,23 @@
+header {
+  background-color: $gray-900;
+
+  .navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+    .brand {
+      font-weight: bold;
+      span {
+        color: $ldmi;
+      }
+      .logo {
+        @media screen and (max-width: 239px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

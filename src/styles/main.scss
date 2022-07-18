@@ -1,7 +1,10 @@
-@import 'values';
+@import "node_modules/@fortawesome/fontawesome-svg-core/styles";
+@import "values";
+@import "bootstrap/scss/bootstrap.scss";
+@import "base";
 
-@import 'bootstrap/scss/bootstrap.scss';
-@import 'helpers';
-@import 'base';
+@import "pages/index";
 
-@import 'pages/index';
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/hero.scss";

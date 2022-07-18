@@ -1,0 +1,57 @@
+.hero {
+    @include cover-background("../assets/images/hero.jpg", true);
+
+    @include media-breakpoint-up(md) {
+        padding: 3rem 4rem 5rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 2rem 1rem;
+    }
+
+    width: 100%;
+
+    color: white;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 0;
+    }
+
+    .title {
+        @include tshadow;
+
+        h1 {
+            font-weight: 700;
+        }
+
+        span.ldmi {
+            color: $ldmi;
+            font-weight: bold;
+        }
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+    }
+
+    h1.title {
+        color: white;
+        font-weight: bold;
+    }
+
+    h3.title {
+        color: white;
+        font-weight: normal;
+    }
+
+    .subtitle {
+        @include tshadow;
+        color: white;
+        font-size: 1.25rem;
+    }
+
+    .scroll {
+        margin-top: 4em;
+    }
+    
+}
