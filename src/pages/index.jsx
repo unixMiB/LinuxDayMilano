@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
             </div>
             <Container className='front' style={{ position: "sticky" }}>
               <div className='d-flex justify-content-center'>
-                <div>
+                <div className="col-lg-7">
                   {" "}
                   {/* TODO FIX ME */}
                   <h2 style={{ textTransform: "uppercase" }}>
