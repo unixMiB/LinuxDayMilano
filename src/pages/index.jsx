@@ -106,9 +106,8 @@ const IndexPage = ({ data }) => {
                         href={data.site.siteMetadata.event.cfp}
                         className='btn-lg'
                         variant='warning'
-                        disabled
                       >
-                        "Presenta un intervento"
+                        Presenta un intervento
                       </Button>
                     ) : (
                       <Button className='btn-lg' variant='warning' disabled>
