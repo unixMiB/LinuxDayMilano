@@ -1,18 +1,18 @@
 const path = require("path");
-const fs = require('fs');
+const fs = require("fs");
 
 function getCurrentBranchName(p = process.cwd()) {
   const gitHeadPath = `${p}/.git/HEAD`;
 
-  return fs.existsSync(p) ?
-      fs.existsSync(gitHeadPath) ?
-          fs.readFileSync(gitHeadPath, 'utf-8').trim().split('/')[2] :
-          getCurrentBranchName(path.resolve(p, '..')) :
-      false
+  return fs.existsSync(p)
+    ? fs.existsSync(gitHeadPath)
+      ? fs.readFileSync(gitHeadPath, "utf-8").trim().split("/")[2]
+      : getCurrentBranchName(path.resolve(p, ".."))
+    : false;
 }
 
-const branch = getCurrentBranchName() || "master"
-const prod = branch === 'master'
+const branch = getCurrentBranchName() || "master";
+const prod = branch === "master";
 
 module.exports = {
   siteMetadata: {
@@ -33,7 +33,7 @@ module.exports = {
     },
     event: {
       date: new Date("2022-10-22"),
-      time: "9:30",
+      time: "9:00",
       topic: "all'undefined (Si, proprio undefined!)",
       cfp: "https://survey.linux.it/295563",
       arguments: [
@@ -87,7 +87,6 @@ module.exports = {
         lang: "it",
         icon_options: {
           purpose: "any",
-          
         },
         description: "Sito ufficiale del Linux Day Milano",
         background_color: "#212529",
