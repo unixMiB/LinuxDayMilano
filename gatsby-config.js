@@ -50,8 +50,8 @@ module.exports = {
       website: "https://unixmib.org",
       place: {
         name: "Università Milano Bicocca",
-        street: "Via Bicocca degli Arcimboldi 8",
-        building: "Edificio U7",
+        street: "Piazza dell'Ateneo Nuovo, 1",
+        building: "Edificio U6",
         cap: "20126 Milano MI",
       },
     },

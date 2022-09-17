@@ -61,7 +61,7 @@ const Header = () => {
               {switches.schedule && (
                 <Nav.Link href='/#schedule'>Programma</Nav.Link>
               )}
-              <Nav.Link href='/#sponsors'>Sponsors</Nav.Link>
+              <Nav.Link href='/#sponsors'>Patrocini</Nav.Link>
               <Nav.Link href='/#contattaci'>Contatti</Nav.Link>
             </Nav>
           </Navbar.Collapse>

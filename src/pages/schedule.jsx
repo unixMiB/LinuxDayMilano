@@ -196,6 +196,26 @@ const Page = ({ data }) => {
               )}
             </div>
 
+            {schedData?.schedule.length ? (
+              <Talks
+                scheduleData={schedData?.schedule}
+                key={schedData?.schedule}
+              />
+            ) : (
+              <div className='text-center py-4'>
+                <FontAwesomeIcon
+                  style={{ fontSize: "5em" }}
+                  icon={"person-digging"}
+                  className='pb-2'
+                />
+                <h3>
+                  Ci sono eventi per questa giornata, sono solo in fase di
+                  organizzazione.
+                </h3>
+                <p>Ricontrolla tra qualche giorno!</p>
+              </div>
+            )}
+
             <Talks
               scheduleData={schedData?.schedule}
               key={schedData?.schedule}

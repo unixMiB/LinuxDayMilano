@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Alert from "react-bootstrap/Alert";
 
 const Hero = ({ small }) => {
   const data = useStaticQuery(
@@ -36,6 +37,10 @@ const Hero = ({ small }) => {
   return (
     <div className='hero'>
       <Container>
+        <Alert variant='warning'>
+          A causa di problemi organizzativi, l'evento è stato spostato
+          nell'edificio U6, presso la Piazza dell'Ateneo
+        </Alert>
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
           Linux Day Milano <span className='ldmi'>{metadata.event.year}</span>
         </h1>
