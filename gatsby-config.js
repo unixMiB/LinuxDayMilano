@@ -28,7 +28,7 @@ module.exports = {
     switches: {
       schedule: false,
       cfp: true,
-      sponsor_submit: false,
+      sponsor_submit: true,
       year_switcher: true,
     },
     event: {

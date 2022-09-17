@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
             </div>
             <Container className='front' style={{ position: "sticky" }}>
               <div className='d-flex justify-content-center'>
-                <div className="col-lg-7">
+                <div className='col-lg-7'>
                   {" "}
                   {/* TODO FIX ME */}
                   <h2 style={{ textTransform: "uppercase" }}>
@@ -141,36 +141,43 @@ const IndexPage = ({ data }) => {
         </section>
 
         {/* Don't show sponsors section if there are none and submission is closed */}
-        {/* (data.site.siteMetadata.switches.sponsor_submit ||
-          !!data.sponsors.nodes.length) */false && (
-          <section id='sponsors'>
-            <Container>
-              <div className='text'>
-                <h2 style={{ textTransform: "uppercase" }}>
-                  Sponsors Linux Day Milano
-                </h2>
-              </div>
-              <Row>
-                {data.sponsors.nodes.map((item) => {
-                  return (
-                    <div className='col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
-                      <GatsbyImage width='5rem' image={getImage(item)} />
-                    </div>
-                  );
-                })}
-              </Row>
-              {data.site.siteMetadata.switches.sponsor_submit && (
-                <Row className=''>
-                  <Col className='justify-content-center'>
-                    <Button className='btn-lg' variant='warning'>
-                      Diventa uno sponsor
-                    </Button>
-                  </Col>
+        {
+          /* (data.site.siteMetadata.switches.sponsor_submit ||
+          !!data.sponsors.nodes.length) */ true && (
+            <section id='sponsors'>
+              <Container>
+                <div className='text'>
+                  <h2 style={{ textTransform: "uppercase" }}>
+                    Patrocini Linux Day Milano
+                  </h2>
+                </div>
+                <Row>
+                  {data.sponsors.nodes.map((item) => {
+                    return (
+                      <div className='col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                        <GatsbyImage width='5rem' image={getImage(item)} />
+                      </div>
+                    );
+                  })}
                 </Row>
-              )}
-            </Container>
-          </section>
-        )}
+                {data.site.siteMetadata.switches.sponsor_submit && (
+                  <Row className=''>
+                    <Col className='justify-content-center pt-4'>
+                      <h3>Sei interessato a patrocinare l'evento?</h3>
+                      <Button
+                        className='btn-lg'
+                        href='https://survey.linux.it/index.php/859655?newtest=Y&lang=it'
+                        variant='warning'
+                      >
+                        Compila il questionario
+                      </Button>
+                    </Col>
+                  </Row>
+                )}
+              </Container>
+            </section>
+          )
+        }
       </main>
     </Layout>
   );
