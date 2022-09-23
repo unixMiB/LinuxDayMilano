@@ -151,12 +151,12 @@ const IndexPage = ({ data }) => {
                     Patrocini Linux Day Milano
                   </h2>
                 </div>
-                <Row>
+                <Row className=''>
                   {data.sponsors.nodes.map((item) => {
                     return (
-                      <div className='col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                      <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
                         <GatsbyImage width='5rem' image={getImage(item)} />
-                      </div>
+                      </Col>
                     );
                   })}
                 </Row>
