@@ -117,6 +117,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    "gatsby-background-image",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
