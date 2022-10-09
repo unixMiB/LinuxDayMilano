@@ -31,8 +31,8 @@ schedule:
         duration: 45 min
   - time: "10:30"
     talks:
-      - title: "break"
-      - duration: 15 min
+      - title: "Break"
+        duration: 15 min
   - time: "10:45"
     talks:
       - title: "In Italia, l'Open Source \u00e8 aperto alle donne?"
@@ -40,8 +40,8 @@ schedule:
         author: "Anna Deppi - Red Hat"
         room: U6-40
         duration: 45 min
-      - title: Git
-        description: 'Come usare Git anche a livello di "best practices" + vedere alcuni dei comandi "avanzati".'
+      - title: Git for Contributors
+        description: 'Come utilizzare Git per contribuire a progetti open source, partendo dalle best practices fondamentali per arrivare alle tecniche più avanzate'
         author: Federico Grandi
         room: U6-41
         duration: 45 min
@@ -80,9 +80,6 @@ schedule:
   - time: "12:45"
     talks:
       - title: Pausa pranzo
-        description:
-        author:
-        room: U6-40
         duration: 60 min
   - time: "13:45"      
     talks:
@@ -130,8 +127,8 @@ schedule:
         duration: 45 min
   - time: "15:45"
     talks:
-      - title: "break"
-      - duration: 15 min
+      - title: "Break"
+        duration: 15 min
   - time: "16:00"
     talks:
       - title: "Intelligenza Artificiale e diritto antidiscriminatorio: un difficile equilibrio"
