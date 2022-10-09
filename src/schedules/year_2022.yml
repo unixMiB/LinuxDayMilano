@@ -98,9 +98,9 @@ schedule:
         author: "Flavio Ronzoni e Massimo Grattieri - Bosch Rexroth"
         room: U6-39
         duration: 45 min
-      - title:
-        description: "Come contribuire al kernel Linux"
-        author: "Vuoi fare bella figura con amici e parenti dimostrando di aver contribuito al kernel Linux con una patch? Questa guida breve e accessibile (si spera) ti mostrer\u00e0 come:\r\n\r\n- mettere in piedi da zero un sistema in locale per sviluppare il kernel Linux\r\n- cercare qualcosa su cui iniziare a lavorare\r\n- fare modifiche al kernel e testarle\r\n- inviare una patch e incrociare le dita\r\n\r\nAlla fine di questo talk avrai le idee chiare su come procedere. Con un po' di buona volont\u00e0 diventerai presto un \"kernel contributor\"!"
+      - title: "Come contribuire al kernel Linux"
+        description: "Vuoi fare bella figura con amici e parenti dimostrando di aver contribuito al kernel Linux con una patch? Questa guida breve e accessibile (si spera) ti mostrer\u00e0 come:\r\n\r\n- mettere in piedi da zero un sistema in locale per sviluppare il kernel Linux\r\n- cercare qualcosa su cui iniziare a lavorare\r\n- fare modifiche al kernel e testarle\r\n- inviare una patch e incrociare le dita\r\n\r\nAlla fine di questo talk avrai le idee chiare su come procedere. Con un po' di buona volont\u00e0 diventerai presto un \"kernel contributor\"!"
+        author: "Rigel Di Scala"
         room: U6-42
         duration: 45 min
   - time: "14:45"
