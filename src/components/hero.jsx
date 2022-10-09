@@ -41,6 +41,9 @@ const Hero = ({ small }) => {
           A causa di problemi organizzativi, l'evento è stato spostato
           nell'edificio U6, presso la Piazza dell'Ateneo
         </Alert>
+        <Alert variant='success'>
+          Finalmente disponibile online il programma dell'edizione 2022!
+        </Alert>
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
           Linux Day Milano <span className='ldmi'>{metadata.event.year}</span>
         </h1>
@@ -88,7 +91,7 @@ const Hero = ({ small }) => {
               variant='warning'
             >
               {metadata.switches.schedule
-                ? "Programma"
+                ? "Guarda il programma"
                 : "Programma precedente"}
             </Button>
           </div>

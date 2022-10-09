@@ -77,7 +77,14 @@ const IndexPage = ({ data }) => {
                 />
               </Col>
               <Col sm='8'>
-                <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
+                {data.site.siteMetadata.switches.cfp ? (
+                  <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
+                ) : (
+                  <h2 style={{ textTransform: "uppercase" }}>
+                    Programma della giornata
+                  </h2>
+                )}
+
                 {data.site.siteMetadata.switches.cfp && (
                   <>
                     <p>

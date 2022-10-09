@@ -99,15 +99,15 @@ class Talks extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        {this.state.data.map((i) => {
+        {this.state.data.map((i, k) => {
           return (
-            <Row className='pb-4'>
+            <Row key={k} className='pb-4'>
               <Col lg={1} md={12} className='pb-4 mr-2'>
                 <h5 className='schedule-time'>{i.time}</h5>
               </Col>
-              {i.talks.map((t) => {
+              {i.talks.map((t, u) => {
                 return (
-                  <Col sm={12} md className='pb-4'>
+                  <Col key={u} sm={12} md className='pb-4'>
                     <div
                       onKeyPress={() => this.replaceModalItem(t)}
                       onClick={() => this.replaceModalItem(t)}
@@ -215,11 +215,6 @@ const Page = ({ data }) => {
                 <p>Ricontrolla tra qualche giorno!</p>
               </div>
             )}
-
-            <Talks
-              scheduleData={schedData?.schedule}
-              key={schedData?.schedule}
-            />
           </Container>
         </section>
       </main>

@@ -11,7 +11,7 @@ schedule:
     talks:
       - title: Comincia oggi a contribuire al mondo Open Source, anche senza essere tecnico!
         description: "Oggi, i progetti Open Source sono alla base del settore informatico e della nostra societ\u00e0.\r\nQuesto percorso comincer\u00e0 con alcune credenze sul contribuire a progetti Open Source che, le persone con cui ho parlato, hanno condiviso con me e perch\u00e8 sono spesso infondate.\r\nAnalizzeremo poi le ragioni per cui contribuire ad un progetto Open Source, oltre che portare vantaggi alla Comunit\u00e0, pu\u00f2 portarti anche vantaggi personali.\r\nVedremo alcuni criteri che possono essere usati per facilitare l'identificazione del progetto a cui contribuire e con quale ruolo, con alcuni esempi.\r\nE ricorda, non c'\u00e8 necessit\u00e0 di avere particolari competenze tecniche per partecipare a progetti Open Source, quindi anche tu puoi partecipare sin da oggi!"
-        author: Fabio Alessandro \"Fale\" Locati
+        author: Fabio Alessandro "Fale" Locati
         room: U6-40
         duration: 45 min
       - title: Introduzione a Podman container engine e un po' di storia sui containers
@@ -81,7 +81,7 @@ schedule:
     talks:
       - title: Pausa pranzo
         duration: 60 min
-  - time: "13:45"      
+  - time: "13:45"
     talks:
       - title: "Public Money? Public Code!"
         description: "Seminario informativo sulla campagna Public Money Public Code di Free Software Foundation Europe (FSFE) volta a promuovere l'impiego del software libero nella pubblica amministrazione. Perch\u00e9 il software creato usando i soldi delle tasse riscosse dai cittadini non \u00e8 rilasciato come Software Libero? Vogliamo che la legge richieda che il software finanziato pubblicamente e sviluppato per il settore pubblico sia reso pubblicamente disponibile sotto una licenza Software Libero/Open Source. Se \u00e8 denaro pubblico (public money), allora dovrebbe essere publico anche il codice sorgente (public code)."
@@ -140,7 +140,7 @@ schedule:
         description: "Hai accumulato anni di esperienza con un altro sistema operativo e ti \u00e8 stato detto che puoi fare le stesse cose con Linux... Ma ci\u00f2 non significa che le farai alla stessa maniera."
         author: Moreno Razzoli
         room: U6-41
-        duration: 45 min  
+        duration: 45 min
       - title: "Un oceano di suono"
         description: "Breve panoramica dei software audio a disposizione per registrare, trasmettere e post-produrre un podcast di qualit\u00e0 professionale."
         author: "Simone Savogin"
