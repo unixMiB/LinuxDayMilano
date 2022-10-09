@@ -1,2 +1,180 @@
 year: 2022
-schedule: []
+schedule:
+  - time: "9:00"
+    talks:
+      - title: Keynote
+        description: Apertura del Linux Day
+        author: Daniele Barcella - unixMiB
+        room: U6-40
+        duration: 30 min
+  - time: "9:30"
+    talks:
+      - title: Comincia oggi a contribuire al mondo Open Source, anche senza essere tecnico!
+        description: "Oggi, i progetti Open Source sono alla base del settore informatico e della nostra societ\u00e0.\r\nQuesto percorso comincer\u00e0 con alcune credenze sul contribuire a progetti Open Source che, le persone con cui ho parlato, hanno condiviso con me e perch\u00e8 sono spesso infondate.\r\nAnalizzeremo poi le ragioni per cui contribuire ad un progetto Open Source, oltre che portare vantaggi alla Comunit\u00e0, pu\u00f2 portarti anche vantaggi personali.\r\nVedremo alcuni criteri che possono essere usati per facilitare l'identificazione del progetto a cui contribuire e con quale ruolo, con alcuni esempi.\r\nE ricorda, non c'\u00e8 necessit\u00e0 di avere particolari competenze tecniche per partecipare a progetti Open Source, quindi anche tu puoi partecipare sin da oggi!"
+        author: Fabio Alessandro \"Fale\" Locati
+        room: U6-40
+        duration: 45 min
+      - title: Introduzione a Podman container engine e un po' di storia sui containers
+        description: "Visto che i container sono diventati il nuovo standard de facto per la creazione di pacchetti di applicazioni e le loro dipendenze, capire come implementarli, costruirli e gestirli \u00e8 ora essenziale per sviluppatori, amministratori di sistema e team SRE/operativi.\r\nDurante questo talk inizieremo esplorando le principali caratteristiche e capacit\u00e0 dei container, partendo dai concetti di base della containerizzazione e della sua tecnologia sottostante. Esploreremo la storia Containers Runtimes, introducendo Podman e i suoi strumenti complementari, il nuovissimo Container Engine disponibile in ogni distribuzione Linux.\r\nPodman e il suo ecosistema sono un'alternativa daemon-less a Docker.\r\nTi aspettiamo per scoprire assieme le principali funzionalit\u00e0 di Podman!"
+        author: Alessandro Arrichiello, Gianni Salinetti
+        room: U6-41
+        duration: 45 min
+      - title: Ecco fatto dopo 8 anni il Notebook Open Hardware - nonostante la guerra dei Chip
+        description: "Al Linux Day di Milano delll'Ottobre 2014 venne presentata l'idea di costruire un notebook progettato intorno a GNU/Linux , poi divenne Open Hardware ( basato su processore Power) dovremmo avercela fatta ad avere tutti i pi\u00f9 di 2000 componenti elettronici in tempo per presentare il prototipo, guerra dei microchip e costi dei chip da strozzini... Chi parteciper\u00f2 alla presentazione scoprir\u00e0...\r\n"
+        author: Roberto Innocenti - Power Progress Community
+        room: U6-42
+        duration: 45 min
+      - title: "(not so smart) Contract"
+        description: "Il Web3 \u00e8 bellissimo, rappresenta una svolta anche per l'universo del futuro ma... parliamo del presente.\r\n\r\nI security token altro non sono che strumenti finanziari rappresentativi di asset class tradizionali come azioni, obbligazioni, diritti, obblighi e loro derivati.\r\n\r\nAd oggi nel mondo circolano, in modo pi\u00f9 o meno regolamentato, 5 miliardi di $ di questi strumenti, la secuirity token offering (STO) rappresenta il loro incipit, ovvero l'offerta iniziale al pubblico.\r\n\r\nLa Frankfurt School of Finance & Management stima che per il 2026 l'offerta di questi strumenti giunga a toccare il trilione, di cui si sfida chiunque a scrivere con tutti gli zero al posto giusto...\r\n\r\n\u00c8 bellissimo, no? Non proprio.\r\n\r\nLa maggior parte di questi strumenti funziona grazie ad uno smart contract, che ne definisce durata, meccanismo, modalit\u00e0 di scambio o rimborso finale.\r\n\r\nIl codice di questi smart contract \u00e8 quindi fondamentale per garantirne il funzionamento e forse pochi si sono chiesti: cosa accade se il codice non \u00e8 stato testato, rivisto, approfondito in una sandbox considerando le differenti condizioni e variabili in cui si trover\u00e0 ad operare?\r\n\r\nSemplice: come qualsiasi codice con bug sar\u00e0 soggetto ad attacchi esterni e, forse peggio, a comportamenti anomali e possibile blocco.\r\n\r\nNel web3 non c'\u00e8 un numero verde, non esiste organismo di intervento da parte di un amministratore di rete, del resto avete voluto la finanza decentralizzata?\r\n\r\nEbbene s\u00ec, una parte di quei 5 miliardi di $ \u00e8 \"bloccata\" in un codice buggato, altra parte \u00e8 stata sottratta da parte di attacchi che sfruttavano le vulnerabilit\u00e0 del codice.\r\n\r\nCosa \u00e8 accaduto nello specifico? Cosa sappiamo e cosa possiamo supporre? Ma soprattutto come poter riconoscere uno smartcontract affidabile rispetto ad un altro?\r\n\r\nInsomma, talvolta \u00e8 davvero un \"not so smart contract\"..."
+        author: "Maurizio Gallina"
+        room: U6-39
+        duration: 45 min
+  - time: "10:30"
+    talks:
+      - title: "Break"
+        duration: 15 min
+  - time: "10:45"
+    talks:
+      - title: "In Italia, l'Open Source \u00e8 aperto alle donne?"
+        description: "Secondo Almalaurea, anche se in Italia ci sono pi\u00f9 donne iscritte all\u2019universit\u00e0 che uomini (il 58,7% degli iscritti complessivamente), queste scelgono soprattutto corsi di studio letterari e umanistici. Solo il 18% delle ragazze sceglie corsi STEM. Il trend italiano \u00e8 in linea con la media europea e mondiale. Pu\u00f2 la comunit\u00e0 Open Source aiutare a colmare questo \u201cgender gap\u201d?\r\n"
+        author: "Anna Deppi - Red Hat"
+        room: U6-40
+        duration: 45 min
+      - title: Git for Contributors
+        description: 'Come utilizzare Git per contribuire a progetti open source, partendo dalle best practices fondamentali per arrivare alle tecniche più avanzate'
+        author: Federico Grandi
+        room: U6-41
+        duration: 45 min
+      - title: Timestamping con opentimestamp
+        description: "Spiegazione generale di cos'\u00e8 il timestamping , come si effettua con opentimestamp e perch\u00e9 \u00e8 utile"
+        author: "Timothy Redaelli - FSFE"
+        room: U6-42
+        duration: 45 min
+      - title: "Debian/Linux -- Il Sistema Operativo Universale. Installiamolo su una voting machine per riconvertirla a scopo ludico e didattico"
+        description: "Debian \u00e8 una delle storiche distribuzioni Linux che mantiene un buon supporto per hardware datato o difficilmente supportato da altre distribuzioni.\r\nNel corso dell'intervento verr\u00e0 illustrata la procedura di installazione del sistema su una SmartMatic A4-210 e come Debian sia una valida distribuzione per il recupero di hardware datato."
+        author: "Michele Bonsignore"
+        room: U6-39
+        duration: 45 min
+  - time: "11:45"
+    talks:
+      - title: "Uno sguardo alle realt\u00e0 di software libero in Italia"
+        description: "In questo talk si cerca di far luce sulle realt\u00e0 oggi attive in Italia in ambito software libero e affini. Nella presentazione vengono illustrate alcune delle associazioni pi\u00f9 rilevanti in questo ambito e i loro canali di comunicazione con il fine di creare maggior consapevolezza sul tema, rafforzare la community gi\u00e0 esistente e coinvolgere anche un pubblico generico."
+        author: "Marta Andreoli - FSFE"
+        room: U6-40
+        duration: 45 min
+      - title: "SELinux: The Good, The Bad and The Worst"
+        description: Placeholder
+        author: "Luca Fus\u00e8"
+        room: U6-41
+        duration: 45 min
+      - title: "Varnish Cache, il web accelerator Open Source"
+        description: "Partendo dal funzionamento di cache e di reverse proxy, scopriremo Varnish, una cache Open Source. Questa cache \u00e8 nata nel 2006 e realizzata appositamente per il protocollo HTTP, ora \u00e8 alla base di tantissimi siti web dal traffico elevato."
+        author: Matteo Enna
+        room: U6-39
+        duration: 45 min
+      - title: "Panoramica su Quarkus"
+        description: "Verranno illustrate le caratteristiche principali del framework Quarkus ed i suoi vantaggi in ottica cloud ready."
+        author: "Alessio Giovanni Baroni - Red Hat"
+        room: U6-42
+        duration: 45 min
+  - time: "12:45"
+    talks:
+      - title: Pausa pranzo
+        duration: 60 min
+  - time: "13:45"      
+    talks:
+      - title: "Public Money? Public Code!"
+        description: "Seminario informativo sulla campagna Public Money Public Code di Free Software Foundation Europe (FSFE) volta a promuovere l'impiego del software libero nella pubblica amministrazione. Perch\u00e9 il software creato usando i soldi delle tasse riscosse dai cittadini non \u00e8 rilasciato come Software Libero? Vogliamo che la legge richieda che il software finanziato pubblicamente e sviluppato per il settore pubblico sia reso pubblicamente disponibile sotto una licenza Software Libero/Open Source. Se \u00e8 denaro pubblico (public money), allora dovrebbe essere publico anche il codice sorgente (public code)."
+        author: "Natale Vinto"
+        room: U6-40
+        duration: 45 min
+      - title: "Ansible: la ricetta per un buon server"
+        description: "Introduzione ad Ansible, il software di provisioning open-source pi\u00f9 diffuso. Perch\u00e8 usarlo anche in ambito domestico al posto degli script fai-da-te per automatizzare il deployment dei servizi nel proprio homelab."
+        author: "Luca Biscaldi - PoUL"
+        room: U6-41
+        duration: 45 min
+      - title: "Gli ingredienti di un approccio data-driven in un'applicazione industriale: apertura e multi-coding"
+        description: "Qual \u00e8 il viaggio del dato che partendo da un processo industriale si deve interfacciare ai complessi sistemi informatici aziendali?\r\nL\u2019approccio data-driven nella progettazione di un\u2019architettura \u00e8 in grado di tradurre informazioni complesse in un output semplice e facile da interpretare. Per fare questo \u00e8 necessario sfruttare tecnologie open source e adottare un approccio multi-coding, trasversale rispetto alle risorse e alle competenze presenti in un\u2019azienda.\r\nL\u2019introduzione dell\u2019AI apre a tutti quegli scenari di hide pattern che contribuiscono ulteriormente ad arricchire il valore dei dati."
+        author: "Flavio Ronzoni e Massimo Grattieri - Bosch Rexroth"
+        room: U6-39
+        duration: 45 min
+      - title: "Come contribuire al kernel Linux"
+        description: "Vuoi fare bella figura con amici e parenti dimostrando di aver contribuito al kernel Linux con una patch? Questa guida breve e accessibile (si spera) ti mostrer\u00e0 come:\r\n\r\n- mettere in piedi da zero un sistema in locale per sviluppare il kernel Linux\r\n- cercare qualcosa su cui iniziare a lavorare\r\n- fare modifiche al kernel e testarle\r\n- inviare una patch e incrociare le dita\r\n\r\nAlla fine di questo talk avrai le idee chiare su come procedere. Con un po' di buona volont\u00e0 diventerai presto un \"kernel contributor\"!"
+        author: "Rigel Di Scala"
+        room: U6-42
+        duration: 45 min
+  - time: "14:45"
+    talks:
+      - title: "FSFe Router Freedom in Italia e nella UE"
+        description: "Cosa \u00e8 la Router Freedom, perch\u00e9 \u00e8 utile ed importante, cosa FSFe ha fatto per promuoverla in Italia ed all'estero, cosa ho praticamente fatto io come supporter FSFe in Italia per la Router Freedom, cosa puoi fare tu per aiutare.\r\nQuesto talk si pu\u00f2 intitolare anche \"Router Freedom quattro anni dopo\" visto che \u00e8 la logica continuazione del mio talk precedente \"Libera il tuo Router\" per il Linux Day 2018, aggiornato alla situazione attuale."
+        author: Stefano Costa
+        room: U6-40
+        duration: 45 min
+      - title: "Rust \u2013 non prendere un granchio"
+        description: "Secondo i sondaggi di Stack Overflow, Rust \u00e8 il linguaggio pi\u00f9 amato negli ultimi 7 anni.\r\nInoltre, Rust diventer\u00e0 presto il secondo linguaggio di programmazione dopo C con cui si potr\u00e0 sviluppare il kernel Linux.\r\n\r\nIn questo talk vediamo quali sono vantaggi e svantaggi di questo linguaggio, confrontandone esempi di codice con C, C++, Java, Kotlin e Python."
+        author: "Marco Ieni"
+        room: U6-41
+        duration: 45 min
+      - title: "Rosetta Mission 2022"
+        description: 'Descriverei il contenuto del mio talk come l''introduzione ad un esperimento di arte contemporanea pensato per la creazione di un''opera partecipativa multi-piattaforma di cross-reality in grado di vivere simultaneamente nel mondo dei processi fisici macroscopici, in quello microscopico dei fenomeni quantistici, e digitali di internet e dei social networks. E'' il racconto di un piccolo viaggio circolare psichedelico fatto di scatole cinesi dove l''informazione e'' sempre libera di saltare su orbite diverse per poi ritornare a casa. E'' forse anche la storia di un gruppo di community invisibili correlate a distanza che sviluppano programmi open source, come blender e mozilla hubs, e che rendono possibile, come nel caso specifico di "Rosetta Mission 2022", la creazione di un mondo fluttuante pensato per l''incontro tra il pubblico generico e minoranze di attivisti, scienziati ed artisti oltre i confini geografici, politici, religiosi ed economici.'
+        author: "Luca Pozzi"
+        room: U6-39
+        duration: 45 min
+      - title: "CMS a confronto: la scelta Open Source che fa al caso tuo!"
+        description: "Comparazione tra i principali Content Management System  in ambito Open Source considerando le funzionalit\u00e0 fornite Out Of The Box.\r\nIn particolare verranno affrontati:\r\n- Supporto dalla community\r\n- Funzionalit\u00e0 del Core\r\n- Estensioni presenti nel Marketplace\r\n- Temi grafici\r\n- Facilit\u00e0 di utilizzo\r\n- Risorse server"
+        author: "Fausto Nenci"
+        room: U6-42
+        duration: 45 min
+  - time: "15:45"
+    talks:
+      - title: "Break"
+        duration: 15 min
+  - time: "16:00"
+    talks:
+      - title: "Intelligenza Artificiale e diritto antidiscriminatorio: un difficile equilibrio"
+        description: "Spesso si pensa che gli algoritmo di Intelligenza Artificiali si basino su calcoli neutri e per tale ragione la loro caratteristica sia quella della neutralit\u00e0. In realt\u00e0, gli algoritmi sono figli dei propri creatori, gli esseri umani, e n\u00e9 rappresentano pregi e difetti. Infatti, essi sono costellati dai c.d. bias ossia pregiudizi che possono inficiare sulla qualit\u00e0 e attendibilit\u00e0 del dato. Tutto ci\u00f2 ha anche delle conseguenze in ambito giuridico: la presenza di bias incentiva comportamenti discriminatori. \r\nL'intervento, quindi, si focalizza sul fenomeno dei bias e sulla sua ripercussione nel diritto: le discriminazioni."
+        author: "Silvia Cereda"
+        room: U6-40
+        duration: 45 min
+      - title: 5+1 Errori da evitare passando a Linux
+        description: "Hai accumulato anni di esperienza con un altro sistema operativo e ti \u00e8 stato detto che puoi fare le stesse cose con Linux... Ma ci\u00f2 non significa che le farai alla stessa maniera."
+        author: Moreno Razzoli
+        room: U6-41
+        duration: 45 min  
+      - title: "Un oceano di suono"
+        description: "Breve panoramica dei software audio a disposizione per registrare, trasmettere e post-produrre un podcast di qualit\u00e0 professionale."
+        author: "Simone Savogin"
+        room: U6-39
+        duration: 45 min
+      - title: "GitOps 101 - da dove veniamo, dove stiamo andando"
+        description: "Questo talk spiegher\u00e0 cosa sia il paradigma GitOps e perch\u00e9 stia venendo utilizzato per la gestione di codice applicativo ed infrastrutture. Capiremo insieme cosa abbia portato alla nascita di questo approccio e quali siano, invece, le domande a cui ancora non abbiamo dato una risposta."
+        author: "Lorenzo Soligo"
+        room: U6-42
+        duration: 45 min
+  - time: "17:00"
+    talks:
+      - title: "NethServer - la distribuzione Linux server italiana semplice da utilizzare."
+        description: "Cos'\u00e8 Nethserver? Un prodotto italiano open source nato per permettere a tutti di costruirsi in casa (o su una piattaforma cloud) un Mailserver, Fileserver, Cloud storage personale, Firewall, Centralino telefonico.\r\nPerch\u00e8 \u00e8 nato, com'\u00e8 nato, l'idea dei fondatori, la creazione e lo sviluppo della community.\r\nSpiegazione della base: utilizzando CentoOS come base e cockpit per l'amministrazione via web permette all'utente anche meno esperto di installare i vari moduli presenti nel software center. Tutti i software sono sviluppati direttamente dall'azienda Nethesis e dalla community, oppure ci si avvale di progetti open gi\u00e0 esistenti come per esempio Nextcloud.\r\nSpiegazione dei vari moduli:\r\n- Mailserver\r\n- Fileserver (samba)\r\n- Nextcloud\r\n- Firewall\r\n- Centralino (esempio creazione e configurazione account VoIP)\r\n"
+        author: "Elia Ronchetti"
+        room: U6-40
+        duration: 45 min
+      - title: "Packit; come integrare un progetto in Fedora facilmente!"
+        description: "I progetti upstream, ovvero quei progetti che sono ospitati - ad esempio - dai vari *git forge* come github o gitlab, non si preoccupano della loro integrazione all'interno di una distribuzione Linux. Per questo motivo portare un progetto dall'upstream al downstream - ovvero integrarlo in una distribuzione - pu\u00f2 diventare un'attivit\u00e1 davvero complessa; solitamente \u00e9 un processo manuale che richiede molte conoscienze e che viene delegato a delle persone chiamate mantainers.\r\nLo scopo di Packit \u00e9 quello di facilitare il processo di integrazione di un progetto dall'upstream al downstream di Fedora rendendolo completamente automatico ed alla portata di tutti.\r\nIn questa sessione verr\u00e1 presentato Packit e come esso pu\u00f2 essere utilizzato per automatizzare il processo di rilascio di un pacchetto con un breve cenno a quelli che sono gli sviluppi futuri."
+        author: Maja Massarini - Red Hat
+        room: U6-41
+        duration: 45 min
+      - title: "Unikernel: a volte ritornano"
+        description: "Gli unikernel non sono del tutto nuovi nell'informatica. Sono sistemi operativi piccoli e leggeri con la particolarit\u00e0 di avere il kernel incluso come libreria all'interno dell'applicazione di cui esistono alcuni esperimenti risalenti ai primi anni 90. Tuttavia stanno tornando in auge come evoluzione naturale di Linux: gli Unikernel Linux (UKL). In questa sessione esamineremo cosa sono gli UKL e perch\u00e9 possono rappresentare un vantaggio importante in contesti sempre pi\u00f9 comuni come high-performance I/O e cloud computing.  "
+        author: "Natale Vinto"
+        room: U6-39
+        duration: 45 min
+      - title: "LotR: (any) Linux on the RaspberryPI"
+        description: "Il successo dirompente del RaspberryPI \u00e8 dovuto in parte anche alla scelta di preparare una distribuzione linux per renderlo utilizzabile facilmente da parte di chiunque. Ma come fare se si hanno esigenze particolari, o anche solo se si preferisce un'altra distribuzione? E in che cosa le schede Single Board Computer (SBC) differiscono da un normale PC?\r\nIn questo talk approfondiremo questi temi e cercheremo una soluzione, standard ed open source, per poter eseguire le pi\u00f9 diffuse distribuzione Linux sul RaspberryPI."
+        author: "Andrea Perotti - Red Hat"
+        room: U6-42
+        duration: 45 min
+  - time: "18:00"
+    talks:
+      - title: Chiusura
+        description: Chisura della giornata
+        room: U6-40
