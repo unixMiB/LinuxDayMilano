@@ -129,7 +129,7 @@ schedule:
         room: U6-42
         duration: 45 min
   - time: "15:45"
-      talks:
+    talks:
       - title: "break"
       - duration: 15 min
   - time: "16:00"
