@@ -4,7 +4,7 @@ schedule:
     talks:
       - title: Plenaria di apertura
         description: Apertura del Linux Day
-        author: Daniele Barcella - unixMiB
+        author: Daniele Barcella, Elia Ronchetti - unixMiB
         room: U6-40
         duration: 30 min
   - time: "9:30"
