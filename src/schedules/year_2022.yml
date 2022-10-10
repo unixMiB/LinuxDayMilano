@@ -2,7 +2,7 @@ year: 2022
 schedule:
   - time: "9:00"
     talks:
-      - title: Keynote
+      - title: Plenaria di apertura
         description: Apertura del Linux Day
         author: Daniele Barcella - unixMiB
         room: U6-40
@@ -67,15 +67,15 @@ schedule:
         author: "Luca Fus\u00e8"
         room: U6-41
         duration: 45 min
-      - title: "Varnish Cache, il web accelerator Open Source"
-        description: "Partendo dal funzionamento di cache e di reverse proxy, scopriremo Varnish, una cache Open Source. Questa cache \u00e8 nata nel 2006 e realizzata appositamente per il protocollo HTTP, ora \u00e8 alla base di tantissimi siti web dal traffico elevato."
-        author: Matteo Enna
-        room: U6-39
-        duration: 45 min
       - title: "Panoramica su Quarkus"
         description: "Verranno illustrate le caratteristiche principali del framework Quarkus ed i suoi vantaggi in ottica cloud ready."
         author: "Alessio Giovanni Baroni - Red Hat"
         room: U6-42
+        duration: 45 min
+      - title: "Varnish Cache, il web accelerator Open Source"
+        description: "Partendo dal funzionamento di cache e di reverse proxy, scopriremo Varnish, una cache Open Source. Questa cache \u00e8 nata nel 2006 e realizzata appositamente per il protocollo HTTP, ora \u00e8 alla base di tantissimi siti web dal traffico elevato."
+        author: Matteo Enna
+        room: U6-39
         duration: 45 min
   - time: "12:45"
     talks:
@@ -153,9 +153,9 @@ schedule:
         duration: 45 min
   - time: "17:00"
     talks:
-      - title: "NethServer - la distribuzione Linux server italiana semplice da utilizzare."
-        description: "Cos'\u00e8 Nethserver? Un prodotto italiano open source nato per permettere a tutti di costruirsi in casa (o su una piattaforma cloud) un Mailserver, Fileserver, Cloud storage personale, Firewall, Centralino telefonico.\r\nPerch\u00e8 \u00e8 nato, com'\u00e8 nato, l'idea dei fondatori, la creazione e lo sviluppo della community.\r\nSpiegazione della base: utilizzando CentoOS come base e cockpit per l'amministrazione via web permette all'utente anche meno esperto di installare i vari moduli presenti nel software center. Tutti i software sono sviluppati direttamente dall'azienda Nethesis e dalla community, oppure ci si avvale di progetti open gi\u00e0 esistenti come per esempio Nextcloud.\r\nSpiegazione dei vari moduli:\r\n- Mailserver\r\n- Fileserver (samba)\r\n- Nextcloud\r\n- Firewall\r\n- Centralino (esempio creazione e configurazione account VoIP)\r\n"
-        author: "Elia Ronchetti"
+      - title: "FOSS e Open Standard per la Sovranità Digitale"
+        description: "Il software open source e gli standard aperti - in particolare i formati dei documenti - sono di fondamentale importanza per le strategie di sovranità digitale di individui, aziende, organizzazioni e governi. Oggi i contenuti creati dagli utenti - e la possibilità di condividerli in modo trasparente - sono nelle mani di poche aziende, che sfruttano a proprio vantaggio la limitata cultura digitale degli utenti. Questa situazione può essere superata solo passando dal software proprietario a quello open source e dagli standard proprietari a quelli aperti."
+        author: "Italo Vignoli"
         room: U6-40
         duration: 45 min
       - title: "Packit; come integrare un progetto in Fedora facilmente!"
@@ -163,9 +163,9 @@ schedule:
         author: Maja Massarini - Red Hat
         room: U6-41
         duration: 45 min
-      - title: "Unikernel: a volte ritornano"
-        description: "Gli unikernel non sono del tutto nuovi nell'informatica. Sono sistemi operativi piccoli e leggeri con la particolarit\u00e0 di avere il kernel incluso come libreria all'interno dell'applicazione di cui esistono alcuni esperimenti risalenti ai primi anni 90. Tuttavia stanno tornando in auge come evoluzione naturale di Linux: gli Unikernel Linux (UKL). In questa sessione esamineremo cosa sono gli UKL e perch\u00e9 possono rappresentare un vantaggio importante in contesti sempre pi\u00f9 comuni come high-performance I/O e cloud computing.  "
-        author: "Natale Vinto"
+      - title: "Common Voice - Vogli(am)o la tua voce!"
+        description: "Ti sei mai chiesto perchè la tua voce sia così importante? Essa viene utilizzata per ridere, cantare, urlare, per esprimere emozioni, ma soprattutto per due motivi fondamentali: parlare e comunicare! \nCommon Voice è un progetto di Mozilla che ha l'obiettivo di creare un'enorme raccolta che comprenda quante più voci possibili, in modo tale che queste siano disponibili per qualunque tipo di progetto...e funziona!"
+        author: "Giovanni Sardisco - Mozilla"
         room: U6-39
         duration: 45 min
       - title: "LotR: (any) Linux on the RaspberryPI"
