@@ -63,7 +63,7 @@ schedule:
         room: U6-40
         duration: 45 min
       - title: "SELinux: The Good, The Bad and The Worst"
-        description: Placeholder
+        description: "SELinux è uno degli strumenti di sicurezza su GNU/Linux(*) più importanti, tristemente è anche uno dei più disabilitate.\nVediamo assieme perché è una componente del sistema molto importante, come facciamo ad usarlo correttamente e come possiamo smettere di disabilatarlo una volte per tutte.\n\n(*) In realtà solo per distro Fedora, Centos, RHEL e derivate"
         author: "Luca Fus\u00e8"
         room: U6-41
         duration: 45 min
