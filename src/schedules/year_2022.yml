@@ -90,7 +90,7 @@ schedule:
         duration: 45 min
       - title: "Ansible: la ricetta per un buon server"
         description: "Introduzione ad Ansible, il software di provisioning open-source pi\u00f9 diffuso. Perch\u00e8 usarlo anche in ambito domestico al posto degli script fai-da-te per automatizzare il deployment dei servizi nel proprio homelab."
-        author: "Luca Biscaldi - PoUL"
+        author: "Luca Biscaldi - POuL"
         room: U6-41
         duration: 45 min
       - title: "Gli ingredienti di un approccio data-driven in un'applicazione industriale: apertura e multi-coding"
