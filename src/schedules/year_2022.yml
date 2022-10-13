@@ -133,7 +133,7 @@ schedule:
     talks:
       - title: "Intelligenza Artificiale e diritto antidiscriminatorio: un difficile equilibrio"
         description: "Spesso si pensa che gli algoritmo di Intelligenza Artificiali si basino su calcoli neutri e per tale ragione la loro caratteristica sia quella della neutralit\u00e0. In realt\u00e0, gli algoritmi sono figli dei propri creatori, gli esseri umani, e n\u00e9 rappresentano pregi e difetti. Infatti, essi sono costellati dai c.d. bias ossia pregiudizi che possono inficiare sulla qualit\u00e0 e attendibilit\u00e0 del dato. Tutto ci\u00f2 ha anche delle conseguenze in ambito giuridico: la presenza di bias incentiva comportamenti discriminatori. \r\nL'intervento, quindi, si focalizza sul fenomeno dei bias e sulla sua ripercussione nel diritto: le discriminazioni."
-        author: "Silvia Cereda"
+        author: "Silvia Cereda - RedOpen"
         room: U6-40
         duration: 45 min
       - title: 5+1 Errori da evitare passando a Linux
