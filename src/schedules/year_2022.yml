@@ -57,7 +57,7 @@ schedule:
         duration: 45 min
   - time: "11:45"
     talks:
-      - title: "Uno sguardo alle realt\u00e0 di software libero in Italia"
+      - title: "Uno sguardo alle realt\u00e0 di software libero e affini in Italia"
         description: "In questo talk si cerca di far luce sulle realt\u00e0 oggi attive in Italia in ambito software libero e affini. Nella presentazione vengono illustrate alcune delle associazioni pi\u00f9 rilevanti in questo ambito e i loro canali di comunicazione con il fine di creare maggior consapevolezza sul tema, rafforzare la community gi\u00e0 esistente e coinvolgere anche un pubblico generico."
         author: "Marta Andreoli - FSFE"
         room: U6-40
