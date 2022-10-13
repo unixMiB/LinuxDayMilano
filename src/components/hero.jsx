@@ -37,15 +37,21 @@ const Hero = ({ small }) => {
   return (
     <div className='hero'>
       <Container>
-        <Alert variant='warning'>
-          A causa di problemi organizzativi, l'evento è stato spostato
-          nell'edificio U6, presso la Piazza dell'Ateneo
-        </Alert>
+        {small && (
+          <Alert>
+            Ricordiamo che l'accesso all'evento è gratuito e libero per tutti
+          </Alert>
+        )}
         {small && (
           <Alert variant='success'>
             Finalmente disponibile online il programma dell'edizione 2022!
           </Alert>
         )}
+        <Alert variant='warning'>
+          A causa di problemi organizzativi, l'evento è stato spostato
+          nell'edificio U6, presso la Piazza dell'Ateneo
+        </Alert>
+
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
           Linux Day Milano <span className='ldmi'>{metadata.event.year}</span>
         </h1>
