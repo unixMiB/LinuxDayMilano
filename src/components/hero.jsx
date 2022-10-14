@@ -39,7 +39,7 @@ const Hero = ({ small }) => {
       <Container>
         {small && (
           <Alert>
-            Ricordiamo che l'accesso all'evento è gratuito e libero per tutti
+            Ricordiamo che l'accesso all'evento è gratuito e libero per tutti, senza necessità di registrazione
           </Alert>
         )}
         {small && (
