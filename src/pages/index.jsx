@@ -234,7 +234,7 @@ export const query = graphql`
               webpOptions: { quality: 80 }
               blurredOptions: { toFormat: AUTO }
               pngOptions: { quality: 80 }
-              breakpoints: [156, 216, 296, 356, 416]
+              breakpoints: [156, 216, 296, 356, 416, 512, 620, 710]
             )
           }
         }
@@ -253,7 +253,7 @@ export const query = graphql`
               webpOptions: { quality: 80 }
               blurredOptions: { toFormat: AUTO }
               pngOptions: { quality: 80 }
-              breakpoints: [156, 216, 296, 356, 416, 512, 620]
+              breakpoints: [156, 216, 296, 356, 416, 512, 620, 710]
             )
           }
         }
