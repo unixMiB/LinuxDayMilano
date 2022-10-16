@@ -2,9 +2,6 @@ sponsors:
   - name: EXTRAORDY
     website: https://extraordy.com/
     logo: Extraordy B@8x.png
-  - name: Red Hat
-    website: https://redhat.com/
-    logo: RedHat A@8x.png
   - name: Bicocca
     website: https://www.unimib.it/
     logo: Universita Milano Bicocca.png
@@ -30,6 +27,9 @@ patrocini:
   - name: Joomla User Group Milano Centro
     logo: JUG Milano@8x.png
     website: https://www.joomla.it/joomla-user-group/jug-milano-centro.html
+  - name: Red Hat
+    website: https://redhat.com/
+    logo: RedHat A@8x.png
 referrals:
   - name: GitHub Experts Campus
     website: https://githubcampus.expert/
