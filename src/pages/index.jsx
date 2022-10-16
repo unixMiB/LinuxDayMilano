@@ -147,44 +147,71 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
 
-        {/* Don't show sponsors section if there are none and submission is closed */}
-        {
-          /* (data.site.siteMetadata.switches.sponsor_submit ||
-          !!data.sponsors.nodes.length) */ true && (
-            <section id='sponsors'>
-              <Container>
-                <div className='text'>
-                  <h2 style={{ textTransform: "uppercase" }}>
-                    Patrocini Linux Day Milano
-                  </h2>
-                </div>
-                <Row className=''>
-                  {data.sponsors.nodes.map((item) => {
-                    return (
-                      <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
-                        <GatsbyImage width='5rem' image={getImage(item)} />
-                      </Col>
-                    );
-                  })}
-                </Row>
-                {data.site.siteMetadata.switches.sponsor_submit && (
-                  <Row className=''>
-                    <Col className='justify-content-center pt-4'>
-                      <h3>Sei interessato a patrocinare l'evento?</h3>
-                      <Button
-                        className='btn-lg'
-                        href='https://survey.linux.it/index.php/859655?newtest=Y&lang=it'
-                        variant='warning'
-                      >
-                        Compila il questionario
-                      </Button>
+        <section id='sponsors'>
+          <Container className='py-5'>
+            <h2 style={{ textTransform: "uppercase" }}>Sponsor dell'evento</h2>
+            <Row className='mb-3'>
+              {data.brandsYaml.sponsors.map((item) => {
+                return (
+                  <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                    <a href={item.website}>
+                      <GatsbyImage
+                        alt={item.name}
+                        title={item.name}
+                        width='5rem'
+                        image={getImage(item.logo)}
+                      />
+                    </a>
+                  </Col>
+                );
+              })}
+            </Row>
+            <h2 style={{ textTransform: "uppercase" }}>Con i patrocini di</h2>
+            <Row className='mb-3'>
+              {data.brandsYaml.patrocini.map((item) => {
+                return (
+                  <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                    <a href={item.website}>
+                      <GatsbyImage
+                        alt={item.name}
+                        title={item.name}
+                        width='5rem'
+                        image={getImage(item.logo)}
+                      />
+                    </a>
+                  </Col>
+                );
+              })}
+            </Row>
+            <h2 style={{ textTransform: "uppercase" }}>Parlano di noi</h2>
+            {data.brandsYaml.referrals.map((item) => {
+              return (
+                <Row>
+                  <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                    <a href={item.website}>
+                      <GatsbyImage
+                        alt={item.name}
+                        title={item.name}
+                        width='5rem'
+                        image={getImage(item.logo)}
+                      />
+                    </a>
                     </Col>
-                  </Row>
-                )}
-              </Container>
-            </section>
-          )
-        }
+                    <Col className='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
+                    <figure>
+                      <blockquote class='blockquote'>
+                        <p>{item.comment}</p>
+                      </blockquote>
+                      <figcaption class='blockquote-footer'>
+                        {item.author}
+                      </figcaption>
+                    </figure>
+                  </Col>
+                </Row>
+              );
+            })}
+          </Container>
+        </section>
       </main>
     </Layout>
   );
@@ -192,23 +219,64 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    sponsors: allFile(filter: { sourceInstanceName: { eq: "brands" } }) {
-      nodes {
+    brandsYaml {
+      patrocini {
         name
-        publicURL
-        childImageSharp {
-          gatsbyImageData(
-            quality: 80
-            placeholder: NONE
-            layout: FULL_WIDTH
-            jpgOptions: { progressive: true }
-            formats: [AUTO, WEBP, AVIF]
-            avifOptions: { lossless: true }
-            webpOptions: { quality: 80 }
-            blurredOptions: { toFormat: AUTO }
-            pngOptions: { quality: 80 }
-            breakpoints: [128, 176, 216, 261, 306]
-          )
+        website
+        logo {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 80
+              placeholder: NONE
+              layout: FULL_WIDTH
+              jpgOptions: { progressive: true, quality: 80 }
+              avifOptions: { lossless: true }
+              webpOptions: { quality: 80 }
+              blurredOptions: { toFormat: AUTO }
+              pngOptions: { quality: 80 }
+              breakpoints: [156, 216, 296, 356, 416]
+            )
+          }
+        }
+      }
+      sponsors {
+        name
+        website
+        logo {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 80
+              placeholder: NONE
+              layout: FULL_WIDTH
+              jpgOptions: { progressive: true, quality: 80 }
+              avifOptions: { lossless: true }
+              webpOptions: { quality: 80 }
+              blurredOptions: { toFormat: AUTO }
+              pngOptions: { quality: 80 }
+              breakpoints: [156, 216, 296, 356, 416, 512, 620]
+            )
+          }
+        }
+      }
+      referrals {
+        comment
+        name
+        website
+        author
+        logo {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 80
+              placeholder: NONE
+              layout: FULL_WIDTH
+              jpgOptions: { progressive: true, quality: 80 }
+              avifOptions: { lossless: true }
+              webpOptions: { quality: 80 }
+              blurredOptions: { toFormat: AUTO }
+              pngOptions: { quality: 80 }
+              breakpoints: [156, 216, 296, 356, 416, 512, 620, 710]
+            )
+          }
         }
       }
     }
@@ -227,7 +295,7 @@ export const query = graphql`
           webpOptions: { quality: 80 }
           blurredOptions: { toFormat: AUTO }
           pngOptions: { quality: 80 }
-          breakpoints: [156, 216, 296, 356, 416]
+          breakpoints: [156, 216, 296, 356, 416, 512, 620]
         )
       }
     }

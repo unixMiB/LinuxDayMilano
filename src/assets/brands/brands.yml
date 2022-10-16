@@ -1,0 +1,39 @@
+sponsors:
+  - name: EXTRAORDY
+    website: https://extraordy.com/
+    logo: Extraordy B@8x.png
+  - name: Red Hat
+    website: https://redhat.com/
+    logo: RedHat A@8x.png
+  - name: Bicocca
+    website: https://www.unimib.it/
+    logo: Universita Milano Bicocca.png
+patrocini:
+  - name: Italian Linux Society
+    website: https://linux.it/
+    logo: ILS@8x.png
+  - name: Libre Italia
+    website: https://example.com/
+    logo: LibreItalia.png
+  - name: POuL
+    logo: POuL@8x.png
+    website: https://poul.org/
+  - name: PCOfficina
+    website: https://www.pcofficina.org/
+    logo: PCOfficina@8x.png
+  - name: VIMELUG
+    website: https://www.vimelug.org/
+    logo: Vimelug@8x.png
+  - name: Libre Office
+    website: https://it.libreoffice.org/
+    logo: LibreOffice@8x.png
+  - name: Joomla User Group Milano Centro
+    logo: JUG Milano@8x.png
+    website: https://www.joomla.it/joomla-user-group/jug-milano-centro.html
+referrals:
+  - name: GitHub Experts Campus
+    website: https://githubcampus.expert/
+    logo: GH Campus Experts 1@8x.png
+    comment: Da quando ho conosciuto questa community ho sempre trovato persone competenti e appassionate. Invito tutti a partecipare al Linux Day Milano 2022 all'università Bicocca per venire a conoscerli! sparkles
+    author: Federico Grandi, GitHub Campus Expert
+    
