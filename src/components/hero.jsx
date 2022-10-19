@@ -44,7 +44,7 @@ const Hero = ({ small }) => {
         )}
         <Alert variant='warning'>
           A causa di problemi organizzativi, l'evento è stato spostato
-          nell'edificio U6, presso la Piazza dell'Ateneo
+          nell'edificio U6, presso la Piazza dell'Ateneo Nuovo
         </Alert>
 
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
