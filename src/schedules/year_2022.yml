@@ -20,7 +20,7 @@ schedule:
         room: U6-41
         duration: 45 min
       - title: Ecco fatto dopo 8 anni il Notebook Open Hardware - nonostante la guerra dei Chip
-        description: "Al Linux Day di Milano delll'Ottobre 2014 venne presentata l'idea di costruire un notebook progettato intorno a GNU/Linux , poi divenne Open Hardware ( basato su processore Power) dovremmo avercela fatta ad avere tutti i pi\u00f9 di 2000 componenti elettronici in tempo per presentare il prototipo, guerra dei microchip e costi dei chip da strozzini... Chi parteciper\u00f2 alla presentazione scoprir\u00e0...\r\n"
+        description: "Al Linux Day di Milano delll'Ottobre 2014 venne presentata l'idea di costruire un notebook progettato intorno a GNU/Linux , poi divenne Open Hardware (basato su processore Power) dovremmo avercela fatta ad avere tutti i pi\u00f9 di 2000 componenti elettronici in tempo per presentare il prototipo, guerra dei microchip e costi dei chip da strozzini... Chi parteciper\u00f2 alla presentazione scoprir\u00e0...\r\n"
         author: Roberto Innocenti - Power Progress Community
         room: U6-42
         duration: 45 min
@@ -46,7 +46,7 @@ schedule:
         room: U6-41
         duration: 45 min
       - title: Timestamping con opentimestamp
-        description: "Spiegazione generale di cos'\u00e8 il timestamping , come si effettua con opentimestamp e perch\u00e9 \u00e8 utile"
+        description: "Spiegazione generale di cos'\u00e8 il timestamping, come si effettua con opentimestamp e perch\u00e9 \u00e8 utile"
         author: "Timothy Redaelli - FSFE"
         room: U6-42
         duration: 45 min
@@ -132,7 +132,7 @@ schedule:
   - time: "16:00"
     talks:
       - title: "Intelligenza Artificiale e diritto antidiscriminatorio: un difficile equilibrio"
-        description: "Spesso si pensa che gli algoritmo di Intelligenza Artificiali si basino su calcoli neutri e per tale ragione la loro caratteristica sia quella della neutralit\u00e0. In realt\u00e0, gli algoritmi sono figli dei propri creatori, gli esseri umani, e n\u00e9 rappresentano pregi e difetti. Infatti, essi sono costellati dai c.d. bias ossia pregiudizi che possono inficiare sulla qualit\u00e0 e attendibilit\u00e0 del dato. Tutto ci\u00f2 ha anche delle conseguenze in ambito giuridico: la presenza di bias incentiva comportamenti discriminatori. \r\nL'intervento, quindi, si focalizza sul fenomeno dei bias e sulla sua ripercussione nel diritto: le discriminazioni."
+        description: "Spesso si pensa che gli algoritmi di Intelligenza Artificiale si basino su calcoli neutri e per tale ragione la loro caratteristica sia quella della neutralit\u00e0. In realt\u00e0, gli algoritmi sono figli dei propri creatori, gli esseri umani, e ne rappresentano pregi e difetti. Infatti, essi sono costellati dai c.d. bias ossia pregiudizi che possono inficiare sulla qualit\u00e0 e attendibilit\u00e0 del dato. Tutto ci\u00f2 ha anche delle conseguenze in ambito giuridico: la presenza di bias incentiva comportamenti discriminatori. \r\nL'intervento, quindi, si focalizza sul fenomeno dei bias e sulla sua ripercussione nel diritto: le discriminazioni."
         author: "Silvia Cereda - RedOpen"
         room: U6-40
         duration: 45 min
@@ -164,7 +164,7 @@ schedule:
         room: U6-41
         duration: 45 min
       - title: "Common Voice - Vogli(am)o la tua voce!"
-        description: "Ti sei mai chiesto perchè la tua voce sia così importante? Essa viene utilizzata per ridere, cantare, urlare, per esprimere emozioni, ma soprattutto per due motivi fondamentali: parlare e comunicare! \nCommon Voice è un progetto di Mozilla che ha l'obiettivo di creare un'enorme raccolta che comprenda quante più voci possibili, in modo tale che queste siano disponibili per qualunque tipo di progetto...e funziona!"
+        description: "Ti sei mai chiesto perchè la tua voce sia così importante? Essa viene utilizzata per ridere, cantare, urlare, per esprimere emozioni, ma soprattutto per due motivi fondamentali: parlare e comunicare! \nCommon Voice è un progetto di Mozilla che ha l'obiettivo di creare un'enorme raccolta che comprenda quante più voci possibili, in modo tale che queste siano disponibili per qualunque tipo di progetto... e funziona!"
         author: "Giovanni Sardisco - Mozilla"
         room: U6-39
         duration: 45 min
