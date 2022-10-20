@@ -165,7 +165,7 @@ schedule:
         duration: 45 min
       - title: "Common Voice - Vogli(am)o la tua voce!"
         description: "Ti sei mai chiesto perchè la tua voce sia così importante? Essa viene utilizzata per ridere, cantare, urlare, per esprimere emozioni, ma soprattutto per due motivi fondamentali: parlare e comunicare! \nCommon Voice è un progetto di Mozilla che ha l'obiettivo di creare un'enorme raccolta che comprenda quante più voci possibili, in modo tale che queste siano disponibili per qualunque tipo di progetto... e funziona!"
-        author: "Giovanni Sardisco - Mozilla"
+        author: "Giovanni Sardisco - Mozilla Italia"
         room: U6-39
         duration: 45 min
       - title: "LotR: (any) Linux on the RaspberryPI"
