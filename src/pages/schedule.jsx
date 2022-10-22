@@ -153,7 +153,7 @@ const Page = ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
   
-  const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(typeof window !== "undefined" && window.location.search);
   const year = params.get("year");
 
   useEffect(() => {
@@ -194,7 +194,7 @@ const Page = ({ data }) => {
                       <Dropdown.Item
                         key={i}
                         onClick={() => {
-                          navigate(window.location.pathname + "?year=" + s.year);
+                          navigate(typeof window !== "undefined" && window.location.pathname + "?year=" + s.year);
                           setSchedData(allSchedules[i]);
                         }}
                       >
