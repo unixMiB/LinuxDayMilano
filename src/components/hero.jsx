@@ -39,12 +39,13 @@ const Hero = ({ small }) => {
       <Container>
         {small && (
           <Alert>
-            Ricordiamo che l'accesso all'evento è gratuito e libero per tutti, senza necessità di registrazione
+            Ricordiamo che l'accesso all'evento è gratuito e libero per tutti,
+            senza necessità di registrazione, siamo al primo piano
           </Alert>
         )}
         <Alert variant='warning'>
           A causa di problemi organizzativi, l'evento è stato spostato
-          nell'edificio U6, presso la Piazza dell'Ateneo Nuovo
+          nell'edificio U6 primo piano, presso la Piazza dell'Ateneo
         </Alert>
 
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>

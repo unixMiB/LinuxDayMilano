@@ -51,7 +51,7 @@ module.exports = {
       place: {
         name: "Università Milano Bicocca",
         street: "Piazza dell'Ateneo Nuovo, 1",
-        building: "Edificio U6",
+        building: "Edificio U6, primo piano",
         cap: "20126 Milano MI",
       },
     },
