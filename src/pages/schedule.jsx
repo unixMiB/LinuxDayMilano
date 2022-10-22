@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "react-bootstrap/Button";
@@ -152,6 +152,19 @@ const activeEnv =
 const Page = ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
+  
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
+
+  useEffect(() => {
+    if (year) {
+      allSchedules.forEach((i) => {
+        if (i.year == year) {
+          setSchedData(i);
+        }
+      });
+    }
+  }, [year]);
 
   if ("development" === activeEnv)
     console.log("schedData: " + JSON.stringify(schedData));
@@ -181,6 +194,7 @@ const Page = ({ data }) => {
                       <Dropdown.Item
                         key={i}
                         onClick={() => {
+                          navigate(window.location.pathname + "?year=" + s.year);
                           setSchedData(allSchedules[i]);
                         }}
                       >
