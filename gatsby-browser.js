@@ -48,8 +48,8 @@ export const onServiceWorkerUpdateReady = () => {
   // Change me to a react toast
 
   const answer = window.confirm(
-    `This application has been updated. ` +
-      `Reload to display the latest version?`
+    `Il sito è stato aggiornato. ` +
+      `Ricaricare per visualizzare la versione aggiornata?`
   );
   if (answer === true) {
     window.location.reload();
