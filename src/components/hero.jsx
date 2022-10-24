@@ -37,6 +37,12 @@ const Hero = ({ small }) => {
   return (
     <div className='hero'>
       <Container>
+        {small && (
+          <Alert>
+            È iniziato il caricamento dei video e delle slide dei talk! Saranno
+            presenti nel <a href='/schedule'>programma della giornata</a>.
+          </Alert>
+        )}
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
           Linux Day Milano <span className='ldmi'>{metadata.event.year}</span>
         </h1>
