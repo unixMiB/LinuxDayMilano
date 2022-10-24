@@ -14,11 +14,13 @@ schedule:
         description: "Oggi, i progetti Open Source sono alla base del settore informatico e della nostra societ\u00e0.\r\nQuesto percorso comincer\u00e0 con alcune credenze sul contribuire a progetti Open Source che, le persone con cui ho parlato, hanno condiviso con me e perch\u00e8 sono spesso infondate.\r\nAnalizzeremo poi le ragioni per cui contribuire ad un progetto Open Source, oltre che portare vantaggi alla Comunit\u00e0, pu\u00f2 portarti anche vantaggi personali.\r\nVedremo alcuni criteri che possono essere usati per facilitare l'identificazione del progetto a cui contribuire e con quale ruolo, con alcuni esempi.\r\nE ricorda, non c'\u00e8 necessit\u00e0 di avere particolari competenze tecniche per partecipare a progetti Open Source, quindi anche tu puoi partecipare sin da oggi!"
         author: Fabio Alessandro "Fale" Locati
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Comincia%20oggi%20a%20contribuire%20al%20mondo%20Open%20Source%2C%20anche%20senza%20essere%20tecnico!%20-%20Fabio%20Alessandro%20%22Fale%22%20Locati.pdf
         duration: 45 min
       - title: Introduzione a Podman container engine e un po' di storia sui containers
         description: "Visto che i container sono diventati il nuovo standard de facto per la creazione di pacchetti di applicazioni e le loro dipendenze, capire come implementarli, costruirli e gestirli \u00e8 ora essenziale per sviluppatori, amministratori di sistema e team SRE/operativi.\r\nDurante questo talk inizieremo esplorando le principali caratteristiche e capacit\u00e0 dei container, partendo dai concetti di base della containerizzazione e della sua tecnologia sottostante. Esploreremo la storia Containers Runtimes, introducendo Podman e i suoi strumenti complementari, il nuovissimo Container Engine disponibile in ogni distribuzione Linux.\r\nPodman e il suo ecosistema sono un'alternativa daemon-less a Docker.\r\nTi aspettiamo per scoprire assieme le principali funzionalit\u00e0 di Podman!"
-        author: Alessandro Arrichiello, Gianni Salinetti
+        author: Alessandro Arrichiello, Gianni Salinetti - Red Hat
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Introduzione%20a%20Podman%20container%20engine%20e%20un%20po'%20di%20storia%20sui%20containers%20-%20Alessandro%20Arrichiello%2C%20Gianni%20Salinetti%20-%20Red%20Hat.pdf
         duration: 45 min
         video: https://video.linux.it/videos/watch/eea8dedf-adea-497f-aee0-c662ae9e0e00
       - title: Ecco fatto dopo 8 anni il Notebook Open Hardware - nonostante la guerra dei Chip
@@ -40,24 +42,26 @@ schedule:
       - title: "In Italia, l'Open Source \u00e8 aperto alle donne?"
         description: "Secondo Almalaurea, anche se in Italia ci sono pi\u00f9 donne iscritte all\u2019universit\u00e0 che uomini (il 58,7% degli iscritti complessivamente), queste scelgono soprattutto corsi di studio letterari e umanistici. Solo il 18% delle ragazze sceglie corsi STEM. Il trend italiano \u00e8 in linea con la media europea e mondiale. Pu\u00f2 la comunit\u00e0 Open Source aiutare a colmare questo \u201cgender gap\u201d?\r\n"
         author: "Anna Deppi - Red Hat"
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/In%20Italia%2C%20l'Open%20Source%20%C3%A8%20aperto%20alle%20donne%3F%20-%20Anna%20Deppi%20-%20Red%20Hat.pdf
         room: U6-40
         duration: 45 min
       - title: Git for Contributors
         description: "Come utilizzare Git per contribuire a progetti open source, partendo dalle best practices fondamentali per arrivare alle tecniche più avanzate"
         author: Federico Grandi
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Git%20for%20Contributors%20-%20Federico%20Grandi.pdf
         duration: 45 min
         video: https://video.linux.it/videos/watch/6b53670f-63cb-408c-8b70-954f2739ad54
-        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Git%20for%20Contributors%20-%20Federico%20Grandi.pdf
       - title: Timestamping con opentimestamp
         description: "Spiegazione generale di cos'\u00e8 il timestamping, come si effettua con opentimestamp e perch\u00e9 \u00e8 utile"
         author: "Timothy Redaelli - FSFE"
         room: U6-42
         duration: 45 min
-        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Timestamping%20con%20opentimestamps%20Timothy%20Redaelli%20-%20FSFE.pdf
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Timestamping%20con%20opentimestamps%20-%20Timothy%20Redaelli%20-%20FSFE.pdf
       - title: "Debian/Linux -- Il Sistema Operativo Universale. Installiamolo su una voting machine per riconvertirla a scopo ludico e didattico"
         description: "Debian \u00e8 una delle storiche distribuzioni Linux che mantiene un buon supporto per hardware datato o difficilmente supportato da altre distribuzioni.\r\nNel corso dell'intervento verr\u00e0 illustrata la procedura di installazione del sistema su una SmartMatic A4-210 e come Debian sia una valida distribuzione per il recupero di hardware datato."
         author: "Michele Bonsignore"
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Debian-Linux%20-%20Il%20Sistema%20Operativo%20Universale.%20Installiamolo%20su%20una%20voting%20machine%20per%20riconvertirla%20a%20scopo%20ludico%20e%20didattico%20-%20Michele%20Bonsignore.pdf
         room: U6-39
         duration: 45 min
   - time: "11:45"
@@ -77,6 +81,7 @@ schedule:
       - title: "Panoramica su Quarkus"
         description: "Verranno illustrate le caratteristiche principali del framework Quarkus ed i suoi vantaggi in ottica cloud ready."
         author: "Alessio Giovanni Baroni - Red Hat"
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Panoramica%20su%20Quarkus%20-%20Alessio%20Giovanni%20Baroni%20-%20Red%20Hat.pdf
         room: U6-42
         duration: 45 min
       - title: "Varnish Cache, il web accelerator Open Source"
@@ -100,22 +105,26 @@ schedule:
         author: "Luca Biscaldi - POuL"
         room: U6-41
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Ansible:%20la%20ricetta%20per%20un%20buon%20server%20-%20Luca%20Biscaldi%20-%20POuL.pdf
       - title: "Gli ingredienti di un approccio data-driven in un'applicazione industriale: apertura e multi-coding"
         description: "Qual \u00e8 il viaggio del dato che partendo da un processo industriale si deve interfacciare ai complessi sistemi informatici aziendali?\r\nL\u2019approccio data-driven nella progettazione di un\u2019architettura \u00e8 in grado di tradurre informazioni complesse in un output semplice e facile da interpretare. Per fare questo \u00e8 necessario sfruttare tecnologie open source e adottare un approccio multi-coding, trasversale rispetto alle risorse e alle competenze presenti in un\u2019azienda.\r\nL\u2019introduzione dell\u2019AI apre a tutti quegli scenari di hide pattern che contribuiscono ulteriormente ad arricchire il valore dei dati."
         author: "Flavio Ronzoni e Massimo Grattieri - Bosch Rexroth"
         room: U6-39
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Gli%20ingredienti%20di%20un%20approccio%20data-driven%20in%20un'applicazione%20industriale:%20apertura%20e%20multi-coding%20-%20Flavio%20Ronzoni%20e%20Massimo%20Grattieri%20-%20Bosch%20Rexroth.pdf
         duration: 45 min
       - title: "Come contribuire al kernel Linux"
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Come%20contribuire%20al%20kernel%20Linux%20-%20Rigel%20Di%20Scala%20e%20Carmelo%20Sarta.pdf
         description: "Vuoi fare bella figura con amici e parenti dimostrando di aver contribuito al kernel Linux con una patch? Questa guida breve e accessibile (si spera) ti mostrer\u00e0 come:\r\n\r\n- mettere in piedi da zero un sistema in locale per sviluppare il kernel Linux\r\n- cercare qualcosa su cui iniziare a lavorare\r\n- fare modifiche al kernel e testarle\r\n- inviare una patch e incrociare le dita\r\n\r\nAlla fine di questo talk avrai le idee chiare su come procedere. Con un po' di buona volont\u00e0 diventerai presto un \"kernel contributor\"!"
-        author: "Rigel Di Scala e Carmelo Sarta"
+        author: "Rigel Di Scala e Carmelo Sarta - Red Hat"
         room: U6-42
         duration: 45 min
   - time: "14:45"
     talks:
-      - title: "FSFe Router Freedom in Italia e nella UE"
+      - title: "FSFE Router Freedom in Italia e nella UE"
         description: "Cosa \u00e8 la Router Freedom, perch\u00e9 \u00e8 utile ed importante, cosa FSFe ha fatto per promuoverla in Italia ed all'estero, cosa ho praticamente fatto io come supporter FSFe in Italia per la Router Freedom, cosa puoi fare tu per aiutare.\r\nQuesto talk si pu\u00f2 intitolare anche \"Router Freedom quattro anni dopo\" visto che \u00e8 la logica continuazione del mio talk precedente \"Libera il tuo Router\" per il Linux Day 2018, aggiornato alla situazione attuale."
-        author: Stefano Costa
+        author: Stefano Costa - FSFE
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/FSFE%20Router%20Freedom%20in%20Italia%20e%20nella%20UE%20-%20Stefano%20Costa.pdf
         duration: 45 min
       - title: "Rust \u2013 non prendere un granchio"
         description: "Secondo i sondaggi di Stack Overflow, Rust \u00e8 il linguaggio pi\u00f9 amato negli ultimi 7 anni.\r\nInoltre, Rust diventer\u00e0 presto il secondo linguaggio di programmazione dopo C con cui si potr\u00e0 sviluppare il kernel Linux.\r\n\r\nIn questo talk vediamo quali sono vantaggi e svantaggi di questo linguaggio, confrontandone esempi di codice con C, C++, Java, Kotlin e Python."
@@ -157,7 +166,8 @@ schedule:
         duration: 45 min
       - title: "GitOps 101 - da dove veniamo, dove stiamo andando"
         description: "Questo talk spiegher\u00e0 cosa sia il paradigma GitOps e perch\u00e9 stia venendo utilizzato per la gestione di codice applicativo ed infrastrutture. Capiremo insieme cosa abbia portato alla nascita di questo approccio e quali siano, invece, le domande a cui ancora non abbiamo dato una risposta."
-        author: "Lorenzo Soligo"
+        author: "Lorenzo Soligo - Giant Swarm"
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/GitOps%20101%20-%20da%20dove%20veniamo%2C%20dove%20stiamo%20andando%20-%20Lorenzo%20Soligo%20-%20Giant%20Swarm.pdf
         room: U6-42
         duration: 45 min
   - time: "17:00"
