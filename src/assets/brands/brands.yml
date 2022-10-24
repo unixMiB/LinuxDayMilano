@@ -2,6 +2,9 @@ sponsors:
   - name: EXTRAORDY
     website: https://extraordy.com/
     logo: Extraordy B@8x.png
+  - name: Bosch Rexroth AG
+    logo: Bosch Rexroth AG@8x.png
+    website: https://www.boschrexroth.com/
   - name: Bicocca
     website: https://www.unimib.it/
     logo: Universita Milano Bicocca.png
@@ -36,4 +39,3 @@ referrals:
     logo: GH Campus Experts 1@8x.png
     comment: Da quando ho conosciuto questa community ho sempre trovato persone competenti e appassionate. Invito tutti a partecipare al Linux Day Milano 2022 all'università Bicocca per venire a conoscerli ✨
     author: Federico Grandi, GitHub Campus Expert
-    
