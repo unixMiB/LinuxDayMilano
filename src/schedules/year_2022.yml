@@ -7,6 +7,7 @@ schedule:
         author: Daniele Barcella, Elia Ronchetti - unixMiB
         room: U6-40
         duration: 30 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Plenaria%20di%20apertura%20-%20Daniele%20Barcella%2C%20Elia%20Ronchetti%20-%20unixMiB.pdf
   - time: "9:30"
     talks:
       - title: Comincia oggi a contribuire al mondo Open Source, anche senza essere tecnico!
@@ -19,6 +20,7 @@ schedule:
         author: Alessandro Arrichiello, Gianni Salinetti
         room: U6-41
         duration: 45 min
+        video: https://video.linux.it/videos/watch/eea8dedf-adea-497f-aee0-c662ae9e0e00
       - title: Ecco fatto dopo 8 anni il Notebook Open Hardware - nonostante la guerra dei Chip
         description: "Al Linux Day di Milano delll'Ottobre 2014 venne presentata l'idea di costruire un notebook progettato intorno a GNU/Linux , poi divenne Open Hardware (basato su processore Power) dovremmo avercela fatta ad avere tutti i pi\u00f9 di 2000 componenti elettronici in tempo per presentare il prototipo, guerra dei microchip e costi dei chip da strozzini... Chi parteciper\u00f2 alla presentazione scoprir\u00e0...\r\n"
         author: Roberto Innocenti - Power Progress Community
@@ -41,15 +43,18 @@ schedule:
         room: U6-40
         duration: 45 min
       - title: Git for Contributors
-        description: 'Come utilizzare Git per contribuire a progetti open source, partendo dalle best practices fondamentali per arrivare alle tecniche più avanzate'
+        description: "Come utilizzare Git per contribuire a progetti open source, partendo dalle best practices fondamentali per arrivare alle tecniche più avanzate"
         author: Federico Grandi
         room: U6-41
         duration: 45 min
+        video: https://video.linux.it/videos/watch/6b53670f-63cb-408c-8b70-954f2739ad54
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Git%20for%20Contributors%20-%20Federico%20Grandi.pdf
       - title: Timestamping con opentimestamp
         description: "Spiegazione generale di cos'\u00e8 il timestamping, come si effettua con opentimestamp e perch\u00e9 \u00e8 utile"
         author: "Timothy Redaelli - FSFE"
         room: U6-42
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Timestamping%20con%20opentimestamps%20Timothy%20Redaelli%20-%20FSFE.pdf
       - title: "Debian/Linux -- Il Sistema Operativo Universale. Installiamolo su una voting machine per riconvertirla a scopo ludico e didattico"
         description: "Debian \u00e8 una delle storiche distribuzioni Linux che mantiene un buon supporto per hardware datato o difficilmente supportato da altre distribuzioni.\r\nNel corso dell'intervento verr\u00e0 illustrata la procedura di installazione del sistema su una SmartMatic A4-210 e come Debian sia una valida distribuzione per il recupero di hardware datato."
         author: "Michele Bonsignore"
@@ -67,6 +72,8 @@ schedule:
         author: "Luca Fus\u00e8 - EXTRAORDY"
         room: U6-41
         duration: 45 min
+        video: https://video.linux.it/videos/watch/38a4e964-7d63-47ed-92ef-b9055f222c92
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/SELinux:%20The%20Good%2C%20The%20Bad%20and%20The%20Worst%20-%20Luca%20Fus%C3%A8%20-%20EXTRAORDY.pdf
       - title: "Panoramica su Quarkus"
         description: "Verranno illustrate le caratteristiche principali del framework Quarkus ed i suoi vantaggi in ottica cloud ready."
         author: "Alessio Giovanni Baroni - Red Hat"
@@ -141,6 +148,8 @@ schedule:
         author: Moreno Razzoli
         room: U6-41
         duration: 45 min
+        video: https://video.linux.it/w/2RHyVVM6qb7SaZGuANztEK
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/5%2B1%20Errori%20da%20evitare%20passando%20a%20Linux%20-%20Moreno%20Razzoli.pdf
       - title: "Un oceano di suono"
         description: "Breve panoramica dei software audio a disposizione per registrare, trasmettere e post-produrre un podcast di qualit\u00e0 professionale."
         author: "Simone Savogin"
@@ -163,11 +172,13 @@ schedule:
         author: Maja Massarini - Red Hat
         room: U6-41
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Packit%3B%20come%20integrare%20un%20progetto%20in%20Fedora%20facilmente!%20-%20Maja%20Massarini%20-%20Red%20Hat.pdf
       - title: "Common Voice - Vogli(am)o la tua voce!"
         description: "Ti sei mai chiesto perchè la tua voce sia così importante? Essa viene utilizzata per ridere, cantare, urlare, per esprimere emozioni, ma soprattutto per due motivi fondamentali: parlare e comunicare! \nCommon Voice è un progetto di Mozilla che ha l'obiettivo di creare un'enorme raccolta che comprenda quante più voci possibili, in modo tale che queste siano disponibili per qualunque tipo di progetto... e funziona!"
         author: "Giovanni Sardisco - Mozilla Italia"
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Common%20Voice%20-%20Vogli(am)o%20la%20tua%20voce!%20-%20Giovanni%20Sardisco%20-%20Mozilla%20Italia.pdf
       - title: "LotR: (any) Linux on the RaspberryPI"
         description: "Il successo dirompente del RaspberryPI \u00e8 dovuto in parte anche alla scelta di preparare una distribuzione linux per renderlo utilizzabile facilmente da parte di chiunque. Ma come fare se si hanno esigenze particolari, o anche solo se si preferisce un'altra distribuzione? E in che cosa le schede Single Board Computer (SBC) differiscono da un normale PC?\r\nIn questo talk approfondiremo questi temi e cercheremo una soluzione, standard ed open source, per poter eseguire le pi\u00f9 diffuse distribuzione Linux sul RaspberryPI."
         author: "Andrea Perotti - Red Hat"
