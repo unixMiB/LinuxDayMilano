@@ -71,6 +71,7 @@ schedule:
         description: "In questo talk si cerca di far luce sulle realt\u00e0 oggi attive in Italia in ambito software libero e affini. Nella presentazione vengono illustrate alcune delle associazioni pi\u00f9 rilevanti in questo ambito e i loro canali di comunicazione con il fine di creare maggior consapevolezza sul tema, rafforzare la community gi\u00e0 esistente e coinvolgere anche un pubblico generico."
         author: "Marta Andreoli - FSFE"
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Uno%20sguardo%20alle%20realt%C3%A0%20di%20software%20libero%20e%20affini%20in%20Italia%20-%20Marta%20Andreoli%20-%20FSFE.pdf
         duration: 45 min
       - title: "SELinux: The Good, The Bad and The Worst"
         description: "SELinux è uno degli strumenti di sicurezza su GNU/Linux(*) più importanti, tristemente è anche uno dei più disabilitate.\nVediamo assieme perché è una componente del sistema molto importante, come facciamo ad usarlo correttamente e come possiamo smettere di disabilatarlo una volte per tutte.\n\n(*) In realtà solo per distro Fedora, Centos, RHEL e derivate"
@@ -141,6 +142,7 @@ schedule:
       - title: "CMS a confronto: la scelta Open Source che fa al caso tuo!"
         description: "Comparazione tra i principali Content Management System  in ambito Open Source considerando le funzionalit\u00e0 fornite Out Of The Box.\r\nIn particolare verranno affrontati:\r\n- Supporto dalla community\r\n- Funzionalit\u00e0 del Core\r\n- Estensioni presenti nel Marketplace\r\n- Temi grafici\r\n- Facilit\u00e0 di utilizzo\r\n- Risorse server"
         author: "Fausto Nenci"
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/CMS%20a%20confronto:%20la%20scelta%20Open%20Source%20che%20fa%20al%20caso%20tuo!%20-%20Fausto%20Nenci%2C%20Luca%20Racchetti%2C%20Matteo%20Enna.pdf
         room: U6-42
         duration: 45 min
   - time: "15:45"
