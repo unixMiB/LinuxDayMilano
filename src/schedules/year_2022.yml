@@ -27,6 +27,7 @@ schedule:
         description: "Al Linux Day di Milano delll'Ottobre 2014 venne presentata l'idea di costruire un notebook progettato intorno a GNU/Linux , poi divenne Open Hardware (basato su processore Power) dovremmo avercela fatta ad avere tutti i pi\u00f9 di 2000 componenti elettronici in tempo per presentare il prototipo, guerra dei microchip e costi dei chip da strozzini... Chi parteciper\u00f2 alla presentazione scoprir\u00e0...\r\n"
         author: Roberto Innocenti - Power Progress Community
         room: U6-42
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Ecco%20fatto%20dopo%208%20anni%20il%20Notebook%20Open%20Hardware%20-%20nonostante%20la%20guerra%20dei%20Chip%20-%20Roberto%20Innocenti%20-%20Power%20Progress%20Community.pdf
         duration: 45 min
       - title: "NethServer - la distribuzione Linux server italiana semplice da utilizzare."
         description: "Cos'\u00e8 Nethserver? Un prodotto italiano open source nato per permettere a tutti di costruirsi in casa (o su una piattaforma cloud) un Mailserver, Fileserver, Cloud storage personale, Firewall, Centralino telefonico.\r\nPerch\u00e8 \u00e8 nato, com'\u00e8 nato, l'idea dei fondatori, la creazione e lo sviluppo della community.\r\nSpiegazione della base: utilizzando CentoOS come base e cockpit per l'amministrazione via web permette all'utente anche meno esperto di installare i vari moduli presenti nel software center. Tutti i software sono sviluppati direttamente dall'azienda Nethesis e dalla community, oppure ci si avvale di progetti open gi\u00e0 esistenti come per esempio Nextcloud.\r\nSpiegazione dei vari moduli:\r\n- Mailserver\r\n- Fileserver (samba)\r\n- Nextcloud\r\n- Firewall\r\n- Centralino (esempio creazione e configurazione account VoIP)\r\n"
@@ -126,8 +127,9 @@ schedule:
         room: U6-40
         slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/FSFE%20Router%20Freedom%20in%20Italia%20e%20nella%20UE%20-%20Stefano%20Costa.pdf
         duration: 45 min
-      - title: "Rust \u2013 non prendere un granchio"
+      - title: "Rust - non prendere un granchio"
         description: "Secondo i sondaggi di Stack Overflow, Rust \u00e8 il linguaggio pi\u00f9 amato negli ultimi 7 anni.\r\nInoltre, Rust diventer\u00e0 presto il secondo linguaggio di programmazione dopo C con cui si potr\u00e0 sviluppare il kernel Linux.\r\n\r\nIn questo talk vediamo quali sono vantaggi e svantaggi di questo linguaggio, confrontandone esempi di codice con C, C++, Java, Kotlin e Python."
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Rust%20-%20non%20prendere%20un%20granchio%20-%20Marco%20Ieni.pdf
         author: "Marco Ieni"
         room: U6-41
         duration: 45 min
