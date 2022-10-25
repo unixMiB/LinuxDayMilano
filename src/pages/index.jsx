@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
                   {/* TODO FIX ME */}
                   <h2 style={{ textTransform: "uppercase" }}>
                     Il Linux Day <span>Milano</span> si{" "}
-                    {isPast ? "è svolta" : "svolgerà"} il
+                    {isPast ? "è svolto" : "svolgerà"} il
                     <br />
                     <span>{data.site.siteMetadata.event.text}</span>
                   </h2>
@@ -196,8 +196,8 @@ const IndexPage = ({ data }) => {
                         image={getImage(item.logo)}
                       />
                     </a>
-                    </Col>
-                    <Col className='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
+                  </Col>
+                  <Col className='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
                     <figure>
                       <blockquote class='blockquote'>
                         <p>{item.comment}</p>
