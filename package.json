@@ -11,7 +11,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap": "^5.2.2",
-    "gatsby": "^4.24.5",
+    "gatsby": "^4.24.7",
     "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-brotli": "^2.1.0",
@@ -34,8 +34,8 @@
     "gatsby-transformer-yaml": "^4.24.0",
     "react-bootstrap": "^2.5.0",
     "react-helmet": "^6.1.0",
-    "sass": "1.55.0",
-    "sharp": "^0.31.1"
+    "sass": "1.56.0",
+    "sharp": "^0.31.2"
   },
   "keywords": [
     "kowalski7cc"
