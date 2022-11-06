@@ -91,6 +91,7 @@ schedule:
         description: "Partendo dal funzionamento di cache e di reverse proxy, scopriremo Varnish, una cache Open Source. Questa cache \u00e8 nata nel 2006 e realizzata appositamente per il protocollo HTTP, ora \u00e8 alla base di tantissimi siti web dal traffico elevato."
         author: Matteo Enna
         room: U6-39
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Varnish%20Cache%2C%20il%20web%20accelerator%20Open%20Source%20-%20Matteo%20Enna.pdf
         duration: 45 min
   - time: "12:45"
     talks:
@@ -103,6 +104,7 @@ schedule:
         author: "Natale Vinto"
         room: U6-40
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Public%20Money%3F%20Public%20Code!%20-%20Natale%20Vinto.pdf
       - title: "Ansible: la ricetta per un buon server"
         description: "Introduzione ad Ansible, il software di provisioning open-source pi\u00f9 diffuso. Perch\u00e8 usarlo anche in ambito domestico al posto degli script fai-da-te per automatizzare il deployment dei servizi nel proprio homelab."
         author: "Luca Biscaldi - POuL"
@@ -138,6 +140,8 @@ schedule:
       - title: "Rosetta Mission 2022"
         description: 'Descriverei il contenuto del mio talk come l''introduzione ad un esperimento di arte contemporanea pensato per la creazione di un''opera partecipativa multi-piattaforma di cross-reality in grado di vivere simultaneamente nel mondo dei processi fisici macroscopici, in quello microscopico dei fenomeni quantistici, e digitali di internet e dei social networks. E'' il racconto di un piccolo viaggio circolare psichedelico fatto di scatole cinesi dove l''informazione e'' sempre libera di saltare su orbite diverse per poi ritornare a casa. E'' forse anche la storia di un gruppo di community invisibili correlate a distanza che sviluppano programmi open source, come blender e mozilla hubs, e che rendono possibile, come nel caso specifico di "Rosetta Mission 2022", la creazione di un mondo fluttuante pensato per l''incontro tra il pubblico generico e minoranze di attivisti, scienziati ed artisti oltre i confini geografici, politici, religiosi ed economici.'
         author: "Luca Pozzi"
+        video: https://video.linux.it/w/h3k6JSNViDDk65aGzxSf2j
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Rosetta%20Mission%202022%20-%20Luca%20Pozzi.pdf
         room: U6-39
         duration: 45 min
       - title: "CMS a confronto: la scelta Open Source che fa al caso tuo!"
@@ -155,6 +159,7 @@ schedule:
       - title: "Intelligenza Artificiale e diritto antidiscriminatorio: un difficile equilibrio"
         description: "Spesso si pensa che gli algoritmi di Intelligenza Artificiale si basino su calcoli neutri e per tale ragione la loro caratteristica sia quella della neutralit\u00e0. In realt\u00e0, gli algoritmi sono figli dei propri creatori, gli esseri umani, e ne rappresentano pregi e difetti. Infatti, essi sono costellati dai c.d. bias ossia pregiudizi che possono inficiare sulla qualit\u00e0 e attendibilit\u00e0 del dato. Tutto ci\u00f2 ha anche delle conseguenze in ambito giuridico: la presenza di bias incentiva comportamenti discriminatori. \r\nL'intervento, quindi, si focalizza sul fenomeno dei bias e sulla sua ripercussione nel diritto: le discriminazioni."
         author: "Silvia Cereda - ReDOPEN"
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Intelligenza%20Artificiale%20e%20diritto%20antidiscriminatorio:%20un%20difficile%20equilibrio%20-%20Silvia%20Cereda%20-%20ReDOPEN.pdf
         room: U6-40
         duration: 45 min
       - title: 5+1 Errori da evitare passando a Linux
