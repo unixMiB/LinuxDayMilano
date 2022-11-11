@@ -115,6 +115,7 @@ schedule:
         description: "Qual \u00e8 il viaggio del dato che partendo da un processo industriale si deve interfacciare ai complessi sistemi informatici aziendali?\r\nL\u2019approccio data-driven nella progettazione di un\u2019architettura \u00e8 in grado di tradurre informazioni complesse in un output semplice e facile da interpretare. Per fare questo \u00e8 necessario sfruttare tecnologie open source e adottare un approccio multi-coding, trasversale rispetto alle risorse e alle competenze presenti in un\u2019azienda.\r\nL\u2019introduzione dell\u2019AI apre a tutti quegli scenari di hide pattern che contribuiscono ulteriormente ad arricchire il valore dei dati."
         author: "Flavio Ronzoni e Massimo Grattieri - Bosch Rexroth"
         room: U6-39
+        video: https://video.linux.it/w/ewJYmatWFtSKRD7spHd7PQ
         slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202022/Gli%20ingredienti%20di%20un%20approccio%20data-driven%20in%20un'applicazione%20industriale:%20apertura%20e%20multi-coding%20-%20Flavio%20Ronzoni%20e%20Massimo%20Grattieri%20-%20Bosch%20Rexroth.pdf
         duration: 45 min
       - title: "Come contribuire al kernel Linux"
