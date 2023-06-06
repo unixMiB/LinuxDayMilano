@@ -20,22 +20,22 @@ module.exports = {
     description:
       "Manifestazione italiana dedicata a GNU/Linux, al software libero, alla cultura aperta e alla condivisione.",
     keywords:
-      "Linux Day, Milano, 2022, GNU, GNU/Linux, Open Source, Software Libero, Condivisione",
+      "Linux Day, Milano, GNU, GNU/Linux, Open Source, Software Libero, Condivisione",
     author: "unixMiB (https://unixmib.org)",
     theme: "#343a40",
     navbarVariant: "dark",
     siteUrl: "https://linuxdaymilano.org/",
     switches: {
-      schedule: true,
-      cfp: false,
-      sponsor_submit: false,
+      schedule: false,
+      cfp: true,
+      sponsor_submit: true,
       year_switcher: true,
     },
     event: {
-      date: new Date("2022-10-22"),
+      date: new Date("2023-10-21"),
       time: "9:00",
-      topic: "all'undefined (Si, proprio undefined!)",
-      cfp: "https://survey.linux.it/295563",
+      topic: "",
+      cfp: "https://survey.linux.it/293588",
       arguments: [
         "Linux, software e hardware Open Source",
         "Open Source nel mondo dell'istruzione",

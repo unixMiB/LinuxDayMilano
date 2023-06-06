@@ -1,10 +1,10 @@
-import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import React from "react";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title='Pagina non trovata' />
+    <Seo title='Pagina non trovata' />
     <main>
       <section className='py-5 text-center'>
         <h1>Pagina non trovata</h1>
@@ -12,6 +12,6 @@ const NotFoundPage = () => (
       </section>
     </main>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

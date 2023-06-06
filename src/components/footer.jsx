@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Container from "react-bootstrap/Container";
 import ear from "../assets/ear-piece.svg";
+import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Footer = () => {
   const { site } = useStaticQuery(
@@ -48,13 +49,25 @@ const Footer = () => {
                 <h3>Contatta l'organizzazione</h3>
                 <ul>
                   <li title='Indirizzo di posta'>
-                    <FontAwesomeIcon icon='envelope' />{" "}
+                    <FontAwesomeIcon
+                      icon={icon({
+                        name: "envelope",
+                        family: "classic",
+                        style: "solid",
+                      })}
+                    />{" "}
                     <a href={"mailto:" + site.siteMetadata.contacts.email}>
                       {site.siteMetadata.contacts.email}
                     </a>
                   </li>
                   <li title='Sito web'>
-                    <FontAwesomeIcon icon='globe' />{" "}
+                    <FontAwesomeIcon
+                      icon={icon({
+                        name: "globe",
+                        family: "classic",
+                        style: "solid",
+                      })}
+                    />{" "}
                     <a
                       href={site.siteMetadata.contacts.website}
                       title='Sito web'
@@ -63,19 +76,43 @@ const Footer = () => {
                     </a>
                   </li>
                   <li title="Luogo dell'evento">
-                    <FontAwesomeIcon icon='map-marked-alt' />{" "}
+                    <FontAwesomeIcon
+                      icon={icon({
+                        name: "map-marked-alt",
+                        family: "classic",
+                        style: "solid",
+                      })}
+                    />{" "}
                     {site.siteMetadata.contacts.place.name}
                   </li>
                   <li title="Luogo dell'evento">
-                    <FontAwesomeIcon icon='chevron-right' />{" "}
+                    <FontAwesomeIcon
+                      icon={icon({
+                        name: "chevron-right",
+                        family: "classic",
+                        style: "solid",
+                      })}
+                    />{" "}
                     {site.siteMetadata.contacts.place.street}
                   </li>
                   <li title="Luogo dell'evento">
-                    <FontAwesomeIcon icon='chevron-right' />{" "}
+                    <FontAwesomeIcon
+                      icon={icon({
+                        name: "chevron-right",
+                        family: "classic",
+                        style: "solid",
+                      })}
+                    />{" "}
                     {site.siteMetadata.contacts.place.building}
                   </li>
                   <li title="Luogo dell'evento">
-                    <FontAwesomeIcon icon='chevron-right' />{" "}
+                    <FontAwesomeIcon
+                      icon={icon({
+                        name: "chevron-right",
+                        family: "classic",
+                        style: "solid",
+                      })}
+                    />{" "}
                     {site.siteMetadata.contacts.place.cap}
                   </li>
                 </ul>

@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import watch from "../assets/watch.svg";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Hero from "../components/hero";
 
 const IndexPage = ({ data }) => {
@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO />
+      <Seo />
       <main id='index'>
         <Hero small={true} />
         <section id='explore'>

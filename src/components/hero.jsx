@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Alert from "react-bootstrap/Alert";
+import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Hero = ({ small }) => {
   const data = useStaticQuery(
@@ -56,14 +56,32 @@ const Hero = ({ small }) => {
           </small>
         </h4>
         <div className='subtitle'>
-          <FontAwesomeIcon icon='calendar' /> {metadata.event.text}
+          <FontAwesomeIcon
+            icon={icon({ name: "calendar", family: "classic", style: "solid" })}
+          />{" "}
+          {metadata.event.text}
           <br />
-          <FontAwesomeIcon icon='clock' /> Ore {metadata.event.time}
+          <FontAwesomeIcon
+            icon={icon({ name: "clock", family: "classic", style: "solid" })}
+          />{" "}
+          Ore {metadata.event.time}
           <br />
-          <FontAwesomeIcon icon='map-marked-alt' />{" "}
+          <FontAwesomeIcon
+            icon={icon({
+              name: "map-marked-alt",
+              family: "classic",
+              style: "solid",
+            })}
+          />{" "}
           {metadata.contacts.place.name}
           <br />
-          <FontAwesomeIcon icon='chevron-right' />{" "}
+          <FontAwesomeIcon
+            icon={icon({
+              name: "chevron-right",
+              family: "classic",
+              style: "solid",
+            })}
+          />{" "}
           {metadata.contacts.place.building}
           <br />
         </div>

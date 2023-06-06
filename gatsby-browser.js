@@ -5,44 +5,8 @@
  */
 
 import "./src/styles/main.scss";
-import { config, library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faUsers,
-  faFlag,
-  faWrench,
-  faBullhorn,
-  faShoppingBag,
-  faInfoCircle,
-  faPersonDigging,
-  faVideo,
-  faCalendar,
-  faClock,
-  faMapMarkedAlt,
-  faChevronRight,
-  faEnvelope,
-  faDownload,
-  faGlobe,
-} from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-library.add(
-  fab,
-  faVideo,
-  faUsers,
-  faFlag,
-  faInfoCircle,
-  faWrench,
-  faDownload,
-  faBullhorn,
-  faShoppingBag,
-  faCalendar,
-  faClock,
-  faPersonDigging,
-  faMapMarkedAlt,
-  faChevronRight,
-  faEnvelope,
-  faGlobe
-);
 
 export const onServiceWorkerUpdateReady = () => {
   // Change me to a react toast

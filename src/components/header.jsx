@@ -58,9 +58,9 @@ const Header = () => {
               {switches.cfp && (
                 <Nav.Link href='/#schedule'>Call for papers</Nav.Link>
               )}
-              {switches.schedule && (
-                <Nav.Link href='/#schedule'>Programma</Nav.Link>
-              )}
+              <Nav.Link href='/schedule/#calendar'>
+                {switches.schedule ? "Programma" : "Programma precedente"}
+              </Nav.Link>
               <Nav.Link href='/#sponsors'>Patrocini</Nav.Link>
               <Nav.Link href='/#contattaci'>Contatti</Nav.Link>
             </Nav>

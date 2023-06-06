@@ -8,8 +8,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Dropdown from "react-bootstrap/Dropdown";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Hero from "../components/hero";
+import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 class Talks extends React.Component {
   constructor(props) {
@@ -74,14 +75,28 @@ class Talks extends React.Component {
             </Row>
           </Modal.Body>
           <Modal.Footer>
-            {!(modalData.video === "" || modalData.video == null) && (
+            {!(modalData.video === "" || modalData.video === null) && (
               <Button target='_blank' href={modalData.video} variant='warning'>
-                <FontAwesomeIcon icon='video' /> Video
+                <FontAwesomeIcon
+                  icon={icon({
+                    name: "video",
+                    family: "classic",
+                    style: "solid",
+                  })}
+                />{" "}
+                Video
               </Button>
             )}
-            {!(modalData.slides === "" || modalData.slides == null) && (
+            {!(modalData.slides === "" || modalData.slides === null) && (
               <Button target='_blank' href={modalData.slides} variant='warning'>
-                <FontAwesomeIcon icon='download' /> Slides
+                <FontAwesomeIcon
+                  icon={icon({
+                    name: "download",
+                    family: "classic",
+                    style: "solid",
+                  })}
+                />{" "}
+                Slides
               </Button>
             )}
             <Button
@@ -131,7 +146,13 @@ class Talks extends React.Component {
                         <Col className='text-start'>{t.duration}</Col>
                         <Col className='text-center'>{t.room}</Col>
                         <Col className='text-end'>
-                          <FontAwesomeIcon icon='info-circle' />
+                          <FontAwesomeIcon
+                            icon={icon({
+                              name: "info-circle",
+                              family: "classic",
+                              style: "solid",
+                            })}
+                          />
                         </Col>
                       </Row>
                     </div>
@@ -152,29 +173,31 @@ const activeEnv =
 const Page = ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
-  
-  const params = new URLSearchParams(typeof window !== "undefined" && window.location.search);
+
+  const params = new URLSearchParams(
+    typeof window !== "undefined" && window.location.search
+  );
   const year = params.get("year");
 
   useEffect(() => {
     if (year) {
       allSchedules.forEach((i) => {
-        if (i.year == year) {
+        if (i.year === year) {
           setSchedData(i);
         }
       });
     }
-  }, [year]);
+  }, [year, allSchedules]);
 
   if ("development" === activeEnv)
     console.log("schedData: " + JSON.stringify(schedData));
 
   return (
     <Layout>
-      <SEO title='Programma' />
+      <Seo title='Programma' />
       <main id='index'>
         <Hero />
-        <section style={{ color: "black" }}>
+        <section id='calendar' style={{ color: "black" }}>
           <Container>
             <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
               <h2 className='text-md-left text-center'>
@@ -194,7 +217,10 @@ const Page = ({ data }) => {
                       <Dropdown.Item
                         key={i}
                         onClick={() => {
-                          navigate(typeof window !== "undefined" && window.location.pathname + "?year=" + s.year);
+                          navigate(
+                            typeof window !== "undefined" &&
+                              window.location.pathname + "?year=" + s.year
+                          );
                           setSchedData(allSchedules[i]);
                         }}
                       >
@@ -219,7 +245,11 @@ const Page = ({ data }) => {
               <div className='text-center py-4'>
                 <FontAwesomeIcon
                   style={{ fontSize: "5em" }}
-                  icon={"person-digging"}
+                  icon={icon({
+                    name: "person-digging",
+                    family: "classic",
+                    style: "solid",
+                  })}
                   className='pb-2'
                 />
                 <h3>
