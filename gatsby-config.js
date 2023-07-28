@@ -32,7 +32,7 @@ module.exports = {
       year_switcher: true,
     },
     event: {
-      date: new Date("2023-10-21"),
+      date: new Date("2023-10-28"),
       time: "9:00",
       topic: "",
       cfp: "https://survey.linux.it/293588",
