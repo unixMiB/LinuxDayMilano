@@ -107,6 +107,15 @@ const IndexPage = ({ data }) => {
                       o mostrare una tua invenzione.
                     </p>
                     <p>Per tutti i dettagli prosegui al link qui sotto.</p>
+                    <p className='fw-bold'>
+                      Deadline{" "}
+                      {new Date("2023-09-21").toLocaleDateString("it-IT", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </p>
 
                     {data.site.siteMetadata.event.cfp ? (
                       <Button
@@ -123,6 +132,15 @@ const IndexPage = ({ data }) => {
                     )}
                   </>
                 )}
+                <br />
+                <br />
+                <Button
+                  className='btn-lg'
+                  variant='warning'
+                  href='https://survey.linux.it/index.php/443825'
+                >
+                  Richiedi uno stand
+                </Button>
                 {data.site.siteMetadata.switches.schedule && (
                   <>
                     <p>
@@ -151,9 +169,12 @@ const IndexPage = ({ data }) => {
           <Container className='py-5'>
             <h2 style={{ textTransform: "uppercase" }}>Sponsor dell'evento</h2>
             <Row className='mb-3'>
-              {data.brandsYaml.sponsors.map((item) => {
+              {data.brandsYaml.sponsors.map((item, index) => {
                 return (
-                  <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                  <Col
+                    key={index}
+                    className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
+                  >
                     <a href={item.website}>
                       <GatsbyImage
                         alt={item.name}

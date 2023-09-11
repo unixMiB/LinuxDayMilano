@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import Alert from "react-bootstrap/Alert";
 
 const Hero = ({ small }) => {
   const data = useStaticQuery(
@@ -37,6 +38,31 @@ const Hero = ({ small }) => {
   return (
     <div className='hero'>
       <Container>
+        <Alert variant='warning'>
+          <Alert.Heading>
+            <FontAwesomeIcon
+              className='me-3'
+              icon={icon({
+                name: "exclamation-circle",
+                family: "classic",
+                style: "solid",
+              })}
+            />
+            Il termine per inviare il tuo talk si avvicina!
+          </Alert.Heading>
+          <hr />
+          <p>
+            Vi ricordiamo che il termine ultimo per inviare il vostro talk è il{" "}
+            <span className='fw-bold'>
+              {new Date("2023-09-21").toLocaleDateString("it-IT", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </span>
+          </p>
+        </Alert>
         <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
           Linux Day Milano <span className='ldmi'>{metadata.event.year}</span>
         </h1>
