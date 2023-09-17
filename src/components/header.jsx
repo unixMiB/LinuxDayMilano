@@ -26,7 +26,7 @@ const Header = () => {
   const switches = data.site.siteMetadata.switches;
 
   return (
-    <header>
+    <header className='d-print-none'>
       <Navbar
         id='navbar'
         collapseOnSelect
@@ -61,6 +61,7 @@ const Header = () => {
               <Nav.Link href='/schedule/#calendar'>
                 {switches.schedule ? "Programma" : "Programma precedente"}
               </Nav.Link>
+              <Nav.Link href='/codeofconduct'>Code of Conduct</Nav.Link>
               <Nav.Link href='/#sponsors'>Patrocini</Nav.Link>
               <Nav.Link href='/#contattaci'>Contatti</Nav.Link>
             </Nav>

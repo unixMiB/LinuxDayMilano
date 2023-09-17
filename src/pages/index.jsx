@@ -251,8 +251,8 @@ export const query = graphql`
               placeholder: NONE
               layout: FULL_WIDTH
               jpgOptions: { progressive: true, quality: 80 }
-              avifOptions: { lossless: true }
-              webpOptions: { quality: 80 }
+              avifOptions: { lossless: false, quality: 90 }
+              webpOptions: { quality: 85 }
               blurredOptions: { toFormat: AUTO }
               pngOptions: { quality: 80 }
               breakpoints: [156, 216, 296, 356, 416, 512, 620, 710]
@@ -270,8 +270,8 @@ export const query = graphql`
               placeholder: NONE
               layout: FULL_WIDTH
               jpgOptions: { progressive: true, quality: 80 }
-              avifOptions: { lossless: true }
-              webpOptions: { quality: 80 }
+              avifOptions: { lossless: false, quality: 90 }
+              webpOptions: { quality: 85 }
               blurredOptions: { toFormat: AUTO }
               pngOptions: { quality: 80 }
               breakpoints: [156, 216, 296, 356, 416, 512, 620, 710]
@@ -291,8 +291,8 @@ export const query = graphql`
               placeholder: NONE
               layout: FULL_WIDTH
               jpgOptions: { progressive: true, quality: 80 }
-              avifOptions: { lossless: true }
-              webpOptions: { quality: 80 }
+              avifOptions: { lossless: false, quality: 90 }
+              webpOptions: { quality: 85 }
               blurredOptions: { toFormat: AUTO }
               pngOptions: { quality: 80 }
               breakpoints: [156, 216, 296, 356, 416, 512, 620, 710]
@@ -312,8 +312,8 @@ export const query = graphql`
           placeholder: NONE
           layout: FULL_WIDTH
           jpgOptions: { progressive: true, quality: 80 }
-          avifOptions: { lossless: true }
-          webpOptions: { quality: 80 }
+          avifOptions: { lossless: false, quality: 90 }
+          webpOptions: { quality: 85 }
           blurredOptions: { toFormat: AUTO }
           pngOptions: { quality: 80 }
           breakpoints: [156, 216, 296, 356, 416, 512, 620]
