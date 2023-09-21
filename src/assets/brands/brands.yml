@@ -1,4 +1,7 @@
 sponsors:
+  - name: SUSE
+    website: https://www.suse.com/
+    logo: SUSE@8x.png
   - name: EXTRAORDY
     website: https://extraordy.com/
     logo: Extraordy B@8x.png
@@ -30,6 +33,9 @@ patrocini:
   - name: Joomla User Group Milano Centro
     logo: JUG Milano@8x.png
     website: https://www.joomla.it/joomla-user-group/jug-milano-centro.html
+  - name: WordPress Meetup Milano
+    logo: WordPress Meetup Milano@8x.png
+    website: https://www.meetup.com/it-IT/wordpress-meetup-milano/
   - name: Red Hat
     website: https://redhat.com/
     logo: RedHat A@8x.png
