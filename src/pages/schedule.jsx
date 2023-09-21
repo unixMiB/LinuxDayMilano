@@ -205,7 +205,7 @@ const Page = ({ data }) => {
               </h2>
               <hr />
               {data.site.siteMetadata.switches.year_switcher ? (
-                <Dropdown className='d-block d-md-inline'>
+                <Dropdown className='d-block d-md-inline d-print-none'>
                   <Dropdown.Toggle
                     className='w-100 w-sm-auto'
                     variant='warning'
@@ -256,7 +256,10 @@ const Page = ({ data }) => {
                   Ci sono eventi per questa giornata, sono solo in fase di
                   organizzazione.
                 </h3>
-                <p>Ricontrolla tra qualche giorno!</p>
+                <p>
+                  Puoi usare il selettore per leggere il programma degli anni
+                  precedenti o ricontrolla tra qualche giorno!
+                </p>
               </div>
             )}
           </Container>
