@@ -132,15 +132,6 @@ const IndexPage = ({ data }) => {
                     )}
                   </>
                 )}
-                <br />
-                <br />
-                <Button
-                  className='btn-lg'
-                  variant='warning'
-                  href='https://survey.linux.it/index.php/443825'
-                >
-                  Richiedi uno stand
-                </Button>
                 {data.site.siteMetadata.switches.schedule && (
                   <>
                     <p>
@@ -160,6 +151,15 @@ const IndexPage = ({ data }) => {
                     </Button>
                   </>
                 )}
+                <br />
+                <br />
+                <Button
+                  className='btn-lg'
+                  variant='warning'
+                  href='https://survey.linux.it/index.php/443825'
+                >
+                  Richiedi uno stand o diventa sponsor
+                </Button>
               </Col>
             </Row>
           </Container>
