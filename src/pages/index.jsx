@@ -151,7 +151,7 @@ const IndexPage = ({ data }) => {
                     </Button>
                   </>
                 )}
-                <br />
+                {/* <br />
                 <br />
                 <Button
                   className='btn-lg'
@@ -159,7 +159,7 @@ const IndexPage = ({ data }) => {
                   href='https://survey.linux.it/index.php/443825'
                 >
                   Richiedi uno stand o diventa sponsor
-                </Button>
+                </Button> */}
               </Col>
             </Row>
           </Container>
