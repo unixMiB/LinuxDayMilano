@@ -27,7 +27,7 @@ module.exports = {
     siteUrl: "https://linuxdaymilano.org/",
     switches: {
       schedule: false,
-      cfp: true,
+      cfp: false,
       sponsor_submit: true,
       year_switcher: true,
     },
