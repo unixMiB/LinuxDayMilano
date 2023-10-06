@@ -9,10 +9,9 @@ schedule:
         duration: 30 min
   - time: "9:30"
     talks:
-      - title: "Web Environment Integrity: chi è, da dove arriva, e dove sta andando."
-        description: "Quest'anno, la proposta della \"Web Environment Integrity API\" lanciata su github alcuni ingegneri di Google ha suscitato forti reazioni negative da parte di molti grandi nomi nel mondo di internet e dei diritti digitali. Quali sono i contenuti di questa proposta? A che punto è la sua implementazione? Da dove nasce l'idea che ci sta dietro? Quali sono i suoi scopi e cosa possiamo aspettarci che succeda nel caso diventi realtà? 
-Questo talk propone una ricostruzione della timeline della discussione e dello sviluppo di questa proposta, uno sguardo tecnico al suo funzionamento e infine combina i due approcci per valutare, sulla base di quello che abbiamo visto succedere per proposte e tecnologie simili in passato, le possibili ripercussioni di questa proposta sul world wide web."
-        author: Valentina Sona - Politecnico Open unix Labs - POuL
+      - title: "Quando un browser conquista la rete: come i monopoli del web decidono cosa puoi fare col tuo computer"
+        description: Questo talk è una presentazione della storia e delle conseguenze dei monopoli dei browser web. Inizieremo introducendo brevemente gli standard web e il modo in cui sono stati stabiliti e che cos'è un browser web; successivamente parleremo della storia dei browser web e della loro quota di mercato, presentando i tentativi della Commissione UE di affrontare il problema. Discuteremo poi le cause dei monopoli e il ruolo della Mozilla Foundation, e infine parleremo delle conseguenze (presenti e future) dell'attuale monopolio di Google Chrome, come i casi di JpegXL, ManifestV3 e Web Environment Integrity, evidenziando le implicazioni sulla privacy, la libertà individuale e la discriminazione.
+        author: Luca Biscaldi, Alexandru Bradatan - Politecnico Open unix Labs - POuL
         room: U6-39
         duration: 45 min
       - title: "5 Falsi miti su GNU/Linux"
@@ -36,9 +35,10 @@ Questo talk propone una ricostruzione della timeline della discussione e dello s
         duration: 15 min
   - time: "10:45"
     talks:
-      - title: "Quando un browser conquista la rete: come i monopoli del web decidono cosa puoi fare col tuo computer"
-        description: Questo talk è una presentazione della storia e delle conseguenze dei monopoli dei browser web. Inizieremo introducendo brevemente gli standard web e il modo in cui sono stati stabiliti e che cos'è un browser web; successivamente parleremo della storia dei browser web e della loro quota di mercato, presentando i tentativi della Commissione UE di affrontare il problema. Discuteremo poi le cause dei monopoli e il ruolo della Mozilla Foundation, e infine parleremo delle conseguenze (presenti e future) dell'attuale monopolio di Google Chrome, come i casi di JpegXL, ManifestV3 e Web Environment Integrity, evidenziando le implicazioni sulla privacy, la libertà individuale e la discriminazione.
-        author: Luca Biscaldi, Alexandru Bradatan - Politecnico Open unix Labs - POuL
+      - title: "Web Environment Integrity: chi è, da dove arriva, e dove sta andando."
+        description: "Quest'anno, la proposta della \"Web Environment Integrity API\" lanciata su github alcuni ingegneri di Google ha suscitato forti reazioni negative da parte di molti grandi nomi nel mondo di internet e dei diritti digitali. Quali sono i contenuti di questa proposta? A che punto è la sua implementazione? Da dove nasce l'idea che ci sta dietro? Quali sono i suoi scopi e cosa possiamo aspettarci che succeda nel caso diventi realtà? 
+Questo talk propone una ricostruzione della timeline della discussione e dello sviluppo di questa proposta, uno sguardo tecnico al suo funzionamento e infine combina i due approcci per valutare, sulla base di quello che abbiamo visto succedere per proposte e tecnologie simili in passato, le possibili ripercussioni di questa proposta sul world wide web."
+        author: Valentina Sona - Politecnico Open unix Labs - POuL
         room: U6-39
         duration: 45 min
       - title: "Cosa potrebbe cambiare per il FOSS con il Cyber Résilience Act"
