@@ -13,52 +13,56 @@ schedule:
         description: Dalla sua nascita nel lontano 1991 ad oggi, GNU/Linux ha subito enormi cambiamenti, nel bene e nel male. L'unica cosa che sembra non essere mai cambiata è la percezione pubblica del progetto, specialmente da parte di chi non l'ha mai utilizzato o l'ha abbandonato tempo addietro. In questo intervento sfateremo le principali "credenze popolari" o falsi miti che tutt'ora fungono da deterrente per l'adozione di GNU/Linux sul Desktop.
         author: Moreno Razzoli
         room: U6-39
-        duration: 50 min
+        duration: 45 min
       - title: "Web Environment Integrity: chi è, da dove arriva, e dove sta andando."
         description: "Quest'anno, la proposta della \"Web Environment Integrity API\" lanciata su github alcuni ingegneri di Google ha suscitato forti reazioni negative da parte di molti grandi nomi nel mondo di internet e dei diritti digitali. Quali sono i contenuti di questa proposta? A che punto è la sua implementazione? Da dove nasce l'idea che ci sta dietro? Quali sono i suoi scopi e cosa possiamo aspettarci che succeda nel caso diventi realtà? 
 Questo talk propone una ricostruzione della timeline della discussione e dello sviluppo di questa proposta, uno sguardo tecnico al suo funzionamento e infine combina i due approcci per valutare, sulla base di quello che abbiamo visto succedere per proposte e tecnologie simili in passato, le possibili ripercussioni di questa proposta sul world wide web."
         author: Valentina Sona - Politecnico Open unix Labs - POuL
         room: U6-40
-        duration: 50 min
+        duration: 45 min
       - title: "Automatizzare l'IT con Ansible"
         description: Ansible è un software per configurare e gestire computer (sia server che client) che unisce flessibilità a scalabilità. A differenza di altri software simili che permettono di usare il paradigma 'infrastructure as code', Ansible sposta ancora oltre la barra della semplicità, usando il paradigma 'infrastructure as data'. Ansible è inoltre molto flessibile in termini di utilizzo e di ambiente, permettendo di gestire dalla creazione e manutenzione di macchine fisiche, virtuali, cloud e container al ciclo di vita delle applicazioni ed è in grado di dare il meglio in qualsiasi situazione, da una piccola installazione personale a installazioni in grosse aziende anche in ambiti altamente regolati quali quello bancario e petrolifero.
         author: Fabio Alessandro "Fale" Locati
         room: U6-41
-        duration: 50 min
+        duration: 45 min
       - title: "Immutable Desktops and Me"
         description: Le distribuzioni Linux "immutabili" come Silverblue avranno un impatto positivo sulla tua salute mentale? Ad oggi non sono del tutto intuitive. Vediamo i concetti di base, come sviluppare codice (qualuno ha detto "prerequisiti"?), installare le CLI indispensabili e quali sono i vantaggi per chi vuole distribuire una nuova applicazione.
         author: Camilla Conte - Red Hat
         room: U6-42
-        duration: 50 min
+        duration: 45 min
+  - time: "10:30"
+    talks:
+      - title: "Break"
+        duration: 15 min
   - time: "10:45"
     talks:
       - title: "Quando un browser conquista la rete: come i monopoli del web decidono cosa puoi fare col tuo computer"
         description: Questo talk è una presentazione della storia e delle conseguenze dei monopoli dei browser web. Inizieremo introducendo brevemente gli standard web e il modo in cui sono stati stabiliti e che cos'è un browser web; successivamente parleremo della storia dei browser web e della loro quota di mercato, presentando i tentativi della Commissione UE di affrontare il problema. Discuteremo poi le cause dei monopoli e il ruolo della Mozilla Foundation, e infine parleremo delle conseguenze (presenti e future) dell'attuale monopolio di Google Chrome, come i casi di JpegXL, ManifestV3 e Web Environment Integrity, evidenziando le implicazioni sulla privacy, la libertà individuale e la discriminazione.
         author: Luca Biscaldi, Alexandru Bradatan - Politecnico Open unix Labs - POuL
         room: U6-39
-        duration: 50 min
+        duration: 45 min
       - title: "Cosa potrebbe cambiare per il FOSS con il Cyber Résilience Act"
         description: L'Unione Europea sta per approvare il Cyber Résilience Act, una legge che ha l'obiettivo di migliorare la sicurezza del software libero e open source, ma che è scritta talmente male da creare problemi a tutto il settore in Europa. La situazione attuale, e le prospettive.
         author: Italo Vignoli - LibreOffice 
         room: U6-40
-        duration: 50 min
+        duration: 45 min
       - title: "Uyuni: the open-source configuration and infrastructure management solution for software-defined infrastructure"
         description: "Uyuni: the open-source configuration and infrastructure management solution for software-defined infrastructure"
         author: Marina Latini - SUSE
         room: U6-41
-        duration: 50 min
+        duration: 45 min
       - title: "Yocto Project, un generatore automatico di distribuzioni linux embedded"
         description: Lo Yocto Project è un progetto di collaborazione open source che fornisce modelli, strumenti e metodi che consentono di creare sistemi Linux-based personalizzati per i prodotti embedded indipendenti dall'architettura hardware. Il progetto è stato creato nel 2010 come una collaborazione tra molti produttori di hardware, fornitori di sistemi operativi open-source e aziende di elettronica per portare un po' di ordine nel caos di sviluppo di Linux Embedded. La presentazione sarà tenuta da Marco Cavallini, Yocto Project Ambassador, sarà accessibile a tutti e non richiede competenze specifiche con sistemi embedded.
         author: Marco Cavallini - KOAN
         room: U6-42
-        duration: 50 min
+        duration: 45 min
   - time: "11:45"
     talks:
       - title: "Le best practice di un buon sviluppo web, lavorare con i CMS senza essere cugini"
         description: Sviluppare un sito web con un CMS è senza dubbio il modo più veloce e semplice per consegnare un prodotto, ma il prodotto consegnato, oltre che essere utilizzabile, è anche performante, sicuro e scalabile? Molto spesso un sistema semplice da usare viene usato da utenti con una consapevolezza inferiore dei rischi e delle problematiche di quello che stanno facendo. In questo talk vedremo, per WordPress e Joomla, quali sono le pratiche che utilizzano i professionisti che lavorano da tanti anni con questi strumenti.
         author: Fausto Nenci, Luca Racchetti e Matteo Enna
         room: U6-39
-        duration: 50 min
+        duration: 45 min
       - title: "Intelligenza Artificale - di quale minaccia stiamo parlando?"
         description: |
           Varie testate giornalistiche illustri ed internazionali ci stanno annunciando che l’AI avrà un impatto dirompente sull’occupazione, vari governi sembra siano in parte consapevoli dell’impatto nel bene e nel male di questa tecnologia sulla società.
@@ -67,20 +71,24 @@ Questo talk propone una ricostruzione della timeline della discussione e dello s
           Sopratutto rifletteremo su che relazione ha tutto ciò con noi che siamo appassionati di condivisione, di beni comuni, di Free Software.
         author: "Roberto Innocenti - Power Progress Community"
         room: U6-40
-        duration: 50 min
+        duration: 45 min
       - title: "Come trasformare un'applicazione server in un'appiicazione \"macroservizio\": l'esempio di Uyuni"
         description: "Uyuni (www.uyuni-project.org) è un progetto open-source per la gestione e la configurazione di infrastrutture software-defined. Al fine di rendere Uyuni una soluzione multicontainer per Kubernetes, verrà rilasciata una prima versione \"fat-container\" (podman). Lo scopo del talk sarà quello di:
 \n- condividere l'esperienza di trasformare un'applicazione server in un'applicazione containerizzata
 \n- come migrare un'applicazione deployata alla sua versione containerizzata"
         author: Michele Bussolotto - SUSE
         room: U6-41
-        duration: 50 min
+        duration: 45 min
       - title: "Self-hosting circolare: installare servizi liberi su vecchi smartphone"
         description: Da quando gli smartphone sono sul mercato, non è mai stato previsto un modo per dismettere senza sprechi il processore, la RAM e la memoria che permettono di usare Android ma ad un certo punto rimangono tagliati fuori dagli aggiornamenti software dello stesso produttore; l'alto livello di integrazione l'estrema diversità dei dispositivi mobili, oltre che la segretezza di molti componenti software, impedisce agli utenti di riutilizzarli in un contesto differente. In questa presentazione si propone al pubblico una strategia scalabile per ottenere una piattaforma di orchestrazione container basata sull'hardware di smartphone datati.
         author: Lorenzo Prosseda
         room: U6-42
-        duration: 50 min
-  - time: "14:00"
+        duration: 45 min
+  - time: "12:45"
+    talks:
+      - title: Pausa pranzo
+        duration: 60 min
+  - time: "13:45"
     talks:
       - title: "Laboratorio interrogazioni in SPARQL su Wikidata"
         description: |
@@ -89,28 +97,28 @@ Questo talk propone una ricostruzione della timeline della discussione e dello s
           Partiremo da casi molto semplici fino ad arrivare a query assolutamente allucinanti che ci permetteranno di sfruttare appieno Wikidata, la piú grande base di dati libera dell'universo.
         author: Valerio Bozzolan (Bozzy) e Cristian Consonni (CristianCantoro) - Wikimedia Italia
         room: U6-39
-        duration: 50 min
+        duration: 45 min
       - title: "Introduzione a ILIAS LMS: Il sistema di gestione dell'apprendimento europeo ed open source"
         description: "Questo paper presenta ILIAS LMS (Learning Management System), una piattaforma open source per la gestione dell'apprendimento. ILIAS LMS offre una vasta gamma di funzionalità per supportare l'e-learning, consentendo agli utenti di creare, distribuire e gestire corsi online in modo efficace. In questo paper, esploreremo le caratteristiche principali di ILIAS LMS, i suoi vantaggi e come può essere utilizzato nella comunità open source.
 ILIAS LMS è un sistema di gestione dell'apprendimento open source ampiamente utilizzato in tutto il mondo. Creato nel 1998, ILIAS LMS si è evoluto nel corso degli anni diventando una soluzione completa per l'e-learning. La sua natura open source permette agli sviluppatori di personalizzare e adattare la piattaforma alle proprie esigenze, rendendola una scelta popolare per le organizzazioni che cercano una soluzione flessibile e personalizzabile.
 ILIAS LMS può essere utilizzato per facilitare l'apprendimento e la condivisione di conoscenze."
         author: Ilario Truppa, Vincenzo Padula - OC Open Consulting società benefit a responsabilità limitata
         room: U6-40
-        duration: 50 min
+        duration: 45 min
       - title: "Ambienti effimeri per Pull Request: Un Viaggio da GitHub alla nostra macchina, senza passare per Kubernetes"
         description: "Avere ambienti isolati per lo sviluppo delle features è un desiderio comune tra gli sviluppatori. La richiesta di ambienti separati per ogni pull request è sempre più cruciale. Solitamente, si fa affidamento a Kubernetes e a complessi flussi di lavoro per gestire queste esigenze, ma questa soluzione può essere onerosa e complessa da mantenere.
 Nel nostro talk, esploreremo un approccio alternativo per creare ambienti di sviluppo separati per ciascuna pull request, senza l'uso di Kubernetes. Utilizzeremo dei container, una macchina virtuale, Nginx e un playbook Ansible per realizzare questo obiettivo. Il ciclo di vita di questi ambienti sarà strettamente legato al ciclo di vita delle nostre pull request, dalla creazione, alla sincronizzazione, fino alla distruzione delle risorse.
 Affronteremo un case study specifico, analizzando l'esperienza del team \"Trento\" di SUSE, che ha adottato questa soluzione per la sua notevole semplicità, affrontando allo stesso tempo diversi trade-off."
         author: Carmine Di Monaco - SUSE
         room: U6-41
-        duration: 50 min
+        duration: 45 min
       - title: "Linux Sicuro sin dal boot"
         description: "Abbiamo sentito nominare negli ultimi anni TPM, Secure Boot e Measured Boot, ma cosa vogliono dire davvero?. In un panorama informatico sempre più complesso e soggetto a costanti attacchi anche Microsoft ha iniziato a supportare queste nuove tecnologie con Windows 8, rendendole con Windows 11 obbligatorie per le nuove installazioni. Una mossa che appare limitare le libertà dell'utente, prevenendo l'installazione di sistemi operativi liberi. In realtà Secure Boot e TPM sono due tecnologie che possono essere utilizzate per rendere il nostro sistema più sicuro, e che sono già supportate da Linux.
 In questo talk vedremo come funzionano e come possono essere utilizzate per preservare l'integrità del sistema, a partire dal boot fino all'esecuzione di applicazioni."
         author: Daniele Barcella - unixMiB
         room: U6-42
-        duration: 50 min
-  - time: "15:00"
+        duration: 45 min
+  - time: "14:45"
     talks:
       - title: "Come Rust semplifica l'Open Source"
         description: "Spesso Rust viene lodato per le sue prestazioni e la sua affidabilità.
@@ -129,18 +137,18 @@ Mostrerò come gli strumenti di Rust:
 Infine, darò una panoramica di release-plz, uno strumento che ho creato per automatizzare il processo di rilascio di progetti Rust."
         author: Marco Ieni - Prisma
         room: U6-39
-        duration: 50 min
+        duration: 45 min
       - title: "LibreOffice e i formati standard"
         description: Presentazione di LibreOffice 7.6, i formati standard, la loro struttura e perché devono essere adottati.
         author: Enio Gemmo - LibreItalia
         room: U6-40
-        duration: 50 min
+        duration: 45 min
       - title: "Come gestire controlli di sicurezza su Kubernetes tramite Tekton e ACS"
         description: "Red Hat Advanced Cluster Security (ACS) for Kubernetes è una piattaforma atta ad eseguire controlli di sicurezza a fronte di una build, un deploy e a run-time.
 Durante questo talk, vedremo come integrare il processo di continous integration (CI) con la validazione di policy di sicurezza su risorse Kubernetes, eseguendo questi controlli dentro una pipeline Tekton."
         author: Carmelo Sarta - Red Hat
         room: U6-41
-        duration: 50 min
+        duration: 45 min
       - title: "Unikernel: dal passato un'idea per il futuro di Linux"
         description: "Avete mai sentito parlare di Unikernel? Questa non è una sessione di archeologia informatica ma uno sguardo ad un possibile futuro per Linux!
 Unikernel è un tipo di sistema operativo che è stato sviluppato per offrire una soluzione più sicura e veloce rispetto ai tradizionali sistemi operativi.
@@ -149,14 +157,18 @@ In questa sessione parleremo di UKL, una patch a Linux e glibc che permette di c
 Mostreremo inoltre casi d'uso concreti come un recente test fatto su Redis su unikernel con un aumento di performance fino al 23%."
         author: Natale Vinto - Red Hat
         room: U6-42
-        duration: 50 min
+        duration: 45 min
+  - time: "15:45"
+    talks:
+      - title: "Break"
+        duration: 15 min
   - time: "16:00"
     talks:
       - title: "RMarkdown un'interfaccia notebook per la Literate Programming in vari linguaggi"
         description: Nel corso del talk presenteremo in termini generali la sintassi RMarkdown ed esporremo alcuni esempi di utilizzo del package Xaringan.
         author: Michele Bonsignore - VimeLug
         room: U6-39
-        duration: 50 min
+        duration: 45 min
       - title: "Cambiare il mondo un PC alla volta col trashware"
         description: |
           Venite ad ascoltare come l'Open Source e il Trashware stanno cambiando (in meglio ;-) ) la vita di molte persone con esigenze reali - e del Pianeta - grazie a PCOfficina.
@@ -164,7 +176,7 @@ Mostreremo inoltre casi d'uso concreti come un recente test fatto su Redis su un
           In questo intervento condivideremo la nostra esperienza decennale, illustrando le difficoltà che abbiamo incontrato, condividendo storie reali e alcuni suggerimenti pratici per chi volesse iniziare un'esperienza simile nel trashware e nel volontariato.
         author: Andrea Perotti - PCOfficina
         room: U6-40
-        duration: 50 min
+        duration: 45 min
       - title: "Flutter for the win: sviluppo Cross-Platform alla massima potenza"
         description: "Flutter si sta sempre più affermando come una soluzione completa per creare app Cross-Platform di alta qualità per le principali piattaforme: Android, iOS, Web, Windows, macOS e Linux. Questa presentazione esplorerà le caratteristiche chiave di Flutter e come queste si traducano in vantaggi tangibili per gli sviluppatori e le aziende.
 Dopo una iniziale panoramica di base di Flutter, in cui verrà spiegato cosa lo rende unico, verranno esaminati i suoi principarli vantaggi: sviluppo cross-platform per 6 piattaforme differenti, la rapida iterazione con l’Hot Reload, un’unica base di codice e creazione di interfacce utente altamente personalizzabili.
@@ -172,12 +184,12 @@ Verranno poi presentate le principali librerie e best practice per realizzare la
 Presenti durante la presentazione delle brevi demo di applicazioni per mostrare i concetti esposti."
         author: Alberto Bonacina
         room: U6-41
-        duration: 50 min
+        duration: 45 min
       - title: "Lo stato di Xfce nel 2023"
         description: Xfce è un ambiente grafico per desktop basato su GTK, nato 26 anni fa, minimale ma ricco di funzionalità.  Per queste sue caratteristiche ha un'ampia base di utenti e diverse distribuzioni offrono edizioni in cui Xfce è l'ambiente predefinito (Xubuntu, Linux Mint Xfce, Fedora spin Xfce, per citarne alcune). In questo talk faremo il punto sul progetto, (ri)scoprendo le funzionalità che offre e le novità introdotte negli ultimi anni, i legami con GTK e GNOME, come e dove iniziare a contribuire, gli sviluppi e le tendenze future, tra cui il supporto per Wayland.
         author: Emanuele Petriglia
         room: U6-42
-        duration: 50 min
+        duration: 45 min
   - time: "17:00"
     talks:
       - title: TODO
