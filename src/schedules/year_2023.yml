@@ -9,15 +9,15 @@ schedule:
         duration: 30 min
   - time: "9:30"
     talks:
-      - title: "5 Falsi miti su GNU/Linux"
-        description: Dalla sua nascita nel lontano 1991 ad oggi, GNU/Linux ha subito enormi cambiamenti, nel bene e nel male. L'unica cosa che sembra non essere mai cambiata è la percezione pubblica del progetto, specialmente da parte di chi non l'ha mai utilizzato o l'ha abbandonato tempo addietro. In questo intervento sfateremo le principali "credenze popolari" o falsi miti che tutt'ora fungono da deterrente per l'adozione di GNU/Linux sul Desktop.
-        author: Moreno Razzoli
-        room: U6-39
-        duration: 45 min
       - title: "Web Environment Integrity: chi è, da dove arriva, e dove sta andando."
         description: "Quest'anno, la proposta della \"Web Environment Integrity API\" lanciata su github alcuni ingegneri di Google ha suscitato forti reazioni negative da parte di molti grandi nomi nel mondo di internet e dei diritti digitali. Quali sono i contenuti di questa proposta? A che punto è la sua implementazione? Da dove nasce l'idea che ci sta dietro? Quali sono i suoi scopi e cosa possiamo aspettarci che succeda nel caso diventi realtà? 
 Questo talk propone una ricostruzione della timeline della discussione e dello sviluppo di questa proposta, uno sguardo tecnico al suo funzionamento e infine combina i due approcci per valutare, sulla base di quello che abbiamo visto succedere per proposte e tecnologie simili in passato, le possibili ripercussioni di questa proposta sul world wide web."
         author: Valentina Sona - Politecnico Open unix Labs - POuL
+        room: U6-39
+        duration: 45 min
+      - title: "5 Falsi miti su GNU/Linux"
+        description: Dalla sua nascita nel lontano 1991 ad oggi, GNU/Linux ha subito enormi cambiamenti, nel bene e nel male. L'unica cosa che sembra non essere mai cambiata è la percezione pubblica del progetto, specialmente da parte di chi non l'ha mai utilizzato o l'ha abbandonato tempo addietro. In questo intervento sfateremo le principali "credenze popolari" o falsi miti che tutt'ora fungono da deterrente per l'adozione di GNU/Linux sul Desktop.
+        author: Moreno Razzoli
         room: U6-40
         duration: 45 min
       - title: "Automatizzare l'IT con Ansible"
