@@ -192,24 +192,28 @@ Presenti durante la presentazione delle brevi demo di applicazioni per mostrare 
         duration: 45 min
   - time: "17:00"
     talks:
-      - title: TODO
-        description: TODO
-        author: TODO
+      - title: Licenze e modelli di business nel settore informatico
+        description: "Nel settore informatico ci sono diverse aziende che operano utilizzando modelli di business differenti.
+Alcuni di questi modelli di business sono fortemente influenzati dal sistema delle licenze software.
+In questa presentazione affronteremo i vari tipi di modelli di business che le aziende informatiche hanno e in che modo queste vengono influenzate dalle licenze.
+Successivamente tratteremo alcune principali differenze tra le varie licenze per capire perchè una azienda potrebbe preferire una licenza o un'altra."
+        author: Fabio Alessandro "Fale" Locati
         room: U6-39
         duration: 30 min
-      - title: TODO
-        description: TODO
-        author: TODO
+      - title: "CentOS Stream: fatti e leggende"
+        description: CentOS Stream è una distribuzione Linux creata dal progetto CentOS. Il progetto CentOS negli ultimi anni è passato dal produrre e distribuire CentOS Linux a produrre e distribuire CentOS Stream. In questa presentazione vedremo come CentOS Stream viene creato da Fedora e come si posiziona nel mondo Enterprise Linux. Discuteremo anche diversi miti e leggende che si sono creati intorno a questa distribuzione, per vedere quali corrispondono alla realtà e quali no.
+        author: Andrea Perotti
         room: U6-40
         duration: 30 min
-      - title: TODO
-        description: TODO
-        author: TODO
+      - title: What the Helm?!
+        description: "Come fare un deploy su K8s in modo comodo? Come trasformare il semplice deploy di applicazione in qualcosa da mantenere sotto versionamento? Come creare delle definizioni di risorse riutilizzabili? Helm!
+In questo intervento vedremo cosa sia Helm, come possiamo utilizzarlo e come andiamo a creare un progetto (Helm Chart) per il deploy di una nostra applicazione."
+        author: Luca Andrea Fusè
         room: U6-41
         duration: 30 min
-      - title: TODO
-        description: TODO
-        author: TODO
+      - title: Presentazione dei prototipi Community Open Hardware PowerPC Notebook
+        description: Al Linux Day di Milano del 2014 avevamo presentato il progetto di questo Community Open Hardware PowerPC Notebook. A quel tempo sognavamo un notebook disegnato intorno al GNU/Linux con architettura PowerPC. Anno per anno ad ogni Linux Day vi abbiamo aggiornato dei progressi fatti, grazie ai volontari, ai donatori e a tutti quei soggetti che hanno collaborato. Quest'anno vi facciamo provare un prototipo di questo Notebook.
+        author: Roberto Innocenti - Power Progress Community
         room: U6-42
         duration: 30 min
   - time: "17:30"
