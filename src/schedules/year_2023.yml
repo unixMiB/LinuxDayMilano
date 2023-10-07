@@ -113,7 +113,7 @@ Affronteremo un case study specifico, analizzando l'esperienza del team \"Trento
         room: U6-41
         duration: 45 min
       - title: "Linux Sicuro sin dal boot"
-        description: "Abbiamo sentito nominare negli ultimi anni TPM, Secure Boot e Measured Boot, ma cosa vogliono dire davvero?. In un panorama informatico sempre più complesso e soggetto a costanti attacchi anche Microsoft ha iniziato a supportare queste nuove tecnologie con Windows 8, rendendole con Windows 11 obbligatorie per le nuove installazioni. Una mossa che appare limitare le libertà dell'utente, prevenendo l'installazione di sistemi operativi liberi. In realtà Secure Boot e TPM sono due tecnologie che possono essere utilizzate per rendere il nostro sistema più sicuro, e che sono già supportate da Linux.
+        description: "Abbiamo sentito nominare negli ultimi anni TPM, Secure Boot e Measured Boot, ma cosa vogliono dire davvero? In un panorama informatico sempre più complesso e soggetto a costanti attacchi anche Microsoft ha iniziato a supportare queste nuove tecnologie con Windows 8, rendendole con Windows 11 obbligatorie per le nuove installazioni. Una mossa che appare limitare le libertà dell'utente, prevenendo l'installazione di sistemi operativi liberi. In realtà Secure Boot e TPM sono due tecnologie che possono essere utilizzate per rendere il nostro sistema più sicuro, e che sono già supportate da Linux.
 In questo talk vedremo come funzionano e come possono essere utilizzate per preservare l'integrità del sistema, a partire dal boot fino all'esecuzione di applicazioni."
         author: Daniele Barcella - unixMiB
         room: U6-42
@@ -202,7 +202,7 @@ Successivamente tratteremo alcune principali differenze tra le varie licenze per
         duration: 30 min
       - title: "CentOS Stream: fatti e leggende"
         description: CentOS Stream è una distribuzione Linux creata dal progetto CentOS. Il progetto CentOS negli ultimi anni è passato dal produrre e distribuire CentOS Linux a produrre e distribuire CentOS Stream. In questa presentazione vedremo come CentOS Stream viene creato da Fedora e come si posiziona nel mondo Enterprise Linux. Discuteremo anche diversi miti e leggende che si sono creati intorno a questa distribuzione, per vedere quali corrispondono alla realtà e quali no.
-        author: Andrea Perotti
+        author: Andrea Perotti, Fabio Alessandro "Fale" Locati
         room: U6-40
         duration: 30 min
       - title: What the Helm?!
