@@ -4,7 +4,7 @@ schedule:
     talks:
       - title: Opening Keynote
         description: Discorso di apertura del Linux Day
-        author: Lorenzo Olearo, Luca Biscaldi - unixMiB
+        author: Lorenzo Olearo - unixMiB, Luca Biscaldi - Politecnico Open unix Labs - POuL
         room: U6-40
         duration: 30 min
   - time: "9:30"
@@ -185,19 +185,19 @@ Presenti durante la presentazione delle brevi demo di applicazioni per mostrare 
         author: Alberto Bonacina
         room: U6-41
         duration: 45 min
-      - title: "Lo stato di Xfce nel 2023"
-        description: Xfce è un ambiente grafico per desktop basato su GTK, nato 26 anni fa, minimale ma ricco di funzionalità.  Per queste sue caratteristiche ha un'ampia base di utenti e diverse distribuzioni offrono edizioni in cui Xfce è l'ambiente predefinito (Xubuntu, Linux Mint Xfce, Fedora spin Xfce, per citarne alcune). In questo talk faremo il punto sul progetto, (ri)scoprendo le funzionalità che offre e le novità introdotte negli ultimi anni, i legami con GTK e GNOME, come e dove iniziare a contribuire, gli sviluppi e le tendenze future, tra cui il supporto per Wayland.
-        author: Emanuele Petriglia
-        room: U6-42
-        duration: 45 min
-  - time: "17:00"
-    talks:
       - title: Licenze e modelli di business nel settore informatico
         description: "Nel settore informatico ci sono diverse aziende che operano utilizzando modelli di business differenti.
 Alcuni di questi modelli di business sono fortemente influenzati dal sistema delle licenze software.
 In questa presentazione affronteremo i vari tipi di modelli di business che le aziende informatiche hanno e in che modo queste vengono influenzate dalle licenze.
 Successivamente tratteremo alcune principali differenze tra le varie licenze per capire perchè una azienda potrebbe preferire una licenza o un'altra."
         author: Fabio Alessandro "Fale" Locati
+        room: U6-42
+        duration: 45 min
+  - time: "17:00"
+    talks:
+      - title: "Lo stato di Xfce nel 2023"
+        description: Xfce è un ambiente grafico per desktop basato su GTK, nato 26 anni fa, minimale ma ricco di funzionalità.  Per queste sue caratteristiche ha un'ampia base di utenti e diverse distribuzioni offrono edizioni in cui Xfce è l'ambiente predefinito (Xubuntu, Linux Mint Xfce, Fedora spin Xfce, per citarne alcune). In questo talk faremo il punto sul progetto, (ri)scoprendo le funzionalità che offre e le novità introdotte negli ultimi anni, i legami con GTK e GNOME, come e dove iniziare a contribuire, gli sviluppi e le tendenze future, tra cui il supporto per Wayland.
+        author: Emanuele Petriglia
         room: U6-39
         duration: 30 min
       - title: "CentOS Stream: fatti e leggende"
