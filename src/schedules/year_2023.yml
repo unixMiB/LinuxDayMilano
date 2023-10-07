@@ -212,7 +212,7 @@ In questo intervento vedremo cosa sia Helm, come possiamo utilizzarlo e come and
         room: U6-41
         duration: 30 min
       - title: Presentazione dei prototipi Community Open Hardware PowerPC Notebook
-        description: Al Linux Day di Milano del 2014 avevamo presentato il progetto di questo Community Open Hardware PowerPC Notebook. A quel tempo sognavamo un notebook disegnato intorno al GNU/Linux con architettura PowerPC. Anno per anno ad ogni Linux Day vi abbiamo aggiornato dei progressi fatti, grazie ai volontari, ai donatori e a tutti quei soggetti che hanno collaborato. Quest'anno vi facciamo provare un prototipo di questo Notebook.
+        description: Al Linux Day di Milano del 2014 avevamo presentato il progetto di questo Community Open Hardware PowerPC Notebook. A quel tempo sognavamo un notebook disegnato intorno al GNU/Linux con architettura PowerPC. Anno per anno ad ogni Linux Day vi abbiamo aggiornato dei progressi fatti, grazie ai volontari, ai donatori e a tutti quei soggetti che hanno collaborato. Quest'anno vi facciamo vedere un prototipo di questo Notebook.
         author: Roberto Innocenti - Power Progress Community
         room: U6-42
         duration: 30 min
