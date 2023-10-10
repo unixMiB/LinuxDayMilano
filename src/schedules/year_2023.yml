@@ -26,7 +26,7 @@ schedule:
         duration: 45 min
       - title: "Immutable Desktops and Me"
         description: Le distribuzioni Linux "immutabili" come Silverblue avranno un impatto positivo sulla tua salute mentale? Ad oggi non sono del tutto intuitive. Vediamo i concetti di base, come sviluppare codice (qualuno ha detto "prerequisiti"?), installare le CLI indispensabili e quali sono i vantaggi per chi vuole distribuire una nuova applicazione.
-        author: Camilla Conte - Red Hat
+        author: Camilla Conte
         room: U6-42
         duration: 45 min
   - time: "10:30"
