@@ -143,10 +143,11 @@ Infine, darò una panoramica di release-plz, uno strumento che ho creato per aut
         author: Enio Gemmo - LibreItalia
         room: U6-40
         duration: 45 min
-      - title: "Come gestire controlli di sicurezza su Kubernetes tramite Tekton e ACS"
-        description: "Red Hat Advanced Cluster Security (ACS) for Kubernetes è una piattaforma atta ad eseguire controlli di sicurezza a fronte di una build, un deploy e a run-time.
-Durante questo talk, vedremo come integrare il processo di continous integration (CI) con la validazione di policy di sicurezza su risorse Kubernetes, eseguendo questi controlli dentro una pipeline Tekton."
-        author: Carmelo Sarta - Red Hat
+      - title: "Gestisci la Supply Chains Security del tuo cluster Kubernetes con Tekton"
+        description: "Vieni a scoprire come rendere sicuri i tuoi workload applicativi sul tuo cluster Kubernetes!
+La Supply Chain Security si pone lo scopo di tutelare il ciclo di vita dello sviluppo del software (SDLC), gestendo i rischi e le vulnerabilità tramite strumenti che integrino la sicurezza in maniera costante in un flusso di lavoro DevOps.
+Tekton è uno strumento di CI/CD che negli ultimi anni ha implementato funzionalità di Supply Chains Security, permettendo di verificare la sicurezza dei task di una pipeline. In questo talk vedremo assieme come utilizzare Tekton Chains per firmare e verificare la provenienza dell'immagine di un container deployato su un cluster Kubernetes."
+        author: Carmelo Sarta, Valerio Muredda - Red Hat
         room: U6-41
         duration: 45 min
       - title: "Unikernel: dal passato un'idea per il futuro di Linux"
