@@ -72,7 +72,7 @@ Questo talk propone una ricostruzione della timeline della discussione e dello s
         author: "Roberto Innocenti - Power Progress Community"
         room: U6-40
         duration: 45 min
-      - title: "Come trasformare un'applicazione server in un'appiicazione \"macroservizio\": l'esempio di Uyuni"
+      - title: "Come trasformare un'applicazione server in un'applicazione \"macroservizio\": l'esempio di Uyuni"
         description: "Uyuni (www.uyuni-project.org) è un progetto open-source per la gestione e la configurazione di infrastrutture software-defined. Al fine di rendere Uyuni una soluzione multicontainer per Kubernetes, verrà rilasciata una prima versione \"fat-container\" (podman). Lo scopo del talk sarà quello di:
 \n- condividere l'esperienza di trasformare un'applicazione server in un'applicazione containerizzata
 \n- come migrare un'applicazione deployata alla sua versione containerizzata"
