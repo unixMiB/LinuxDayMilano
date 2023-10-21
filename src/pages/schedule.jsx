@@ -12,160 +12,145 @@ import Seo from "../components/seo";
 import Hero from "../components/hero";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-class Talks extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: props.scheduleData,
-      required: {
-        show: false,
-        title: "Titolo",
-        description: "Descrizione",
-        author: "Autore",
-        room: "Aula",
-        duration: "Durata",
-        slides: "",
-        video: "",
-      },
-    };
-    this.replaceModalItem = this.replaceModalItem.bind(this);
-  }
+const Talks = ({ scheduleData }) => {
+  const [data, setData] = useState(scheduleData);
+  const [modalData, setModalData] = useState({
+    show: false,
+    title: "Titolo",
+    description: "Descrizione",
+    author: "Autore",
+    room: "Aula",
+    duration: "Durata",
+    slides: "",
+    video: "",
+  });
 
-  replaceModalItem(item) {
-    this.setState({
-      required: {
-        ...item,
-        show: !this.state.required.show,
-      },
-    });
-  }
+  const replaceModalItem = (item) => {
+    setModalData((current) => ({
+      ...item,
+      show: !current.show,
+    }));
+  };
 
-  render() {
-    let modalData = this.state.required;
-    return (
-      <>
-        <Modal
-          show={modalData.show}
-          onHide={() => {
-            this.setState({
-              required: {
-                ...modalData,
-                show: false,
-              },
-            });
-          }}
-          size='lg'
-          aria-labelledby='contained-modal-title-vcenter'
-          centered
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id='contained-modal-title-vcenter'>
-              {modalData.title}
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>{modalData.description}</p>
-            <br />
-            <h6>{modalData.author}</h6>
-            <Row>
-              <Col>{modalData.duration && "Durata: " + modalData.duration}</Col>
-              <Col className='text-end'>
-                {modalData.room && "Aula: " + modalData.room}
-              </Col>
-            </Row>
-          </Modal.Body>
-          <Modal.Footer>
-            {!(modalData.video === "" || modalData.video === null) && (
-              <Button target='_blank' href={modalData.video} variant='warning'>
-                <FontAwesomeIcon
-                  icon={icon({
-                    name: "video",
-                    family: "classic",
-                    style: "solid",
-                  })}
-                />{" "}
-                Video
-              </Button>
-            )}
-            {!(modalData.slides === "" || modalData.slides === null) && (
-              <Button target='_blank' href={modalData.slides} variant='warning'>
-                <FontAwesomeIcon
-                  icon={icon({
-                    name: "download",
-                    family: "classic",
-                    style: "solid",
-                  })}
-                />{" "}
-                Slides
-              </Button>
-            )}
-            <Button
-              variant='warning'
-              onClick={() => {
-                this.setState({
-                  required: {
-                    ...modalData,
-                    show: false,
-                  },
-                });
-              }}
-            >
-              Chiudi
+  return (
+    <>
+      <Modal
+        show={modalData.show}
+        onHide={() => {
+          setModalData((current) => ({
+            ...current,
+            show: false,
+          }));
+        }}
+        size='lg'
+        aria-labelledby='contained-modal-title-vcenter'
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id='contained-modal-title-vcenter'>
+            {modalData.title}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>{modalData.description}</p>
+          <br />
+          <h6>{modalData.author}</h6>
+          <Row>
+            <Col>{modalData.duration && "Durata: " + modalData.duration}</Col>
+            <Col className='text-end'>
+              {modalData.room && "Aula: " + modalData.room}
+            </Col>
+          </Row>
+        </Modal.Body>
+        <Modal.Footer>
+          {!(modalData.video === "" || modalData.video === null) && (
+            <Button target='_blank' href={modalData.video} variant='warning'>
+              <FontAwesomeIcon
+                icon={icon({
+                  name: "video",
+                  family: "classic",
+                  style: "solid",
+                })}
+              />{" "}
+              Video
             </Button>
-          </Modal.Footer>
-        </Modal>
-        {this.state.data.map((i, k) => {
-          return (
-            <Row key={k} className='pb-4'>
-              <Col lg={1} md={12} className='pb-4 mr-2'>
-                <h5 className='schedule-time'>{i.time}</h5>
-              </Col>
-              {i.talks.map((t, u) => {
-                return (
-                  <Col key={u} sm={12} md className='pb-4'>
-                    <div
-                      onKeyPress={() => this.replaceModalItem(t)}
-                      onClick={() => this.replaceModalItem(t)}
-                      className='event border rounded h-100 d-flex flex-column'
-                      style={{
-                        padding: "1rem",
-                        cursor: "pointer",
-                      }}
-                    >
-                      <Row>
-                        <Col>
-                          <h5>{t.title}</h5>
-                        </Col>
-                      </Row>
-                      <Row className='mt-2'>
-                        <Col>
-                          <h6>{t.author}</h6>
-                        </Col>
-                      </Row>
-                      <Row className='flex-grow-1 mt-3 align-items-end'>
-                        <Col className='text-start'>{t.duration}</Col>
-                        <Col className='text-center'>{t.room}</Col>
-                        <Col className='text-end'>
-                          <FontAwesomeIcon
-                            icon={icon({
-                              name: "info-circle",
-                              family: "classic",
-                              style: "solid",
-                            })}
-                          />
-                        </Col>
-                      </Row>
-                    </div>
-                  </Col>
-                );
-              })}
-            </Row>
-          );
-        })}
-      </>
-    );
-  }
-}
+          )}
+          {!(modalData.slides === "" || modalData.slides === null) && (
+            <Button target='_blank' href={modalData.slides} variant='warning'>
+              <FontAwesomeIcon
+                icon={icon({
+                  name: "download",
+                  family: "classic",
+                  style: "solid",
+                })}
+              />{" "}
+              Slides
+            </Button>
+          )}
+          <Button
+            variant='warning'
+            onClick={() => {
+              setModalData((current) => ({
+                ...current,
+                show: false,
+              }));
+            }}
+          >
+            Chiudi
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      {data.map((i, k) => {
+        return (
+          <Row key={k} className='pb-4'>
+            <Col lg={1} md={12} className='pb-4 mr-2'>
+              <h5 className='schedule-time'>{i.time}</h5>
+            </Col>
+            {i.talks.map((t, u) => {
+              return (
+                <Col key={u} sm={12} md className='pb-4'>
+                  <div
+                    onKeyPress={() => replaceModalItem(t)}
+                    onClick={() => replaceModalItem(t)}
+                    className='event border rounded h-100 d-flex flex-column'
+                    style={{
+                      padding: "1rem",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <Row>
+                      <Col>
+                        <h5>{t.title}</h5>
+                      </Col>
+                    </Row>
+                    <Row className='mt-2'>
+                      <Col>
+                        <h6>{t.author}</h6>
+                      </Col>
+                    </Row>
+                    <Row className='flex-grow-1 mt-3 align-items-end'>
+                      <Col className='text-start'>{t.duration}</Col>
+                      <Col className='text-center'>{t.room}</Col>
+                      <Col className='text-end'>
+                        <FontAwesomeIcon
+                          icon={icon({
+                            name: "info-circle",
+                            family: "classic",
+                            style: "solid",
+                          })}
+                        />
+                      </Col>
+                    </Row>
+                  </div>
+                </Col>
+              );
+            })}
+          </Row>
+        );
+      })}
+    </>
+  );
+};
 
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
