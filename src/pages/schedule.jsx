@@ -32,6 +32,30 @@ const Talks = ({ scheduleData, starredTalksForYear, toggleTalkStar }) => {
     }));
   };
 
+  const handleStarClick = (title, clickEvent) => {
+    clickEvent.stopPropagation();
+    toggleTalkStar(title);
+  };
+
+  const StarToggle = ({ title }) => (
+    <FontAwesomeIcon
+      icon={
+        starredTalksForYear?.includes(title)
+          ? icon({
+              name: "star",
+              family: "classic",
+              style: "solid",
+            })
+          : icon({
+              name: "star",
+              family: "classic",
+              style: "regular",
+            })
+      }
+      onClick={(e) => handleStarClick(title, e)}
+    />
+  );
+
   return (
     <>
       <Modal
@@ -62,42 +86,57 @@ const Talks = ({ scheduleData, starredTalksForYear, toggleTalkStar }) => {
             </Col>
           </Row>
         </Modal.Body>
-        <Modal.Footer>
-          {!(modalData.video === "" || modalData.video === null) && (
-            <Button target='_blank' href={modalData.video} variant='warning'>
-              <FontAwesomeIcon
-                icon={icon({
-                  name: "video",
-                  family: "classic",
-                  style: "solid",
-                })}
-              />{" "}
-              Video
+        <Modal.Footer className='justify-content-between'>
+          <div className='d-flex flex-start'>
+            <Button
+              variant='warning'
+              onClick={(e) => handleStarClick(modalData.title, e)}
+              className='d-flex gap-1 align-items-center'
+            >
+              <StarToggle title={modalData.title} />
+              {starredTalksForYear?.includes(modalData.title)
+                ? "Rimuovi da"
+                : "Aggiungi ad"}{" "}
+              agenda personale
             </Button>
-          )}
-          {!(modalData.slides === "" || modalData.slides === null) && (
-            <Button target='_blank' href={modalData.slides} variant='warning'>
-              <FontAwesomeIcon
-                icon={icon({
-                  name: "download",
-                  family: "classic",
-                  style: "solid",
-                })}
-              />{" "}
-              Slides
+          </div>
+          <div className='d-flex flex-end'>
+            {!(modalData.video === "" || modalData.video === null) && (
+              <Button target='_blank' href={modalData.video} variant='warning'>
+                <FontAwesomeIcon
+                  icon={icon({
+                    name: "video",
+                    family: "classic",
+                    style: "solid",
+                  })}
+                />{" "}
+                Video
+              </Button>
+            )}
+            {!(modalData.slides === "" || modalData.slides === null) && (
+              <Button target='_blank' href={modalData.slides} variant='warning'>
+                <FontAwesomeIcon
+                  icon={icon({
+                    name: "download",
+                    family: "classic",
+                    style: "solid",
+                  })}
+                />{" "}
+                Slides
+              </Button>
+            )}
+            <Button
+              variant='warning'
+              onClick={() => {
+                setModalData((current) => ({
+                  ...current,
+                  show: false,
+                }));
+              }}
+            >
+              Chiudi
             </Button>
-          )}
-          <Button
-            variant='warning'
-            onClick={() => {
-              setModalData((current) => ({
-                ...current,
-                show: false,
-              }));
-            }}
-          >
-            Chiudi
-          </Button>
+          </div>
         </Modal.Footer>
       </Modal>
       {data.map((i, k) => {
@@ -132,25 +171,7 @@ const Talks = ({ scheduleData, starredTalksForYear, toggleTalkStar }) => {
                       <Col className='text-start'>{t.duration}</Col>
                       <Col className='text-center'>{t.room}</Col>
                       <Col className='text-end d-flex gap-1 justify-content-end'>
-                        <FontAwesomeIcon
-                          icon={
-                            starredTalksForYear?.includes(t.title)
-                              ? icon({
-                                  name: "star",
-                                  family: "classic",
-                                  style: "solid",
-                                })
-                              : icon({
-                                  name: "star",
-                                  family: "classic",
-                                  style: "regular",
-                                })
-                          }
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleTalkStar(t.title);
-                          }}
-                        />
+                        <StarToggle title={t.title} />
                         <FontAwesomeIcon
                           icon={icon({
                             name: "info-circle",
