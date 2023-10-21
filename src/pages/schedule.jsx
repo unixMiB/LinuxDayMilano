@@ -12,7 +12,7 @@ import Seo from "../components/seo";
 import Hero from "../components/hero";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const Talks = ({ scheduleData }) => {
+const Talks = ({ scheduleData, starredTalksForYear, toggleTalkStar }) => {
   const [data, setData] = useState(scheduleData);
   const [modalData, setModalData] = useState({
     show: false,
@@ -131,7 +131,26 @@ const Talks = ({ scheduleData }) => {
                     <Row className='flex-grow-1 mt-3 align-items-end'>
                       <Col className='text-start'>{t.duration}</Col>
                       <Col className='text-center'>{t.room}</Col>
-                      <Col className='text-end'>
+                      <Col className='text-end d-flex gap-1 justify-content-end'>
+                        <FontAwesomeIcon
+                          icon={
+                            starredTalksForYear?.includes(t.title)
+                              ? icon({
+                                  name: "star",
+                                  family: "classic",
+                                  style: "solid",
+                                })
+                              : icon({
+                                  name: "star",
+                                  family: "classic",
+                                  style: "regular",
+                                })
+                          }
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleTalkStar(t.title);
+                          }}
+                        />
                         <FontAwesomeIcon
                           icon={icon({
                             name: "info-circle",
@@ -158,11 +177,27 @@ const activeEnv =
 const Page = ({ data }) => {
   const allSchedules = data.allSchedulesYaml.nodes;
   const [schedData, setSchedData] = useState(allSchedules[0]);
+  const [starredTalks, setStarredTalks] = useState({});
 
   const params = new URLSearchParams(
     typeof window !== "undefined" && window.location.search
   );
   const year = params.get("year");
+
+  useEffect(() => {
+    let current = localStorage.getItem("starredTalks");
+    if (current) {
+      try {
+        current = JSON.parse(current);
+        setStarredTalks(current);
+      } catch (e) {
+        console.error(
+          "localStorage.starredTalks was set, but can't be parsed as JSON"
+        );
+        setStarredTalks({});
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (year) {
@@ -224,6 +259,33 @@ const Page = ({ data }) => {
             {schedData?.schedule.length ? (
               <Talks
                 scheduleData={schedData?.schedule}
+                starredTalksForYear={starredTalks[schedData?.year]}
+                toggleTalkStar={(title) => {
+                  setStarredTalks((current) => {
+                    let next;
+
+                    if (current[schedData?.year]?.includes(title)) {
+                      next = {
+                        ...current,
+                        [schedData?.year]: current[schedData?.year].filter(
+                          (t) => t !== title
+                        ),
+                      };
+                    } else {
+                      next = {
+                        ...current,
+                        [schedData?.year]: [
+                          ...(current[schedData?.year] || []),
+                          title,
+                        ],
+                      };
+                    }
+
+                    localStorage.setItem("starredTalks", JSON.stringify(next));
+
+                    return next;
+                  });
+                }}
                 key={schedData?.schedule}
               />
             ) : (
