@@ -36,14 +36,15 @@ schedule:
   - time: "10:45"
     talks:
       - title: "Web Environment Integrity: chi è, da dove arriva, e dove sta andando."
-        description: "Quest'anno, la proposta della \"Web Environment Integrity API\" lanciata su github alcuni ingegneri di Google ha suscitato forti reazioni negative da parte di molti grandi nomi nel mondo di internet e dei diritti digitali. Quali sono i contenuti di questa proposta? A che punto è la sua implementazione? Da dove nasce l'idea che ci sta dietro? Quali sono i suoi scopi e cosa possiamo aspettarci che succeda nel caso diventi realtà? 
-Questo talk propone una ricostruzione della timeline della discussione e dello sviluppo di questa proposta, uno sguardo tecnico al suo funzionamento e infine combina i due approcci per valutare, sulla base di quello che abbiamo visto succedere per proposte e tecnologie simili in passato, le possibili ripercussioni di questa proposta sul world wide web."
+        description:
+          'Quest''anno, la proposta della "Web Environment Integrity API" lanciata su github alcuni ingegneri di Google ha suscitato forti reazioni negative da parte di molti grandi nomi nel mondo di internet e dei diritti digitali. Quali sono i contenuti di questa proposta? A che punto è la sua implementazione? Da dove nasce l''idea che ci sta dietro? Quali sono i suoi scopi e cosa possiamo aspettarci che succeda nel caso diventi realtà?
+          Questo talk propone una ricostruzione della timeline della discussione e dello sviluppo di questa proposta, uno sguardo tecnico al suo funzionamento e infine combina i due approcci per valutare, sulla base di quello che abbiamo visto succedere per proposte e tecnologie simili in passato, le possibili ripercussioni di questa proposta sul world wide web.'
         author: Valentina Sona - Politecnico Open unix Labs - POuL
         room: U6-39
         duration: 45 min
       - title: "Cosa potrebbe cambiare per il FOSS con il Cyber Resilience Act"
         description: L'Unione Europea sta per approvare il Cyber Resilience Act, una legge che ha l'obiettivo di migliorare la sicurezza del software libero e open source, ma che è scritta talmente male da creare problemi a tutto il settore in Europa. La situazione attuale, e le prospettive.
-        author: Italo Vignoli - LibreOffice 
+        author: Italo Vignoli - LibreOffice
         room: U6-40
         duration: 45 min
       - title: "Uyuni: the open-source configuration and infrastructure management solution for software-defined infrastructure"
@@ -72,10 +73,11 @@ Questo talk propone una ricostruzione della timeline della discussione e dello s
         author: "Roberto Innocenti - Power Progress Community"
         room: U6-40
         duration: 45 min
-      - title: "Come trasformare un'applicazione server in un'applicazione \"macroservizio\": l'esempio di Uyuni"
-        description: "Uyuni (www.uyuni-project.org) è un progetto open-source per la gestione e la configurazione di infrastrutture software-defined. Al fine di rendere Uyuni una soluzione multicontainer per Kubernetes, verrà rilasciata una prima versione \"fat-container\" (podman). Lo scopo del talk sarà quello di:
-\n- condividere l'esperienza di trasformare un'applicazione server in un'applicazione containerizzata
-\n- come migrare un'applicazione deployata alla sua versione containerizzata"
+      - title: 'Come trasformare un''applicazione server in un''applicazione "macroservizio": l''esempio di Uyuni'
+        description:
+          "Uyuni (www.uyuni-project.org) è un progetto open-source per la gestione e la configurazione di infrastrutture software-defined. Al fine di rendere Uyuni una soluzione multicontainer per Kubernetes, verrà rilasciata una prima versione \"fat-container\" (podman). Lo scopo del talk sarà quello di:
+          \n- condividere l'esperienza di trasformare un'applicazione server in un'applicazione containerizzata
+          \n- come migrare un'applicazione deployata alla sua versione containerizzata"
         author: Michele Bussolotto - SUSE
         room: U6-41
         duration: 45 min
@@ -99,42 +101,46 @@ Questo talk propone una ricostruzione della timeline della discussione e dello s
         room: U6-39
         duration: 45 min
       - title: "Introduzione a ILIAS LMS: Il sistema di gestione dell'apprendimento europeo ed open source"
-        description: "Questo paper presenta ILIAS LMS (Learning Management System), una piattaforma open source per la gestione dell'apprendimento. ILIAS LMS offre una vasta gamma di funzionalità per supportare l'e-learning, consentendo agli utenti di creare, distribuire e gestire corsi online in modo efficace. In questo paper, esploreremo le caratteristiche principali di ILIAS LMS, i suoi vantaggi e come può essere utilizzato nella comunità open source.
-ILIAS LMS è un sistema di gestione dell'apprendimento open source ampiamente utilizzato in tutto il mondo. Creato nel 1998, ILIAS LMS si è evoluto nel corso degli anni diventando una soluzione completa per l'e-learning. La sua natura open source permette agli sviluppatori di personalizzare e adattare la piattaforma alle proprie esigenze, rendendola una scelta popolare per le organizzazioni che cercano una soluzione flessibile e personalizzabile.
-ILIAS LMS può essere utilizzato per facilitare l'apprendimento e la condivisione di conoscenze."
+        description:
+          "Questo paper presenta ILIAS LMS (Learning Management System), una piattaforma open source per la gestione dell'apprendimento. ILIAS LMS offre una vasta gamma di funzionalità per supportare l'e-learning, consentendo agli utenti di creare, distribuire e gestire corsi online in modo efficace. In questo paper, esploreremo le caratteristiche principali di ILIAS LMS, i suoi vantaggi e come può essere utilizzato nella comunità open source.
+          ILIAS LMS è un sistema di gestione dell'apprendimento open source ampiamente utilizzato in tutto il mondo. Creato nel 1998, ILIAS LMS si è evoluto nel corso degli anni diventando una soluzione completa per l'e-learning. La sua natura open source permette agli sviluppatori di personalizzare e adattare la piattaforma alle proprie esigenze, rendendola una scelta popolare per le organizzazioni che cercano una soluzione flessibile e personalizzabile.
+          ILIAS LMS può essere utilizzato per facilitare l'apprendimento e la condivisione di conoscenze."
         author: Ilario Truppa, Vincenzo Padula - OC Open Consulting società benefit a responsabilità limitata
         room: U6-40
         duration: 45 min
       - title: "Ambienti effimeri per Pull Request: Un Viaggio da GitHub alla nostra macchina, senza passare per Kubernetes"
-        description: "Avere ambienti isolati per lo sviluppo delle features è un desiderio comune tra gli sviluppatori. La richiesta di ambienti separati per ogni pull request è sempre più cruciale. Solitamente, si fa affidamento a Kubernetes e a complessi flussi di lavoro per gestire queste esigenze, ma questa soluzione può essere onerosa e complessa da mantenere.
-Nel nostro talk, esploreremo un approccio alternativo per creare ambienti di sviluppo separati per ciascuna pull request, senza l'uso di Kubernetes. Utilizzeremo dei container, una macchina virtuale, Nginx e un playbook Ansible per realizzare questo obiettivo. Il ciclo di vita di questi ambienti sarà strettamente legato al ciclo di vita delle nostre pull request, dalla creazione, alla sincronizzazione, fino alla distruzione delle risorse.
-Affronteremo un case study specifico, analizzando l'esperienza del team \"Trento\" di SUSE, che ha adottato questa soluzione per la sua notevole semplicità, affrontando allo stesso tempo diversi trade-off."
+        description:
+          'Avere ambienti isolati per lo sviluppo delle features è un desiderio comune tra gli sviluppatori. La richiesta di ambienti separati per ogni pull request è sempre più cruciale. Solitamente, si fa affidamento a Kubernetes e a complessi flussi di lavoro per gestire queste esigenze, ma questa soluzione può essere onerosa e complessa da mantenere.
+          Nel nostro talk, esploreremo un approccio alternativo per creare ambienti di sviluppo separati per ciascuna pull request, senza l''uso di Kubernetes. Utilizzeremo dei container, una macchina virtuale, Nginx e un playbook Ansible per realizzare questo obiettivo. Il ciclo di vita di questi ambienti sarà strettamente legato al ciclo di vita delle nostre pull request, dalla creazione, alla sincronizzazione, fino alla distruzione delle risorse.
+          Affronteremo un case study specifico, analizzando l''esperienza del team "Trento" di SUSE, che ha adottato questa soluzione per la sua notevole semplicità, affrontando allo stesso tempo diversi trade-off.'
         author: Carmine Di Monaco - SUSE
         room: U6-41
         duration: 45 min
       - title: "Linux Sicuro sin dal boot"
-        description: "Abbiamo sentito nominare negli ultimi anni TPM, Secure Boot e Measured Boot, ma cosa vogliono dire davvero? In un panorama informatico sempre più complesso e soggetto a costanti attacchi anche Microsoft ha iniziato a supportare queste nuove tecnologie con Windows 8, rendendole con Windows 11 obbligatorie per le nuove installazioni. Una mossa che appare limitare le libertà dell'utente, prevenendo l'installazione di sistemi operativi liberi. In realtà Secure Boot e TPM sono due tecnologie che possono essere utilizzate per rendere il nostro sistema più sicuro, e che sono già supportate da Linux.
-In questo talk vedremo come funzionano e come possono essere utilizzate per preservare l'integrità del sistema, a partire dal boot fino all'esecuzione di applicazioni."
+        description:
+          "Abbiamo sentito nominare negli ultimi anni TPM, Secure Boot e Measured Boot, ma cosa vogliono dire davvero? In un panorama informatico sempre più complesso e soggetto a costanti attacchi anche Microsoft ha iniziato a supportare queste nuove tecnologie con Windows 8, rendendole con Windows 11 obbligatorie per le nuove installazioni. Una mossa che appare limitare le libertà dell'utente, prevenendo l'installazione di sistemi operativi liberi. In realtà Secure Boot e TPM sono due tecnologie che possono essere utilizzate per rendere il nostro sistema più sicuro, e che sono già supportate da Linux.
+          In questo talk vedremo come funzionano e come possono essere utilizzate per preservare l'integrità del sistema, a partire dal boot fino all'esecuzione di applicazioni."
         author: Daniele Barcella - unixMiB
         room: U6-42
         duration: 45 min
   - time: "14:45"
     talks:
       - title: "Come Rust semplifica l'Open Source"
-        description: "Spesso Rust viene lodato per le sue prestazioni e la sua affidabilità.
-In questa presentazione, voglio mostrare un altro aspetto di Rust: gli strumenti a servizio degli sviluppatori.
-Cargo, il package manager di Rust, e tutti i suoi plugin, rendono facile creare e mantenere progetti Rust open-source.
+        description:
+          "Spesso Rust viene lodato per le sue prestazioni e la sua affidabilità.
+          In questa presentazione, voglio mostrare un altro aspetto di Rust: gli strumenti a servizio degli sviluppatori.
+          Cargo, il package manager di Rust, e tutti i suoi plugin, rendono facile creare e mantenere progetti Rust open-source.
 
-Mostrerò come gli strumenti di Rust:
+          Mostrerò come gli strumenti di Rust:
 
-- Scaricano e compilano le dipendenze.
-- Formattano automaticamente il codice.
-- Aiutano a garantire la qualità del codice.
-- Eseguono i test.
-- Semplificano la scrittura e il mantenimento della documentazione.
-- Rilevano cambiamenti che non rispettano i contratti delle API delle librerie.
+          - Scaricano e compilano le dipendenze.
+          - Formattano automaticamente il codice.
+          - Aiutano a garantire la qualità del codice.
+          - Eseguono i test.
+          - Semplificano la scrittura e il mantenimento della documentazione.
+          - Rilevano cambiamenti che non rispettano i contratti delle API delle librerie.
 
-Infine, darò una panoramica di release-plz, uno strumento che ho creato per automatizzare il processo di rilascio di progetti Rust."
+          Infine, darò una panoramica di release-plz, uno strumento che ho creato per automatizzare il processo di rilascio di progetti Rust."
         author: Marco Ieni - Prisma
         room: U6-39
         duration: 45 min
@@ -144,18 +150,20 @@ Infine, darò una panoramica di release-plz, uno strumento che ho creato per aut
         room: U6-40
         duration: 45 min
       - title: "Gestisci la Supply Chains Security del tuo cluster Kubernetes con Tekton"
-        description: "Vieni a scoprire come rendere sicuri i tuoi workload applicativi sul tuo cluster Kubernetes!
-La Supply Chain Security si pone lo scopo di tutelare il ciclo di vita dello sviluppo del software (SDLC), gestendo i rischi e le vulnerabilità tramite strumenti che integrino la sicurezza in maniera costante in un flusso di lavoro DevOps.
-Tekton è uno strumento di CI/CD che negli ultimi anni ha implementato funzionalità di Supply Chains Security, permettendo di verificare la sicurezza dei task di una pipeline. In questo talk vedremo assieme come utilizzare Tekton Chains per firmare e verificare la provenienza dell'immagine di un container deployato su un cluster Kubernetes."
+        description:
+          "Vieni a scoprire come rendere sicuri i tuoi workload applicativi sul tuo cluster Kubernetes!
+          La Supply Chain Security si pone lo scopo di tutelare il ciclo di vita dello sviluppo del software (SDLC), gestendo i rischi e le vulnerabilità tramite strumenti che integrino la sicurezza in maniera costante in un flusso di lavoro DevOps.
+          Tekton è uno strumento di CI/CD che negli ultimi anni ha implementato funzionalità di Supply Chains Security, permettendo di verificare la sicurezza dei task di una pipeline. In questo talk vedremo assieme come utilizzare Tekton Chains per firmare e verificare la provenienza dell'immagine di un container deployato su un cluster Kubernetes."
         author: Carmelo Sarta, Valerio Muredda - Red Hat
         room: U6-41
         duration: 45 min
       - title: "Unikernel: dal passato un'idea per il futuro di Linux"
-        description: "Avete mai sentito parlare di Unikernel? Questa non è una sessione di archeologia informatica ma uno sguardo ad un possibile futuro per Linux!
-Unikernel è un tipo di sistema operativo che è stato sviluppato per offrire una soluzione più sicura e veloce rispetto ai tradizionali sistemi operativi.
-Attraverso gli unikernel si elimina la separazione tra il kernel e gli applicativi, creando uno spazio di esecuzione singolo per tutti i componenti del sistema. In questo modo, gli unikernel sono in grado di fornire una maggiore isolamento e potenzialmente maggiori performance.
-In questa sessione parleremo di UKL, una patch a Linux e glibc che permette di convertire applicazioni user-space in applicazioni unikernel che vengono eseguite in kernel-space. 
-Mostreremo inoltre casi d'uso concreti come un recente test fatto su Redis su unikernel con un aumento di performance fino al 23%."
+        description:
+          "Avete mai sentito parlare di Unikernel? Questa non è una sessione di archeologia informatica ma uno sguardo ad un possibile futuro per Linux!
+          Unikernel è un tipo di sistema operativo che è stato sviluppato per offrire una soluzione più sicura e veloce rispetto ai tradizionali sistemi operativi.
+          Attraverso gli unikernel si elimina la separazione tra il kernel e gli applicativi, creando uno spazio di esecuzione singolo per tutti i componenti del sistema. In questo modo, gli unikernel sono in grado di fornire una maggiore isolamento e potenzialmente maggiori performance.
+          In questa sessione parleremo di UKL, una patch a Linux e glibc che permette di convertire applicazioni user-space in applicazioni unikernel che vengono eseguite in kernel-space.
+          Mostreremo inoltre casi d'uso concreti come un recente test fatto su Redis su unikernel con un aumento di performance fino al 23%."
         author: Natale Vinto - Red Hat
         room: U6-42
         duration: 45 min
@@ -179,18 +187,20 @@ Mostreremo inoltre casi d'uso concreti come un recente test fatto su Redis su un
         room: U6-40
         duration: 45 min
       - title: "Flutter for the win: sviluppo Cross-Platform alla massima potenza"
-        description: "Flutter si sta sempre più affermando come una soluzione completa per creare app Cross-Platform di alta qualità per le principali piattaforme: Android, iOS, Web, Windows, macOS e Linux. Questa presentazione esplorerà le caratteristiche chiave di Flutter e come queste si traducano in vantaggi tangibili per gli sviluppatori e le aziende.
-Dopo una iniziale panoramica di base di Flutter, in cui verrà spiegato cosa lo rende unico, verranno esaminati i suoi principarli vantaggi: sviluppo cross-platform per 6 piattaforme differenti, la rapida iterazione con l’Hot Reload, un’unica base di codice e creazione di interfacce utente altamente personalizzabili.
-Verranno poi presentate le principali librerie e best practice per realizzare la propria app Cross-Platform tenendo conto delle specifiche caratteristiche delle piattaforme, l’esperienza d’uso e il look and feel che l’utente di aspetta.
-Presenti durante la presentazione delle brevi demo di applicazioni per mostrare i concetti esposti."
+        description:
+          "Flutter si sta sempre più affermando come una soluzione completa per creare app Cross-Platform di alta qualità per le principali piattaforme: Android, iOS, Web, Windows, macOS e Linux. Questa presentazione esplorerà le caratteristiche chiave di Flutter e come queste si traducano in vantaggi tangibili per gli sviluppatori e le aziende.
+          Dopo una iniziale panoramica di base di Flutter, in cui verrà spiegato cosa lo rende unico, verranno esaminati i suoi principarli vantaggi: sviluppo cross-platform per 6 piattaforme differenti, la rapida iterazione con l’Hot Reload, un’unica base di codice e creazione di interfacce utente altamente personalizzabili.
+          Verranno poi presentate le principali librerie e best practice per realizzare la propria app Cross-Platform tenendo conto delle specifiche caratteristiche delle piattaforme, l’esperienza d’uso e il look and feel che l’utente di aspetta.
+          Presenti durante la presentazione delle brevi demo di applicazioni per mostrare i concetti esposti."
         author: Alberto Bonacina
         room: U6-41
         duration: 45 min
       - title: Licenze e modelli di business nel settore informatico
-        description: "Nel settore informatico ci sono diverse aziende che operano utilizzando modelli di business differenti.
-Alcuni di questi modelli di business sono fortemente influenzati dal sistema delle licenze software.
-In questa presentazione affronteremo i vari tipi di modelli di business che le aziende informatiche hanno e in che modo queste vengono influenzate dalle licenze.
-Successivamente tratteremo alcune principali differenze tra le varie licenze per capire perchè una azienda potrebbe preferire una licenza o un'altra."
+        description:
+          "Nel settore informatico ci sono diverse aziende che operano utilizzando modelli di business differenti.
+          Alcuni di questi modelli di business sono fortemente influenzati dal sistema delle licenze software.
+          In questa presentazione affronteremo i vari tipi di modelli di business che le aziende informatiche hanno e in che modo queste vengono influenzate dalle licenze.
+          Successivamente tratteremo alcune principali differenze tra le varie licenze per capire perchè una azienda potrebbe preferire una licenza o un'altra."
         author: Fabio Alessandro "Fale" Locati
         room: U6-42
         duration: 45 min
@@ -207,8 +217,9 @@ Successivamente tratteremo alcune principali differenze tra le varie licenze per
         room: U6-40
         duration: 30 min
       - title: What the Helm?!
-        description: "Come fare un deploy su K8s in modo comodo? Come trasformare il semplice deploy di applicazione in qualcosa da mantenere sotto versionamento? Come creare delle definizioni di risorse riutilizzabili? Helm!
-In questo intervento vedremo cosa sia Helm, come possiamo utilizzarlo e come andiamo a creare un progetto (Helm Chart) per il deploy di una nostra applicazione."
+        description:
+          "Come fare un deploy su K8s in modo comodo? Come trasformare il semplice deploy di applicazione in qualcosa da mantenere sotto versionamento? Come creare delle definizioni di risorse riutilizzabili? Helm!
+          In questo intervento vedremo cosa sia Helm, come possiamo utilizzarlo e come andiamo a creare un progetto (Helm Chart) per il deploy di una nostra applicazione."
         author: Luca Andrea Fusè
         room: U6-41
         duration: 30 min
@@ -221,4 +232,3 @@ In questo intervento vedremo cosa sia Helm, come possiamo utilizzarlo e come and
     talks:
       - title: "Chiusura del Linux Day"
         description: TODO
-        

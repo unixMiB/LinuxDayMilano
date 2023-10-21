@@ -16,7 +16,7 @@ Before starting you will need the following software:
 
 ## How to build
 
-``` bash
+```bash
 npm install
 npm run develop
 # Edit source files

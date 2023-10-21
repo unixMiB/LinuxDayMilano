@@ -9,14 +9,12 @@
       "request": "launch",
       "name": "Gatsby Develop",
       "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
-      "args": [
-        "develop"
-      ],
+      "args": ["develop"],
       "protocol": "inspector",
       "cwd": "${workspaceFolder}",
       "sourceMaps": false,
       "stopOnEntry": false,
       "console": "integratedTerminal"
-    },
+    }
   ]
 }
