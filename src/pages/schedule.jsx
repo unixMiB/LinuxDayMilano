@@ -181,7 +181,7 @@ const Talks = ({
                       <Col className='align-bottom text-center'>{t.room}</Col>
                       <Col className='d-flex gap-1 justify-content-end'>
                         <Button variant='warning'
-                          onClick={(e) => handleStarClick(modalData.title, e)}>
+                          onClick={(e) => handleStarClick(t.title, e)}>
                             <StarToggle title={t.title} />
                             </Button>
                       </Col>
