@@ -47,15 +47,15 @@ const Talks = ({
       icon={
         starredTalksForYear?.includes(title)
           ? icon({
-              name: "star",
-              family: "classic",
-              style: "solid",
-            })
+            name: "star",
+            family: "classic",
+            style: "solid",
+          })
           : icon({
-              name: "star",
-              family: "classic",
-              style: "regular",
-            })
+            name: "star",
+            family: "classic",
+            style: "regular",
+          })
       }
       onClick={(e) => handleStarClick(title, e)}
     />
@@ -151,7 +151,7 @@ const Talks = ({
               <h5 className='schedule-time'>{i.time}</h5>
             </Col>
             {i.talks.map((t, u) => {
-              console.log(showStarred);
+              if ("development" === activeEnv) console.log(showStarred);
               return !showStarred || starredTalksForYear?.includes(t.title) ? (
                 <Col key={u} sm={12} md className='pb-4'>
                   <div
@@ -173,18 +173,17 @@ const Talks = ({
                         <h6>{t.author}</h6>
                       </Col>
                     </Row>
-                    <Row className='flex-grow-1 mt-3 align-items-end'>
-                      <Col className='text-start'>{t.duration}</Col>
-                      <Col className='text-center'>{t.room}</Col>
-                      <Col className='text-end d-flex gap-1 justify-content-end'>
-                        <StarToggle title={t.title} />
-                        <FontAwesomeIcon
-                          icon={icon({
-                            name: "info-circle",
-                            family: "classic",
-                            style: "solid",
-                          })}
-                        />
+                    <Row className='d-flex flex-grow-1' />
+                    <Row className='mt-3 align-items-center'>
+                      <Col className='align-bottom text-start'>
+                        {t.duration}
+                      </Col>
+                      <Col className='align-bottom text-center'>{t.room}</Col>
+                      <Col className='d-flex gap-1 justify-content-end'>
+                        <Button variant='warning'
+                          onClick={(e) => handleStarClick(modalData.title, e)}>
+                            <StarToggle title={t.title} />
+                            </Button>
                       </Col>
                     </Row>
                   </div>
@@ -252,7 +251,7 @@ const Page = ({ data }) => {
                 Programma della giornata
               </h2>
 
-              <div className='d-flex flex-row gap-3'>
+              <div className='d-flex flex-row gap-3 d-print-none'>
                 <Button
                   variant='warning'
                   onClick={() => setShowStarred((curr) => !curr)}
@@ -274,7 +273,7 @@ const Page = ({ data }) => {
                           onClick={() => {
                             navigate(
                               typeof window !== "undefined" &&
-                                window.location.pathname + "?year=" + s.year
+                              window.location.pathname + "?year=" + s.year
                             );
                             setSchedData(allSchedules[i]);
                           }}
