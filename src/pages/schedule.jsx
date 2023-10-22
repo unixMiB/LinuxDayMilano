@@ -246,7 +246,7 @@ const Page = ({ data }) => {
       <Seo title='Programma' />
       <main id='index'>
         <Hero />
-        <section id='calendar' style={{ color: "black" }}>
+        <section id='calendar' className='text-body'>
           <Container>
             <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
               <h2 className='text-md-left text-center'>
