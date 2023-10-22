@@ -231,4 +231,4 @@ schedule:
   - time: "17:30"
     talks:
       - title: "Chiusura del Linux Day"
-        description: TODO
+        description: Chiusura della giornata e saluti finali
