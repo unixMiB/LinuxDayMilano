@@ -220,10 +220,10 @@ const IndexPage = ({ data }) => {
                   </Col>
                   <Col className='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
                     <figure>
-                      <blockquote class='blockquote'>
+                      <blockquote className='blockquote'>
                         <p>{item.comment}</p>
                       </blockquote>
-                      <figcaption class='blockquote-footer'>
+                      <figcaption className='blockquote-footer'>
                         {item.author}
                       </figcaption>
                     </figure>
