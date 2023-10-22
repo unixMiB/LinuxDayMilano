@@ -16,7 +16,7 @@ const CodeofconductPage = ({ data }) => {
       <Seo />
       <Hero />
       <main>
-        <section id='' style={{ color: "black" }}>
+        <section id='' className="text-body">
           <Container className='py-5'>
             <h2 style={{ textTransform: "uppercase" }}>Code of Conduct</h2>
             <h3 className='pt-3'>Versione Italiana</h3>
