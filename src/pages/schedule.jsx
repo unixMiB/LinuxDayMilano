@@ -47,15 +47,15 @@ const Talks = ({
       icon={
         starredTalksForYear?.includes(title)
           ? icon({
-            name: "star",
-            family: "classic",
-            style: "solid",
-          })
+              name: "star",
+              family: "classic",
+              style: "solid",
+            })
           : icon({
-            name: "star",
-            family: "classic",
-            style: "regular",
-          })
+              name: "star",
+              family: "classic",
+              style: "regular",
+            })
       }
       onClick={(e) => handleStarClick(title, e)}
     />
@@ -180,10 +180,12 @@ const Talks = ({
                       </Col>
                       <Col className='align-bottom text-center'>{t.room}</Col>
                       <Col className='d-flex gap-1 justify-content-end'>
-                        <Button variant='warning'
-                          onClick={(e) => handleStarClick(t.title, e)}>
-                            <StarToggle title={t.title} />
-                            </Button>
+                        <Button
+                          variant='warning'
+                          onClick={(e) => handleStarClick(t.title, e)}
+                        >
+                          <StarToggle title={t.title} />
+                        </Button>
                       </Col>
                     </Row>
                   </div>
@@ -273,7 +275,7 @@ const Page = ({ data }) => {
                           onClick={() => {
                             navigate(
                               typeof window !== "undefined" &&
-                              window.location.pathname + "?year=" + s.year
+                                window.location.pathname + "?year=" + s.year
                             );
                             setSchedData(allSchedules[i]);
                           }}
