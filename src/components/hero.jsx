@@ -40,6 +40,7 @@ const Hero = ({ small }) => {
     <div
       style={{
         position: "relative",
+        color: "black",
       }}
     >
       <StaticImage
@@ -56,7 +57,6 @@ const Hero = ({ small }) => {
         formats={["auto", "avif", "webp"]}
         layout='fullWidth'
         aspectRatio={3 / 1}
-        placeholder='blurred'
       />
       <div
         style={{
