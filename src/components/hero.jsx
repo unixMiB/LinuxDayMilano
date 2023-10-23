@@ -37,28 +37,34 @@ const Hero = ({ small }) => {
   const metadata = data.site.siteMetadata;
 
   return (
-    <div style={{ display: "grid" }}>
+    <div
+      style={{
+        position: "relative",
+      }}
+    >
       <StaticImage
         style={{
-          gridArea: "1/1",
-          filter: "brightness(0.5)",
+          filter: "brightness(0.4)",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: -1,
         }}
         src='../assets/images/hero.jpg'
-        aspectRatio={4 / 1}
         formats={["auto", "avif", "webp"]}
         layout='fullWidth'
+        aspectRatio={3 / 1}
         placeholder='blurred'
       />
       <div
-        className='hero'
         style={{
-          gridArea: "1/1",
           position: "relative",
-          placeItems: "center",
-          display: "grid",
+          zIndex: 1,
         }}
       >
-        <Container>
+        <Container className='hero'>
           {/* {small && (
           <Alert variant='warning'>
             <Alert.Heading>
