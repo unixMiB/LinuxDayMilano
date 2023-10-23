@@ -47,8 +47,7 @@ const Hero = ({ small }) => {
         aspectRatio={4 / 1}
         formats={["auto", "avif", "webp"]}
         layout='fullWidth'
-        placeholder="blurred"
-
+        placeholder='blurred'
       />
       <div
         className='hero'
