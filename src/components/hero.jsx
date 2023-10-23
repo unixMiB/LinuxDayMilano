@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
-import Alert from "react-bootstrap/Alert";
+// import Alert from "react-bootstrap/Alert";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Hero = ({ small }) => {
