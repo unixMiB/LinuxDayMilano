@@ -215,6 +215,10 @@ const Page = ({ data }) => {
 
   useEffect(() => {
     let current = localStorage.getItem("starredTalks");
+    let showStarred = localStorage.getItem("showStarred");
+    if (showStarred === "true") {
+      setShowStarred(true);
+    }
     if (current) {
       try {
         current = JSON.parse(current);
@@ -256,7 +260,7 @@ const Page = ({ data }) => {
               <div className='d-flex flex-row gap-3 d-print-none'>
                 <Button
                   variant='warning'
-                  onClick={() => setShowStarred((curr) => !curr)}
+                  onClick={() => {setShowStarred((curr) => !curr); localStorage.setItem("showStarred", !showStarred)}}
                 >
                   {showStarred ? "Tutte le talk" : "Agenda personale"}
                 </Button>
