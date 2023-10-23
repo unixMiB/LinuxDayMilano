@@ -57,6 +57,8 @@ const Hero = ({ small }) => {
         formats={["auto", "avif", "webp"]}
         layout='fullWidth'
         aspectRatio={3 / 1}
+        alt=''
+        aria-hidden='true'
       />
       <div
         style={{

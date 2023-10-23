@@ -136,12 +136,12 @@ const IndexPage = ({ data }) => {
                   <>
                     <p>
                       <strong>Ecco in breve alcuni dei nostri talk:</strong>
-                      <ul>
-                        {data.site.siteMetadata.event.arguments.map((topic) => {
-                          return <li>{topic}</li>;
-                        })}
-                      </ul>
                     </p>{" "}
+                    <ul>
+                      {data.site.siteMetadata.event.arguments.map((topic) => {
+                        return <li key={topic}>{topic}</li>;
+                      })}
+                    </ul>
                     <Button
                       href='/schedule'
                       className='btn-lg'
@@ -191,7 +191,10 @@ const IndexPage = ({ data }) => {
             <Row className='mb-3'>
               {data.brandsYaml.patrocini.map((item) => {
                 return (
-                  <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                  <Col
+                    className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
+                    key={item.name}
+                  >
                     <a href={item.website}>
                       <GatsbyImage
                         alt={item.name}
@@ -207,7 +210,7 @@ const IndexPage = ({ data }) => {
             <h2 style={{ textTransform: "uppercase" }}>Parlano di noi</h2>
             {data.brandsYaml.referrals.map((item) => {
               return (
-                <Row>
+                <Row key={item.name}>
                   <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
                     <a href={item.website}>
                       <GatsbyImage
