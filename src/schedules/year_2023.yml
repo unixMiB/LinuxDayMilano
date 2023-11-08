@@ -21,6 +21,7 @@ schedule:
         author: Moreno Razzoli
         room: U6-40
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/5%20Falsi%20Miti%20su%20GNU-Linux%20-%20Moreno%20Razzoli.pdf
       - title: "Automatizzare l'IT con Ansible"
         description: Ansible è un software per configurare e gestire computer (sia server che client) che unisce flessibilità a scalabilità. A differenza di altri software simili che permettono di usare il paradigma 'infrastructure as code', Ansible sposta ancora oltre la barra della semplicità, usando il paradigma 'infrastructure as data'. Ansible è inoltre molto flessibile in termini di utilizzo e di ambiente, permettendo di gestire dalla creazione e manutenzione di macchine fisiche, virtuali, cloud e container al ciclo di vita delle applicazioni ed è in grado di dare il meglio in qualsiasi situazione, da una piccola installazione personale a installazioni in grosse aziende anche in ambiti altamente regolati quali quello bancario e petrolifero.
         author: Fabio Alessandro "Fale" Locati
@@ -191,6 +192,7 @@ schedule:
           PCOfficina è un'associazione di volontariato che si occupa di condividere conoscenze informatiche, specialmente su Linux, di aiutare le persone a riparare i loro PC e di offrire computer ricondizionati a chi non può permetterseli.
           In questo intervento condivideremo la nostra esperienza decennale, illustrando le difficoltà che abbiamo incontrato, condividendo storie reali e alcuni suggerimenti pratici per chi volesse iniziare un'esperienza simile nel trashware e nel volontariato.
         author: Andrea Perotti - PCOfficina
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Cambiare%20il%20mondo%20un%20PC%20alla%20volta%20col%20trashware%20-%20Andrea%20Perotti%20-%20PCOfficina.pdf
         room: U6-40
         duration: 45 min
       - title: "Flutter for the win: sviluppo Cross-Platform alla massima potenza"
@@ -224,6 +226,7 @@ schedule:
         author: Andrea Perotti, Fabio Alessandro "Fale" Locati
         room: U6-40
         duration: 30 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/CentOS%20Stream%20fatti%20e%20leggende%20-%20Andrea%20Perotti%2C%20Fabio%20Alessandro%20Locati.pdf
       - title: What the Helm?!
         description:
           "Come fare un deploy su K8s in modo comodo? Come trasformare il semplice deploy di applicazione in qualcosa da mantenere sotto versionamento? Come creare delle definizioni di risorse riutilizzabili? Helm!
