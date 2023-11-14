@@ -59,10 +59,10 @@ const Talks = ({
       }
       onClick={(e) => handleStarClick(title, e)}
     />
-    );
-    
-    return (
-      <>
+  );
+
+  return (
+    <>
       <Modal
         show={modalData.show}
         onHide={() => {
@@ -74,7 +74,7 @@ const Talks = ({
         size='lg'
         aria-labelledby='contained-modal-title-vcenter'
         centered
-        >
+      >
         <Modal.Header closeButton>
           <Modal.Title id='contained-modal-title-vcenter'>
             {modalData.title}
@@ -98,7 +98,7 @@ const Talks = ({
               variant='warning'
               onClick={(e) => handleStarClick(modalData.title, e)}
               className='d-flex gap-1 align-items-center'
-              >
+            >
               <StarToggle title={modalData.title} />
               {starredTalksForYear?.includes(modalData.title)
                 ? "Rimuovi da"
@@ -115,7 +115,7 @@ const Talks = ({
                     family: "classic",
                     style: "solid",
                   })}
-                  />{" "}
+                />{" "}
                 Video
               </Button>
             )}
@@ -127,7 +127,7 @@ const Talks = ({
                     family: "classic",
                     style: "solid",
                   })}
-                  />{" "}
+                />{" "}
                 Slides
               </Button>
             )}
@@ -139,7 +139,7 @@ const Talks = ({
                   show: false,
                 }));
               }}
-              >
+            >
               Chiudi
             </Button>
           </div>
@@ -163,7 +163,7 @@ const Talks = ({
                       padding: "1rem",
                       cursor: "pointer",
                     }}
-                    >
+                  >
                     <Row>
                       <Col>
                         <h5>{t.title}</h5>
