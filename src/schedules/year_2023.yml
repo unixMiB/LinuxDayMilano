@@ -26,6 +26,7 @@ schedule:
         description: Ansible è un software per configurare e gestire computer (sia server che client) che unisce flessibilità a scalabilità. A differenza di altri software simili che permettono di usare il paradigma 'infrastructure as code', Ansible sposta ancora oltre la barra della semplicità, usando il paradigma 'infrastructure as data'. Ansible è inoltre molto flessibile in termini di utilizzo e di ambiente, permettendo di gestire dalla creazione e manutenzione di macchine fisiche, virtuali, cloud e container al ciclo di vita delle applicazioni ed è in grado di dare il meglio in qualsiasi situazione, da una piccola installazione personale a installazioni in grosse aziende anche in ambiti altamente regolati quali quello bancario e petrolifero.
         author: Fabio Alessandro "Fale" Locati
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Automatizzare%20l'IT%20con%20Ansible%20-%20Fabio%20Alessandro%20Fale%20Locati.pdf
         duration: 45 min
       - title: "Immutable Desktops and Me"
         description: Le distribuzioni Linux "immutabili" come Silverblue avranno un impatto positivo sulla tua salute mentale? Ad oggi non sono del tutto intuitive. Vediamo i concetti di base, come sviluppare codice (qualuno ha detto "prerequisiti"?), installare le CLI indispensabili e quali sono i vantaggi per chi vuole distribuire una nuova applicazione.
@@ -211,6 +212,7 @@ schedule:
           In questa presentazione affronteremo i vari tipi di modelli di business che le aziende informatiche hanno e in che modo queste vengono influenzate dalle licenze.
           Successivamente tratteremo alcune principali differenze tra le varie licenze per capire perchè una azienda potrebbe preferire una licenza o un'altra."
         author: Fabio Alessandro "Fale" Locati
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Licenze%20e%20modelli%20di%20business%20nel%20settore%20informatico%20-%20Fabio%20Alessandro%20Fale%20Locati.pdf
         room: U6-42
         duration: 45 min
   - time: "17:00"
