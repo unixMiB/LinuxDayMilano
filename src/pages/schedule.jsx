@@ -59,10 +59,10 @@ const Talks = ({
       }
       onClick={(e) => handleStarClick(title, e)}
     />
-  );
-
-  return (
-    <>
+    );
+    
+    return (
+      <>
       <Modal
         show={modalData.show}
         onHide={() => {
@@ -74,7 +74,7 @@ const Talks = ({
         size='lg'
         aria-labelledby='contained-modal-title-vcenter'
         centered
-      >
+        >
         <Modal.Header closeButton>
           <Modal.Title id='contained-modal-title-vcenter'>
             {modalData.title}
@@ -91,13 +91,14 @@ const Talks = ({
             </Col>
           </Row>
         </Modal.Body>
+
         <Modal.Footer className='justify-content-between'>
-          <div className='d-flex flex-start'>
+          <div className='d-flex flex-start gap-1'>
             <Button
               variant='warning'
               onClick={(e) => handleStarClick(modalData.title, e)}
               className='d-flex gap-1 align-items-center'
-            >
+              >
               <StarToggle title={modalData.title} />
               {starredTalksForYear?.includes(modalData.title)
                 ? "Rimuovi da"
@@ -105,7 +106,7 @@ const Talks = ({
               agenda personale
             </Button>
           </div>
-          <div className='d-flex flex-end'>
+          <div className='d-flex flex-end gap-1'>
             {!(modalData.video === "" || modalData.video === null) && (
               <Button target='_blank' href={modalData.video} variant='warning'>
                 <FontAwesomeIcon
@@ -114,7 +115,7 @@ const Talks = ({
                     family: "classic",
                     style: "solid",
                   })}
-                />{" "}
+                  />{" "}
                 Video
               </Button>
             )}
@@ -126,7 +127,7 @@ const Talks = ({
                     family: "classic",
                     style: "solid",
                   })}
-                />{" "}
+                  />{" "}
                 Slides
               </Button>
             )}
@@ -138,7 +139,7 @@ const Talks = ({
                   show: false,
                 }));
               }}
-            >
+              >
               Chiudi
             </Button>
           </div>
@@ -162,7 +163,7 @@ const Talks = ({
                       padding: "1rem",
                       cursor: "pointer",
                     }}
-                  >
+                    >
                     <Row>
                       <Col>
                         <h5>{t.title}</h5>
