@@ -178,6 +178,7 @@ schedule:
           Mostreremo inoltre casi d'uso concreti come un recente test fatto su Redis su unikernel con un aumento di performance fino al 23%."
         author: Natale Vinto - Red Hat
         room: U6-42
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Unikernel%20dal%20passato%20un'idea%20per%20il%20futuro%20di%20Linux%20-%20Natale%20Vinto%20-%20Red%20Hat.pdf
         duration: 45 min
   - time: "15:45"
     talks:
