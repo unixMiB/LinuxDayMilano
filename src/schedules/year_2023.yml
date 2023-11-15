@@ -21,7 +21,6 @@ schedule:
         author: Moreno Razzoli
         room: U6-40
         duration: 45 min
-        video: "https://video.linux.it/"
         slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/5%20Falsi%20Miti%20su%20GNU-Linux%20-%20Moreno%20Razzoli.pdf
       - title: "Automatizzare l'IT con Ansible"
         description: Ansible è un software per configurare e gestire computer (sia server che client) che unisce flessibilità a scalabilità. A differenza di altri software simili che permettono di usare il paradigma 'infrastructure as code', Ansible sposta ancora oltre la barra della semplicità, usando il paradigma 'infrastructure as data'. Ansible è inoltre molto flessibile in termini di utilizzo e di ambiente, permettendo di gestire dalla creazione e manutenzione di macchine fisiche, virtuali, cloud e container al ciclo di vita delle applicazioni ed è in grado di dare il meglio in qualsiasi situazione, da una piccola installazione personale a installazioni in grosse aziende anche in ambiti altamente regolati quali quello bancario e petrolifero.
@@ -87,6 +86,7 @@ schedule:
           \n- condividere l'esperienza di trasformare un'applicazione server in un'applicazione containerizzata
           \n- come migrare un'applicazione deployata alla sua versione containerizzata"
         author: Michele Bussolotto - SUSE
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Come%20trasformare%20un'applicazione%20server%20in%20un'applicazione%20macroservizio%20-%20Michele%20Bussolotto%20-%20SUSE.pdf
         room: U6-41
         duration: 45 min
       - title: "Self-hosting circolare: installare servizi liberi su vecchi smartphone"
@@ -109,6 +109,7 @@ schedule:
         author: Valerio Bozzolan (Bozzy) e Cristian Consonni (CristianCantoro) - Wikimedia Italia
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Laboratorio%20interrogazioni%20in%20SPARQL%20su%20Wikidata%20-%20Valerio%20Bozzy%20Bozzolan%2C%20Cristian%20CristianCantoro%20Consonni%20-%20Wikimedia%20Italia.pdf
       - title: "Introduzione a ILIAS LMS: Il sistema di gestione dell'apprendimento europeo ed open source"
         description:
           "Questo paper presenta ILIAS LMS (Learning Management System), una piattaforma open source per la gestione dell'apprendimento. ILIAS LMS offre una vasta gamma di funzionalità per supportare l'e-learning, consentendo agli utenti di creare, distribuire e gestire corsi online in modo efficace. In questo paper, esploreremo le caratteristiche principali di ILIAS LMS, i suoi vantaggi e come può essere utilizzato nella comunità open source.
