@@ -1,12 +1,6 @@
 import React from "react";
-import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import watch from "../assets/watch.svg";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Hero from "../components/hero";
 
