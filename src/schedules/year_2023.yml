@@ -21,6 +21,7 @@ schedule:
         author: Moreno Razzoli
         room: U6-40
         duration: 45 min
+        video: "https://video.linux.it/"
         slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/5%20Falsi%20Miti%20su%20GNU-Linux%20-%20Moreno%20Razzoli.pdf
       - title: "Automatizzare l'IT con Ansible"
         description: Ansible è un software per configurare e gestire computer (sia server che client) che unisce flessibilità a scalabilità. A differenza di altri software simili che permettono di usare il paradigma 'infrastructure as code', Ansible sposta ancora oltre la barra della semplicità, usando il paradigma 'infrastructure as data'. Ansible è inoltre molto flessibile in termini di utilizzo e di ambiente, permettendo di gestire dalla creazione e manutenzione di macchine fisiche, virtuali, cloud e container al ciclo di vita delle applicazioni ed è in grado di dare il meglio in qualsiasi situazione, da una piccola installazione personale a installazioni in grosse aziende anche in ambiti altamente regolati quali quello bancario e petrolifero.
@@ -157,6 +158,7 @@ schedule:
         description: Presentazione di LibreOffice 7.6, i formati standard, la loro struttura e perché devono essere adottati.
         author: Enio Gemmo - LibreItalia
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/LibreOffice%20e%20i%20formati%20standard%20-%20Enio%20Gemmo%20-%20LibreItalia.pdf
         duration: 45 min
       - title: "Gestisci la Supply Chains Security del tuo cluster Kubernetes con Tekton"
         description:
