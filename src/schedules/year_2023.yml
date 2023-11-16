@@ -51,6 +51,7 @@ schedule:
         description: L'Unione Europea sta per approvare il Cyber Resilience Act, una legge che ha l'obiettivo di migliorare la sicurezza del software libero e open source, ma che è scritta talmente male da creare problemi a tutto il settore in Europa. La situazione attuale, e le prospettive.
         author: Italo Vignoli - LibreOffice
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Cosa%20potrebbe%20cambiare%20per%20il%20FOSS%20con%20il%20Cyber%20Resilience%20Act%20-%20Italo%20Vignoli%20-%20LibreOffice.pdf
         duration: 45 min
       - title: "Uyuni: the open-source configuration and infrastructure management solution for software-defined infrastructure"
         description: "Uyuni: the open-source configuration and infrastructure management solution for software-defined infrastructure"
@@ -61,6 +62,7 @@ schedule:
         description: Lo Yocto Project è un progetto di collaborazione open source che fornisce modelli, strumenti e metodi che consentono di creare sistemi Linux-based personalizzati per i prodotti embedded indipendenti dall'architettura hardware. Il progetto è stato creato nel 2010 come una collaborazione tra molti produttori di hardware, fornitori di sistemi operativi open-source e aziende di elettronica per portare un po' di ordine nel caos di sviluppo di Linux Embedded. La presentazione sarà tenuta da Marco Cavallini, Yocto Project Ambassador, sarà accessibile a tutti e non richiede competenze specifiche con sistemi embedded.
         author: Marco Cavallini - KOAN
         room: U6-42
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Yocto%20Project%2C%20un%20generatore%20automatico%20di%20distribuzioni%20linux%20embedded%20-%20Marco%20Cavallini%20-%20KOAN.pdf
         duration: 45 min
   - time: "11:45"
     talks:
@@ -115,8 +117,9 @@ schedule:
           "Questo paper presenta ILIAS LMS (Learning Management System), una piattaforma open source per la gestione dell'apprendimento. ILIAS LMS offre una vasta gamma di funzionalità per supportare l'e-learning, consentendo agli utenti di creare, distribuire e gestire corsi online in modo efficace. In questo paper, esploreremo le caratteristiche principali di ILIAS LMS, i suoi vantaggi e come può essere utilizzato nella comunità open source.
           ILIAS LMS è un sistema di gestione dell'apprendimento open source ampiamente utilizzato in tutto il mondo. Creato nel 1998, ILIAS LMS si è evoluto nel corso degli anni diventando una soluzione completa per l'e-learning. La sua natura open source permette agli sviluppatori di personalizzare e adattare la piattaforma alle proprie esigenze, rendendola una scelta popolare per le organizzazioni che cercano una soluzione flessibile e personalizzabile.
           ILIAS LMS può essere utilizzato per facilitare l'apprendimento e la condivisione di conoscenze."
-        author: Ilario Truppa, Vincenzo Padula - OC Open Consulting società benefit a responsabilità limitata
+        author: Ilario Truppa - OC Open Consulting società benefit a responsabilità limitata
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Introduzione%20a%20ILIAS%20LMS%20Il%20sistema%20di%20gestione%20dell'apprendimento%20europeo%20ed%20open%20source%20-%20Ilario%20Truppa%2C%20Vincenzo%20Padula%20-%20OC%20Open%20Consulting.pdf
         duration: 45 min
       - title: "Ambienti effimeri per Pull Request: Un Viaggio da GitHub alla nostra macchina, senza passare per Kubernetes"
         description:
@@ -168,6 +171,7 @@ schedule:
           Tekton è uno strumento di CI/CD che negli ultimi anni ha implementato funzionalità di Supply Chains Security, permettendo di verificare la sicurezza dei task di una pipeline. In questo talk vedremo assieme come utilizzare Tekton Chains per firmare e verificare la provenienza dell'immagine di un container deployato su un cluster Kubernetes."
         author: Carmelo Sarta, Valerio Muredda - Red Hat
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Gestisci%20la%20Supply%20Chains%20Security%20del%20tuo%20cluster%20Kubernetes%20con%20Tekton%20-%20Carmelo%20Sarta%2C%20Valerio%20Muredda%20-%20Red%20Hat.pdf
         duration: 45 min
       - title: "Unikernel: dal passato un'idea per il futuro di Linux"
         description:
@@ -208,6 +212,7 @@ schedule:
           Presenti durante la presentazione delle brevi demo di applicazioni per mostrare i concetti esposti."
         author: Alberto Bonacina
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Flutter%20for%20the%20win%20sviluppo%20Cross-Platform%20alla%20massima%20potenza%20-%20Alberto%20Bonacina.pdf
         duration: 45 min
       - title: Licenze e modelli di business nel settore informatico
         description:
