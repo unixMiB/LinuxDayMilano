@@ -31,6 +31,7 @@ schedule:
       - title: "Immutable Desktops and Me"
         description: Le distribuzioni Linux "immutabili" come Silverblue avranno un impatto positivo sulla tua salute mentale? Ad oggi non sono del tutto intuitive. Vediamo i concetti di base, come sviluppare codice (qualuno ha detto "prerequisiti"?), installare le CLI indispensabili e quali sono i vantaggi per chi vuole distribuire una nuova applicazione.
         author: Camilla Conte
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Immutable%20Desktops%20and%20Me%20-%20Camilla%20Conte.md
         room: U6-42
         duration: 45 min
   - time: "10:30"
@@ -157,6 +158,7 @@ schedule:
           Infine, darò una panoramica di release-plz, uno strumento che ho creato per automatizzare il processo di rilascio di progetti Rust."
         author: Marco Ieni - Prisma
         room: U6-39
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Come%20Rust%20semplifica%20l'Open%20Source%20-%20Marco%20Ieni%20-%20Prisma.pdf
         duration: 45 min
       - title: "LibreOffice e i formati standard"
         description: Presentazione di LibreOffice 7.6, i formati standard, la loro struttura e perché devono essere adottati.
