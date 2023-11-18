@@ -196,6 +196,7 @@ schedule:
         description: Nel corso del talk presenteremo in termini generali la sintassi RMarkdown ed esporremo alcuni esempi di utilizzo del package Xaringan.
         author: Michele Bonsignore - VimeLug
         room: U6-39
+        slides: https://github.com/unixMiB/events/tree/master/Linux%20Day%20Milano%202023/RMarkdown%20un'interfaccia%20notebook%20per%20la%20Literate%20Programming%20in%20vari%20linguaggi%20-%20Michele%20Bonsignore%20-%20VimeLug
         duration: 45 min
       - title: "Cambiare il mondo un PC alla volta col trashware"
         description: |
