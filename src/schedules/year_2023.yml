@@ -129,6 +129,7 @@ schedule:
           Affronteremo un case study specifico, analizzando l''esperienza del team "Trento" di SUSE, che ha adottato questa soluzione per la sua notevole semplicità, affrontando allo stesso tempo diversi trade-off.'
         author: Carmine Di Monaco - SUSE
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Ambienti%20effimeri%20per%20Pull%20Request%20-%20Carmine%20Di%20Monaco%20-%20SUSE.pdf
         duration: 45 min
       - title: "Linux Sicuro sin dal boot"
         description:
@@ -141,8 +142,8 @@ schedule:
   - time: "14:45"
     talks:
       - title: "Come Rust semplifica l'Open Source"
-        description:
-          "Spesso Rust viene lodato per le sue prestazioni e la sua affidabilità.
+        description: |
+          Spesso Rust viene lodato per le sue prestazioni e la sua affidabilità.
           In questa presentazione, voglio mostrare un altro aspetto di Rust: gli strumenti a servizio degli sviluppatori.
           Cargo, il package manager di Rust, e tutti i suoi plugin, rendono facile creare e mantenere progetti Rust open-source.
 
@@ -155,7 +156,7 @@ schedule:
           - Semplificano la scrittura e il mantenimento della documentazione.
           - Rilevano cambiamenti che non rispettano i contratti delle API delle librerie.
 
-          Infine, darò una panoramica di release-plz, uno strumento che ho creato per automatizzare il processo di rilascio di progetti Rust."
+          Infine, darò una panoramica di release-plz, uno strumento che ho creato per automatizzare il processo di rilascio di progetti Rust.
         author: Marco Ieni - Prisma
         room: U6-39
         slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Come%20Rust%20semplifica%20l'Open%20Source%20-%20Marco%20Ieni%20-%20Prisma.pdf
