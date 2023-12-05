@@ -7,6 +7,7 @@ schedule:
         author: Lorenzo Olearo - unixMiB, Luca Biscaldi - Politecnico Open unix Labs - POuL
         room: U6-40
         duration: 30 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Opening%20Keynote%20-%20Lorenzo%20Olearo%20-%20unixMiB%2C%20Luca%20Biscaldi%20-%20POuL.pdf
   - time: "9:30"
     talks:
       - title: "Quando un browser conquista la rete: come i monopoli del web decidono cosa puoi fare col tuo computer"
@@ -14,19 +15,23 @@ schedule:
         author: Luca Biscaldi, Alexandru Bradatan - Politecnico Open unix Labs - POuL
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Quando%20un%20browser%20conquista%20la%20rete%20-%20Luca%20Biscaldi%2C%20Alexandru%20Bradatan%20-%20POuL.pdf
       - title: "5 Falsi miti su GNU/Linux"
         description: Dalla sua nascita nel lontano 1991 ad oggi, GNU/Linux ha subito enormi cambiamenti, nel bene e nel male. L'unica cosa che sembra non essere mai cambiata è la percezione pubblica del progetto, specialmente da parte di chi non l'ha mai utilizzato o l'ha abbandonato tempo addietro. In questo intervento sfateremo le principali "credenze popolari" o falsi miti che tutt'ora fungono da deterrente per l'adozione di GNU/Linux sul Desktop.
         author: Moreno Razzoli
         room: U6-40
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/5%20Falsi%20Miti%20su%20GNU-Linux%20-%20Moreno%20Razzoli.pdf
       - title: "Automatizzare l'IT con Ansible"
         description: Ansible è un software per configurare e gestire computer (sia server che client) che unisce flessibilità a scalabilità. A differenza di altri software simili che permettono di usare il paradigma 'infrastructure as code', Ansible sposta ancora oltre la barra della semplicità, usando il paradigma 'infrastructure as data'. Ansible è inoltre molto flessibile in termini di utilizzo e di ambiente, permettendo di gestire dalla creazione e manutenzione di macchine fisiche, virtuali, cloud e container al ciclo di vita delle applicazioni ed è in grado di dare il meglio in qualsiasi situazione, da una piccola installazione personale a installazioni in grosse aziende anche in ambiti altamente regolati quali quello bancario e petrolifero.
         author: Fabio Alessandro "Fale" Locati
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Automatizzare%20l'IT%20con%20Ansible%20-%20Fabio%20Alessandro%20Fale%20Locati.pdf
         duration: 45 min
       - title: "Immutable Desktops and Me"
         description: Le distribuzioni Linux "immutabili" come Silverblue avranno un impatto positivo sulla tua salute mentale? Ad oggi non sono del tutto intuitive. Vediamo i concetti di base, come sviluppare codice (qualuno ha detto "prerequisiti"?), installare le CLI indispensabili e quali sono i vantaggi per chi vuole distribuire una nuova applicazione.
         author: Camilla Conte
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Immutable%20Desktops%20and%20Me%20-%20Camilla%20Conte.md
         room: U6-42
         duration: 45 min
   - time: "10:30"
@@ -42,10 +47,12 @@ schedule:
         author: Valentina Sona - Politecnico Open unix Labs - POuL
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Web%20Environment%20Integrity%20-%20Valentina%20Sona%20-%20POuL.pdf
       - title: "Cosa potrebbe cambiare per il FOSS con il Cyber Resilience Act"
         description: L'Unione Europea sta per approvare il Cyber Resilience Act, una legge che ha l'obiettivo di migliorare la sicurezza del software libero e open source, ma che è scritta talmente male da creare problemi a tutto il settore in Europa. La situazione attuale, e le prospettive.
         author: Italo Vignoli - LibreOffice
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Cosa%20potrebbe%20cambiare%20per%20il%20FOSS%20con%20il%20Cyber%20Resilience%20Act%20-%20Italo%20Vignoli%20-%20LibreOffice.pdf
         duration: 45 min
       - title: "Uyuni: the open-source configuration and infrastructure management solution for software-defined infrastructure"
         description: "Uyuni: the open-source configuration and infrastructure management solution for software-defined infrastructure"
@@ -56,6 +63,7 @@ schedule:
         description: Lo Yocto Project è un progetto di collaborazione open source che fornisce modelli, strumenti e metodi che consentono di creare sistemi Linux-based personalizzati per i prodotti embedded indipendenti dall'architettura hardware. Il progetto è stato creato nel 2010 come una collaborazione tra molti produttori di hardware, fornitori di sistemi operativi open-source e aziende di elettronica per portare un po' di ordine nel caos di sviluppo di Linux Embedded. La presentazione sarà tenuta da Marco Cavallini, Yocto Project Ambassador, sarà accessibile a tutti e non richiede competenze specifiche con sistemi embedded.
         author: Marco Cavallini - KOAN
         room: U6-42
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Yocto%20Project%2C%20un%20generatore%20automatico%20di%20distribuzioni%20linux%20embedded%20-%20Marco%20Cavallini%20-%20KOAN.pdf
         duration: 45 min
   - time: "11:45"
     talks:
@@ -64,6 +72,7 @@ schedule:
         author: Fausto Nenci, Luca Racchetti e Matteo Enna
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Le%20best%20practice%20di%20un%20buon%20sviluppo%20web%2C%20lavorare%20con%20i%20CMS%20senza%20essere%20cugini%20-%20Fausto%20Nenci%2C%20Luca%20Racchetti%20e%20Matteo%20Enna.pdf
       - title: "Intelligenza Artificiale - di quale minaccia stiamo parlando?"
         description: |
           Varie testate giornalistiche illustri ed internazionali ci stanno annunciando che l’AI avrà un impatto dirompente sull’occupazione, vari governi sembra siano in parte consapevoli dell’impatto nel bene e nel male di questa tecnologia sulla società.
@@ -73,18 +82,21 @@ schedule:
         author: "Roberto Innocenti - Power Progress Community"
         room: U6-40
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Intelligenza%20Artificiale%20-%20di%20quale%20minaccia%20stiamo%20parlando%20-%20Roberto%20Innocenti%20-%20Power%20Progress%20Community.pdf
       - title: 'Come trasformare un''applicazione server in un''applicazione "macroservizio": l''esempio di Uyuni'
         description:
           "Uyuni (www.uyuni-project.org) è un progetto open-source per la gestione e la configurazione di infrastrutture software-defined. Al fine di rendere Uyuni una soluzione multicontainer per Kubernetes, verrà rilasciata una prima versione \"fat-container\" (podman). Lo scopo del talk sarà quello di:
           \n- condividere l'esperienza di trasformare un'applicazione server in un'applicazione containerizzata
           \n- come migrare un'applicazione deployata alla sua versione containerizzata"
         author: Michele Bussolotto - SUSE
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Come%20trasformare%20un'applicazione%20server%20in%20un'applicazione%20macroservizio%20-%20Michele%20Bussolotto%20-%20SUSE.pdf
         room: U6-41
         duration: 45 min
       - title: "Self-hosting circolare: installare servizi liberi su vecchi smartphone"
         description: Da quando gli smartphone sono sul mercato, non è mai stato previsto un modo per dismettere senza sprechi il processore, la RAM e la memoria che permettono di usare Android ma ad un certo punto rimangono tagliati fuori dagli aggiornamenti software dello stesso produttore; l'alto livello di integrazione l'estrema diversità dei dispositivi mobili, oltre che la segretezza di molti componenti software, impedisce agli utenti di riutilizzarli in un contesto differente. In questa presentazione si propone al pubblico una strategia scalabile per ottenere una piattaforma di orchestrazione container basata sull'hardware di smartphone datati.
         author: Lorenzo Prosseda
         room: U6-42
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Self%20Hosting%20Circolare%20-%20Lorenzo%20Prosseda.pdf
         duration: 45 min
   - time: "12:45"
     talks:
@@ -100,13 +112,15 @@ schedule:
         author: Valerio Bozzolan (Bozzy) e Cristian Consonni (CristianCantoro) - Wikimedia Italia
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Laboratorio%20interrogazioni%20in%20SPARQL%20su%20Wikidata%20-%20Valerio%20Bozzy%20Bozzolan%2C%20Cristian%20CristianCantoro%20Consonni%20-%20Wikimedia%20Italia.pdf
       - title: "Introduzione a ILIAS LMS: Il sistema di gestione dell'apprendimento europeo ed open source"
         description:
           "Questo paper presenta ILIAS LMS (Learning Management System), una piattaforma open source per la gestione dell'apprendimento. ILIAS LMS offre una vasta gamma di funzionalità per supportare l'e-learning, consentendo agli utenti di creare, distribuire e gestire corsi online in modo efficace. In questo paper, esploreremo le caratteristiche principali di ILIAS LMS, i suoi vantaggi e come può essere utilizzato nella comunità open source.
           ILIAS LMS è un sistema di gestione dell'apprendimento open source ampiamente utilizzato in tutto il mondo. Creato nel 1998, ILIAS LMS si è evoluto nel corso degli anni diventando una soluzione completa per l'e-learning. La sua natura open source permette agli sviluppatori di personalizzare e adattare la piattaforma alle proprie esigenze, rendendola una scelta popolare per le organizzazioni che cercano una soluzione flessibile e personalizzabile.
           ILIAS LMS può essere utilizzato per facilitare l'apprendimento e la condivisione di conoscenze."
-        author: Ilario Truppa, Vincenzo Padula - OC Open Consulting società benefit a responsabilità limitata
+        author: Ilario Truppa - OC Open Consulting società benefit a responsabilità limitata
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Introduzione%20a%20ILIAS%20LMS%20Il%20sistema%20di%20gestione%20dell'apprendimento%20europeo%20ed%20open%20source%20-%20Ilario%20Truppa%2C%20Vincenzo%20Padula%20-%20OC%20Open%20Consulting.pdf
         duration: 45 min
       - title: "Ambienti effimeri per Pull Request: Un Viaggio da GitHub alla nostra macchina, senza passare per Kubernetes"
         description:
@@ -115,6 +129,7 @@ schedule:
           Affronteremo un case study specifico, analizzando l''esperienza del team "Trento" di SUSE, che ha adottato questa soluzione per la sua notevole semplicità, affrontando allo stesso tempo diversi trade-off.'
         author: Carmine Di Monaco - SUSE
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Ambienti%20effimeri%20per%20Pull%20Request%20-%20Carmine%20Di%20Monaco%20-%20SUSE.pdf
         duration: 45 min
       - title: "Linux Sicuro sin dal boot"
         description:
@@ -122,12 +137,13 @@ schedule:
           In questo talk vedremo come funzionano e come possono essere utilizzate per preservare l'integrità del sistema, a partire dal boot fino all'esecuzione di applicazioni."
         author: Daniele Barcella - unixMiB
         room: U6-42
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Linux%20Sicuro%20sin%20dal%20Boot%20-%20Daniele%20Barcella%20-%20unixMiB.pdf
         duration: 45 min
   - time: "14:45"
     talks:
       - title: "Come Rust semplifica l'Open Source"
-        description:
-          "Spesso Rust viene lodato per le sue prestazioni e la sua affidabilità.
+        description: |
+          Spesso Rust viene lodato per le sue prestazioni e la sua affidabilità.
           In questa presentazione, voglio mostrare un altro aspetto di Rust: gli strumenti a servizio degli sviluppatori.
           Cargo, il package manager di Rust, e tutti i suoi plugin, rendono facile creare e mantenere progetti Rust open-source.
 
@@ -140,14 +156,16 @@ schedule:
           - Semplificano la scrittura e il mantenimento della documentazione.
           - Rilevano cambiamenti che non rispettano i contratti delle API delle librerie.
 
-          Infine, darò una panoramica di release-plz, uno strumento che ho creato per automatizzare il processo di rilascio di progetti Rust."
+          Infine, darò una panoramica di release-plz, uno strumento che ho creato per automatizzare il processo di rilascio di progetti Rust.
         author: Marco Ieni - Prisma
         room: U6-39
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Come%20Rust%20semplifica%20l'Open%20Source%20-%20Marco%20Ieni%20-%20Prisma.pdf
         duration: 45 min
       - title: "LibreOffice e i formati standard"
         description: Presentazione di LibreOffice 7.6, i formati standard, la loro struttura e perché devono essere adottati.
         author: Enio Gemmo - LibreItalia
         room: U6-40
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/LibreOffice%20e%20i%20formati%20standard%20-%20Enio%20Gemmo%20-%20LibreItalia.pdf
         duration: 45 min
       - title: "Gestisci la Supply Chains Security del tuo cluster Kubernetes con Tekton"
         description:
@@ -156,6 +174,7 @@ schedule:
           Tekton è uno strumento di CI/CD che negli ultimi anni ha implementato funzionalità di Supply Chains Security, permettendo di verificare la sicurezza dei task di una pipeline. In questo talk vedremo assieme come utilizzare Tekton Chains per firmare e verificare la provenienza dell'immagine di un container deployato su un cluster Kubernetes."
         author: Carmelo Sarta, Valerio Muredda - Red Hat
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Gestisci%20la%20Supply%20Chains%20Security%20del%20tuo%20cluster%20Kubernetes%20con%20Tekton%20-%20Carmelo%20Sarta%2C%20Valerio%20Muredda%20-%20Red%20Hat.pdf
         duration: 45 min
       - title: "Unikernel: dal passato un'idea per il futuro di Linux"
         description:
@@ -166,6 +185,7 @@ schedule:
           Mostreremo inoltre casi d'uso concreti come un recente test fatto su Redis su unikernel con un aumento di performance fino al 23%."
         author: Natale Vinto - Red Hat
         room: U6-42
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Unikernel%20dal%20passato%20un'idea%20per%20il%20futuro%20di%20Linux%20-%20Natale%20Vinto%20-%20Red%20Hat.pdf
         duration: 45 min
   - time: "15:45"
     talks:
@@ -177,6 +197,7 @@ schedule:
         description: Nel corso del talk presenteremo in termini generali la sintassi RMarkdown ed esporremo alcuni esempi di utilizzo del package Xaringan.
         author: Michele Bonsignore - VimeLug
         room: U6-39
+        slides: https://github.com/unixMiB/events/tree/master/Linux%20Day%20Milano%202023/RMarkdown%20un'interfaccia%20notebook%20per%20la%20Literate%20Programming%20in%20vari%20linguaggi%20-%20Michele%20Bonsignore%20-%20VimeLug
         duration: 45 min
       - title: "Cambiare il mondo un PC alla volta col trashware"
         description: |
@@ -184,6 +205,7 @@ schedule:
           PCOfficina è un'associazione di volontariato che si occupa di condividere conoscenze informatiche, specialmente su Linux, di aiutare le persone a riparare i loro PC e di offrire computer ricondizionati a chi non può permetterseli.
           In questo intervento condivideremo la nostra esperienza decennale, illustrando le difficoltà che abbiamo incontrato, condividendo storie reali e alcuni suggerimenti pratici per chi volesse iniziare un'esperienza simile nel trashware e nel volontariato.
         author: Andrea Perotti - PCOfficina
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Cambiare%20il%20mondo%20un%20PC%20alla%20volta%20col%20trashware%20-%20Andrea%20Perotti%20-%20PCOfficina.pdf
         room: U6-40
         duration: 45 min
       - title: "Flutter for the win: sviluppo Cross-Platform alla massima potenza"
@@ -194,6 +216,7 @@ schedule:
           Presenti durante la presentazione delle brevi demo di applicazioni per mostrare i concetti esposti."
         author: Alberto Bonacina
         room: U6-41
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Flutter%20for%20the%20win%20sviluppo%20Cross-Platform%20alla%20massima%20potenza%20-%20Alberto%20Bonacina.pdf
         duration: 45 min
       - title: Licenze e modelli di business nel settore informatico
         description:
@@ -202,6 +225,7 @@ schedule:
           In questa presentazione affronteremo i vari tipi di modelli di business che le aziende informatiche hanno e in che modo queste vengono influenzate dalle licenze.
           Successivamente tratteremo alcune principali differenze tra le varie licenze per capire perchè una azienda potrebbe preferire una licenza o un'altra."
         author: Fabio Alessandro "Fale" Locati
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Licenze%20e%20modelli%20di%20business%20nel%20settore%20informatico%20-%20Fabio%20Alessandro%20Fale%20Locati.pdf
         room: U6-42
         duration: 45 min
   - time: "17:00"
@@ -211,11 +235,13 @@ schedule:
         author: Emanuele Petriglia
         room: U6-39
         duration: 30 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Lo%20stato%20di%20Xfce%20nel%202023%20-%20Emanuele%20Petriglia.pdf
       - title: "CentOS Stream: fatti e leggende"
         description: CentOS Stream è una distribuzione Linux creata dal progetto CentOS. Il progetto CentOS negli ultimi anni è passato dal produrre e distribuire CentOS Linux a produrre e distribuire CentOS Stream. In questa presentazione vedremo come CentOS Stream viene creato da Fedora e come si posiziona nel mondo Enterprise Linux. Discuteremo anche diversi miti e leggende che si sono creati intorno a questa distribuzione, per vedere quali corrispondono alla realtà e quali no.
         author: Andrea Perotti, Fabio Alessandro "Fale" Locati
         room: U6-40
         duration: 30 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/CentOS%20Stream%20fatti%20e%20leggende%20-%20Andrea%20Perotti%2C%20Fabio%20Alessandro%20Locati.pdf
       - title: What the Helm?!
         description:
           "Come fare un deploy su K8s in modo comodo? Come trasformare il semplice deploy di applicazione in qualcosa da mantenere sotto versionamento? Come creare delle definizioni di risorse riutilizzabili? Helm!
@@ -223,11 +249,13 @@ schedule:
         author: Luca Andrea Fusè
         room: U6-41
         duration: 30 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/What%20The%20Helm%20-%20Luca%20Andrea%20Fus%C3%A8.pdf
       - title: Presentazione dei prototipi Community Open Hardware PowerPC Notebook
         description: Al Linux Day di Milano del 2014 avevamo presentato il progetto di questo Community Open Hardware PowerPC Notebook. A quel tempo sognavamo un notebook disegnato intorno al GNU/Linux con architettura PowerPC. Anno per anno ad ogni Linux Day vi abbiamo aggiornato dei progressi fatti, grazie ai volontari, ai donatori e a tutti quei soggetti che hanno collaborato. Quest'anno vi facciamo vedere un prototipo di questo Notebook.
         author: Roberto Innocenti - Power Progress Community
         room: U6-42
         duration: 30 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202023/Presentazione%20dei%20prototipi%20Community%20Open%20Hardware%20PowerPC%20Notebook%20-%20Roberto%20Innocenti%20-%20Power%20Progress%20Community.pdf
   - time: "17:30"
     talks:
       - title: "Chiusura del Linux Day"
