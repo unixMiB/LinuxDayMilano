@@ -65,20 +65,20 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        <section className="bg-dark d-none" id='timeline'>
+        <section className="bg-dark" id='timeline'>
             <Container>
               <h2 className="pb-5" style={{ textTransform: "uppercase" }}>Timeline organizzativa</h2>
-              <div className="fs-4">
+              <div className="fs-5">
                 <ol className="timeline">
-                  <li>lunedì 1 luglio - Apertura call for papers</li>
-                  <li>domenica 29 settembre - Chiusura call for papers</li>
+                  <li>lunedì 20 giugno - Apertura call for papers</li>
+                  <li>venerdì 27 settembre - Chiusura call for papers</li>
                   <li>{data.site.siteMetadata.event.text} - Linux Day Milano</li>
                 </ol>
               </div>
             </Container>
         </section>
 
-        <section className="d-none" id='schedule'>
+        <section id='schedule'>
           <Container>
             <Row>
               <Col sm='4'>
@@ -101,7 +101,8 @@ const IndexPage = ({ data }) => {
                 {data.site.siteMetadata.switches.cfp && (
                   <>
                     <p>
-                      Abbiamo aperto la call-for-speakers! Ecco cosa devi sapere
+                      {data.site.siteMetadata.event.cfp && "Abbiamo aperto la call-for-speakers! "}
+                      Ecco cosa devi sapere
                       se vuoi presentare qualcosa al Linux Day Milano.
                     </p>
                     <p>
@@ -130,7 +131,7 @@ const IndexPage = ({ data }) => {
                       })}
                     </p> */}
 
-                    {data.site.siteMetadata.event.cfp && false ? (
+                    {data.site.siteMetadata.event.cfp && true ? (
                       <Button
                         href={data.site.siteMetadata.event.cfp}
                         className='btn-lg'

@@ -35,7 +35,7 @@ module.exports = {
       date: new Date("2024-10-26"),
       time: "9:00",
       topic: "",
-      cfp: "https://survey.linux.it/293588",
+      cfp: "https://survey.linux.it/index.php/315635",
       arguments: [
         "Linux, software e hardware Open Source",
         "Open Source nel mondo dell'istruzione",
