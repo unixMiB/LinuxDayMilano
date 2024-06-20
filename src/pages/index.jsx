@@ -65,7 +65,20 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        <section id='schedule'>
+        <section className="bg-dark d-none" id='timeline'>
+            <Container>
+              <h2 className="pb-5" style={{ textTransform: "uppercase" }}>Timeline organizzativa</h2>
+              <div className="fs-4">
+                <ol className="timeline">
+                  <li>lunedì 1 luglio - Apertura call for papers</li>
+                  <li>domenica 29 settembre - Chiusura call for papers</li>
+                  <li>{data.site.siteMetadata.event.text} - Linux Day Milano</li>
+                </ol>
+              </div>
+            </Container>
+        </section>
+
+        <section className="d-none" id='schedule'>
           <Container>
             <Row>
               <Col sm='4'>
@@ -107,7 +120,7 @@ const IndexPage = ({ data }) => {
                       o mostrare una tua invenzione.
                     </p>
                     <p>Per tutti i dettagli prosegui al link qui sotto.</p>
-                    <p className='fw-bold'>
+                    {/* <p className='fw-bold'>
                       Deadline{" "}
                       {new Date("2023-09-21").toLocaleDateString("it-IT", {
                         weekday: "long",
@@ -115,9 +128,9 @@ const IndexPage = ({ data }) => {
                         month: "long",
                         day: "numeric",
                       })}
-                    </p>
+                    </p> */}
 
-                    {data.site.siteMetadata.event.cfp ? (
+                    {data.site.siteMetadata.event.cfp && false ? (
                       <Button
                         href={data.site.siteMetadata.event.cfp}
                         className='btn-lg'
@@ -165,7 +178,7 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
 
-        <section id='sponsors'>
+        <section id='sponsors' className='d-none'>
           <Container className='py-5'>
             <h2 style={{ textTransform: "uppercase" }}>Sponsor dell'evento</h2>
             <Row className='mb-3'>

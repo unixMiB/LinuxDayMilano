@@ -67,7 +67,7 @@ const Hero = ({ small }) => {
         }}
       >
         <Container className='hero'>
-          {small && (
+          {/* {small && (
             <Alert variant='info'>
               <Alert.Heading>
                 <FontAwesomeIcon
@@ -87,7 +87,7 @@ const Hero = ({ small }) => {
                 <a href='/schedule'>programma</a>.
               </p>
             </Alert>
-          )}
+          )} */}
           <h1 style={{ textTransform: "uppercase" }} className='mb-0 title'>
             Linux Day Milano <span className='ldmi'>{metadata.event.year}</span>
           </h1>
