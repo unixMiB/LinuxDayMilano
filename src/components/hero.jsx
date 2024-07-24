@@ -8,31 +8,29 @@ import Alert from "react-bootstrap/Alert";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Hero = ({ small }) => {
-  const data = useStaticQuery(
-    graphql`
-      {
-        site {
-          siteMetadata {
-            event {
-              year: date(formatString: "YYYY")
-              time
-              text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
-            }
-            switches {
-              schedule
-            }
-            contacts {
-              website
-              place {
-                building
-                name
-              }
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          event {
+            year: date(formatString: "YYYY")
+            time
+            text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
+          }
+          switches {
+            schedule
+          }
+          contacts {
+            website
+            place {
+              building
+              name
             }
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   const metadata = data.site.siteMetadata;
 

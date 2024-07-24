@@ -6,26 +6,24 @@ import ear from "../assets/ear-piece.svg";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Footer = () => {
-  const { site } = useStaticQuery(
-    graphql`
-      {
-        site {
-          siteMetadata {
-            contacts {
-              place {
-                name
-                street
-                building
-                cap
-              }
-              email
-              website
+  const { site } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          contacts {
+            place {
+              name
+              street
+              building
+              cap
             }
+            email
+            website
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   return (
     <footer>

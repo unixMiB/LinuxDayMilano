@@ -16,22 +16,22 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <main id="index">
+      <main id='index'>
         <Hero small={true} />
-        <section id="explore">
+        <section id='explore'>
           <div>
-            <div className="watch">
+            <div className='watch'>
               <img
-                alt=""
-                className="img-fluid"
-                role="presentation"
+                alt=''
+                className='img-fluid'
+                role='presentation'
                 src={watch}
                 style={{ height: "316px", width: "256px" }}
               />
             </div>
-            <Container className="front" style={{ position: "sticky" }}>
-              <div className="d-flex justify-content-center">
-                <div className="col-lg-7">
+            <Container className='front' style={{ position: "sticky" }}>
+              <div className='d-flex justify-content-center'>
+                <div className='col-lg-7'>
                   {" "}
                   {/* TODO FIX ME */}
                   <h2 style={{ textTransform: "uppercase" }}>
@@ -65,33 +65,36 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        <section className="bg-dark" id="timeline">
+        <section className='bg-dark' id='timeline'>
           <Container>
-            <h2 className="pb-5" style={{ textTransform: "uppercase" }}>
+            <h2 className='pb-5' style={{ textTransform: "uppercase" }}>
               Timeline organizzativa
             </h2>
-            <div className="fs-5">
-              <ol className="timeline">
+            <div className='fs-5'>
+              <ol className='timeline'>
                 <li>lunedì 20 giugno - Apertura call for papers</li>
-                <li>venerdì 27 settembre - Chiusura call for papers</li>
+                <li>
+                  venerdì 27 settembre - Chiusura call for papers e richieste
+                  stands
+                </li>
                 <li>{data.site.siteMetadata.event.text} - Linux Day Milano</li>
               </ol>
             </div>
           </Container>
         </section>
 
-        <section id="schedule">
+        <section id='schedule'>
           <Container>
             <Row>
-              <Col sm="4">
+              <Col sm='4'>
                 <GatsbyImage
-                  alt=""
-                  className="img-fluid mb-4 mb-sm-0"
-                  role="presentation"
+                  alt=''
+                  className='img-fluid mb-4 mb-sm-0'
+                  role='presentation'
                   image={getImage(data.talk_subscription_image)}
                 />
               </Col>
-              <Col sm="8">
+              <Col sm='8'>
                 {data.site.siteMetadata.switches.cfp ? (
                   <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
                 ) : (
@@ -137,37 +140,39 @@ const IndexPage = ({ data }) => {
                     {data.site.siteMetadata.event.cfp ? (
                       <Button
                         href={data.site.siteMetadata.event.cfp}
-                        className="btn-lg"
-                        variant="warning"
+                        className='btn-lg'
+                        variant='warning'
                       >
                         Presenta un intervento
                       </Button>
                     ) : (
-                      <Button className="btn-lg" variant="warning" disabled>
+                      <Button className='btn-lg' variant='warning' disabled>
                         Presto disponibile
                       </Button>
                     )}
 
                     {data.site.siteMetadata.event.cfs && (
-                      <>
+                      <div className='py-5'>
                         <p>
                           Sei una associazione no profit o una azienda sponsor
-                          ILS che lavora con l'open source? Compila il form qui
-                          sotto per fare richiesta di uno stand.
-                          <br />
+                          di Italian Linux Society che lavora con l'open source?
+                          Compila il form qui sotto per fare richiesta di uno
+                          stand.
+                        </p>
+                        <p>
                           Non ti preoccupare se la tua azienda non è ancora
-                          sponor ILS, siamo sempre aperti a nuove collaborazioni
-                          e saremo felici di valutare la tua richiesta!
+                          sponsor, siamo sempre aperti a nuove collaborazioni e
+                          saremo felici di valutare la tua richiesta!
                         </p>
 
                         <Button
                           href={data.site.siteMetadata.event.cfp}
-                          className="btn-lg"
-                          variant="warning"
+                          className='btn-lg'
+                          variant='warning'
                         >
                           Richiedi uno stand
                         </Button>
-                      </>
+                      </div>
                     )}
                   </>
                 )}
@@ -182,9 +187,9 @@ const IndexPage = ({ data }) => {
                       })}
                     </ul>
                     <Button
-                      href="/schedule"
-                      className="btn-lg"
-                      variant="warning"
+                      href='/schedule'
+                      className='btn-lg'
+                      variant='warning'
                     >
                       Guarda il programma
                     </Button>
@@ -204,21 +209,21 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
 
-        <section id="sponsors" className="d-none">
-          <Container className="py-5">
+        <section id='sponsors' className='d-none'>
+          <Container className='py-5'>
             <h2 style={{ textTransform: "uppercase" }}>Sponsor dell'evento</h2>
-            <Row className="mb-3">
+            <Row className='mb-3'>
               {data.brandsYaml.sponsors.map((item, index) => {
                 return (
                   <Col
                     key={index}
-                    className="align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3"
+                    className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
                   >
                     <a href={item.website}>
                       <GatsbyImage
                         alt={item.name}
                         title={item.name}
-                        width="5rem"
+                        width='5rem'
                         image={getImage(item.logo)}
                       />
                     </a>
@@ -227,18 +232,18 @@ const IndexPage = ({ data }) => {
               })}
             </Row>
             <h2 style={{ textTransform: "uppercase" }}>Con i patrocini di</h2>
-            <Row className="mb-3">
+            <Row className='mb-3'>
               {data.brandsYaml.patrocini.map((item) => {
                 return (
                   <Col
-                    className="align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3"
+                    className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
                     key={item.name}
                   >
                     <a href={item.website}>
                       <GatsbyImage
                         alt={item.name}
                         title={item.name}
-                        width="5rem"
+                        width='5rem'
                         image={getImage(item.logo)}
                       />
                     </a>
@@ -250,22 +255,22 @@ const IndexPage = ({ data }) => {
             {data.brandsYaml.referrals.map((item) => {
               return (
                 <Row key={item.name}>
-                  <Col className="align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3">
+                  <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
                     <a href={item.website}>
                       <GatsbyImage
                         alt={item.name}
                         title={item.name}
-                        width="5rem"
+                        width='5rem'
                         image={getImage(item.logo)}
                       />
                     </a>
                   </Col>
-                  <Col className="align-self-start col-12 col-md-6 pb-2 pb-sm-3">
+                  <Col className='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
                     <figure>
-                      <blockquote className="blockquote">
+                      <blockquote className='blockquote'>
                         <p>{item.comment}</p>
                       </blockquote>
-                      <figcaption className="blockquote-footer">
+                      <figcaption className='blockquote-footer'>
                         {item.author}
                       </figcaption>
                     </figure>
