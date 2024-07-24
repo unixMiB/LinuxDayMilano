@@ -16,22 +16,22 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <main id='index'>
+      <main id="index">
         <Hero small={true} />
-        <section id='explore'>
+        <section id="explore">
           <div>
-            <div className='watch'>
+            <div className="watch">
               <img
-                alt=''
-                className='img-fluid'
-                role='presentation'
+                alt=""
+                className="img-fluid"
+                role="presentation"
                 src={watch}
                 style={{ height: "316px", width: "256px" }}
               />
             </div>
-            <Container className='front' style={{ position: "sticky" }}>
-              <div className='d-flex justify-content-center'>
-                <div className='col-lg-7'>
+            <Container className="front" style={{ position: "sticky" }}>
+              <div className="d-flex justify-content-center">
+                <div className="col-lg-7">
                   {" "}
                   {/* TODO FIX ME */}
                   <h2 style={{ textTransform: "uppercase" }}>
@@ -65,31 +65,33 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        <section className="bg-dark" id='timeline'>
-            <Container>
-              <h2 className="pb-5" style={{ textTransform: "uppercase" }}>Timeline organizzativa</h2>
-              <div className="fs-5">
-                <ol className="timeline">
-                  <li>lunedì 20 giugno - Apertura call for papers</li>
-                  <li>venerdì 27 settembre - Chiusura call for papers</li>
-                  <li>{data.site.siteMetadata.event.text} - Linux Day Milano</li>
-                </ol>
-              </div>
-            </Container>
+        <section className="bg-dark" id="timeline">
+          <Container>
+            <h2 className="pb-5" style={{ textTransform: "uppercase" }}>
+              Timeline organizzativa
+            </h2>
+            <div className="fs-5">
+              <ol className="timeline">
+                <li>lunedì 20 giugno - Apertura call for papers</li>
+                <li>venerdì 27 settembre - Chiusura call for papers</li>
+                <li>{data.site.siteMetadata.event.text} - Linux Day Milano</li>
+              </ol>
+            </div>
+          </Container>
         </section>
 
-        <section id='schedule'>
+        <section id="schedule">
           <Container>
             <Row>
-              <Col sm='4'>
+              <Col sm="4">
                 <GatsbyImage
-                  alt=''
-                  className='img-fluid mb-4 mb-sm-0'
-                  role='presentation'
+                  alt=""
+                  className="img-fluid mb-4 mb-sm-0"
+                  role="presentation"
                   image={getImage(data.talk_subscription_image)}
                 />
               </Col>
-              <Col sm='8'>
+              <Col sm="8">
                 {data.site.siteMetadata.switches.cfp ? (
                   <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
                 ) : (
@@ -101,9 +103,10 @@ const IndexPage = ({ data }) => {
                 {data.site.siteMetadata.switches.cfp && (
                   <>
                     <p>
-                      {data.site.siteMetadata.event.cfp && "Abbiamo aperto la call-for-speakers! "}
-                      Ecco cosa devi sapere
-                      se vuoi presentare qualcosa al Linux Day Milano.
+                      {data.site.siteMetadata.event.cfp &&
+                        "Abbiamo aperto la call-for-speakers! "}
+                      Ecco cosa devi sapere se vuoi presentare qualcosa al Linux
+                      Day Milano.
                     </p>
                     <p>
                       Siamo interessati a tutti i generi di talk e presentazioni
@@ -131,18 +134,40 @@ const IndexPage = ({ data }) => {
                       })}
                     </p> */}
 
-                    {data.site.siteMetadata.event.cfp && true ? (
+                    {data.site.siteMetadata.event.cfp ? (
                       <Button
                         href={data.site.siteMetadata.event.cfp}
-                        className='btn-lg'
-                        variant='warning'
+                        className="btn-lg"
+                        variant="warning"
                       >
                         Presenta un intervento
                       </Button>
                     ) : (
-                      <Button className='btn-lg' variant='warning' disabled>
+                      <Button className="btn-lg" variant="warning" disabled>
                         Presto disponibile
                       </Button>
+                    )}
+
+                    {data.site.siteMetadata.event.cfs && (
+                      <>
+                        <p>
+                          Sei una associazione no profit o una azienda sponsor
+                          ILS che lavora con l'open source? Compila il form qui
+                          sotto per fare richiesta di uno stand.
+                          <br />
+                          Non ti preoccupare se la tua azienda non è ancora
+                          sponor ILS, siamo sempre aperti a nuove collaborazioni
+                          e saremo felici di valutare la tua richiesta!
+                        </p>
+
+                        <Button
+                          href={data.site.siteMetadata.event.cfp}
+                          className="btn-lg"
+                          variant="warning"
+                        >
+                          Richiedi uno stand
+                        </Button>
+                      </>
                     )}
                   </>
                 )}
@@ -157,9 +182,9 @@ const IndexPage = ({ data }) => {
                       })}
                     </ul>
                     <Button
-                      href='/schedule'
-                      className='btn-lg'
-                      variant='warning'
+                      href="/schedule"
+                      className="btn-lg"
+                      variant="warning"
                     >
                       Guarda il programma
                     </Button>
@@ -179,21 +204,21 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
 
-        <section id='sponsors' className='d-none'>
-          <Container className='py-5'>
+        <section id="sponsors" className="d-none">
+          <Container className="py-5">
             <h2 style={{ textTransform: "uppercase" }}>Sponsor dell'evento</h2>
-            <Row className='mb-3'>
+            <Row className="mb-3">
               {data.brandsYaml.sponsors.map((item, index) => {
                 return (
                   <Col
                     key={index}
-                    className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
+                    className="align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3"
                   >
                     <a href={item.website}>
                       <GatsbyImage
                         alt={item.name}
                         title={item.name}
-                        width='5rem'
+                        width="5rem"
                         image={getImage(item.logo)}
                       />
                     </a>
@@ -202,18 +227,18 @@ const IndexPage = ({ data }) => {
               })}
             </Row>
             <h2 style={{ textTransform: "uppercase" }}>Con i patrocini di</h2>
-            <Row className='mb-3'>
+            <Row className="mb-3">
               {data.brandsYaml.patrocini.map((item) => {
                 return (
                   <Col
-                    className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
+                    className="align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3"
                     key={item.name}
                   >
                     <a href={item.website}>
                       <GatsbyImage
                         alt={item.name}
                         title={item.name}
-                        width='5rem'
+                        width="5rem"
                         image={getImage(item.logo)}
                       />
                     </a>
@@ -225,22 +250,22 @@ const IndexPage = ({ data }) => {
             {data.brandsYaml.referrals.map((item) => {
               return (
                 <Row key={item.name}>
-                  <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                  <Col className="align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3">
                     <a href={item.website}>
                       <GatsbyImage
                         alt={item.name}
                         title={item.name}
-                        width='5rem'
+                        width="5rem"
                         image={getImage(item.logo)}
                       />
                     </a>
                   </Col>
-                  <Col className='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
+                  <Col className="align-self-start col-12 col-md-6 pb-2 pb-sm-3">
                     <figure>
-                      <blockquote className='blockquote'>
+                      <blockquote className="blockquote">
                         <p>{item.comment}</p>
                       </blockquote>
-                      <figcaption className='blockquote-footer'>
+                      <figcaption className="blockquote-footer">
                         {item.author}
                       </figcaption>
                     </figure>
@@ -346,6 +371,7 @@ export const query = graphql`
           date
           topic
           cfp
+          cfs
           arguments
           text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
         }

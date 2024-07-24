@@ -36,6 +36,7 @@ module.exports = {
       time: "9:00",
       topic: "",
       cfp: "https://survey.linux.it/index.php/315635",
+      cfs: "https://survey.linux.it/index.php/769265",
       arguments: [
         "Linux, software e hardware Open Source",
         "Open Source nel mondo dell'istruzione",
