@@ -166,7 +166,7 @@ const IndexPage = ({ data }) => {
                         </p>
 
                         <Button
-                          href={data.site.siteMetadata.event.cfp}
+                          href={data.site.siteMetadata.event.cfs}
                           className='btn-lg'
                           variant='warning'
                         >
