@@ -19,11 +19,22 @@ const Header = () => {
           }
         }
       }
+
+      allSchedulesYaml(sort: { order: DESC, fields: year }) {
+        nodes {
+          year
+        }
+      }
     }
   `);
 
   const year = data.site.siteMetadata.event.year;
   const switches = data.site.siteMetadata.switches;
+
+  const previousYear = data.allSchedulesYaml.nodes.map((node) => node.year)[1];
+  const params = switches.schedule
+    ? ""
+    : "?" + new URLSearchParams({ year: previousYear });
 
   return (
     <header className='d-print-none'>
@@ -58,7 +69,7 @@ const Header = () => {
               {switches.cfp && (
                 <Nav.Link href='/#schedule'>Call for papers</Nav.Link>
               )}
-              <Nav.Link href='/schedule/#calendar'>
+              <Nav.Link href={`/schedule/${params}#calendar`}>
                 {switches.schedule ? "Programma" : "Programma precedente"}
               </Nav.Link>
               <Nav.Link href='/codeofconduct'>Code of Conduct</Nav.Link>
