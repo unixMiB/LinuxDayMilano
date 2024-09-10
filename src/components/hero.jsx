@@ -29,10 +29,21 @@ const Hero = ({ small }) => {
           }
         }
       }
+
+      allSchedulesYaml(sort: { order: DESC, fields: year }) {
+        nodes {
+          year
+        }
+      }
     }
   `);
 
   const metadata = data.site.siteMetadata;
+
+  const previousYear = data.allSchedulesYaml.nodes.map((node) => node.year)[1];
+  const params = data.site.siteMetadata.switches.schedule
+    ? ""
+    : "?" + new URLSearchParams({ year: previousYear });
 
   return (
     <div
@@ -149,7 +160,7 @@ const Hero = ({ small }) => {
                 Scopri di più
               </Button>
               <Button
-                href='/schedule'
+                href={`/schedule/${params}#calendar`}
                 size='lg'
                 className='m-1'
                 variant='warning'
