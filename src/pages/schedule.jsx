@@ -212,7 +212,7 @@ const Page = ({ data }) => {
   const params = new URLSearchParams(
     typeof window !== "undefined" && window.location.search
   );
-  const year = params.get("year");
+  const year = Number(params.get("year"));
 
   useEffect(() => {
     let current = localStorage.getItem("starredTalks");
