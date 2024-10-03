@@ -1,2 +1,179 @@
 year: 2024
-schedule: []
+schedule:
+  - time: "9:00"
+    talks:
+      - title: Opening Keynote
+        description: Discorso di apertura del Linux Day
+        author: 
+        room: U6-
+        duration: 30 min
+  - time: "9:30"
+    talks:
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+  - time: "10:30"
+    talks:
+      - title: "Break"
+        duration: 15 min
+  - time: "10:45"
+    talks:
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+  - time: "11:45"
+    talks:
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+  - time: "12:45"
+    talks:
+      - title: Pausa pranzo
+        duration: 60 min
+  - time: "13:45"
+    talks:
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+  - time: "14:45"
+    talks:
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+  - time: "15:45"
+    talks:
+      - title: "Break"
+        duration: 15 min
+  - time: "16:00"
+    talks:
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+  - time: "17:00"
+    talks:
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+      - title:
+        description:
+        author: 
+        room: U6-
+        duration: 45 min
+  - time: "17:30"
+    talks:
+      - title: "Chiusura del Linux Day"
+        description: Chiusura della giornata e saluti finali
