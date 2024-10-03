@@ -26,8 +26,8 @@ module.exports = {
     navbarVariant: "dark",
     siteUrl: "https://linuxdaymilano.org/",
     switches: {
-      schedule: false,
-      cfp: true,
+      schedule: true,
+      cfp: false,
       sponsor_submit: false,
       year_switcher: true,
     },

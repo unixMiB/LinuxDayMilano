@@ -21,9 +21,9 @@ patrocini:
   - name: Italian Linux Society
     website: https://www.ils.org/
     logo: ILS@8x.png
-  - name: Libre Italia
-    website: https://libreitalia.org/
-    logo: LibreItalia.png
+  # - name: Libre Italia
+  #   website: https://libreitalia.org/
+  #   logo: LibreItalia.png
   - name: POuL
     logo: POuL@8x.png
     website: https://poul.org/
@@ -33,18 +33,18 @@ patrocini:
   - name: VIMELUG
     website: https://www.vimelug.org/
     logo: Vimelug@8x.png
-  - name: Libre Office
-    website: https://it.libreoffice.org/
-    logo: LibreOffice@8x.png
-  - name: Joomla User Group Milano Centro
-    logo: JUG Milano@8x.png
-    website: https://www.joomla.it/joomla-user-group/jug-milano-centro.html
-  - name: WordPress Meetup Milano
-    logo: WordPress Meetup Milano@8x.png
-    website: https://www.meetup.com/it-IT/wordpress-meetup-milano/
+  # - name: Libre Office
+  #   website: https://it.libreoffice.org/
+  #   logo: LibreOffice@8x.png
+  # - name: Joomla User Group Milano Centro
+  #   logo: JUG Milano@8x.png
+  #   website: https://www.joomla.it/joomla-user-group/jug-milano-centro.html
+  # - name: WordPress Meetup Milano
+  #   logo: WordPress Meetup Milano@8x.png
+  #   website: https://www.meetup.com/it-IT/wordpress-meetup-milano/
 referrals:
   - name: GitHub Campus Experts
     website: https://githubcampus.expert/
     logo: GH Campus Experts 1@8x.png
-    comment: Da quando ho conosciuto questa community ho sempre trovato persone competenti e appassionate. Invito tutti a partecipare al Linux Day Milano 2023 all'università Bicocca per venire a conoscerli ✨
+    comment: Da quando ho conosciuto questa community ho sempre trovato persone competenti e appassionate. Invito tutti a partecipare al Linux Day Milano 2024 all'università Bicocca per venire a conoscerli ✨
     author: Federico Grandi, GitHub Campus Expert

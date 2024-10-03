@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
 
-        <section id='schedule'>
+        <section id='schedule' className="">
           <Container>
             <Row>
               <Col sm='4'>
@@ -209,7 +209,7 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
 
-        <section id='sponsors' className='d-none'>
+        <section id='sponsors' className=''>
           <Container className='py-5'>
             <h2 style={{ textTransform: "uppercase" }}>Sponsor dell'evento</h2>
             <Row className='mb-3'>
