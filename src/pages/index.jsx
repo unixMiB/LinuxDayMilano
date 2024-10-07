@@ -76,13 +76,15 @@ const IndexPage = ({ data }) => {
                 da qualsiasi piattaforma federata ActivityPub):{" "}
                 <a href='https://mastodon.uno/@unixmib'>
                   @unixmib@mastodon.uno
-                </a>,<br/>
+                </a>
+                ,<br />
                 puoi seguicrci anche su social tradizionali come:{" "}
                 <a href='https://x.com/unixmib'>@unixMiB su Twitter</a>{" "}
                 (#LinuxDayMilano2024){" e "}
                 <a href='https://www.facebook.com/unixmib'>
                   @unixmib su Facebook
-                </a>.
+                </a>
+                .
               </p>
               <p>
                 Oppure iscriviti al nostro{" "}
