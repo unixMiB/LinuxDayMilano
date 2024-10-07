@@ -133,7 +133,7 @@ schedule:
     talks:
       - title: "Dal cloud al self-hosting"
         description: Oggi siamo abituati ad utilizzare molti servizi cloud nella nostra vita di tutti i giorni, a partire da quelli di Google. Negli ultimi anni, ho deciso di progressivamente liberarmi di questi servizi, preferendo soluzioni self-hosted e open source. In questa sessione parleremo delle motivazioni dietro a questa scelta, i principali ostacoli che ho incontrato, e le lezioni apprese lungo il cammino. Discuteremo delle alternative open source che sono disponibili i servizi più comuni e come io ho deciso di preferirne alcune ad altre per aiutare chi desidera intraprendere un percorso simile verso una maggiore autonomia digitale e controllo dei propri dati.
-        author: Fabio Alessandro Locati
+        author: Fabio Alessandro "Fale" Locati
         room: U6-39
         duration: 45 min
       - title: "Intrusion prevention per tutti: introduzione a Fail2ban"
