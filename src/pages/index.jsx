@@ -65,11 +65,41 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        <section className='bg-dark' id='timeline'>
+        <section className='bg-dark' id='socials-cta'>
           <Container>
-            <h2 className='pb-5' style={{ textTransform: "uppercase" }}>
-              Timeline organizzativa
+            <h2 className='pb-5 text-uppercase'>
+              Condividi i momenti migliori
             </h2>
+            <div>
+              <p>
+                Segui l'evento sul social network libero Mastodon (accessibile
+                da qualsiasi piattaforma federata ActivityPub):{" "}
+                <a href='https://mastodon.uno/@unixmib'>
+                  @unixmib@mastodon.uno
+                </a>,<br/>
+                puoi seguicrci anche su social tradizionali come:{" "}
+                <a href='https://x.com/unixmib'>@unixMiB su Twitter</a>{" "}
+                (#LinuxDayMilano2024){" e "}
+                <a href='https://www.facebook.com/unixmib'>
+                  @unixmib su Facebook
+                </a>.
+              </p>
+              <p>
+                Oppure iscriviti al nostro{" "}
+                <a href='https://t.me/unixmib_info'>canale telegram</a> per
+                rimanere aggiornato anche sui nostri eventi futuri.
+              </p>
+              <p>
+                Usa l'hashtag ufficiale #LinuxDay2024 e le foto migliori saranno
+                ricondivise!
+              </p>
+            </div>
+          </Container>
+        </section>
+
+        <section className='bg-dark d-none' id='timeline'>
+          <Container>
+            <h2 className='pb-5 text-uppercase'>Timeline organizzativa</h2>
             <div className='fs-5'>
               <ol className='timeline'>
                 <li>lunedì 20 giugno - Apertura call for papers</li>
@@ -83,7 +113,7 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
 
-        <section id='schedule' className="">
+        <section id='schedule' className=''>
           <Container>
             <Row>
               <Col sm='4'>
