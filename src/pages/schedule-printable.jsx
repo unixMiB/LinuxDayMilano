@@ -253,8 +253,8 @@ const Page = ({ data }) => {
 
   return (
     <div>
-      <Header className="d-print-none" />
-      <div className="d-print-none my-3"/>
+      <Header className='d-print-none' />
+      <div className='d-print-none my-3' />
       <Seo title='Programma' />
       <main id='index' className='text-body'>
         <Container fluid>
