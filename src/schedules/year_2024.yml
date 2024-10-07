@@ -24,9 +24,9 @@ schedule:
         author: Fabio Alessandro "Fale" Locati
         room: U6-41
         duration: 45 min
-      - title: "LDAP, Kerberos e AFS per il sysadmin hobbista"
-        description: "La coppia LDAP+Kerberos rappresenta lo standard de facto per la gestione centralizzata degli utenti di una intranet, mentre AFS è un robusto file system distribuito con una storia di grandi successi alle spalle. Integrate assieme, queste tre tecnologie raggiungono un'armonia magica, consentendo un'esperienza utente totalmente nomade. Peccato solo che esse siano poco conosciute, che il loro funzionamento sia alquanto imperscrutabile, e che la loro sola menzione possa far venire gli incubi a molti sysadmin di professione. In questo intervento vedremo come, in ambiti hobbistici quali homelabs o piccole reti, un sistema del genere sia, tutto sommato, divertente da mettere in opera, a patto di avere una certa passione per le tecnologie oscure e le visioni alternative di Internet. Parleremo dei concetti chiave dietro a queste tre tecnologie, mostreremo i passaggi principali nel setup di uno stack OpenLDAP/MIT Kerberos/OpenAFS, e ne evidenzieremo le criticità. La soddisfazione è garantita."
-        author: Tomas Antonio Lopez
+      - title: "RigeneraMI: inclusione digitale e sostenibilità ambientale"
+        description: "RigeneraMI è un progetto del Rotary che mira a ridurre i rifiuti tecnologici e l'inquinamento attraverso il riciclo e il riutilizzo dei dispositivi elettronici obsoleti. In questo intervento, presenteremo le strategie e le iniziative che abbiamo implementato per sensibilizzare la comunità sull'importanza della sostenibilità tecnologica. Discuteremo delle attività di raccolta e donazione dei dispositivi, dei nostri eventi di sensibilizzazione e delle collaborazioni con scuole e aziende locali. Il talk è rivolto a chiunque sia interessato alla sostenibilità, all'innovazione tecnologica e alla responsabilità sociale, inclusi studenti, professionisti IT e membri della comunità open source. Speriamo di ispirare i partecipanti a contribuire attivamente al progetto RigeneraMI, mostrando come le azioni collettive possano portare a un impatto positivo sull'ambiente e sulla società."
+        author: Gianluca Cocca
         room: U6-42
         duration: 45 min
   - time: "10:30"
