@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { graphql, navigate } from "gatsby";
-import Layout from "../components/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -9,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Dropdown from "react-bootstrap/Dropdown";
 import Seo from "../components/seo";
-import Hero from "../components/hero";
+import Header from "../components/header";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Talks = ({
@@ -254,12 +253,14 @@ const Page = ({ data }) => {
 
   return (
     <div>
+      <Header className="d-print-none" />
+      <div className="d-print-none my-3"/>
       <Seo title='Programma' />
       <main id='index' className='text-body'>
         <Container fluid>
           <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
             <h2 className='text-md-left text-center'>
-              Programma della giornata
+              Linux Day Milano - Programma della giornata
             </h2>
 
             <div className='d-flex flex-row gap-3 d-print-none'>
