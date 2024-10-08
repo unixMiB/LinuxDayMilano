@@ -162,6 +162,8 @@ const Talks = ({
                     style={{
                       padding: "1rem",
                       cursor: "pointer",
+                      pageBreakInside: "avoid",
+                      breakInside: "avoid",
                     }}
                   >
                     <Row>
@@ -247,7 +249,7 @@ const Page = ({ data }) => {
     <Layout>
       <Seo title='Programma' />
       <main id='index'>
-        <Hero />
+        <Hero className='d-none' />
         <section id='calendar' className='text-body'>
           <Container>
             <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
@@ -256,7 +258,11 @@ const Page = ({ data }) => {
               </h2>
 
               <div className='d-flex flex-row gap-3 d-print-none'>
-                <Button href='/schedule-printable' variant='warning'>
+                <Button
+                  className='d-none'
+                  href='/schedule-printable'
+                  variant='warning'
+                >
                   Versione stampabile
                 </Button>
                 <Button

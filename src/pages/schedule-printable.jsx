@@ -147,21 +147,20 @@ const Talks = ({
       </Modal>
       {data.map((i, k) => {
         return (
-          <Row key={k} className='pb-4'>
-            <Col lg={1} md={12} className='pb-4 mr-2'>
+          <Row key={k} className='pb-1 gx-1'>
+            <Col lg={1} md={12} className='pb-1 mr-1'>
               <h5 className='schedule-time'>{i.time}</h5>
             </Col>
             {i.talks.map((t, u) => {
               if ("development" === activeEnv) console.log(showStarred);
               return !showStarred || starredTalksForYear?.includes(t.title) ? (
-                <Col key={u} sm={showDescriptions ? 12 : ""} className='pb-4'>
+                <Col key={u} sm={showDescriptions ? 12 : ""} className='pb-0'>
                   <div
-                    onKeyPress={() => replaceModalItem(t)}
-                    onClick={() => replaceModalItem(t)}
-                    className='event border rounded h-100 d-flex flex-column'
+                    className='border border-success h-100 d-flex flex-column'
                     style={{
                       padding: "1rem",
-                      cursor: "pointer",
+                      pageBreakInside: "avoid",
+                      breakInside: "avoid",
                     }}
                   >
                     <Row>
@@ -186,8 +185,10 @@ const Talks = ({
                       <Col className='align-bottom text-start'>
                         {t.duration}
                       </Col>
-                      <Col className='align-bottom text-center'>{t.room}</Col>
-                      <Col className='d-flex gap-1 justify-content-end'>
+                      <Col className='align-bottom text-end justify-content-end'>
+                        {t.room}
+                      </Col>
+                      <Col className='d-flex gap-1 justify-content-end d-none'>
                         <Button
                           variant='warning'
                           onClick={(e) => handleStarClick(t.title, e)}
@@ -253,14 +254,16 @@ const Page = ({ data }) => {
 
   return (
     <div>
-      <Header className='d-print-none' />
-      <div className='d-print-none my-3' />
+      <div className='d-none my-3'>
+        <Header />
+      </div>
       <Seo title='Programma' />
       <main id='index' className='text-body'>
         <Container fluid>
           <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
             <h2 className='text-md-left text-center'>
-              Linux Day Milano - Programma della giornata
+              Linux Day Milano {schedData?.year} -{" "}
+              {!showStarred ? "Programma della giornata" : "Agenda personale"}
             </h2>
 
             <div className='d-flex flex-row gap-3 d-print-none'>
