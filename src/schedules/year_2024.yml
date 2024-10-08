@@ -1,2 +1,158 @@
 year: 2024
-schedule: []
+schedule:
+  - time: "9:00"
+    talks:
+      - title: Opening Keynote
+        description: "Discorso di apertura del Linux Day"
+        author: TBD
+        room: U6-40
+        duration: 30 min
+  - time: "9:30"
+    talks:
+      - title: "Denaro Pubblico? Codice Pubblico!"
+        description: '"Public Money? Public Code!" è una campagna che mira a garantire che il software finanziato con fondi pubblici sia disponibile per il pubblico. Il codice pagato dai contribuenti dovrebbe essere accessibile a tutti, promuovendo la trasparenza e l''innovazione. L''obiettivo è convincere i decisori politici europei ad adottare una legislazione che richieda che il software sviluppato con fondi pubblici per il settore pubblico sia reso disponibile con una licenza di software libero. La campagna sottolinea i vantaggi della libertà del software in termini di sicurezza, trasparenza e innovazione, soprattutto nel settore pubblico, che rappresenta una quota significativa del mercato IT. La campagna ha già ottenuto il supporto di numerose organizzazioni e individui, e continua a crescere. Questo talk presenterà la campagna "Public Money? Public Code!", discuterà i suoi obiettivi e le sue strategie, e mostrerà come i partecipanti possano contribuire a questa iniziativa.'
+        author: Dario Presutti - Free Software Foundation Europe (FSFE)
+        room: U6-39
+        duration: 45 min
+      - title: "Kubernetes 101: Navigating the Container Seas"
+        description: "Kubernetes è la piattaforma open source piu' popolare per l'orchestrazione di containers. Il mio talk si prefige di introdurre Kubernetes ad assoluti neofiti della containerizzazione. Inizierò con una breve introduzione su cos'è un Linux container, per poi gradualmente introdurre i concetti base di Kubernetes al fine di comprendere, alla conclusione del talk, come deployare una piccola applicazione di demo su Kubernetes. L'argomento potebbe essere attrattivo sia ad una platea puramente interessata all'aspetto tecnologico dei containers, sia ad una platea interessata ad un tale progetto puramente open source che raccoglie una vasta platea di contributori, sia ad una platea interessata alle opportunita' lavorative offerte dalla conoscenza di Kubernetes"
+        author: Alfonso Cancellara - Red Hat
+        room: U6-40
+        duration: 45 min
+      - title: "La strada verso l’immutabilità di sistemi Linux"
+        description: "L'immutabilità dei sistemi operativi rappresenta un concetto chiave nella gestione moderna dell'infrastruttura software, offrendo maggior sicurezza, stabilità e coerenza tra ambienti. In questo talk, discuteremo i vantaggi di un filesystem immutabile, la separazione tra dati utente e sistema operativo ed esploreremo alcuni approcci sperimentati dalle varie distribuzioni Linux. Analizzeremo inoltre l'impatto che questo paradigma può avere nello sviluppo software, nella gestione dei sistemi e nella sicurezza, evidenziando i punti di forza e limiti di questo modello."
+        author: Fabio Alessandro "Fale" Locati
+        room: U6-41
+        duration: 45 min
+      - title: "RigeneraMI: inclusione digitale e sostenibilità ambientale"
+        description: "RigeneraMI è un progetto del Rotary che mira a ridurre i rifiuti tecnologici e l'inquinamento attraverso il riciclo e il riutilizzo dei dispositivi elettronici obsoleti. In questo intervento, presenteremo le strategie e le iniziative che abbiamo implementato per sensibilizzare la comunità sull'importanza della sostenibilità tecnologica. Discuteremo delle attività di raccolta e donazione dei dispositivi, dei nostri eventi di sensibilizzazione e delle collaborazioni con scuole e aziende locali. Il talk è rivolto a chiunque sia interessato alla sostenibilità, all'innovazione tecnologica e alla responsabilità sociale, inclusi studenti, professionisti IT e membri della comunità open source. Speriamo di ispirare i partecipanti a contribuire attivamente al progetto RigeneraMI, mostrando come le azioni collettive possano portare a un impatto positivo sull'ambiente e sulla società."
+        author: Gianluca Cocca
+        room: U6-42
+        duration: 45 min
+  - time: "10:30"
+    talks:
+      - title: "Break"
+        duration: 15 min
+  - time: "10:45"
+    talks:
+      - title: Emacs non è un editor di testo (e nemmeno un sistema operativo)
+        description: 'Nonostante una storia lunga quasi 50 anni ed un ricco retaggio culturale, GNU Emacs viene spesso raccontato come solo uno dei tanti editor di testo usati da programmatori e appassionati. Anche a causa dalla perniciosa e interminabile ""guerra"" che imperversa tra gli utenti dei vari editor, è difficile per gli estranei capire cosa veramente sia Emacs, e la sua trattazione nel discorso comune tende a restare tristemente superficiale (nonché afflitta da numerose leggende). Questo talk rappresenta un tentativo di oltrepassare questa barriera culturale, raccontando la storia della famiglia EMACS, per poi mostrare come GNU Emacs sia, in realtà, in gran parte incomparabile con gli altri editor di testo di uso comune, e di come, forse, rappresenti l''ultima istanza di una concezione dei computer oramai quasi dimenticata.'
+        author: Tomas Antonio Lopez
+        room: U6-39
+        duration: 45 min
+      - title: "Workshop: Come contribuire al kernel Linux"
+        description: 'Vuoi fare bella figura con amici e parenti dimostrando di aver contribuito al kernel Linux con una patch? Questa guida breve e accessibile (si spera) ti mostrerà come: - mettere in piedi da zero un sistema in locale per sviluppare il kernel Linux - cercare qualcosa su cui iniziare a lavorare - fare modifiche al kernel e testarle - inviare una patch e incrociare le dita Alla fine di questo talk avrai le idee chiare su come procedere. Con un po'' di buona volontà diventerai presto un "kernel contributor"! (Talk del 2022 riproposto)'
+        author: Rigel Di Scala
+        room: U6-40
+        duration: 45 min
+      - title: "Packaging: analizziamo il DNA delle distro"
+        description: "In questo talk si vuole mostrare al pubblico cosa sia il Packaging, cuore di ogni distribuzione. Verrà mostrato il processo con il quale otteniamo dei pacchetti pronti da installare a partire dal codice sorgente, includendo alcuni esempi delle distribuzioni piu' famose e non. Si discuterà poi dei vari ecosistemi (come rust e python), dei loro relativi problemi e soluzioni nell'ambito del packaging. Conoscenze pregresse consigliate per una migliore fruizione del contenuto includono una conoscenza base di come funziona una distribuzione Linux e del linguaggio di scripting Bash."
+        author: Danilo Spinella - SUSE
+        room: U6-41
+        duration: 45 min
+      - title: "Domotica 2024: casa mia è casa tua (e di chiunque acceda alla telemetria)"
+        description: 'Negli ultimi anni è esploso il mercato della casa cosiddetta "furba", che ha portato all''utilizzo di computer connessi alla rete colleggati letteralmente a qualunque cosa: a chi appartiene dunque una moderna casa connessa? In questa presentazione verrà esposta la situazione attuale, e alcune proposte per poter beneficiare di domotica e automazione usando software libero e hardware riparabile, anche nel 2024.'
+        author: Lorenzo Prosseda - EXTRAORDY
+        room: U6-42
+        duration: 45 min
+  - time: "11:45"
+    talks:
+      - title: "Packaging Flatpaks: Building and mantaining Flatpaks"
+        description: I pacchetti software su Linux sono file che contengono applicazioni e le loro dipendenze, progettati per facilitare l'installazione su diverse distribuzioni. Purtroppo per gli sviluppatori, le diverse distribuzioni hanno sistemi di pacchettizzazione differenti, rendendo difficile creare pacchetti universali. Flatpak è una tecnologia che cerca di risolvere questo problema offrendo un sistema di pacchettizzazione quasi universale, che consente di distribuire applicazioni su diverse distribuzioni Linux in modo consistente e isolato. In questo intervento partiremo dalle basi della gestione pacchetti, esploreremo i passaggi fondamentali per costruire e mantenere un Flatpak. Esamineremo come scrivere un manifest per produrre un pacchetto Flatpak, come compilarlo localmente per testarlo, e infine come inviare una richiesta per aggiungerlo al repository Flathub, per renderlo disponibile agli utenti di tutto il mondo.
+        author: Daniele Barcella - unixMiB
+        room: U6-39
+        duration: 45 min
+      - title: "Sviluppa la tua prima applicazione per Linux con Flutter"
+        description: Flutter si è affermato come framework per lo sviluppo di applicazioni multi-piattaforma, supportando Android, iOS, Web e sistemi Desktop (Linux, macOS e Windows). La sua crescente popolarità ha catturato l'attenzione di importanti aziende del settore, inclusa Canonical, che ha adottato Flutter per sviluppare applicazioni come l'installer di Ubuntu a partire dalla versione 23.04. In questo talk vedremo come si può sviluppare una applicazione per il desktop Linux con Flutter, concentrandoci sulle migliori pratiche e sui pacchetti più efficaci per implementarne le funzionalità, dimostrando come questo framework possa potenziare lo sviluppo di Software Libero e Open Source.
+        author: Alberto Bonacina - Soluzione 1
+        room: U6-40
+        duration: 45 min
+      - title: "Dai nuova vita al tuo laboratorio di informatica con l’OpenSource"
+        description: 'In questa sessione presenteremo il lavoro congiunto fatto dall''Istituto Comprensivo Vittorio Locchi di Milano con l''associazione PCOfficina, specialisti nella rigenerazione di computer e nelle tecnologie Open Source. La quotidianità di molte scuole è fatta di hardware non sempre aggiornatissimo e l''assenza di continuità di figure tecniche esperte può portare ad un uso non ottimale o a soluzioni di rattoppo nella gestione di un''aula informatica. L''IC Locchi ha avviato nel 2021 una collaborazione con l''associazione PCOfficina che ha portato nel corso degli anni alla rigenerazione di 3 aule informatiche in plessi differenti e all''introduzione di soluzioni semplici e efficaci nella gestione delle stesse, il tutto senza onerosi investimenti e con gran soddisfazione dei vari insegnanti coinvolti. Se ti interessa scoprire come rendere "a prova di studente" e di facile manutenzione un''aula informatica, non mancare!'
+        author: Andrea Perotti, prof.ssa Patrizia Leggio - Associazione PCOfficina, I. C. Locchi
+        room: U6-41
+        duration: 45 min
+      - title: "Perché contribuire all'Open Source ti cambia (in meglio)"
+        description: "Contribuire a un progetto open source non è solo un modo per migliorare le tue competenze tecniche, ma è un'esperienza che può trasformare la tua carriera e il tuo modo di lavorare. In questo talk ti racconterò cosa ho imparato contribuendo a WordPress, ma soprattutto come partecipare a un progetto open source può darti molto più di quello che immagini: nuove abilità, opportunità lavorative e una rete di contatti globale. Non importa da dove inizi o quanto sai, l'open source ti offre la possibilità di crescere, imparare e fare davvero la differenza, sia per te che per gli altri."
+        author: Matteo Enna - Tannico
+        room: U6-42
+        duration: 45 min
+  - time: "12:45"
+    talks:
+      - title: Pausa pranzo
+        duration: 60 min
+  - time: "13:45"
+    talks:
+      - title: "Bootable Container: si installa come Linux, si gestisce come un container"
+        description: I container hanno rivoluzionato il modo di gestire servizi e applicazioni, riducendo al minimo i problemi di compatibilità e dipendenze. Immaginate di poter assemblare pacchetto per pacchetto, configurazione per configurazione una container image che al suo interno include tutto ciò che è necessario (kernel, moduli, systemd) a poterlo avviare come una qualsiasi macchina, in maniera dichiarativa e utilizzare quel container per creare un'immagine funzionante per un hypervisor, un cloud provider, o semplicemente una ISO da utilizzare per l'installazione di un sistema da zero. Cosa succederebbe se applicassimo lo stesso concetto al sistema operativo?  E se potessimo addirittura aggiornare lo stesso sistema solamente aggiornando l'immagine del container iniziale? Bene, smettete di immaginare!  Esistono e si chiamano bootable containers e in questa sessione andremo a vedere meglio cosa sono, come funzionano e quali vantaggi porta gestire un SO con un approccio orientato ai container.
+        author: Andrea Perotti, Carmelo Sarta - Red Hat
+        room: U6-39
+        duration: 45 min
+      - title: "Dal cloud al self-hosting"
+        description: Oggi siamo abituati ad utilizzare molti servizi cloud nella nostra vita di tutti i giorni, a partire da quelli di Google. Negli ultimi anni, ho deciso di progressivamente liberarmi di questi servizi, preferendo soluzioni self-hosted e open source. In questa sessione parleremo delle motivazioni dietro a questa scelta, i principali ostacoli che ho incontrato, e le lezioni apprese lungo il cammino. Discuteremo delle alternative open source che sono disponibili i servizi più comuni e come io ho deciso di preferirne alcune ad altre per aiutare chi desidera intraprendere un percorso simile verso una maggiore autonomia digitale e controllo dei propri dati.
+        author: Fabio Alessandro "Fale" Locati
+        room: U6-40
+        duration: 45 min
+      - title: "OSTree for fun and profit"
+        description: Dopo una breve introduzione su cos'è OSTree e su Fedora Atomic (con i vari pro e contro rispetto a distro "tradizionali"), quache esempio più avanzato su come usarla per compilarci moduli del kernel offtree, su toolbox e su archlinux-ostree (giusto per non stare sempre su fedora)
+        author: Timothy Redaelli
+        room: U6-41
+        duration: 45 min
+      - title: "Un nuovo approccio al self-hosting: purpose-built hardware e NixOS"
+        description: L'obiettivo del talk è mostrare una nuova prospettiva riguardante il self hosting ad un pubblico già approcciato all'argomento. Dopo aver introdotto i motivi per cui "self-hostare", con accenni ad alcuni prodotti in arrivo sul mercato proposti come "single board server", ovvero single board computer con un focus su funzionalità come networking e connettività espansa. Dopodiché si mostrerà un impiego di NixOS per poter configurare una macchina adibita al self-hosting con un approccio walk-through facendo un parallelismo con distribuzioni più comuni. Il talk sarà tenuto da 2 studenti del Politecnico di Milano membri del POuL.
+        author: Lorenzo Andreasi, Leonardo Salvini - Politecnico Open unix Labs (PoUL)
+        room: U6-42
+        duration: 45 min
+  - time: "14:45"
+    talks:
+      - title: Costruisci la tua cassetta degli attrezzi open source
+        description: "Come fare manutenzione e diagnosi hardware su un computer, utilizzando strumenti precisi e affidabili? In questo talk illustreremo diversi strumenti, tutti rigorosamente Open Source, utilizzati in PCOfficina, associazione milanese dedita da più di 10 anni alla rigenerazione di computer. Scopri con noi come ricavare le caratteristiche hardware di un PC senza usare il cacciavite, come testare la memoria RAM, come ottenere le caratteristiche e la salute di un disco e molto altro ancora. Alla fine, avrai tutto quel che ti serve per costruire la tua cassetta degli attrezzi, ed essere pronto a gestire ogni evenienza."
+        author: Emanuele Petriglia, Tomas Antonio Lopez - PCOfficina
+        room: U6-39
+        duration: 45 min
+      - title: "Le pratiche della ricerca scientifica aperta e il loro impatto: dati aperti, codice software aperto, pubblicazioni aperte"
+        description: "Un ricercatore scientifico che intenda usare strumenti computazionali per iniziare un progetto scientifico ad oggi si trova di fronte a svariate decisioni. Quale linguaggio di programmazione usare? Cosa fare dei dati una volto concluso il progetto? Su che rivista pubblicare lo studio? Queste decisioni, spesso prese adeguandosi a quello che è stato fatto precedentemente nel gruppo di ricerca dove uno lavora, possono in realtà influenzare profondamente l'impatto delle scoperte scientifiche fatte durante un progetto. In particolare, l'utilizzo di linguaggi di programmazione con licenza aperta come Python ed R, la pubblicazione degli scripts del progetto online, la pubblicazione dei dati utilizzati online senza restrizioni, e la pubblicazione dell'articolo scientifico sullo studio in una rivista Open Acces possono garantire la reproducibilità degli esperimenti fatti. In questo intervento, verranno spiegati i vantaggi e l'impatto della scienza aperta attraverso le sue pratiche principali."
+        author: Davide Chicco - Dipartimento di Informatica Sistemistica e Informazione, Università di Milano-Bicocca
+        room: U6-40
+        duration: 45 min
+      - title: "Z3 e gli SMT solver - I computer sanno risolvere problemi senza essere guidati?"
+        description: "Questo talk presenterà il problema di soddisfacibilità booleana e i SAT solver, visti come strumenti per risolvere alcune classi di problemi senza specificare un algoritmo risolutore. Quindi il problema di soddifacibilità modulo teorie verrà introdotto e verranno mostrati semplici esempi dell'utilizzo del solver Z3, attraverso la sua API Python. La presentazione non richiede conoscenze specifiche, per gli esempi sarà utile saper seguire semplici script in Python 3. L'obiettivo è mostrare un punto di vista diverso dal solito sulle potenzialità dei computer e dare un esempio dei risvolti pratici dell'informatica teorica e della logica matematica."
+        author: Pietro Lepori - Politecnico Open unix Labs (POuL)
+        room: U6-41
+        duration: 45 min
+      - title: "KubeVirt: la virtualizzazione nell'era di Kubernetes"
+        description: "KubeVirt è la tecnologia che permette di eseguire in parallelo container e virtual machine nello stesso cluster Kubernetes. Vedremo come progettare una piattaforma basata su KubeVirt, le reference architecture e i vantaggi strategici rispetto ad un hypervisor di vecchia generazione. "
+        author: Stefano Stagnaro - EXTRAORDY
+        room: U6-42
+        duration: 45 min
+  - time: "15:45"
+    talks:
+      - title: "Break"
+        duration: 15 min
+  - time: "16:00"
+    talks:
+      - title: "Workshop: Ada & Zangemann - Una fiaba che parla di software, skateboard e gelato al lampone"
+        description: '"Ada & Zangemann" (ada.fsfe.org) è una fiaba divertente e istruttiva che, attraverso le avventure di una curiosa ragazza di nome Ada e di un famoso inventore, Zangemann, esplora il mondo del software libero. La storia, adatta a lettori dai 6 ai 106 anni, sottolinea l''importanza di controllare la tecnologia e incoraggia i giovani - soprattutto le ragazze - a sperimentare e plasmare la tecnologia. La fiaba è uno strumento efficace per sensibilizzare i bambini sul mondo dell''open source e della libertà del software. La storia affronta argomenti come i monopoli, il lobbismo e la privacy in modo accessibile e stimolante. La lettura di questa fiaba alla Linux Day Milano Conference può essere un modo coinvolgente per introdurre gli adulti ai concetti di base dell''open source e - soprattutto - per mostrare come la letteratura possa essere utilizzata per educare e ispirare le future generazioni di innovatori e sostenitori dell''open source.'
+        author: Dario Presutti - Free Software Foundation Europe (FSFE)
+        room: U6-39
+        duration: 45 min
+      - title: "Intrusion prevention per tutti: introduzione a Fail2ban"
+        description: La sicurezza è un argomento importante per chiunque sia coinvolto nell'IT, sia in ambito professionale che hobbystico. Questa presentazione vuole dare una introduzione alla Intrusion prevention, spiegare i concetti fondamentali di Fail2ban e mostrarne la sua implementazione pratica.
+        author: Luca Mauri
+        room: U6-40
+        duration: 45 min
+      - title: "Cos'è il Confidential Computing?"
+        description: 'Gli ambienti di esecuzione fidati (TEE) sono una tecnologia nei processori usati in ambito di sicurezza informatica che permettono di proteggere i dati anche mentre vengono elaborati. In questo talk esploreremo come queste tecnologie creano "bolle impenetrabili" all''interno del sistema, isolando le informazioni sensibili da qualsiasi accesso non autorizzato, superando le soluzioni di sicurezza tradizionali.'
+        author: Camilla Conte
+        room: U6-41
+        duration: 45 min
+      - title: "Cockpit on steroids - Sviluppare e distribuire Cockpit Applications"
+        description: Cockpit è uno strumento potente per la gestione dei server Linux, ma le sue funzionalità di base potrebbero non coprire tutte le esigenze. In questo talk, vedremo come estendere Cockpit creando delle custom Cockpit Applications utilizzando React come framework per l'interfaccia utente, sfruttando le ampie API offerte da Cockpit. Partiremo dalla creazione fino alla distribuzione di una Cockpit Application, approfondendo l'esperienza di sviluppo, le best practice e come conciliare lo sviluppo web con il system programming. Alla fine del percorso, avremo una Cockpit Application minimale, pronta per essere testata e distribuita sui nostri server
+        author: Carmine Di Monaco - SUSE
+        room: U6-42
+        duration: 45 min
+  - time: "17:00"
+    talks:
+      - title: "Chiusura del Linux Day"
+        description: Chiusura della giornata e saluti finali
+        duration: 60 min
