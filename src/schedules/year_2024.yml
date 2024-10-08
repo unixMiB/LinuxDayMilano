@@ -14,9 +14,9 @@ schedule:
         author: Dario Presutti - Free Software Foundation Europe (FSFE)
         room: U6-39
         duration: 45 min
-      - title: Emacs non è un editor di testo (e nemmeno un sistema operativo)
-        description: 'Nonostante una storia lunga quasi 50 anni ed un ricco retaggio culturale, GNU Emacs viene spesso raccontato come solo uno dei tanti editor di testo usati da programmatori e appassionati. Anche a causa dalla perniciosa e interminabile ""guerra"" che imperversa tra gli utenti dei vari editor, è difficile per gli estranei capire cosa veramente sia Emacs, e la sua trattazione nel discorso comune tende a restare tristemente superficiale (nonché afflitta da numerose leggende). Questo talk rappresenta un tentativo di oltrepassare questa barriera culturale, raccontando la storia della famiglia EMACS, per poi mostrare come GNU Emacs sia, in realtà, in gran parte incomparabile con gli altri editor di testo di uso comune, e di come, forse, rappresenti l''ultima istanza di una concezione dei computer oramai quasi dimenticata.'
-        author: Tomas Antonio Lopez
+      - title: "Kubernetes 101: Navigating the Container Seas"
+        description: "Kubernetes è la piattaforma open source piu' popolare per l'orchestrazione di containers. Il mio talk si prefige di introdurre Kubernetes ad assoluti neofiti della containerizzazione. Inizierò con una breve introduzione su cos'è un Linux container, per poi gradualmente introdurre i concetti base di Kubernetes al fine di comprendere, alla conclusione del talk, come deployare una piccola applicazione di demo su Kubernetes. L'argomento potebbe essere attrattivo sia ad una platea puramente interessata all'aspetto tecnologico dei containers, sia ad una platea interessata ad un tale progetto puramente open source che raccoglie una vasta platea di contributori, sia ad una platea interessata alle opportunita' lavorative offerte dalla conoscenza di Kubernetes"
+        author: Alfonso Cancellara - Red Hat
         room: U6-40
         duration: 45 min
       - title: "La strada verso l’immutabilità di sistemi Linux"
@@ -35,9 +35,9 @@ schedule:
         duration: 15 min
   - time: "10:45"
     talks:
-      - title: "Kubernetes 101: Navigating the Container Seas"
-        description: "Kubernetes è la piattaforma open source piu' popolare per l'orchestrazione di containers. Il mio talk si prefige di introdurre Kubernetes ad assoluti neofiti della containerizzazione. Inizierò con una breve introduzione su cos'è un Linux container, per poi gradualmente introdurre i concetti base di Kubernetes al fine di comprendere, alla conclusione del talk, come deployare una piccola applicazione di demo su Kubernetes. L'argomento potebbe essere attrattivo sia ad una platea puramente interessata all'aspetto tecnologico dei containers, sia ad una platea interessata ad un tale progetto puramente open source che raccoglie una vasta platea di contributori, sia ad una platea interessata alle opportunita' lavorative offerte dalla conoscenza di Kubernetes"
-        author: Alfonso Cancellara - Red Hat
+      - title: Emacs non è un editor di testo (e nemmeno un sistema operativo)
+        description: 'Nonostante una storia lunga quasi 50 anni ed un ricco retaggio culturale, GNU Emacs viene spesso raccontato come solo uno dei tanti editor di testo usati da programmatori e appassionati. Anche a causa dalla perniciosa e interminabile ""guerra"" che imperversa tra gli utenti dei vari editor, è difficile per gli estranei capire cosa veramente sia Emacs, e la sua trattazione nel discorso comune tende a restare tristemente superficiale (nonché afflitta da numerose leggende). Questo talk rappresenta un tentativo di oltrepassare questa barriera culturale, raccontando la storia della famiglia EMACS, per poi mostrare come GNU Emacs sia, in realtà, in gran parte incomparabile con gli altri editor di testo di uso comune, e di come, forse, rappresenti l''ultima istanza di una concezione dei computer oramai quasi dimenticata.'
+        author: Tomas Antonio Lopez
         room: U6-39
         duration: 45 min
       - title: "Workshop: Come contribuire al kernel Linux"
