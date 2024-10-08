@@ -9,6 +9,7 @@ import watch from "../assets/watch.svg";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Hero from "../components/hero";
+import { Link } from "gatsby";
 
 const IndexPage = ({ data }) => {
   const isPast = new Date(data.site.siteMetadata.event.date) <= new Date();
@@ -219,6 +220,7 @@ const IndexPage = ({ data }) => {
                       })}
                     </ul>
                     <Button
+                      as={Link}
                       href='/schedule'
                       className='btn-lg'
                       variant='warning'

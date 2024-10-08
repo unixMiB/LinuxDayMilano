@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Alert from "react-bootstrap/Alert";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 const Hero = ({ small }) => {
   const data = useStaticQuery(graphql`
@@ -153,6 +154,7 @@ const Hero = ({ small }) => {
             <div className='mt-5 gx-5 d-flex flex-wrap justify-content-start clearfix'>
               <Button
                 href='/#explore'
+                as={Link}
                 size='lg'
                 className='m-1'
                 variant='warning'
@@ -160,6 +162,7 @@ const Hero = ({ small }) => {
                 Scopri di più
               </Button>
               <Button
+                as={Link}
                 href={`/schedule/${params}#calendar`}
                 size='lg'
                 className='m-1'

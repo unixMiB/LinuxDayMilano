@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../assets/foot.svg";
+import { Link } from "gatsby";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -48,7 +49,11 @@ const Header = () => {
         }}
       >
         <Container>
-          <Navbar.Brand className='brand d-flex align-items-center' href='/'>
+          <Navbar.Brand
+            as={Link}
+            className='brand d-flex align-items-center'
+            href='/'
+          >
             <img
               src={Logo}
               style={{ fontSize: "1.5em" }}
@@ -65,16 +70,26 @@ const Header = () => {
             className='justify-content-end'
           >
             <Nav>
-              <Nav.Link href='/#explore'>Evento</Nav.Link>
+              <Nav.Link as={Link} href='/#explore'>
+                Evento
+              </Nav.Link>
               {switches.cfp && (
-                <Nav.Link href='/#schedule'>Call for papers</Nav.Link>
+                <Nav.Link as={Link} href='/#schedule'>
+                  Call for papers
+                </Nav.Link>
               )}
-              <Nav.Link href={`/schedule/${params}#calendar`}>
+              <Nav.Link as={Link} href={`/schedule/${params}#calendar`}>
                 {switches.schedule ? "Programma" : "Programma precedente"}
               </Nav.Link>
-              <Nav.Link href='/codeofconduct'>Code of Conduct</Nav.Link>
-              <Nav.Link href='/#sponsors'>Patrocini</Nav.Link>
-              <Nav.Link href='/#contattaci'>Contatti</Nav.Link>
+              <Nav.Link as={Link} href='/codeofconduct'>
+                Code of Conduct
+              </Nav.Link>
+              <Nav.Link as={Link} href='/#sponsors'>
+                Patrocini
+              </Nav.Link>
+              <Nav.Link as={Link} href='/#contattaci'>
+                Contatti
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
