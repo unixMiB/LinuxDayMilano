@@ -88,9 +88,9 @@ schedule:
         author: Andrea Perotti, Carmelo Sarta - Red Hat
         room: U6-39
         duration: 45 min
-      - title: "Workshop: Ada & Zangemann - Una fiaba che parla di software, skateboard e gelato al lampone"
-        description: '"Ada & Zangemann" (ada.fsfe.org) è una fiaba divertente e istruttiva che, attraverso le avventure di una curiosa ragazza di nome Ada e di un famoso inventore, Zangemann, esplora il mondo del software libero. La storia, adatta a lettori dai 6 ai 106 anni, sottolinea l''importanza di controllare la tecnologia e incoraggia i giovani - soprattutto le ragazze - a sperimentare e plasmare la tecnologia. La fiaba è uno strumento efficace per sensibilizzare i bambini sul mondo dell''open source e della libertà del software. La storia affronta argomenti come i monopoli, il lobbismo e la privacy in modo accessibile e stimolante. La lettura di questa fiaba alla Linux Day Milano Conference può essere un modo coinvolgente per introdurre gli adulti ai concetti di base dell''open source e - soprattutto - per mostrare come la letteratura possa essere utilizzata per educare e ispirare le future generazioni di innovatori e sostenitori dell''open source.'
-        author: Dario Presutti - Free Software Foundation Europe (FSFE)
+      - title: "Dal cloud al self-hosting"
+        description: Oggi siamo abituati ad utilizzare molti servizi cloud nella nostra vita di tutti i giorni, a partire da quelli di Google. Negli ultimi anni, ho deciso di progressivamente liberarmi di questi servizi, preferendo soluzioni self-hosted e open source. In questa sessione parleremo delle motivazioni dietro a questa scelta, i principali ostacoli che ho incontrato, e le lezioni apprese lungo il cammino. Discuteremo delle alternative open source che sono disponibili i servizi più comuni e come io ho deciso di preferirne alcune ad altre per aiutare chi desidera intraprendere un percorso simile verso una maggiore autonomia digitale e controllo dei propri dati.
+        author: Fabio Alessandro "Fale" Locati
         room: U6-40
         duration: 45 min
       - title: "OSTree for fun and profit"
@@ -131,9 +131,9 @@ schedule:
         duration: 15 min
   - time: "16:00"
     talks:
-      - title: "Dal cloud al self-hosting"
-        description: Oggi siamo abituati ad utilizzare molti servizi cloud nella nostra vita di tutti i giorni, a partire da quelli di Google. Negli ultimi anni, ho deciso di progressivamente liberarmi di questi servizi, preferendo soluzioni self-hosted e open source. In questa sessione parleremo delle motivazioni dietro a questa scelta, i principali ostacoli che ho incontrato, e le lezioni apprese lungo il cammino. Discuteremo delle alternative open source che sono disponibili i servizi più comuni e come io ho deciso di preferirne alcune ad altre per aiutare chi desidera intraprendere un percorso simile verso una maggiore autonomia digitale e controllo dei propri dati.
-        author: Fabio Alessandro "Fale" Locati
+      - title: "Workshop: Ada & Zangemann - Una fiaba che parla di software, skateboard e gelato al lampone"
+        description: '"Ada & Zangemann" (ada.fsfe.org) è una fiaba divertente e istruttiva che, attraverso le avventure di una curiosa ragazza di nome Ada e di un famoso inventore, Zangemann, esplora il mondo del software libero. La storia, adatta a lettori dai 6 ai 106 anni, sottolinea l''importanza di controllare la tecnologia e incoraggia i giovani - soprattutto le ragazze - a sperimentare e plasmare la tecnologia. La fiaba è uno strumento efficace per sensibilizzare i bambini sul mondo dell''open source e della libertà del software. La storia affronta argomenti come i monopoli, il lobbismo e la privacy in modo accessibile e stimolante. La lettura di questa fiaba alla Linux Day Milano Conference può essere un modo coinvolgente per introdurre gli adulti ai concetti di base dell''open source e - soprattutto - per mostrare come la letteratura possa essere utilizzata per educare e ispirare le future generazioni di innovatori e sostenitori dell''open source.'
+        author: Dario Presutti - Free Software Foundation Europe (FSFE)
         room: U6-39
         duration: 45 min
       - title: "Intrusion prevention per tutti: introduzione a Fail2ban"
