@@ -153,6 +153,6 @@ schedule:
         duration: 45 min
   - time: "17:00"
     talks:
-      - title: "Chiusura del Linux Day"
+      - title: "Chiusura del Linux Day e foto di gruppo"
         description: Chiusura della giornata e saluti finali
         duration: 60 min
