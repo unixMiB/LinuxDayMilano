@@ -4,9 +4,10 @@ schedule:
     talks:
       - title: Opening Keynote
         description: "Discorso di apertura del Linux Day"
-        author: TBD
+        author: Massimo Pezzali, Daniele Barcella - unixMiB
         room: U6-40
         duration: 30 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Opening%20Keynote%20-%20Massimo%20Pezzali%2C%20Daniele%20Barcella%20-%20unixMiB%20.pdf
   - time: "9:30"
     talks:
       - title: "Denaro Pubblico? Codice Pubblico!"
@@ -14,6 +15,7 @@ schedule:
         author: Dario Presutti - Free Software Foundation Europe (FSFE)
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Denaro%20Pubblico%20Codice%20Pubblico%20-%20Dario%20Presutti%20-%20Free%20Software%20Foundation%20Europe%20(FSFE).pdf
       - title: "Kubernetes 101: Navigating the Container Seas"
         description: "Kubernetes è la piattaforma open source piu' popolare per l'orchestrazione di containers. Il mio talk si prefige di introdurre Kubernetes ad assoluti neofiti della containerizzazione. Inizierò con una breve introduzione su cos'è un Linux container, per poi gradualmente introdurre i concetti base di Kubernetes al fine di comprendere, alla conclusione del talk, come deployare una piccola applicazione di demo su Kubernetes. L'argomento potebbe essere attrattivo sia ad una platea puramente interessata all'aspetto tecnologico dei containers, sia ad una platea interessata ad un tale progetto puramente open source che raccoglie una vasta platea di contributori, sia ad una platea interessata alle opportunita' lavorative offerte dalla conoscenza di Kubernetes"
         author: Alfonso Cancellara - Red Hat
@@ -45,6 +47,7 @@ schedule:
         author: Rigel Di Scala
         room: U6-40
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Come%20contribuire%20al%20kernel%20Linux%20-%20Rigel%20Di%20Scala.pdf
       - title: "Packaging: analizziamo il DNA delle distro"
         description: "In questo talk si vuole mostrare al pubblico cosa sia il Packaging, cuore di ogni distribuzione. Verrà mostrato il processo con il quale otteniamo dei pacchetti pronti da installare a partire dal codice sorgente, includendo alcuni esempi delle distribuzioni piu' famose e non. Si discuterà poi dei vari ecosistemi (come rust e python), dei loro relativi problemi e soluzioni nell'ambito del packaging. Conoscenze pregresse consigliate per una migliore fruizione del contenuto includono una conoscenza base di come funziona una distribuzione Linux e del linguaggio di scripting Bash."
         author: Danilo Spinella - SUSE
@@ -55,6 +58,7 @@ schedule:
         author: Lorenzo Prosseda - EXTRAORDY
         room: U6-42
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Casa%20mia%20%C3%A8%20casa%20tua%20(e%20di%20chiunque%20acceda%20alla%20telemetria)%20-%20Lorenzo%20Prosseda%20-%20EXTRAORDY.pdf
   - time: "11:45"
     talks:
       - title: "Packaging Flatpaks: Building and mantaining Flatpaks"
@@ -62,6 +66,7 @@ schedule:
         author: Daniele Barcella - unixMiB
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Packaging%20Flatpaks%20-%20Daniele%20Barcella%20-%20unixMiB.pdf
       - title: "Sviluppa la tua prima applicazione per Linux con Flutter"
         description: Flutter si è affermato come framework per lo sviluppo di applicazioni multi-piattaforma, supportando Android, iOS, Web e sistemi Desktop (Linux, macOS e Windows). La sua crescente popolarità ha catturato l'attenzione di importanti aziende del settore, inclusa Canonical, che ha adottato Flutter per sviluppare applicazioni come l'installer di Ubuntu a partire dalla versione 23.04. In questo talk vedremo come si può sviluppare una applicazione per il desktop Linux con Flutter, concentrandoci sulle migliori pratiche e sui pacchetti più efficaci per implementarne le funzionalità, dimostrando come questo framework possa potenziare lo sviluppo di Software Libero e Open Source.
         author: Alberto Bonacina - Soluzione 1
@@ -103,6 +108,7 @@ schedule:
         author: Lorenzo Andreasi, Leonardo Salvini - Politecnico Open unix Labs (PoUL)
         room: U6-42
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Un%20nuovo%20approccio%20al%20self-hosting%2C%20purpose-built%20hardware%20e%20NixOS%20-%20Lorenzo%20Andreasi%2C%20Leonardo%20Salvini%20-%20Politecnico%20Open%20unix%20Labs%20(PoUL).pdf
   - time: "14:45"
     talks:
       - title: Costruisci la tua cassetta degli attrezzi open source
@@ -141,6 +147,7 @@ schedule:
         author: Luca Mauri
         room: U6-40
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Intrusion%20prevention%20per%20tutti%20-%20Luca%20Mauri.pdf
       - title: "Cos'è il Confidential Computing?"
         description: 'Gli ambienti di esecuzione fidati (TEE) sono una tecnologia nei processori usati in ambito di sicurezza informatica che permettono di proteggere i dati anche mentre vengono elaborati. In questo talk esploreremo come queste tecnologie creano "bolle impenetrabili" all''interno del sistema, isolando le informazioni sensibili da qualsiasi accesso non autorizzato, superando le soluzioni di sicurezza tradizionali.'
         author: Camilla Conte
