@@ -21,6 +21,7 @@ schedule:
         author: Alfonso Cancellara - Red Hat
         room: U6-40
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Kubernetes%20101%20-%20Navigating%20the%20Container%20Seas%20-%20Alfonso%20Cancellara%20-%20Red%20Hat.pdf
       - title: "La strada verso l’immutabilità di sistemi Linux"
         description: "L'immutabilità dei sistemi operativi rappresenta un concetto chiave nella gestione moderna dell'infrastruttura software, offrendo maggior sicurezza, stabilità e coerenza tra ambienti. In questo talk, discuteremo i vantaggi di un filesystem immutabile, la separazione tra dati utente e sistema operativo ed esploreremo alcuni approcci sperimentati dalle varie distribuzioni Linux. Analizzeremo inoltre l'impatto che questo paradigma può avere nello sviluppo software, nella gestione dei sistemi e nella sicurezza, evidenziando i punti di forza e limiti di questo modello."
         author: Fabio Alessandro "Fale" Locati
@@ -31,6 +32,7 @@ schedule:
         author: Gianluca Cocca
         room: U6-42
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/RigeneraMI%20-%20inclusione%20digitale%20e%20sostenibilit%C3%A0%20ambientale%20-%20Gianluca%20Cocca.pdf
   - time: "10:30"
     talks:
       - title: "Break"
@@ -82,6 +84,7 @@ schedule:
         author: Matteo Enna - Tannico
         room: U6-42
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Perch%C3%A9%20contribuire%20all'Open%20Source%20ti%20cambia%20(in%20meglio)%20-%20Matteo%20Enna%20-%20Tannico.pdf
   - time: "12:45"
     talks:
       - title: Pausa pranzo
@@ -103,6 +106,7 @@ schedule:
         author: Timothy Redaelli
         room: U6-41
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/OSTree%20for%20fun%20and%20profit%20-%20Timothy%20Redaelli.pdf
       - title: "Un nuovo approccio al self-hosting: purpose-built hardware e NixOS"
         description: L'obiettivo del talk è mostrare una nuova prospettiva riguardante il self hosting ad un pubblico già approcciato all'argomento. Dopo aver introdotto i motivi per cui "self-hostare", con accenni ad alcuni prodotti in arrivo sul mercato proposti come "single board server", ovvero single board computer con un focus su funzionalità come networking e connettività espansa. Dopodiché si mostrerà un impiego di NixOS per poter configurare una macchina adibita al self-hosting con un approccio walk-through facendo un parallelismo con distribuzioni più comuni. Il talk sarà tenuto da 2 studenti del Politecnico di Milano membri del POuL.
         author: Lorenzo Andreasi, Leonardo Salvini - Politecnico Open unix Labs (PoUL)
@@ -121,6 +125,7 @@ schedule:
         author: Davide Chicco - Dipartimento di Informatica Sistemistica e Informazione, Università di Milano-Bicocca
         room: U6-40
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Le%20pratiche%20della%20ricerca%20scientifica%20aperta%20e%20il%20loro%20impatto%20-%20dati%20aperti%2C%20codice%20software%20aperto%2C%20pubblicazioni%20aperte%20-%20Davide%20Chicco%20-%20Dipartimento%20di%20Informatica%20Sistemistica%20e%20Informazione%2C%20Universit%C3%A0%20di%20Milano-Bicocca.pdf
       - title: "Z3 e gli SMT solver - I computer sanno risolvere problemi senza essere guidati?"
         description: "Questo talk presenterà il problema di soddisfacibilità booleana e i SAT solver, visti come strumenti per risolvere alcune classi di problemi senza specificare un algoritmo risolutore. Quindi il problema di soddifacibilità modulo teorie verrà introdotto e verranno mostrati semplici esempi dell'utilizzo del solver Z3, attraverso la sua API Python. La presentazione non richiede conoscenze specifiche, per gli esempi sarà utile saper seguire semplici script in Python 3. L'obiettivo è mostrare un punto di vista diverso dal solito sulle potenzialità dei computer e dare un esempio dei risvolti pratici dell'informatica teorica e della logica matematica."
         author: Pietro Lepori - Politecnico Open unix Labs (POuL)
@@ -153,6 +158,7 @@ schedule:
         author: Camilla Conte
         room: U6-41
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/c5b7934b73259cc1d8ef2e48504aaf4543d67342/Linux%20Day%20Milano%202024/Cos%E2%80%99%C3%A8%20il%20Confidential%20Computing%20-%20Camilla%20Conte.pdf
       - title: "Cockpit on steroids - Sviluppare e distribuire Cockpit Applications"
         description: Cockpit è uno strumento potente per la gestione dei server Linux, ma le sue funzionalità di base potrebbero non coprire tutte le esigenze. In questo talk, vedremo come estendere Cockpit creando delle custom Cockpit Applications utilizzando React come framework per l'interfaccia utente, sfruttando le ampie API offerte da Cockpit. Partiremo dalla creazione fino alla distribuzione di una Cockpit Application, approfondendo l'esperienza di sviluppo, le best practice e come conciliare lo sviluppo web con il system programming. Alla fine del percorso, avremo una Cockpit Application minimale, pronta per essere testata e distribuita sui nostri server
         author: Carmine Di Monaco - SUSE
