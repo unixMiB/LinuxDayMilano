@@ -45,6 +45,7 @@ schedule:
         author: Tomas Antonio Lopez
         room: U6-39
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Emacs%20non%20%C3%A8%20un%20editor%20di%20testo%20(e%20nemmeno%20un%20sistema%20operativo)%20-%20Tomas%20Antonio%20Lopez.pdf
       - title: "Workshop: Come contribuire al kernel Linux"
         description: 'Vuoi fare bella figura con amici e parenti dimostrando di aver contribuito al kernel Linux con una patch? Questa guida breve e accessibile (si spera) ti mostrerà come: - mettere in piedi da zero un sistema in locale per sviluppare il kernel Linux - cercare qualcosa su cui iniziare a lavorare - fare modifiche al kernel e testarle - inviare una patch e incrociare le dita Alla fine di questo talk avrai le idee chiare su come procedere. Con un po'' di buona volontà diventerai presto un "kernel contributor"! (Talk del 2022 riproposto)'
         author: Rigel Di Scala
