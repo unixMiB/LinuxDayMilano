@@ -81,6 +81,7 @@ schedule:
         author: Andrea Perotti, prof.ssa Patrizia Leggio - Associazione PCOfficina, I. C. Locchi
         room: U6-41
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/Dai%20nuova%20vita%20al%20tuo%20laboratorio%20di%20informatica%20con%20l%E2%80%99OpenSource%20-%20Andrea%20Perotti%2C%20prof.ssa%20Patrizia%20Leggio%20-%20Associazione%20PCOfficina%2C%20I.%20C.%20Locchi.pdf
       - title: "Perché contribuire all'Open Source ti cambia (in meglio)"
         description: "Contribuire a un progetto open source non è solo un modo per migliorare le tue competenze tecniche, ma è un'esperienza che può trasformare la tua carriera e il tuo modo di lavorare. In questo talk ti racconterò cosa ho imparato contribuendo a WordPress, ma soprattutto come partecipare a un progetto open source può darti molto più di quello che immagini: nuove abilità, opportunità lavorative e una rete di contatti globale. Non importa da dove inizi o quanto sai, l'open source ti offre la possibilità di crescere, imparare e fare davvero la differenza, sia per te che per gli altri."
         author: Matteo Enna - Tannico
@@ -140,6 +141,7 @@ schedule:
         author: Stefano Stagnaro - EXTRAORDY
         room: U6-42
         duration: 45 min
+        slides: https://github.com/unixMiB/events/blob/master/Linux%20Day%20Milano%202024/KubeVirt%20-%20la%20virtualizzazione%20nell'era%20di%20Kubernetes%20-%20Stefano%20Stagnaro%20-%20EXTRAORDY.pdf
   - time: "15:45"
     talks:
       - title: "Break"
