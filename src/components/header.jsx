@@ -17,6 +17,7 @@ const Header = () => {
           switches {
             schedule
             cfp
+            sponsors
           }
         }
       }
@@ -31,7 +32,6 @@ const Header = () => {
 
   const year = data.site.siteMetadata.event.year;
   const switches = data.site.siteMetadata.switches;
-
   const previousYear = data.allSchedulesYaml.nodes.map((node) => node.year)[1];
   const params = switches.schedule
     ? ""
@@ -84,9 +84,11 @@ const Header = () => {
               <Nav.Link as={Link} href='/codeofconduct'>
                 Code of Conduct
               </Nav.Link>
-              <Nav.Link as={Link} href='/#sponsors'>
-                Patrocini
-              </Nav.Link>
+              {switches.sponsors && (
+                <Nav.Link as={Link} href='/#sponsors'>
+                  Patrocini e sponsor
+                </Nav.Link>
+              )}
               <Nav.Link as={Link} href='/#contattaci'>
                 Contatti
               </Nav.Link>

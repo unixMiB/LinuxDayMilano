@@ -105,14 +105,13 @@ const Hero = ({ small }) => {
             <small>
               organizzato da{" "}
               <a
-                title='Scopri di più su unixMiB'
+                title='Scopri di più su POuL'
                 href={metadata.contacts.website}
                 target='_blank'
                 className='unixmib text-white'
                 rel='noopener noreferrer'
               >
-                <span className='unix'>unix</span>
-                <span className='mib'>MiB</span>
+                <span className='unix'>POuL</span>
               </a>
             </small>
           </h4>

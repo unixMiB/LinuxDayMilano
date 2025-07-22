@@ -10,6 +10,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Hero from "../components/hero";
 import { Link } from "gatsby";
+import Alert from "react-bootstrap/Alert";
 
 const IndexPage = ({ data }) => {
   const isPast = new Date(data.site.siteMetadata.event.date) <= new Date();
@@ -137,30 +138,35 @@ const IndexPage = ({ data }) => {
                 )}
 
                 {data.site.siteMetadata.switches.cfp && (
-                  <>
-                    <p>
-                      {data.site.siteMetadata.event.cfp &&
-                        "Abbiamo aperto la call-for-speakers! "}
-                      Ecco cosa devi sapere se vuoi presentare qualcosa al Linux
-                      Day Milano.
-                    </p>
-                    <p>
-                      Siamo interessati a tutti i generi di talk e presentazioni
-                      inerenti (anche in piccola parte) al mondo Linux, del
-                      Software Libero e dello Sviluppo Software Open Source.
-                    </p>
-                    <p>
-                      Alcuni argomenti che piacciono a chi viene al Linux Day:
-                      Linux, Software Libero, Sviluppo Software, Machine
-                      Learning, Big Data, Self-hosting, Privacy, Retro Gaming,
-                      Storia dell'informatica, Do It Yourself ...
-                    </p>
-                    <p>
-                      Sei anche il benvenuto se vuoi presentare un tuo progetto
-                      o mostrare una tua invenzione.
-                    </p>
-                    <p>Per tutti i dettagli prosegui al link qui sotto.</p>
-                    {/* <p className='fw-bold'>
+                  <div>
+                    <div className='pb-4'>
+                      <p>
+                        {data.site.siteMetadata.event.cfp && (
+                          <Alert variant='info'>
+                            Abbiamo aperto la call-for-speakers!
+                          </Alert>
+                        )}
+                        Ecco cosa devi sapere se vuoi presentare qualcosa al
+                        Linux Day Milano.
+                      </p>
+                      <p>
+                        Siamo interessati a tutti i generi di talk e
+                        presentazioni inerenti (anche in piccola parte) al mondo
+                        Linux, del Software Libero e dello Sviluppo Software
+                        Open Source.
+                      </p>
+                      <p>
+                        Alcuni argomenti che piacciono a chi viene al Linux Day:
+                        Linux, Software Libero, Sviluppo Software, Machine
+                        Learning, Big Data, Self-hosting, Privacy, Retro Gaming,
+                        Storia dell'informatica, Do It Yourself ...
+                      </p>
+                      <p>
+                        Sei anche il benvenuto se vuoi presentare un tuo
+                        progetto o mostrare una tua invenzione.
+                      </p>
+                      <p>Per tutti i dettagli prosegui al link qui sotto.</p>
+                      {/* <p className='fw-bold'>
                       Deadline{" "}
                       {new Date("2023-09-21").toLocaleDateString("it-IT", {
                         weekday: "long",
@@ -170,45 +176,69 @@ const IndexPage = ({ data }) => {
                       })}
                     </p> */}
 
-                    {data.site.siteMetadata.event.cfp ? (
-                      <Button
-                        href={data.site.siteMetadata.event.cfp}
-                        className='btn-lg'
-                        variant='warning'
-                      >
-                        Presenta un intervento
-                      </Button>
-                    ) : (
-                      <Button className='btn-lg' variant='warning' disabled>
-                        Presto disponibile
-                      </Button>
-                    )}
-
-                    {data.site.siteMetadata.event.cfs && (
-                      <div className='py-5'>
+                      {data.site.siteMetadata.event.cfp ? (
+                        <Button
+                          href={data.site.siteMetadata.event.cfp}
+                          className='btn-lg'
+                          variant='warning'
+                        >
+                          Presenta un intervento
+                        </Button>
+                      ) : (
+                        <Button className='btn-lg' variant='warning' disabled>
+                          Presto disponibile
+                        </Button>
+                      )}
+                    </div>
+                    {data.site.siteMetadata.switches.stand_submit && (
+                      <div className='pb-4'>
                         <p>
                           Sei una associazione no profit o una azienda sponsor
                           di Italian Linux Society che lavora con l'open source?
                           Compila il form qui sotto per fare richiesta di uno
                           stand.
                         </p>
+                        {data.site.siteMetadata.event.cfs ? (
+                          <Button
+                            href={data.site.siteMetadata.event.cfs}
+                            className='btn-lg'
+                            variant='warning'
+                          >
+                            Richiedi uno stand
+                          </Button>
+                        ) : (
+                          <Button className='btn-lg' variant='warning' disabled>
+                            Presto disponibile
+                          </Button>
+                        )}
+                      </div>
+                    )}
+
+                    {data.site.siteMetadata.switches.sponsor_submit && (
+                      <div className='pb-4'>
                         <p>
                           Non ti preoccupare se la tua azienda non è ancora
                           sponsor, siamo sempre aperti a nuove collaborazioni e
                           saremo felici di valutare la tua richiesta!
                         </p>
-
-                        <Button
-                          href={data.site.siteMetadata.event.cfs}
-                          className='btn-lg'
-                          variant='warning'
-                        >
-                          Richiedi uno stand
-                        </Button>
+                        {data.site.siteMetadata.event.cfs ? (
+                          <Button
+                            className='btn-lg'
+                            variant='warning'
+                            href={data.site.siteMetadata.event.cfs}
+                          >
+                            Diventa sponsor
+                          </Button>
+                        ) : (
+                          <Button className='btn-lg' variant='warning' disabled>
+                            Presto disponibile
+                          </Button>
+                        )}
                       </div>
                     )}
-                  </>
+                  </div>
                 )}
+
                 {data.site.siteMetadata.switches.schedule && (
                   <>
                     <p>
@@ -243,77 +273,81 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
 
-        <section id='sponsors' className=''>
-          <Container className='py-5'>
-            <h2 style={{ textTransform: "uppercase" }}>Sponsor dell'evento</h2>
-            <Row className='mb-3'>
-              {data.brandsYaml.sponsors.map((item, index) => {
+        {data.site.siteMetadata.switches.sponsors && (
+          <section id='sponsors' className=''>
+            <Container className='py-5'>
+              <h2 style={{ textTransform: "uppercase" }}>
+                Sponsor dell'evento
+              </h2>
+              <Row className='mb-3'>
+                {data.brandsYaml.sponsors.map((item, index) => {
+                  return (
+                    <Col
+                      key={index}
+                      className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
+                    >
+                      <a href={item.website}>
+                        <GatsbyImage
+                          alt={item.name}
+                          title={item.name}
+                          width='5rem'
+                          image={getImage(item.logo)}
+                        />
+                      </a>
+                    </Col>
+                  );
+                })}
+              </Row>
+              <h2 style={{ textTransform: "uppercase" }}>Con i patrocini di</h2>
+              <Row className='mb-3'>
+                {data.brandsYaml.patrocini.map((item) => {
+                  return (
+                    <Col
+                      className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
+                      key={item.name}
+                    >
+                      <a href={item.website}>
+                        <GatsbyImage
+                          alt={item.name}
+                          title={item.name}
+                          width='5rem'
+                          image={getImage(item.logo)}
+                        />
+                      </a>
+                    </Col>
+                  );
+                })}
+              </Row>
+              <h2 style={{ textTransform: "uppercase" }}>Parlano di noi</h2>
+              {data.brandsYaml.referrals.map((item) => {
                 return (
-                  <Col
-                    key={index}
-                    className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
-                  >
-                    <a href={item.website}>
-                      <GatsbyImage
-                        alt={item.name}
-                        title={item.name}
-                        width='5rem'
-                        image={getImage(item.logo)}
-                      />
-                    </a>
-                  </Col>
+                  <Row key={item.name}>
+                    <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+                      <a href={item.website}>
+                        <GatsbyImage
+                          alt={item.name}
+                          title={item.name}
+                          width='5rem'
+                          image={getImage(item.logo)}
+                        />
+                      </a>
+                    </Col>
+                    <Col className='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
+                      <figure>
+                        <blockquote className='blockquote'>
+                          <p>{item.comment}</p>
+                        </blockquote>
+                        <figcaption className='blockquote-footer'>
+                          {item.author}
+                        </figcaption>
+                      </figure>
+                    </Col>
+                  </Row>
                 );
               })}
-            </Row>
-            <h2 style={{ textTransform: "uppercase" }}>Con i patrocini di</h2>
-            <Row className='mb-3'>
-              {data.brandsYaml.patrocini.map((item) => {
-                return (
-                  <Col
-                    className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'
-                    key={item.name}
-                  >
-                    <a href={item.website}>
-                      <GatsbyImage
-                        alt={item.name}
-                        title={item.name}
-                        width='5rem'
-                        image={getImage(item.logo)}
-                      />
-                    </a>
-                  </Col>
-                );
-              })}
-            </Row>
-            <h2 style={{ textTransform: "uppercase" }}>Parlano di noi</h2>
-            {data.brandsYaml.referrals.map((item) => {
-              return (
-                <Row key={item.name}>
-                  <Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
-                    <a href={item.website}>
-                      <GatsbyImage
-                        alt={item.name}
-                        title={item.name}
-                        width='5rem'
-                        image={getImage(item.logo)}
-                      />
-                    </a>
-                  </Col>
-                  <Col className='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
-                    <figure>
-                      <blockquote className='blockquote'>
-                        <p>{item.comment}</p>
-                      </blockquote>
-                      <figcaption className='blockquote-footer'>
-                        {item.author}
-                      </figcaption>
-                    </figure>
-                  </Col>
-                </Row>
-              );
-            })}
-          </Container>
-        </section>
+            </Container>
+          </section>
+        )}
       </main>
     </Layout>
   );
@@ -421,6 +455,8 @@ export const query = graphql`
         switches {
           schedule
           cfp
+          cfp_submit
+          stand_submit
           sponsor_submit
         }
       }
