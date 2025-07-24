@@ -13,7 +13,7 @@ const CodeofconductPage = ({ data }) => {
         <section id='' className='text-body'>
           <Container className='py-5'>
             <h2 style={{ textTransform: "uppercase" }}>Code of Conduct</h2>
-            <h3 className='pt-3'>Versione Italiana</h3>
+            <h3 id="italian" className='pt-3'>Versione Italiana</h3>
             <p>
               Tutti i partecipanti del Linux Day Milano sono tenuti ad attenersi
               al seguente codice di condotta. I volontari del team UnixMiB
@@ -22,7 +22,7 @@ const CodeofconductPage = ({ data }) => {
             <ul>
               <li>
                 Gli organizzatori della conferenza (tra comunità partecipanti e
-                volontari) si impegnano a fornire un’esperienza della conferenza
+                volontari) si impegnano a fornire un'esperienza della conferenza
                 senza molestie per tutti, indipendentemente da genere,
                 orientamento sessuale, disabilità, aspetto fisico, dimensione
                 corporea, razza o religione.
@@ -76,7 +76,7 @@ const CodeofconductPage = ({ data }) => {
               </a>{" "}
               per averci permesso di usare il loro Codice di Condotta come base.
             </p>
-            <h3 className='pt-3'>English version</h3>
+            <h3 id="english" className='pt-3'>English version</h3>
             <p>
               All Linux Day Milan participants are required to abide by the
               following code of conduct. Volunteers from the UnixMiB team will

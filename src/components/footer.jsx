@@ -123,9 +123,9 @@ const Footer = () => {
         Quest'opera è distribuita con Licenza Creative Commons Attribuzione -{" "}
         <span className='ldmi'>
           Condividi allo stesso modo 4.0 Internazionale
-        </span>{" "}
-        - unix
-        <span className='unixmib'>MiB</span> {new Date().getFullYear()}
+        </span>
+        {" - "}
+        ILS Milano <span className='ldmi'>{new Date().getFullYear()}</span>
       </section>
     </footer>
   );

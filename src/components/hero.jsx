@@ -111,7 +111,7 @@ const Hero = ({ small }) => {
                 className='unixmib text-white'
                 rel='noopener noreferrer'
               >
-                <span className='unix'>POuL</span>
+                <span className='ldmi'>POuL</span>
               </a>
             </small>
           </h4>

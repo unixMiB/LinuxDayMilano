@@ -21,7 +21,7 @@ module.exports = {
       "Manifestazione italiana dedicata a GNU/Linux, al software libero, alla cultura aperta e alla condivisione.",
     keywords:
       "Linux Day, Milano, GNU, GNU/Linux, Open Source, Software Libero, Condivisione",
-    author: "POuL (https://poul.org/)",
+    author: "ILS Milano (https://poul.org/)",
     theme: "#343a40",
     navbarVariant: "dark",
     siteUrl: "https://linuxdaymilano.org/",
@@ -37,6 +37,7 @@ module.exports = {
     event: {
       date: new Date("2025-10-25"),
       time: "9:00",
+      organizer: "POuL",
       topic: "",
       cfp: "",
       cfs: "",

@@ -13,6 +13,7 @@ const Header = () => {
         siteMetadata {
           event {
             year: date(formatString: "YYYY")
+            organizer
           }
           switches {
             schedule
@@ -31,6 +32,7 @@ const Header = () => {
   `);
 
   const year = data.site.siteMetadata.event.year;
+  const organizer = data.site.siteMetadata.organizer;
   const switches = data.site.siteMetadata.switches;
   const previousYear = data.allSchedulesYaml.nodes.map((node) => node.year)[1];
   const params = switches.schedule

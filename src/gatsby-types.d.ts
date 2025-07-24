@@ -2126,6 +2126,7 @@ type Query_siteSiteMetadataEventArgs = {
   date: InputMaybe<DateQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
+  organizer: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   time: InputMaybe<StringQueryOperatorInput>;
   topic: InputMaybe<StringQueryOperatorInput>;
@@ -3124,6 +3125,7 @@ type SiteSiteMetadataEvent = Node & {
   readonly date: Maybe<Scalars['Date']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
+  readonly organizer: Maybe<Scalars['String']>;
   readonly parent: Maybe<Node>;
   readonly time: Maybe<Scalars['String']>;
   readonly topic: Maybe<Scalars['String']>;
@@ -3190,6 +3192,7 @@ type SiteSiteMetadataEventFieldSelector = {
   readonly date: InputMaybe<FieldSelectorEnum>;
   readonly id: InputMaybe<FieldSelectorEnum>;
   readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly organizer: InputMaybe<FieldSelectorEnum>;
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly time: InputMaybe<FieldSelectorEnum>;
   readonly topic: InputMaybe<FieldSelectorEnum>;
@@ -3203,6 +3206,7 @@ type SiteSiteMetadataEventFilterInput = {
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
+  readonly organizer: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly time: InputMaybe<StringQueryOperatorInput>;
   readonly topic: InputMaybe<StringQueryOperatorInput>;
@@ -3257,6 +3261,7 @@ type SiteSiteMetadataEventSortInput = {
   readonly date: InputMaybe<SortOrderEnum>;
   readonly id: InputMaybe<SortOrderEnum>;
   readonly internal: InputMaybe<InternalSortInput>;
+  readonly organizer: InputMaybe<SortOrderEnum>;
   readonly parent: InputMaybe<NodeSortInput>;
   readonly time: InputMaybe<SortOrderEnum>;
   readonly topic: InputMaybe<SortOrderEnum>;
