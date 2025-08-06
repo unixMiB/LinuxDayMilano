@@ -181,6 +181,8 @@ const IndexPage = ({ data }) => {
                           href={data.site.siteMetadata.event.cfp}
                           className='btn-lg'
                           variant='warning'
+                          target="_blank"
+                          rel="noopener"
                         >
                           Presenta un intervento
                         </Button>
@@ -203,6 +205,8 @@ const IndexPage = ({ data }) => {
                             href={data.site.siteMetadata.event.cfs}
                             className='btn-lg'
                             variant='warning'
+                            target="_blank"
+                            rel="noopener"
                           >
                             Richiedi uno stand
                           </Button>
@@ -221,11 +225,13 @@ const IndexPage = ({ data }) => {
                           sponsor, siamo sempre aperti a nuove collaborazioni e
                           saremo felici di valutare la tua richiesta!
                         </p>
-                        {data.site.siteMetadata.event.cfs ? (
+                        {data.site.siteMetadata.event.sponsor ? (
                           <Button
                             className='btn-lg'
                             variant='warning'
-                            href={data.site.siteMetadata.event.cfs}
+                            target="_blank"
+                            rel="noopener"
+                            href={data.site.siteMetadata.event.sponsor}
                           >
                             Diventa sponsor
                           </Button>
@@ -445,6 +451,7 @@ export const query = graphql`
           topic
           cfp
           cfs
+	  sponsor
           arguments
           text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
         }

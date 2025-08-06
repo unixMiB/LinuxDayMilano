@@ -39,8 +39,9 @@ module.exports = {
       time: "9:00",
       organizer: "POuL",
       topic: "",
-      cfp: "",
-      cfs: "",
+      cfp: "https://survey.linux.it/index.php/653441?lang=it",
+      cfs: "https://survey.linux.it/index.php/511682?lang=it",
+      sponsor: "https://www.ils.org/sponsorizzazioni/",
       arguments: [
         "Linux, software e hardware Open Source",
         "Open Source nel mondo dell'istruzione",
