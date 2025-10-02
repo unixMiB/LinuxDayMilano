@@ -1,19 +1,19 @@
 sponsors:
-  - name: SUSE
-    website: https://www.suse.com/
-    logo: SUSE@8x.png
   - name: Red Hat
     website: https://redhat.com/
     logo: RedHat A@8x.png
+  # - name: SUSE
+  #   website: https://www.suse.com/
+  #   logo: SUSE@8x.png
   - name: EXTRAORDY
     website: https://extraordy.com/
     logo: Extraordy B@8x.png
   # - name: Bosch Rexroth AG
   #   logo: Bosch Rexroth AG@8x.png
   #   website: https://www.boschrexroth.com/
-  - name: Bicocca
-    website: https://www.unimib.it/
-    logo: Universita Milano Bicocca.png
+  # - name: Bicocca
+  #   website: https://www.unimib.it/
+  #   logo: Universita Milano Bicocca.png
   - name: GitHub
     website: https://gh.io/linuxmilan2023
     logo: GitHub.png
@@ -27,12 +27,12 @@ patrocini:
   - name: POuL
     logo: POuL@8x.png
     website: https://poul.org/
-  - name: PCOfficina
-    website: https://www.pcofficina.org/
-    logo: PCOfficina@8x.png
-  - name: VIMELUG
-    website: https://www.vimelug.org/
-    logo: Vimelug@8x.png
+  # - name: PCOfficina
+  #   website: https://www.pcofficina.org/
+  #   logo: PCOfficina@8x.png
+  # - name: VIMELUG
+  #   website: https://www.vimelug.org/
+  #   logo: Vimelug@8x.png
   # - name: Libre Office
   #   website: https://it.libreoffice.org/
   #   logo: LibreOffice@8x.png
@@ -46,5 +46,5 @@ referrals:
   - name: GitHub Campus Experts
     website: https://githubcampus.expert/
     logo: GH Campus Experts 1@8x.png
-    comment: Da quando ho conosciuto questa community ho sempre trovato persone competenti e appassionate. Invito tutti a partecipare al Linux Day Milano 2024 all'università Bicocca per venire a conoscerli ✨
+    comment: Da quando ho conosciuto questa community ho sempre trovato persone competenti e appassionate. Invito tutti a partecipare al Linux Day Milano all'università Bicocca per venire a conoscerli ✨
     author: Federico Grandi, GitHub Campus Expert

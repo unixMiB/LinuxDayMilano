@@ -26,13 +26,13 @@ module.exports = {
     navbarVariant: "dark",
     siteUrl: "https://linuxdaymilano.org/",
     switches: {
-      schedule: false,
-      cfp: true,
+      schedule: true,
+      cfp: false,
       cfp_submit: false,
-      stand_submit: true,
+      stand_submit: false,
       sponsor_submit: true,
       year_switcher: true,
-      sponsors: false,
+      sponsors: true,
     },
     event: {
       date: new Date("2025-10-25"),

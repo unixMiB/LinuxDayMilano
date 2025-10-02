@@ -278,7 +278,6 @@ const IndexPage = ({ data }) => {
             </Row>
           </Container>
         </section>
-
         {data.site.siteMetadata.switches.sponsors && (
           <section id='sponsors' className=''>
             <Container className='py-5'>
@@ -465,6 +464,7 @@ export const query = graphql`
           cfp_submit
           stand_submit
           sponsor_submit
+          sponsors
         }
       }
     }
