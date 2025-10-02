@@ -27,9 +27,9 @@ patrocini:
   - name: POuL
     logo: POuL@8x.png
     website: https://poul.org/
-  # - name: PCOfficina
-  #   website: https://www.pcofficina.org/
-  #   logo: PCOfficina@8x.png
+  - name: PCOfficina
+    website: https://www.pcofficina.org/
+    logo: PCOfficina@8x.png
   # - name: VIMELUG
   #   website: https://www.vimelug.org/
   #   logo: Vimelug@8x.png
