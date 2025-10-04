@@ -30,9 +30,9 @@ patrocini:
   - name: PCOfficina
     website: https://www.pcofficina.org/
     logo: PCOfficina@8x.png
-  # - name: VIMELUG
-  #   website: https://www.vimelug.org/
-  #   logo: Vimelug@8x.png
+  - name: VIMELUG
+    website: https://www.vimelug.org/
+    logo: Vimelug@8x.png
   # - name: Libre Office
   #   website: https://it.libreoffice.org/
   #   logo: LibreOffice@8x.png
