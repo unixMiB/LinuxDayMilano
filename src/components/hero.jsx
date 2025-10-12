@@ -113,6 +113,16 @@ const Hero = ({ small }) => {
               >
                 <span className='ldmi'>POuL</span>
               </a>
+              {" "}e{" "}
+              <a
+                title='Scopri di più su unixMiB'
+                href="https://unixmib.org"
+                target='_blank'
+                className='unixmib text-white'
+                rel='noopener noreferrer'
+              >
+                <span className='ldmi'>unixMiB</span>
+              </a>
             </small>
           </h4>
           <div className='subtitle'>
