@@ -289,7 +289,7 @@ const Page = ({ data }) => {
                           onClick={() => {
                             navigate(
                               typeof window !== "undefined" &&
-                                window.location.pathname + "?year=" + s.year
+                                window.location.pathname + "?year=" + s.year + "#calendar"
                             );
                             setSchedData(allSchedules[i]);
                           }}
