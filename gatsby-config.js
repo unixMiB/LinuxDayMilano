@@ -57,7 +57,7 @@ module.exports = {
       place: {
         name: "Politecnico di Milano, Campus Leonardo",
         street: "Piazza Leonardo da Vinci, 32",
-        building: "Campus Leonardo",
+        building: "Edificio 3 - Campus Leonardo",
         cap: "20133 Milano MI",
       },
     },
