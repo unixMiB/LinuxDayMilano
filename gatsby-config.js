@@ -52,7 +52,7 @@ module.exports = {
       ],
     },
     contacts: {
-      email: "info@unixmib.org",
+      email: "linuxday@unixmib.org",
       website: "https://poul.org/",
       place: {
         name: "Politecnico di Milano, Campus Leonardo",
