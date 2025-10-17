@@ -94,9 +94,9 @@ schedule:
         author: 'Andrea Perotti - Associazione PCOfficina'
         room: "3.0.1"
         duration: 45 min
-      - title: 'Bringing Fictional Characters to Life with Open Source LLMs (Workshop)'
-        description: "Tired of generic chatbots? In this session, we’ll create a truly unique AI agent. We’ll go through the process of running an LLM on your own machines, building a chat agent from the ground up, and imbuing it with the personality of your favorite fictional character. In addition, thanks to Retrieval Augmented Generation (RAG) and voice cloning, our character will sound as awesome as it acts. We’ll use only open source tools and a sprinkle of Docker."
-        author: 'Alfredo "Rainbowbreeze" Morresi'
+      - title: 'Open Source AI: Separating the genuine from the "openwashed"'
+        description: "Questo intervento chiarirà il vero significato di \"open source\" nel contesto dell'IA, distinguendo la vera innovazione aperta da pratiche fuorvianti. Esploreremo la Open Source AI Definition (OSAID), dettagliandone le implicazioni per dati, modelli e codice. La sessione confronterà inoltre il modo in cui pilastri della comunità come OSI e FSF, insieme ad aziende come Red Hat e IBM, affrontano le sfide uniche dell'IA. I partecipanti impareranno a identificare pratiche ingannevoli e a comprendere l'impatto reale di licenze restrittive e modelli \"open weights\". Verranno forniti criteri pratici per valutare la vera \"openness\" di qualsiasi sistema di IA, fornendo ai partecipanti un \"Open Source AI Toolkit\" per fare scelte informate per i loro progetti. Pensato per chiunque sia appassionato di open source e IA, l'incontro è aperto a tutti, garantendo che tutti i partecipanti, indipendentemente dalle loro conoscenze pregresse, possano acquisire una solida comprensione dell’argomento."
+        author: 'Alfonso Cancellara - Red Hat'
         room: "3.0.2"
         duration: 45 min
       - title: 'Dal GDPR al Grande Fratello? L’Europa di fronte alla sorveglianza digitale'
