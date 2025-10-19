@@ -80,9 +80,9 @@ const IndexPage = ({ data }) => {
                   @unixmib@mastodon.uno
                 </a>
                 ,<br />
-                puoi seguicrci anche su social tradizionali come:{" "}
+                puoi seguirci anche su social tradizionali come:{" "}
                 <a href='https://x.com/unixmib'>@unixMiB su Twitter</a>{" "}
-                (#LinuxDayMilano2024){" e "}
+                (#LinuxDayMilano{data.site.siteMetadata.event.year}){" e "}
                 <a href='https://www.facebook.com/unixmib'>
                   @unixmib su Facebook
                 </a>
@@ -94,7 +94,7 @@ const IndexPage = ({ data }) => {
                 rimanere aggiornato anche sui nostri eventi futuri.
               </p>
               <p>
-                Usa l'hashtag ufficiale #LinuxDay2024 e le foto migliori saranno
+                Usa l'hashtag ufficiale #LinuxDay{data.site.siteMetadata.event.year} e le foto migliori saranno
                 ricondivise!
               </p>
             </div>

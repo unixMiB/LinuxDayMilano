@@ -87,7 +87,7 @@ schedule:
     talks:
       - title: "Break"
         duration: 30 min
-  - time: "16:00"
+  - time: "16:30"
     talks:
       - title: 'Cambiare il mondo un PC alla volta: la rivoluzione di PCOfficina'
         description: "Tonnellate di rifiuti elettronici da un lato, persone escluse dalla cittadinanza digitale dall'altro. E se la soluzione a questa doppia sfida fosse il software libero? L'associazione PCOfficina dal 2011 trasforma questo problema in un'opportunità, mettendo in pratica i valori della comunità Open Source per generare un impatto reale. Attraverso la pratica del trashware, riduciamo l'inquinamento, ridiamo vita a computer dismessi, li facciamo arrivare a chi non può permetterseli e combattiamo attivamente il divario digitale. In questo talk vi porteremo nel cuore del nostro laboratorio per condividere esperienze di inclusione sociale, di economia circolare e sensibilizzazione sulla sostenibilità tecnologica. Un intervento rivolto a chi crede che la tecnologia debba essere uno strumento di inclusione e non di scarto, a chiunque sia interessato alla sostenibilità e a plasmare una società più equa e un pianeta più sano. Unisciti a noi per scoprire come cambiare il mondo, un PC alla volta."
@@ -104,7 +104,7 @@ schedule:
         author: 'Lorenzo Andreasi - POuL'
         room: "3.0.3"
         duration: 45 min
-  - time: "17:00"
+  - time: "17:30"
     talks:
       - title: 'RigeneraMI: volontariato tecnologico per ridurre i rifiuti elettronici e favorire l’inclusione'
         description: "Il talk presenterà l’esperienza di RigeneraMI, progetto di volontariato nato a Milano che rigenera e redistribuisce gratuitamente dispositivi informatici dismessi, promuovendo al tempo stesso la sostenibilità ambientale e l’inclusione digitale. Racconteremo come, attraverso l’uso di Linux e software open source, sia possibile dare nuova vita a computer destinati allo smaltimento, riducendo i rifiuti elettronici e garantendo strumenti utili a scuole, associazioni e famiglie in difficoltà. L’intervento è rivolto a chiunque sia interessato ai temi del riuso tecnologico, dell’economia circolare e del digitale solidale: appassionati di Linux, studenti, docenti, professionisti o semplici cittadini. L’obiettivo è mostrare in modo concreto come l’open source possa essere una leva di sostenibilità e solidarietà, condividendo sfide, risultati e opportunità future per diffondere e replicare il modello in altri territori."
@@ -121,7 +121,8 @@ schedule:
         author: 'kowalski7cc - unixMiB'
         room: "3.0.3"
         duration: 45 min
-  - time: "17:30"
+  - time: "18:30"
     talks:
-      - title: "Chiusura del Linux Day"
-        description: Chiusura della giornata e saluti finali
+      - title: "Chiusura del Linux Day e foto di gruppo"
+        description: Chiusura della giornata, foto di gruppo e saluti finali
+        duration: 60 min
