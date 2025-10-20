@@ -10,7 +10,7 @@ schedule:
   - time: "9:30"
     talks:
       - title: 'Zant - Neural Networks for embedded devices'
-        description: "Zant nasce come progetto Open Source tra le mura del Politecnico di Milano con l'intento di facilitare l'ottimizzazione e il deployment di reti neurali su sistemi embedded. Stanchi delle soluzioni difficili da integrare e poco personalizzabili attualmente presenti, volevamo creare qualcosa di intuitivo e pensato per gli MCU. Il progetto conta più di 300 star su GitHub e si è evoluto diventando una startup. Durante il talk, Mirko, attuale CTO, vi parlerà delle motivazioni tecniche legate all'utilizzo di Zig, della filosofia DependencyFree, della vasta gamma di personalizzazioni che Zant offre e molto altro... Il tutto accompagnato da demo interattive e tanto software! Vi aspettiamo!"
+        description: "Zant nasce come progetto Open Source tra le mura del Politecnico di Milano con l'intento di facilitare l'ottimizzazione e il deployment di reti neurali su sistemi embedded. Stanchi delle soluzioni difficili da integrare e poco personalizzabili attualmente presenti, volevamo creare qualcosa di intuitivo e pensato per gli MCU. Il progetto conta più di 300 star su GitHub e si è evoluto diventando una startup. Durante il talk, Mirko, vi parlerà delle motivazioni tecniche legate all'utilizzo di Zig, della vasta gamma di personalizzazioni che Zant offre, quali sono le dinamiche in un progetto Open Source e molto altro... Il tutto accompagnato da demo interattive e tanto software! Vi aspettiamo!"
         author: 'Mirko Calvi - Zant'
         room: "3.0.1"
         duration: 45 min
