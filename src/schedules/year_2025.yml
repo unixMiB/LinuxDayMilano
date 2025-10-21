@@ -59,7 +59,7 @@ schedule:
         duration: 45 min
       - title: 'Fediverso: il paradigma per servizi digitali open e liberi'
         description: "L'intervento presenta le iniziative di Fedimedia Italia Associazione di promozione sociale, dedicata alla promozione di servizi digitali federati (che costituiscono il fediverso). I servizi di Fedimedia spaziano dalla distibuzione Linux Office Zero Linux, a plugin liberi per WordPress, alla piattaforma di microblogging Mastodon. Lo scopo di Fedimedia è sviluppare alternative digitali FOSS ai servizi delle BigTech, basate sul protocollo ActivityPub."
-        author: 'Nino Gualdoni - Fedimedia Italia APS'
+        author: 'Andrea Guani - Fedimedia Italia APS'
         room: "3.0.3"
         duration: 45 min
   - time: "13:00"
