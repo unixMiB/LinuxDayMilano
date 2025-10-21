@@ -9,19 +9,19 @@ schedule:
         duration: 30 min
   - time: "9:30"
     talks:
-      - title: 'Zant - Neural Networks for embedded devices'
+      - title: "Zant - Neural Networks for embedded devices"
         description: "Zant nasce come progetto Open Source tra le mura del Politecnico di Milano con l'intento di facilitare l'ottimizzazione e il deployment di reti neurali su sistemi embedded. Stanchi delle soluzioni difficili da integrare e poco personalizzabili attualmente presenti, volevamo creare qualcosa di intuitivo e pensato per gli MCU. Il progetto conta più di 300 star su GitHub e si è evoluto diventando una startup. Durante il talk, Mirko, vi parlerà delle motivazioni tecniche legate all'utilizzo di Zig, della vasta gamma di personalizzazioni che Zant offre, quali sono le dinamiche in un progetto Open Source e molto altro... Il tutto accompagnato da demo interattive e tanto software! Vi aspettiamo!"
-        author: 'Mirko Calvi - Zant'
+        author: "Mirko Calvi - Zant"
         room: "3.0.1"
         duration: 45 min
-      - title: 'Workshop: contribuisci al kernel Linux!'
-        description: "Vuoi contribuire al kernel Linux ma non sai dove cominciare? Questa breve e accessibile guida ti mostrerà come: 1) mettere in piedi da zero un sistema in locale per sviluppare, 2) cercare qualcosa su cui lavorare, 3) fare modifiche al kernel e testarle, 4) inviare una patch (incrociando le dita). Dopo questo talk avrai le idee chiare su come procedere e diventare in poco tempo un \"kernel contributor\"."
+      - title: "Workshop: contribuisci al kernel Linux!"
+        description: 'Vuoi contribuire al kernel Linux ma non sai dove cominciare? Questa breve e accessibile guida ti mostrerà come: 1) mettere in piedi da zero un sistema in locale per sviluppare, 2) cercare qualcosa su cui lavorare, 3) fare modifiche al kernel e testarle, 4) inviare una patch (incrociando le dita). Dopo questo talk avrai le idee chiare su come procedere e diventare in poco tempo un "kernel contributor".'
         author: "Rigel Di Scala"
         room: "3.0.2"
         duration: 45 min
-      - title: 'Distro hopping: esplorare le infinite versioni di Linux senza perdersi'
+      - title: "Distro hopping: esplorare le infinite versioni di Linux senza perdersi"
         description: "Linux offre una varietà incredibile di distribuzioni, ognuna con caratteristiche, ambienti desktop e gestori di pacchetti diversi. Questo talk guida i partecipanti attraverso le principali distro, dalle più popolari come Ubuntu e Fedora, alle più particolari come Arch o OpenSUSE, spiegando le differenze in termini di performance, facilità d’uso e comunità di supporto.Durante la presentazione verranno mostrati metodi pratici per testare distro diverse senza compromettere il proprio sistema principale, consigli su come scegliere la distribuzione più adatta a un progetto o a un ambiente specifico e suggerimenti su come muoversi tra ambienti desktop, pacchetti e strumenti di gestione."
-        author: 'Emanuele Solferino'
+        author: "Emanuele Solferino"
         room: "3.0.3"
         duration: 45 min
   - time: "10:30"
@@ -30,36 +30,36 @@ schedule:
         duration: 30 min
   - time: "11:00"
     talks:
-      - title: 'bootc 101: dalla container image alla tua distro personale'
-        description: 'bootc è lo strumento che trasforma immagini OCI in sistemi avviabili: un approccio “image-based” che semplifica build, provisioning e aggiornamenti atomici. In questo talk vedremo cos’è bootc, come funziona sotto il cofano e in cosa differisce da installer tradizionali e da modelli package-based. Parleremo di composizione dell’immagine, gestione degli aggiornamenti/rollback e pipeline di pubblicazione. Poi passiamo al live coding: partiremo da un semplice Dockerfile, aggiungeremo pacchetti e servizi, costruiremo l’immagine, la testeremo e mostreremo come aggiornarla in modo riproducibile.'
+      - title: "bootc 101: dalla container image alla tua distro personale"
+        description: "bootc è lo strumento che trasforma immagini OCI in sistemi avviabili: un approccio “image-based” che semplifica build, provisioning e aggiornamenti atomici. In questo talk vedremo cos’è bootc, come funziona sotto il cofano e in cosa differisce da installer tradizionali e da modelli package-based. Parleremo di composizione dell’immagine, gestione degli aggiornamenti/rollback e pipeline di pubblicazione. Poi passiamo al live coding: partiremo da un semplice Dockerfile, aggiungeremo pacchetti e servizi, costruiremo l’immagine, la testeremo e mostreremo come aggiornarla in modo riproducibile."
         author: 'Fabio Alessandro "Fale" Locati'
         room: "3.0.1"
         duration: 45 min
-      - title: 'Casa connessa pilotata ad eventi: EDA × Z2M'
+      - title: "Casa connessa pilotata ad eventi: EDA × Z2M"
         description: "Come possiamo realizzare un sistema di automazione domestica affidabile, resiliente e con bassissima necessità di manutenzione? La risposte che ho trovato è nata da un esercizio di stile per combinare il potere dello strumento di automazione più all'avanguardia (Ansible) con il progetto per la coordinazione di reti mesh personali (Zigbee to MQTT). Unendo questi strumenti nel modo corretto si ottiene un motore di automazione ad eventi leggero, mantenibile e versatile; naturalmente non posso omettere la barriera all'ingresso per imparare la burocrazia applicativa sia di Ansible che di Zigbee, ma sono convinto di potervi convincere con una dimostrazione e le giuste parole."
-        author: 'Lorenzo Prosseda - Extraordy'
+        author: "Lorenzo Prosseda - Extraordy"
         room: "3.0.2"
         duration: 45 min
-      - title: 'GNU Taler: Il contante elettronico anonimo, etico e libero'
+      - title: "GNU Taler: Il contante elettronico anonimo, etico e libero"
         description: "In un panorama dominato da piattaforme di pagamento centralizzate e invasive, dove le alternative orientate alla privacy si affidano a meccanismi speculativi o ad alto consumo energetico come le blockchain, GNU Taler si presenta come una terza via, garantendo la privacy degli acquirenti ma offrendo al contempo la tracciabilità fiscale dei commercianti, in modo da rispondere alle considerazioni etiche indirizzate ai sistemi di e-cash già presenti. Nel talk approfondiremo i principi di design che guidano GNU Taler, il suo funzionamento tecnico e le tecniche crittografiche che ne garantiscono sicurezza ed efficienza."
-        author: 'Elisa Pioldi - unixMiB'
+        author: "Elisa Pioldi - unixMiB"
         room: "3.0.3"
         duration: 45 min
   - time: "12:00"
     talks:
-      - title: 'Ho portato Linux moderno sul Kobo Touch: ecco perché tu non ci hai ancora provato'
-        description: "Portare un kernel Linux moderno su un e-reader del 2011 sembra un’impresa da super esperti. Molti pensano \"io non ne sarei mai capace.\" In realtà, l’unico vero \"superpotere\" è quello di buttarsi senza paura di fallire o di non essere abbastanza. In questo talk racconto il mio percorso tra device tree, bootloader vecchi e bug assurdi, ma soprattutto condivido una riflessione: non serve finire ogni progetto per imparare e divertirsi. E forse il motivo per cui tu non hai ancora iniziato non è la difficoltà tecnica, ma la paura di provarci. Il talk è pensato per un pubblico ampio: chiunque abbia almeno una conoscenza di base dell’informatica e di GNU/Linux potrà seguire la storia e coglierne il messaggio, anche senza esperienza nello sviluppo del kernel."
-        author: 'Davide Depau'
+      - title: "Ho portato Linux moderno sul Kobo Touch: ecco perché tu non ci hai ancora provato"
+        description: 'Portare un kernel Linux moderno su un e-reader del 2011 sembra un’impresa da super esperti. Molti pensano "io non ne sarei mai capace." In realtà, l’unico vero "superpotere" è quello di buttarsi senza paura di fallire o di non essere abbastanza. In questo talk racconto il mio percorso tra device tree, bootloader vecchi e bug assurdi, ma soprattutto condivido una riflessione: non serve finire ogni progetto per imparare e divertirsi. E forse il motivo per cui tu non hai ancora iniziato non è la difficoltà tecnica, ma la paura di provarci. Il talk è pensato per un pubblico ampio: chiunque abbia almeno una conoscenza di base dell’informatica e di GNU/Linux potrà seguire la storia e coglierne il messaggio, anche senza esperienza nello sviluppo del kernel.'
+        author: "Davide Depau"
         room: "3.0.1"
         duration: 45 min
-      - title: 'Costruisci il tuo GPT'
+      - title: "Costruisci il tuo GPT"
         description: "Il successo esponenziale dell' Intelligenza Artificiale Generativa è interamente dovuto all'architettura Transformer. Questo workshop intensivo offre un'analisi tecnica e pratica di questa architettura, ideale per comprendere meglio i meccanismi dietro a questi strumenti che stanno entrando prepotentemente nei nostri dispositivi e nella vita di tutti i giorni. Esploreremo i concetti fondamentali, dalla Tokenizzazione e l'Embedding all'Attenzione, passando per Softmax, Temperatura e Sampling – comprendendo come questi elementi si combinano nel Blocco del Transformer. La sessione terminerà con un'implementazione pratica in PyTorch, vedendo come con poche righe di codice si possano costruire i componenti chiave del modello. Nota: Seppure non necessari per la fruizione del corso, il codice e un tutorial al suo utilizzo saranno resi disponibili alla pagina ld2025.ceru-sh.site nel caso si voglia implementare e giocare con il codice."
         author: 'Andrea Cerutti "ceru" - POuL'
         room: "3.0.2"
         duration: 45 min
-      - title: 'Fediverso: il paradigma per servizi digitali open e liberi'
+      - title: "Fediverso: il paradigma per servizi digitali open e liberi"
         description: "L'intervento presenta le iniziative di Fedimedia Italia Associazione di promozione sociale, dedicata alla promozione di servizi digitali federati (che costituiscono il fediverso). I servizi di Fedimedia spaziano dalla distibuzione Linux Office Zero Linux, a plugin liberi per WordPress, alla piattaforma di microblogging Mastodon. Lo scopo di Fedimedia è sviluppare alternative digitali FOSS ai servizi delle BigTech, basate sul protocollo ActivityPub."
-        author: 'Andrea Guani - Fedimedia Italia APS'
+        author: "Andrea Guani - Fedimedia Italia APS"
         room: "3.0.3"
         duration: 45 min
   - time: "13:00"
@@ -68,19 +68,19 @@ schedule:
         duration: 60 min
   - time: "14:00"
     talks:
-      - title: 'Il potente framework di test di NixOS'
+      - title: "Il potente framework di test di NixOS"
         description: "Questo talk fornisce una breve panoramica sul framework di test usato dal sistema operativo NixOS e sulle sue potenzialità. L'obiettivo è di far assaporare il framework e dare un quadro delle funzionalità più interessanti, dunque verrà fornita una minima e indispensabile introduzione sul linguaggio funzionale Nix e sul sistema operativo NixOS in modo da permettere ad un pubblico il più ampio possibile di seguire il talk. Il taglio è pragmatico e verrà dato numeroso spazio ad esempi e demo."
-        author: 'Andrea Ciceri'
+        author: "Andrea Ciceri"
         room: "3.0.1"
         duration: 45 min
-      - title: 'Cinque cose che il tuo dispositivo dice su di te: profilazione e fingerprinting'
+      - title: "Cinque cose che il tuo dispositivo dice su di te: profilazione e fingerprinting"
         description: Al giorno d'oggi l'anonimato online sta scomparendo, sotto la scure delle tecniche di profilazione che arrivano ad essere sempre più pervasive. In questo talk si analizzeranno alcune "caratteristiche", dette fingerprint, che all'apparenza sembrano innocue ma che, nella pratica, permettono ad attori di tracciare gli utenti lungo la loro navigazione, in alcuni casi anche nel mentre tentano di "cammuffarsi". In altre parole, verranno trattati cinque fingerprint che sono usati attivamente per fare tracciamento. Inoltre, si menzionerà anche il come possano essere utilizzate a fini commerciali, ad esempio dall'advertisement, e delle conseguenze di ciò sullo stato dell'anonimato.
-        author: 'Edoardo Marziali - POuL'
+        author: "Edoardo Marziali - POuL"
         room: "3.0.2"
         duration: 45 min
-      - title: 'Open data, trasporto pubblico, e navigazione: come sviluppare per la mobilità'
+      - title: "Open data, trasporto pubblico, e navigazione: come sviluppare per la mobilità"
         description: Grigory Vodyanov, Yassine Zarouali, e Giovanni Perozzo, membri del progetto PadoVia.it, parleranno di come sviluppare software con l'Open Data per la mobilità. Si parlerà di come richiedere e utilizzare dati del trasporto pubblico (come GTFS e SIRI), come integrarli con progetti Open Source di cartografia e navigazione come OpenStreetMap e OpenTripPlanner, e si esplorerà il panorama dell'Open Data e del MaaS (Mobility as a Service) in Italia e all'estero. Come caso di successo presenteranno la loro applicazione di trasporto pubblico a Padova PadoVia.it, basata sui dati messi a disposizione da Busitalia Veneto, che ha come obiettivo la promozione dell'Open Data per la mobilità in tutta Italia e la diffusione dei suoi componenti Open Source per creare piattaforme simili.
-        author: 'Grigory Vodyanov, Yassine Zarouali, Giovanni Perozzo - PadoVia.it'
+        author: "Grigory Vodyanov, Yassine Zarouali, Giovanni Perozzo - PadoVia.it"
         room: "3.0.3"
         duration: 45 min
   - time: "15:00"
@@ -89,36 +89,36 @@ schedule:
         duration: 30 min
   - time: "16:30"
     talks:
-      - title: 'Cambiare il mondo un PC alla volta: la rivoluzione di PCOfficina'
+      - title: "Cambiare il mondo un PC alla volta: la rivoluzione di PCOfficina"
         description: "Tonnellate di rifiuti elettronici da un lato, persone escluse dalla cittadinanza digitale dall'altro. E se la soluzione a questa doppia sfida fosse il software libero? L'associazione PCOfficina dal 2011 trasforma questo problema in un'opportunità, mettendo in pratica i valori della comunità Open Source per generare un impatto reale. Attraverso la pratica del trashware, riduciamo l'inquinamento, ridiamo vita a computer dismessi, li facciamo arrivare a chi non può permetterseli e combattiamo attivamente il divario digitale. In questo talk vi porteremo nel cuore del nostro laboratorio per condividere esperienze di inclusione sociale, di economia circolare e sensibilizzazione sulla sostenibilità tecnologica. Un intervento rivolto a chi crede che la tecnologia debba essere uno strumento di inclusione e non di scarto, a chiunque sia interessato alla sostenibilità e a plasmare una società più equa e un pianeta più sano. Unisciti a noi per scoprire come cambiare il mondo, un PC alla volta."
-        author: 'Andrea Perotti - Associazione PCOfficina'
+        author: "Andrea Perotti - Associazione PCOfficina"
         room: "3.0.1"
         duration: 45 min
       - title: 'Open Source AI: Separating the genuine from the "openwashed"'
-        description: "Questo intervento chiarirà il vero significato di \"open source\" nel contesto dell'IA, distinguendo la vera innovazione aperta da pratiche fuorvianti. Esploreremo la Open Source AI Definition (OSAID), dettagliandone le implicazioni per dati, modelli e codice. La sessione confronterà inoltre il modo in cui pilastri della comunità come OSI e FSF, insieme ad aziende come Red Hat e IBM, affrontano le sfide uniche dell'IA. I partecipanti impareranno a identificare pratiche ingannevoli e a comprendere l'impatto reale di licenze restrittive e modelli \"open weights\". Verranno forniti criteri pratici per valutare la vera \"openness\" di qualsiasi sistema di IA, fornendo ai partecipanti un \"Open Source AI Toolkit\" per fare scelte informate per i loro progetti. Pensato per chiunque sia appassionato di open source e IA, l'incontro è aperto a tutti, garantendo che tutti i partecipanti, indipendentemente dalle loro conoscenze pregresse, possano acquisire una solida comprensione dell’argomento."
-        author: 'Alfonso Cancellara - Red Hat'
+        description: 'Questo intervento chiarirà il vero significato di "open source" nel contesto dell''IA, distinguendo la vera innovazione aperta da pratiche fuorvianti. Esploreremo la Open Source AI Definition (OSAID), dettagliandone le implicazioni per dati, modelli e codice. La sessione confronterà inoltre il modo in cui pilastri della comunità come OSI e FSF, insieme ad aziende come Red Hat e IBM, affrontano le sfide uniche dell''IA. I partecipanti impareranno a identificare pratiche ingannevoli e a comprendere l''impatto reale di licenze restrittive e modelli "open weights". Verranno forniti criteri pratici per valutare la vera "openness" di qualsiasi sistema di IA, fornendo ai partecipanti un "Open Source AI Toolkit" per fare scelte informate per i loro progetti. Pensato per chiunque sia appassionato di open source e IA, l''incontro è aperto a tutti, garantendo che tutti i partecipanti, indipendentemente dalle loro conoscenze pregresse, possano acquisire una solida comprensione dell’argomento.'
+        author: "Alfonso Cancellara - Red Hat"
         room: "3.0.2"
         duration: 45 min
-      - title: 'Dal GDPR al Grande Fratello? L’Europa di fronte alla sorveglianza digitale'
+      - title: "Dal GDPR al Grande Fratello? L’Europa di fronte alla sorveglianza digitale"
         description: "L’UE parla di privacy con il GDPR e di etica con l’AI Act. Ma allo stesso tempo spinge per il Chat Control e le raccomandazioni dell’HLG, spianando la strada alla sorveglianza delle conversazioni che ora riteniamo private. Questo talk, divulgativo e senza tecnicismi, mette a confronto queste politiche contraddittorie. Stiamo davvero rafforzando i diritti digitali o costruendo un Grande Fratello europeo?"
-        author: 'Lorenzo Andreasi - POuL'
+        author: "Lorenzo Andreasi - POuL"
         room: "3.0.3"
         duration: 45 min
   - time: "17:30"
     talks:
-      - title: 'RigeneraMI: volontariato tecnologico per ridurre i rifiuti elettronici e favorire l’inclusione'
+      - title: "RigeneraMI: volontariato tecnologico per ridurre i rifiuti elettronici e favorire l’inclusione"
         description: "Il talk presenterà l’esperienza di RigeneraMI, progetto di volontariato nato a Milano che rigenera e redistribuisce gratuitamente dispositivi informatici dismessi, promuovendo al tempo stesso la sostenibilità ambientale e l’inclusione digitale. Racconteremo come, attraverso l’uso di Linux e software open source, sia possibile dare nuova vita a computer destinati allo smaltimento, riducendo i rifiuti elettronici e garantendo strumenti utili a scuole, associazioni e famiglie in difficoltà. L’intervento è rivolto a chiunque sia interessato ai temi del riuso tecnologico, dell’economia circolare e del digitale solidale: appassionati di Linux, studenti, docenti, professionisti o semplici cittadini. L’obiettivo è mostrare in modo concreto come l’open source possa essere una leva di sostenibilità e solidarietà, condividendo sfide, risultati e opportunità future per diffondere e replicare il modello in altri territori."
-        author: 'Gianluca Cocca - RigeneraMI'
+        author: "Gianluca Cocca - RigeneraMI"
         room: "3.0.1"
         duration: 45 min
-      - title: 'Linux e hardware: come far parlare PC, Raspberry Pi e Arduino'
+      - title: "Linux e hardware: come far parlare PC, Raspberry Pi e Arduino"
         description: "Questo talk è dedicato a chi vuole scoprire come Linux possa diventare il motore di progetti hardware reali e interattivi. Partendo da esempi concreti con Raspberry Pi e Arduino, vedremo come collegare sensori, leggere dati ambientali, controllare LED, motori o altri dispositivi elettronici e automatizzare azioni tramite script Linux. Il talk include dimostrazioni pratiche di strumenti open-source e librerie che permettono di interfacciare facilmente microcontrollori e PC, mostrando anche come monitorare e analizzare i dati raccolti. L’obiettivo è far capire che Linux non è solo un sistema operativo da desktop o server, ma una piattaforma completa per progetti maker, robotica e IoT."
-        author: 'Emanuele Solferino'
+        author: "Emanuele Solferino"
         room: "3.0.2"
         duration: 45 min
-      - title: 'Basta password! Un Identity Provider personale con Authentik'
-        description: "Sei stanco di dover ricordare decine di password diverse e di non avere il controllo sui tuoi dati? La soluzione potrebbe essere un Identity Provider personale. Ma con tutte le opzioni proprietarie sul mercato, come fare? In questo talk, esploreremo Authentik, un'alternativa open-source che ti permette di diventare l'unico gestore delle tue identità digitali. Ti mostrerò come configurare il tuo ambiente di Single Sign-On (SSO) in pochi minuti, sfruttando la flessibilità di Kubernetes. Approfondiremo come integrare le tue applicazioni con standard come SAML, OAuth2/OIDC e LDAP, e scopriremo funzionalità avanzate come i flussi di autenticazione personalizzati e l'autenticazione a più fattori. Un'occasione per riappropriarsi della propria identità digitale e dire addio alla \"password fatigue\" una volta per tutte."
-        author: 'kowalski7cc - unixMiB'
+      - title: "Basta password! Un Identity Provider personale con Authentik"
+        description: 'Sei stanco di dover ricordare decine di password diverse e di non avere il controllo sui tuoi dati? La soluzione potrebbe essere un Identity Provider personale. Ma con tutte le opzioni proprietarie sul mercato, come fare? In questo talk, esploreremo Authentik, un''alternativa open-source che ti permette di diventare l''unico gestore delle tue identità digitali. Ti mostrerò come configurare il tuo ambiente di Single Sign-On (SSO) in pochi minuti, sfruttando la flessibilità di Kubernetes. Approfondiremo come integrare le tue applicazioni con standard come SAML, OAuth2/OIDC e LDAP, e scopriremo funzionalità avanzate come i flussi di autenticazione personalizzati e l''autenticazione a più fattori. Un''occasione per riappropriarsi della propria identità digitale e dire addio alla "password fatigue" una volta per tutte.'
+        author: "kowalski7cc - unixMiB"
         room: "3.0.3"
         duration: 45 min
   - time: "18:30"

@@ -94,7 +94,8 @@ const IndexPage = ({ data }) => {
                 rimanere aggiornato anche sui nostri eventi futuri.
               </p>
               <p>
-                Usa l'hashtag ufficiale #LinuxDay{data.site.siteMetadata.event.year} e le foto migliori saranno
+                Usa l'hashtag ufficiale #LinuxDay
+                {data.site.siteMetadata.event.year} e le foto migliori saranno
                 ricondivise!
               </p>
             </div>
@@ -181,8 +182,8 @@ const IndexPage = ({ data }) => {
                           href={data.site.siteMetadata.event.cfp}
                           className='btn-lg'
                           variant='warning'
-                          target="_blank"
-                          rel="noopener"
+                          target='_blank'
+                          rel='noopener'
                         >
                           Presenta un intervento
                         </Button>
@@ -205,8 +206,8 @@ const IndexPage = ({ data }) => {
                             href={data.site.siteMetadata.event.cfs}
                             className='btn-lg'
                             variant='warning'
-                            target="_blank"
-                            rel="noopener"
+                            target='_blank'
+                            rel='noopener'
                           >
                             Richiedi uno stand
                           </Button>
@@ -229,8 +230,8 @@ const IndexPage = ({ data }) => {
                           <Button
                             className='btn-lg'
                             variant='warning'
-                            target="_blank"
-                            rel="noopener"
+                            target='_blank'
+                            rel='noopener'
                             href={data.site.siteMetadata.event.sponsor}
                           >
                             Diventa sponsor
@@ -450,7 +451,7 @@ export const query = graphql`
           topic
           cfp
           cfs
-	  sponsor
+          sponsor
           arguments
           text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
         }
