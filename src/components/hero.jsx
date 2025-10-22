@@ -63,7 +63,7 @@ const Hero = ({ small }) => {
           height: "100%",
           zIndex: -1,
         }}
-        src='../assets/images/hero.jpg'
+        src='../assets/images/politecnico.jpg'
         formats={["auto", "avif", "webp"]}
         layout='fullWidth'
         aspectRatio={3 / 1}
