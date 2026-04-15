@@ -4,9 +4,9 @@ import Header from "../components/header";
 ---
 
 <div class='d-flex flex-column' style={{ minHeight: "100vh" }}>
-    <Header />
+    <Header client:load />
     <div class='container-fluid flex-grow-1' style={{ padding: 0 }}>
       <slot/>
     </div>
-    <Footer />
+    <Footer  client:load />
   </div>
