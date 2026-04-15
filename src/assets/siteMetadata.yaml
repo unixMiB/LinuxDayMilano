@@ -4,7 +4,6 @@ description: >-
 keywords: "Linux Day, Milano, GNU, GNU/Linux, Open Source, Software Libero, Condivisione"
 author: "ILS Milano (https://poul.org/)"
 theme: "#343a40"
-navbarVariant: dark
 siteUrl: "https://linuxdaymilano.org/"
 switches:
   schedule: true
