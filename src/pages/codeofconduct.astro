@@ -2,11 +2,9 @@
 import React from "react";
 import Layout from "../layouts/layout.astro";
 import Container from "react-bootstrap/Container";
-import Seo from "../components/seo";
 import Hero from "../components/hero";
 ---
     <Layout>
-      <Seo client:load/>
       <Hero client:load/>
       <main>
         <section id='' class='text-body'>

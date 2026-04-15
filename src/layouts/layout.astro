@@ -1,7 +1,36 @@
 ---
-import Footer from "../components/footer";
+import Footer from "../components/footer.astro";
 import Header from "../components/header";
+
+import { getCollection } from 'astro:content';
+
+// Get all `src/data/blog/` entries
+const data = await getCollection('siteMetadata');
+
+const {description, lang, meta, title} = Astro.props
+
+  const metaDescription = description || data.description;
+  const siteTitle =
+    title == null
+      ? data.title
+      : `${title} - ${data.title}`;
+
 ---
+<head>
+  <meta name="keywords" content={data.keywords} />
+  <meta name="application-name" content={data.title} />
+  <meta name="author" content={data.author} />
+  <meta name="description" content={metaDescription} />
+  <meta name="og:title" content={siteTitle} />
+  <meta name="og:description" content={metaDescription} />
+  <meta name="og:type" content="website" />
+  <meta name="og:locale" content="it_IT" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content={data.author} />
+  <meta name="twitter:title" content={siteTitle} />
+  <meta name="twitter:description" content={metaDescription} />
+</head>
+<body>
 
 <div class='d-flex flex-column' style={{ minHeight: "100vh" }}>
     <Header client:load />
@@ -10,3 +39,4 @@ import Header from "../components/header";
     </div>
     <Footer />
   </div>
+</body>
