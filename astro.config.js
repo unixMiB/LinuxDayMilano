@@ -1,18 +1,23 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import Icons from "unplugin-icons/vite";
-import IconsAstro from "unplugin-icons/vite";
+import yaml from "@rollup/plugin-yaml";
 
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   // ...
-  integrations: [react(), sitemap(), IconsAstro({ compiler: "astro" })],
+  integrations: [react(), sitemap()],
   vite: {
     plugins: [
       Icons({
         compiler: "jsx",
+        jsx: "react",
       }),
+      Icons({
+        compiler: "astro",
+      }),
+      yaml(),
     ],
   },
   redirects: {
