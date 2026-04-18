@@ -11,10 +11,14 @@ import { glob, file } from "astro/loaders";
 //   }),
 // });
 
-const siteMetadata = defineCollection({
-  loader: file("src/assets/siteMetadata.yaml"),
+const schedules = defineCollection({
+  loader: glob({
+    base: "./src/schedules",
+    pattern: "*.yml",
+    generateId: ({ data }) => data.year,
+  }),
 });
 
 // Expose your defined collection to Astro
 // with the `collections` export
-export const collections = { siteMetadata };
+export const collections = { schedules };

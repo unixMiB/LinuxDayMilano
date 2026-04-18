@@ -1,10 +1,8 @@
 ---
 import Layout from "../layouts/layout.astro";
-import IndexJS from "./index"
-
-const data = {}
+import IndexJS from "./index";
 ---
 
 <Layout>
-    <IndexJS data={data} client:load/>
+  <IndexJS client:load />
 </Layout>
