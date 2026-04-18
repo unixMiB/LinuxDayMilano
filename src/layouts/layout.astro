@@ -79,7 +79,7 @@ const isProd = import.meta.env.MODE === "production";
   <body>
     <div class='d-flex flex-column' style={{ minHeight: "100vh" }}>
       <header class='d-print-none'>
-        <Header client:load allSchedulesYaml={allSchedulesYaml} />
+        <Header allSchedulesYaml={allSchedulesYaml} />
       </header>
       <div class='container-fluid flex-grow-1' style={{ padding: 0 }}>
         {hero !== HeroEnum.hide && <Hero small={hero !== HeroEnum.show} />}

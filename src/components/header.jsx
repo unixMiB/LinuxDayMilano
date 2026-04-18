@@ -1,6 +1,5 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar, Container } from "react-bootstrap";
 import Logo from "../assets/foot.svg";
 import { default as siteMetadata } from "../assets/siteMetadata.yml";
 

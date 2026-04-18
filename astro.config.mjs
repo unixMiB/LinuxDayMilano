@@ -19,6 +19,7 @@ export default defineConfig({
       yaml(),
     ],
   },
+  site: "https://linuxdaymilano.org",
   redirects: {
     "/2018": "/schedule?year=2018",
     "/2019": "/schedule?year=2019",
