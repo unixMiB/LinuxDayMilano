@@ -37,12 +37,28 @@ const metaDescription = description || data.description;
 const siteTitle = title == null ? data.title : `${title} - ${data.title}`;
 
 const allSchedulesYaml = await getCollection("schedules");
+
+const isProd = import.meta.env.MODE === "production";
 ---
 
 <html>
   <head>
     <meta charset='UTF-8' />
     <meta name='generator' content={Astro.generator} />
+
+    <link rel='icon' href='./src/assets/favicon_foot_transparent.svg' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='description' content='Sito ufficiale del Linux Day Milano' />
+    <meta name='theme-color' content='#212529' />
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta
+      name='apple-mobile-web-app-status-bar-style'
+      content='black-translucent'
+    />
+    <meta
+      name='apple-mobile-web-app-title'
+      content={isProd ? "LDMI" : "LDMI λ"}
+    />
 
     <meta name='keywords' content={data.keywords} />
     <meta name='application-name' content={data.title} />
@@ -56,6 +72,8 @@ const allSchedulesYaml = await getCollection("schedules");
     <meta name='twitter:creator' content={data.author} />
     <meta name='twitter:title' content={siteTitle} />
     <meta name='twitter:description' content={metaDescription} />
+
+    <title>{isProd ? "Linux Day Milano" : "Linux Day Milano λ"}</title>
   </head>
 
   <body>
@@ -64,11 +82,7 @@ const allSchedulesYaml = await getCollection("schedules");
         <Header client:load allSchedulesYaml={allSchedulesYaml} />
       </header>
       <div class='container-fluid flex-grow-1' style={{ padding: 0 }}>
-        {
-          hero !== HeroEnum.hide && (
-            <Hero small={hero === HeroEnum.show ? true : false} />
-          )
-        }
+        {hero !== HeroEnum.hide && <Hero small={hero !== HeroEnum.show} />}
 
         <main id={id}>
           <slot />

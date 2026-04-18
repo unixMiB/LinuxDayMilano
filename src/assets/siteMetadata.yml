@@ -15,7 +15,7 @@ switches:
   year_switcher: true
   sponsors: true
 event:
-  date: 2025-10-25 #T00:00:00.000Z
+  date: 2025-10-25T07:00:00.000+02:00
   time: "9:00"
   organizer: POuL
   topic: ""

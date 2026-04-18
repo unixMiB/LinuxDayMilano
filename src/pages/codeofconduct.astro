@@ -1,11 +1,11 @@
 ---
 import Layout, { HeroEnum } from "../layouts/layout.astro";
-import Container from "react-bootstrap/Container";
+import { Container } from "react-bootstrap";
 ---
 
-<Layout title='code of conduct' hero={HeroEnum.small}>
+<Layout title='code of conduct' hero={HeroEnum.small} id=''>
   <section id='' class='text-body'>
-    <Container client:load className='py-5'>
+    <Container className='py-5'>
       <h2 style={{ textTransform: "uppercase" }}>Code of Conduct</h2>
       <h3 id='italian' class='pt-3'>Versione Italiana</h3>
       <p>

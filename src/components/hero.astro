@@ -19,7 +19,6 @@ const previousYear = allSchedulesYaml.map((node) => node.data.year)[1];
 const params = siteMetadata.switches.schedule
   ? ""
   : "?" + new URLSearchParams({ year: previousYear });
-
 ---
 
 <div
@@ -76,7 +75,7 @@ const params = siteMetadata.switches.schedule
       }
       <h1 style={{ textTransform: "uppercase" }} class='mb-0 title'>
         Linux Day Milano{" "}
-        <span class='ldmi'>{siteMetadata.event.year}</span>
+        <span class='ldmi'>{siteMetadata.event.date.getFullYear()}</span>
       </h1>
       <h4 class='pb-3 pb-sm-5 title'>
         <small>
@@ -104,7 +103,7 @@ const params = siteMetadata.switches.schedule
       </h4>
       <div class='subtitle'>
         <Calendar />
-        {siteMetadata.event.text}
+        {siteMetadata.event.date.toLocaleDateString("it-IT")}
         <br />
         <Clock /> Ore {siteMetadata.event.time}
         <br />

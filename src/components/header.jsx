@@ -1,11 +1,11 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Nav, Navbar } from "react-bootstrap";
 import Logo from "../assets/foot.svg";
+import { default as siteMetadata } from "../assets/siteMetadata.yml";
 
-const Header = ({ siteMetadata, allSchedulesYaml }) => {
-  const year = siteMetadata.event.year;
+const Header = ({ allSchedulesYaml }) => {
+  const year = siteMetadata.event.date.getFullYear();
   const organizer = siteMetadata.organizer;
   const switches = siteMetadata.switches;
   const previousYear = allSchedulesYaml.map((node) => node.data.year)[1];
@@ -28,7 +28,7 @@ const Header = ({ siteMetadata, allSchedulesYaml }) => {
           <Navbar.Brand className='brand d-flex align-items-center' href='/'>
             <img
               src={Logo.src}
-              style={{ fontSize: "1.5em" }}
+              style={{ fontSize: "1.5em", height: "1em" }}
               aria-hidden='true'
               alt=''
               className='logo me-2 svg-inline--fa'
