@@ -24,16 +24,12 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build --verbose",
-    "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop -H 0.0.0.0 -o --inspect",
-    "debug": "node --nolazy --inspect-brk node_modules/.bin/gatsby develop",
-    "clean": "gatsby clean",
+    "build": "astro build",
     "lint": "prettier --check \"**/*.{js,jsx,json,md,yml}\"",
     "format": "prettier --write \"**/*.{astro,js,jsx,json,md,yml}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve -H 0.0.0.0 -o",
-    "dev": "astro dev",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "start": "astro dev",
+    "serve": "astro preview -H 0.0.0.0 -o",
+    "dev": "astro dev"
   },
   "devDependencies": {
     "@svgr/core": "^8.1.0",
