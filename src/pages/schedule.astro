@@ -4,7 +4,7 @@ import ScheduleJS from "../layouts/schedule";
 
 import Layout, { HeroEnum } from "../layouts/layout.astro";
 
-const allSchedulesYaml = await getCollection("schedules");
+const allSchedulesYaml = (await getCollection("schedules")).reverse();
 ---
 
 <Layout id='index' title='Programma' hero={HeroEnum.hide}>

@@ -213,14 +213,13 @@ const Page = ({ allSchedules }) => {
     if (year) {
       setSchedData(
         allSchedules.find((i) => {
-          i.data.year === year;
-        })
+          return i.data.year === year;
+        }).data
       );
     }
   }, [year, allSchedules]);
 
-  if ("development" === activeEnv)
-    console.log("schedData: " + JSON.stringify(schedData));
+  if ("development" === activeEnv) console.log("schedData: ", schedData);
 
   return (
     <>
@@ -262,17 +261,13 @@ const Page = ({ allSchedules }) => {
                         key={i}
                         onClick={() => {
                           //TODO
-                          console.log(
-                            typeof window !== "undefined" &&
-                              window.location.pathname +
-                                "?year=" +
-                                s.year +
-                                "#calendar"
-                          );
-                          setSchedData(allSchedules[i]);
+                          const url = new URL(window.location);
+                          url.searchParams.set("year", s.data.year);
+                          window.history.pushState({}, "", url);
+                          setSchedData(allSchedules[i].data);
                         }}
                       >
-                        {s.year}
+                        {s.data.year}
                       </Dropdown.Item>
                     ))}
                   </Dropdown.Menu>
