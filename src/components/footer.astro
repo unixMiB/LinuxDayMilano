@@ -1,114 +1,74 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Container from "react-bootstrap/Container";
+
 import ear from "../assets/ear-piece.svg";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-import { getCollection } from 'astro:content';
+import Envelope from "~icons/fa6-solid/envelope";
+import Globe from "~icons/fa6-solid/globe";
+import MapMarketAlt from "~icons/fa7-solid/map-marked-alt";
+import ChevronRight from "~icons/fa6-solid/chevron-right";
 
-// Get all `src/data/blog/` entries
-const data = await getCollection('siteMetadata');
-
+import { default as data } from "../assets/siteMetadata.yml";
 ---
-      <footer>
-      <section id='contattaci'>
-        <Container client:load className='footer'>
-          <div class='d-flex justify-content-start gx-md-5'>
-            <div
-              style={{ overflow: "hidden", height: "20rem" }}
-              class='d-md-block d-none'
-            >
-              <img
-                alt=''
-                style={{ height: "400px", width: "382px" }}
-                class=''
-                role='presentation'
-                src={ear.src}
-              />
-            </div>
-            <div class='my-5'>
-              <Container>
-                <h3>Contatta l'organizzazione</h3>
-                <ul>
-                  <li title='Indirizzo di posta'>
-                    <FontAwesomeIcon
-                      icon={icon({
-                        name: "envelope",
-                        family: "classic",
-                        style: "solid",
-                      })}
-                    />{" "}
-                    <a href={"mailto:" + data.contacts.email}>
-                      {data.contacts.email}
-                    </a>
-                  </li>
-                  <li title='Sito web'>
-                    <FontAwesomeIcon
-                      icon={icon({
-                        name: "globe",
-                        family: "classic",
-                        style: "solid",
-                      })}
-                    />{" "}
-                    <a
-                      href={data.contacts.website}
-                      title='Sito web'
-                    >
-                      {data.contacts.website}
-                    </a>
-                  </li>
-                  <li title="Luogo dell'evento">
-                    <FontAwesomeIcon
-                      icon={icon({
-                        name: "map-marked-alt",
-                        family: "classic",
-                        style: "solid",
-                      })}
-                    />{" "}
-                    {data.contacts.place.name}
-                  </li>
-                  <li title="Luogo dell'evento">
-                    <FontAwesomeIcon
-                      icon={icon({
-                        name: "chevron-right",
-                        family: "classic",
-                        style: "solid",
-                      })}
-                    />{" "}
-                    {data.contacts.place.street}
-                  </li>
-                  <li title="Luogo dell'evento">
-                    <FontAwesomeIcon
-                      icon={icon({
-                        name: "chevron-right",
-                        family: "classic",
-                        style: "solid",
-                      })}
-                    />{" "}
-                    {data.contacts.place.building}
-                  </li>
-                  <li title="Luogo dell'evento">
-                    <FontAwesomeIcon
-                      icon={icon({
-                        name: "chevron-right",
-                        family: "classic",
-                        style: "solid",
-                      })}
-                    />{" "}
-                    {data.contacts.place.cap}
-                  </li>
-                </ul>
-              </Container>
-            </div>
-          </div>
-        </Container>
-      </section>
-      <section class='section-license text-center align align-middle'>
-        Quest'opera è distribuita con Licenza Creative Commons Attribuzione -{" "}
-        <span class='ldmi'>
-          Condividi allo stesso modo 4.0 Internazionale
-        </span>
-        {" - "}
-        ILS Milano <span class='ldmi'>{new Date().getFullYear()}</span>
-      </section>
-    </footer>
+
+<footer>
+  <section id='contattaci'>
+    <Container client:load className='footer'>
+      <div class='d-flex justify-content-start gx-md-5'>
+        <div
+          style={{ overflow: "hidden", height: "20rem" }}
+          class='d-md-block d-none'
+        >
+          <img
+            alt=''
+            style={{ height: "400px", width: "382px" }}
+            class=''
+            role='presentation'
+            src={ear.src}
+          />
+        </div>
+        <div class='my-5'>
+          <Container client:load>
+            <h3>Contatta l'organizzazione</h3>
+            <ul>
+              <li title='Indirizzo di posta'>
+                <Envelope />{" "}
+                <a href={"mailto:" + data.contacts.email}>
+                  {data.contacts.email}
+                </a>
+              </li>
+              <li title='Sito web'>
+                <Globe />{" "}
+                <a href={data.contacts.website} title='Sito web'>
+                  {data.contacts.website}
+                </a>
+              </li>
+              <li title="Luogo dell'evento">
+                <MapMarketAlt />{" "}
+                {data.contacts.place.name}
+              </li>
+              <li title="Luogo dell'evento">
+                <ChevronRight />{" "}
+                {data.contacts.place.street}
+              </li>
+              <li title="Luogo dell'evento">
+                <ChevronRight />{" "}
+                {data.contacts.place.building}
+              </li>
+              <li title="Luogo dell'evento">
+                <ChevronRight />{" "}
+                {data.contacts.place.cap}
+              </li>
+            </ul>
+          </Container>
+        </div>
+      </div>
+    </Container>
+  </section>
+  <section class='section-license text-center align align-middle'>
+    Quest'opera è distribuita con Licenza Creative Commons Attribuzione -{" "}
+    <span class='ldmi'> Condividi allo stesso modo 4.0 Internazionale </span>
+    {" - "}
+    ILS Milano <span class='ldmi'>{new Date().getFullYear()}</span>
+  </section>
+</footer>

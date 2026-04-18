@@ -9,6 +9,7 @@ switches:
   schedule: true
   cfp: false
   cfp_submit: false
+  cfs: false
   stand_submit: false
   sponsor_submit: true
   year_switcher: true
