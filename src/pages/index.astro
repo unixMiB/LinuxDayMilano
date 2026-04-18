@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/layout.astro";
-import IndexJS from "./index";
+import IndexJS from "../components/index";
 ---
 
-<Layout>
-  <IndexJS client:load />
+<Layout id='index'>
+  <IndexJS client:only='react' />
 </Layout>
