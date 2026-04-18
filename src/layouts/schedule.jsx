@@ -100,12 +100,12 @@ const Talks = ({
             </Button>
           </div>
           <div className='d-flex flex-end gap-1'>
-            {!(modalData.video === "" || modalData.video === null) && (
+            {modalData?.video && (
               <Button target='_blank' href={modalData.video} variant='warning'>
                 <Video /> Video
               </Button>
             )}
-            {!(modalData.slides === "" || modalData.slides === null) && (
+            {modalData?.slides && (
               <Button target='_blank' href={modalData.slides} variant='warning'>
                 <Download /> Slides
               </Button>
@@ -183,8 +183,7 @@ const Talks = ({
 
 const activeEnv = import.meta.env.MODE || process.env.NODE_ENV || "development";
 
-const Page = ({ data }) => {
-  const allSchedules = data.reverse();
+const Page = ({ allSchedules }) => {
   const [schedData, setSchedData] = useState(allSchedules[0].data);
   const [starredTalks, setStarredTalks] = useState({});
   const [showStarred, setShowStarred] = useState(false);

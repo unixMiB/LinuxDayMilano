@@ -207,8 +207,7 @@ const Talks = ({
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
 
-const Page = ({ data }) => {
-  const allSchedules = data.reverse();
+const Page = ({ allSchedules }) => {
   const [showDescriptions, setShowDescriptions] = useState(false);
   const [schedData, setSchedData] = useState(allSchedules[0].data);
   const [starredTalks, setStarredTalks] = useState({});
@@ -253,7 +252,6 @@ const Page = ({ data }) => {
       <div className='d-none my-3'>
         <Header />
       </div>
-      <Seo title='Programma' />
       <main id='index' className='text-body'>
         <Container fluid>
           <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
