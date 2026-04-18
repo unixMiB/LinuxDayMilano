@@ -6,8 +6,9 @@ import { getCollection } from "astro:content";
 
 import "../styles/main.scss";
 
-import { default as data } from "../assets/siteMetadata.yml";
+import { default as data } from "@assets/siteMetadata.yml";
 import Hero from "../components/hero.astro";
+import Favicon from "@assets/favicon_foot_transparent.svg";
 
 export enum HeroEnum {
   show,
@@ -46,7 +47,7 @@ const isProd = import.meta.env.MODE === "production";
     <meta charset='UTF-8' />
     <meta name='generator' content={Astro.generator} />
 
-    <link rel='icon' href='./src/assets/favicon_foot_transparent.svg' />
+    <link rel='icon' href={Favicon.src} />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <meta name='description' content='Sito ufficiale del Linux Day Milano' />
     <meta name='theme-color' content='#212529' />

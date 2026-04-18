@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
-import Logo from "../assets/foot.svg";
-import { default as siteMetadata } from "../assets/siteMetadata.yml";
+import Logo from "@assets/foot.svg";
+import { default as siteMetadata } from "@assets/siteMetadata.yml";
 
 const Header = ({ allSchedulesYaml }) => {
   const year = siteMetadata.event.date.getFullYear();

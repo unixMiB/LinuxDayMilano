@@ -12,7 +12,7 @@ import Video from "~icons/fa6-solid/video";
 import Download from "~icons/fa6-solid/download";
 import PersonDigging from "~icons/fa6-solid/person-digging";
 
-import { default as siteMetadata } from "../assets/siteMetadata.yml";
+import { default as siteMetadata } from "@assets/siteMetadata.yml";
 
 const Talks = ({
   scheduleData,

@@ -1,21 +1,11 @@
 import { defineCollection } from "astro:content";
 // import { z } from "astro/zod";
-import { glob, file } from "astro/loaders";
-
-// Example
-// const blog = defineCollection({
-//   loader: glob({ pattern: "**/*.md", base: "./src/data/blog" }),
-//   schema: z.object({
-//     title: z.string(),
-//     permalink: z.string().optional(),
-//   }),
-// });
+import { glob } from "astro/loaders";
 
 const schedules = defineCollection({
   loader: glob({
     base: "./src/schedules",
     pattern: "*.yml",
-    generateId: ({ data }) => data.year,
   }),
 });
 

@@ -2,15 +2,15 @@
 import Layout from "../layouts/layout.astro";
 import Sponsors from "../components/Sponsors.astro";
 
-import { default as data } from "../assets/siteMetadata.yml";
+import { default as data } from "@assets/siteMetadata.yml";
 
 const isPast = new Date(siteMetadata.event.date) <= new Date();
 import { Button, Container, Row, Col, Alert } from "react-bootstrap";
-import watch from "../assets/watch.svg";
+import watch from "@assets/watch.svg";
 
-import talkSubscription from "../assets/images/talk-subscription.png";
+import talkSubscription from "@assets/images/talk-subscription.png";
 
-import { default as siteMetadata } from "../assets/siteMetadata.yml";
+import { default as siteMetadata } from "@assets/siteMetadata.yml";
 ---
 
 <Layout id='index'>
