@@ -1,0 +1,48 @@
+---
+import { Container, Row, Col } from "react-bootstrap";
+
+import brands from "../assets/brands/brands.yml";
+import SponsorItem from "./SponsorItem.astro";
+import { Image } from "astro:assets";
+---
+
+<section id='sponsors'>
+  <Container className='py-5'>
+    <h2 style={{ textTransform: "uppercase" }}>Sponsor dell'evento</h2>
+    <Row class='mb-3'>
+      {brands.sponsors.map(async (item) => <SponsorItem item={item} />)}
+    </Row>
+    <h2 style={{ textTransform: "uppercase" }}>Con i patrocini di</h2>
+    <Row class='mb-3'>
+      {brands.patrocini.map(async (item) => <SponsorItem item={item} />)}
+    </Row>
+    <h2 style={{ textTransform: "uppercase" }}>Parlano di noi</h2>
+    {
+      brands.referrals.map(async (item) => {
+        const logoSrc = await import(`../assets/brands/${item.logo}.png`);
+        return (
+          <Row key={item.name}>
+            <Col class='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+              <a href={item.website}>
+                <Image
+                  alt={item.name}
+                  title={item.name}
+                  height='100'
+                  src={logoSrc.default}
+                />
+              </a>
+            </Col>
+            <Col class='align-self-start col-12 col-md-6 pb-2 pb-sm-3'>
+              <figure>
+                <blockquote class='blockquote'>
+                  <p>{item.comment}</p>
+                </blockquote>
+                <figcaption class='blockquote-footer'>{item.author}</figcaption>
+              </figure>
+            </Col>
+          </Row>
+        );
+      })
+    }
+  </Container>
+</section>

@@ -6,7 +6,6 @@ import yaml from "@rollup/plugin-yaml";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  // ...
   integrations: [react(), sitemap()],
   vite: {
     plugins: [
@@ -28,5 +27,8 @@ export default defineConfig({
     "/2024": "/schedule?year=2024",
     "/2025": "/schedule?year=2025",
     "/2026": "/schedule?year=2026",
+  },
+  image: {
+    imageresponsivestyles: true,
   },
 });

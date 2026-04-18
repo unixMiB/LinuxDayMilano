@@ -1,8 +1,12 @@
 ---
 import Layout from "../layouts/layout.astro";
 import IndexJS from "../components/index";
+import Sponsors from "../components/Sponsors.astro";
+
+import { default as data } from "../assets/siteMetadata.yml";
 ---
 
 <Layout id='index'>
-  <IndexJS client:only='react' />
+  <IndexJS client:load />
+  {data.switches.sponsors && <Sponsors />}
 </Layout>
