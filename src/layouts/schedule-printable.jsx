@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { graphql, navigate } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Dropdown from "react-bootstrap/Dropdown";
-import Seo from "../components/seo";
 import Header from "../components/header";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Talks = ({
   scheduleData,
@@ -212,9 +208,9 @@ const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
 
 const Page = ({ data }) => {
-  const allSchedules = data.allSchedulesYaml.nodes;
+  const allSchedules = data.reverse();
   const [showDescriptions, setShowDescriptions] = useState(false);
-  const [schedData, setSchedData] = useState(allSchedules[0]);
+  const [schedData, setSchedData] = useState(allSchedules[0].data);
   const [starredTalks, setStarredTalks] = useState({});
   const [showStarred, setShowStarred] = useState(false);
 
@@ -380,46 +376,5 @@ const Page = ({ data }) => {
     </div>
   );
 };
-
-export const query = graphql`
-  {
-    allSchedulesYaml(sort: { order: DESC, fields: year }) {
-      nodes {
-        year
-        schedule {
-          time
-          talks {
-            title
-            description
-            author
-            room
-            duration
-            slides
-            video
-          }
-        }
-      }
-    }
-
-    site {
-      siteMetadata {
-        event {
-          year: date(formatString: "YYYY")
-          time
-          text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
-        }
-        contacts {
-          email
-          website
-        }
-        switches {
-          schedule
-          cfp
-          year_switcher
-        }
-      }
-    }
-  }
-`;
 
 export default Page;

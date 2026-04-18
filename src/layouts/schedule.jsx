@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { graphql, navigate } from "gatsby";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -13,7 +12,7 @@ import Video from "~icons/fa6-solid/video";
 import Download from "~icons/fa6-solid/download";
 import PersonDigging from "~icons/fa6-solid/person-digging";
 
-import { siteMetadata } from "../assets/siteMetadata.yml";
+import { default as siteMetadata } from "../assets/siteMetadata.yml";
 
 const Talks = ({
   scheduleData,
@@ -182,12 +181,11 @@ const Talks = ({
   );
 };
 
-const activeEnv =
-  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+const activeEnv = import.meta.env.MODE || process.env.NODE_ENV || "development";
 
 const Page = ({ data }) => {
-  const allSchedules = data.allSchedulesYaml.nodes;
-  const [schedData, setSchedData] = useState(allSchedules[0]);
+  const allSchedules = data.reverse();
+  const [schedData, setSchedData] = useState(allSchedules[0].data);
   const [starredTalks, setStarredTalks] = useState({});
   const [showStarred, setShowStarred] = useState(false);
 
@@ -214,11 +212,11 @@ const Page = ({ data }) => {
 
   useEffect(() => {
     if (year) {
-      allSchedules.forEach((i) => {
-        if (i.year === year) {
-          setSchedData(i);
-        }
-      });
+      setSchedData(
+        allSchedules.find((i) => {
+          i.data.year === year;
+        })
+      );
     }
   }, [year, allSchedules]);
 
@@ -264,7 +262,8 @@ const Page = ({ data }) => {
                       <Dropdown.Item
                         key={i}
                         onClick={() => {
-                          navigate(
+                          //TODO
+                          console.log(
                             typeof window !== "undefined" &&
                               window.location.pathname +
                                 "?year=" +
@@ -338,46 +337,5 @@ const Page = ({ data }) => {
     </>
   );
 };
-
-export const query = graphql`
-  {
-    allSchedulesYaml(sort: { order: DESC, fields: year }) {
-      nodes {
-        year
-        schedule {
-          time
-          talks {
-            title
-            description
-            author
-            room
-            duration
-            slides
-            video
-          }
-        }
-      }
-    }
-
-    site {
-      siteMetadata {
-        event {
-          year: date(formatString: "YYYY")
-          time
-          text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
-        }
-        contacts {
-          email
-          website
-        }
-        switches {
-          schedule
-          cfp
-          year_switcher
-        }
-      }
-    }
-  }
-`;
 
 export default Page;
