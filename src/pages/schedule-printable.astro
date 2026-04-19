@@ -7,6 +7,6 @@ import Layout, { HeroEnum } from "../layouts/layout.astro";
 const allSchedulesYaml = await getCollection("schedules");
 ---
 
-<Layout id='index' title='Programma' hero={HeroEnum.hide}>
+<Layout id='index' title='Programma' hero={HeroEnum.small}>
   <!-- <SchedulePrintableJS client:load allSchedules={allSchedulesYaml} /> -->
 </Layout>
