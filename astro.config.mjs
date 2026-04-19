@@ -12,9 +12,11 @@ export default defineConfig({
       Icons({
         compiler: "jsx",
         jsx: "react",
+        defaultStyle: "height: 1em;",
       }),
       Icons({
         compiler: "astro",
+        defaultStyle: "height: 1em;",
       }),
       yaml(),
     ],

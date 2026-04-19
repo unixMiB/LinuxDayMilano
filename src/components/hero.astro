@@ -3,8 +3,8 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 
 import Calendar from "~icons/fa6-solid/calendar";
-import Clock from "~icons/fa6-solid/calendar";
-import MapMarketAlt from "~icons/fa7-solid/map-marked-alt";
+import Clock from "~icons/fa6-solid/clock";
+import MapMarketAlt from "~icons/fa6-solid/map-location-dot";
 import ChevronRight from "~icons/fa6-solid/chevron-right";
 
 import { default as siteMetadata } from "@assets/siteMetadata.yml";
@@ -103,7 +103,12 @@ const params = siteMetadata.switches.schedule
       </h4>
       <div class='subtitle'>
         <Calendar />
-        {siteMetadata.event.date.toLocaleDateString("it-IT")}
+        {
+          siteMetadata.event.date.toLocaleDateString(
+            "it-IT",
+            siteMetadata.event.dateOptions
+          )
+        }
         <br />
         <Clock /> Ore {siteMetadata.event.time}
         <br />

@@ -35,7 +35,12 @@ import { default as siteMetadata } from "@assets/siteMetadata.yml";
               {isPast ? "è svolto" : "svolgerà"} il
               <br />
               <span>
-                {siteMetadata.event.date.toLocaleDateString("it-IT")}
+                {
+                  siteMetadata.event.date.toLocaleDateString(
+                    "it-IT",
+                    siteMetadata.event.dateOptions
+                  )
+                }
               </span>
             </h2>
             <p>
