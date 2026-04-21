@@ -8,3 +8,8 @@ $color-mode-type: media-query;
 @import "components/header.scss";
 @import "components/footer.scss";
 @import "components/hero.scss";
+
+@view-transition {
+    navigation: auto;
+    /* enabled! */
+}
