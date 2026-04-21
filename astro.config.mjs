@@ -20,6 +20,18 @@ export default defineConfig({
       }),
       yaml(),
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: [
+            "import",
+            "mixed-decls",
+            "color-functions",
+            "global-builtin",
+          ],
+        },
+      },
+    },
   },
   site: "https://linuxdaymilano.org",
   redirects: {
@@ -32,6 +44,6 @@ export default defineConfig({
     "/2026": "/schedule?year=2026",
   },
   image: {
-    imageresponsivestyles: true,
+    responsiveStyles: true,
   },
 });
