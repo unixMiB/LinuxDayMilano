@@ -8,6 +8,7 @@
     "types": ["unplugin-icons/types/astro", "unplugin-icons/types/jsx"],
     "paths": {
       "@assets/*": ["./src/assets/*"]
-    }
+    },
+    "moduleResolution": "bundler"
   }
 }

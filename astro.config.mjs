@@ -45,5 +45,6 @@ export default defineConfig({
   },
   image: {
     responsiveStyles: true,
+    layout: "full-width",
   },
 });

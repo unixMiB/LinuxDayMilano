@@ -10,6 +10,7 @@ import ChevronRight from "~icons/fa6-solid/chevron-right";
 import { default as siteMetadata } from "@assets/siteMetadata.yml";
 import Location from "@assets/images/politecnico.jpg";
 import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
 
 const allSchedulesYaml = await getCollection("schedules");
 
@@ -27,7 +28,9 @@ const params = siteMetadata.switches.schedule
     color: "black",
   }}
 >
-  <img
+  <Picture
+    widths={[400, 800, 1200, 1920]}
+    formats={["avif", "webp"]}
     style={{
       filter: "brightness(0.4)",
       position: "absolute",
@@ -36,13 +39,15 @@ const params = siteMetadata.switches.schedule
       width: "100%",
       height: "100%",
       zIndex: -1,
-      aspectRatio: 3 / 1,
-      layout: "fullWidth",
+      objectPosition: "left bottom",
     }}
-    src={Location.src}
+    src={Location}
+    layout='fullWidth'
+    aspectRatio={3 / 1}
     alt=''
     aria-hidden='true'
   />
+
   <div
     style={{
       position: "relative",

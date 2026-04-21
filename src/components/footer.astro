@@ -9,6 +9,7 @@ import MapMarketAlt from "~icons/fa6-solid/map-location-dot";
 import ChevronRight from "~icons/fa6-solid/chevron-right";
 
 import { default as data } from "@assets/siteMetadata.yml";
+import { Image } from "astro:assets";
 ---
 
 <footer>
@@ -19,12 +20,13 @@ import { default as data } from "@assets/siteMetadata.yml";
           style={{ overflow: "hidden", height: "20rem" }}
           class='d-md-block d-none'
         >
-          <img
+          <Image
             alt=''
-            style={{ height: "400px", width: "382px" }}
+            height='400'
+            width='382'
             class=''
             role='presentation'
-            src={ear.src}
+            src={ear}
           />
         </div>
         <div class='my-5'>

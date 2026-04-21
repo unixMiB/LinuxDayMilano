@@ -8,14 +8,14 @@ const dynamicImagePath = await import(`../assets/brands/${item.logo}.png`);
 const imageUrl = dynamicImagePath.default;
 ---
 
-<Col class='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
+<Col className='align-self-start col-6 col-sm-4 col-md-3 pb-2 pb-sm-3'>
   <a href={item.website}>
     <Image
       alt={item.name}
       title={item.name}
-      height='100'
       layout='constrained'
       src={imageUrl}
+      style='object-fit:cover; width: 100%; height:100%'
     />
   </a>
 </Col>

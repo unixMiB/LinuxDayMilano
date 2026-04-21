@@ -11,18 +11,20 @@ import watch from "@assets/watch.svg";
 import talkSubscription from "@assets/images/talk-subscription.png";
 
 import { default as siteMetadata } from "@assets/siteMetadata.yml";
+import { Image } from "astro:assets";
 ---
 
 <Layout id='index'>
   <section id='explore'>
     <div>
       <div class='watch'>
-        <img
+        <Image
           alt=''
           class='img-fluid'
           role='presentation'
-          src={watch.src}
-          style={{ height: "316px", width: "256px" }}
+          src={watch}
+          height='316'
+          width='256'
         />
       </div>
       <Container className='front' style={{ position: "sticky" }}>
@@ -115,11 +117,11 @@ import { default as siteMetadata } from "@assets/siteMetadata.yml";
     <Container>
       <Row>
         <Col sm='4'>
-          <img
+          <Image
             alt=''
             class='img-fluid mb-4 mb-sm-0'
             role='presentation'
-            src={talkSubscription.src}
+            src={talkSubscription}
           />
         </Col>
         <Col sm='8'>
