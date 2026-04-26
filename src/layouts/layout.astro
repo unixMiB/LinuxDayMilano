@@ -83,9 +83,8 @@ const isProd = import.meta.env.MODE === "production";
         <Header client:load allSchedulesYaml={allSchedulesYaml} />
       </header>
       <div class='container-fluid flex-grow-1' style={{ padding: 0 }}>
-        {hero !== HeroEnum.hide && <Hero small={hero === HeroEnum.small} />}
-
         <main id={id}>
+          {hero !== HeroEnum.hide && <Hero small={hero === HeroEnum.small} />}
           <slot />
         </main>
       </div>

@@ -30,7 +30,7 @@ const Header = ({ allSchedulesYaml }) => {
               style={{ fontSize: "1.5em", height: "1em" }}
               aria-hidden='true'
               alt=''
-              className='logo me-2 svg-inline--fa'
+              className='logo me-2'
             />
             LD
             <span>MI {year}</span>

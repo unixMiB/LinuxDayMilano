@@ -2,8 +2,11 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import Icons from "unplugin-icons/vite";
 import yaml from "@rollup/plugin-yaml";
+import { imagetools } from "vite-imagetools";
 
 import sitemap from "@astrojs/sitemap";
+
+const defaultStyle = "height: 1em; vertical-align: -.125em;";
 
 export default defineConfig({
   integrations: [react(), sitemap()],
@@ -12,13 +15,14 @@ export default defineConfig({
       Icons({
         compiler: "jsx",
         jsx: "react",
-        defaultStyle: "height: 1em;",
+        defaultStyle,
       }),
       Icons({
         compiler: "astro",
-        defaultStyle: "height: 1em;",
+        defaultStyle,
       }),
       yaml(),
+      imagetools(),
     ],
     css: {
       preprocessorOptions: {
@@ -42,9 +46,5 @@ export default defineConfig({
     "/2024": "/schedule?year=2024",
     "/2025": "/schedule?year=2025",
     "/2026": "/schedule?year=2026",
-  },
-  image: {
-    responsiveStyles: true,
-    layout: "full-width",
   },
 });

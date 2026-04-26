@@ -18,7 +18,8 @@
     "react-bootstrap": "^3.0.0-beta.5",
     "react-dom": "^18.3.1",
     "sass": "^1.89.2",
-    "unplugin-icons": "^23.0.1"
+    "unplugin-icons": "^23.0.1",
+    "vite-imagetools": "^10.0.0"
   },
   "keywords": [
     "kowalski7cc"
@@ -36,6 +37,9 @@
   "devDependencies": {
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.1"
+  },
+  "overrides": {
+    "vite": "^7"
   },
   "repository": {
     "type": "git",
