@@ -6,7 +6,8 @@ import { imagetools } from "vite-imagetools";
 
 import sitemap from "@astrojs/sitemap";
 
-const defaultStyle = "height: 1em; vertical-align: -.125em;";
+const defaultStyle =
+  "height: 1em; vertical-align: -.125em; baseline-shift: -2.5px; overflow: visible";
 
 export default defineConfig({
   integrations: [react(), sitemap()],
