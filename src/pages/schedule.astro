@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import ScheduleJS from "../layouts/schedule";
+
+import Layout, { HeroEnum } from "../layouts/layout.astro";
+
+const allSchedulesYaml = (await getCollection("schedules")).reverse();
+---
+
+<Layout id='index' title='Programma' hero={HeroEnum.small}>
+  <ScheduleJS client:load allSchedules={allSchedulesYaml} />
+</Layout>

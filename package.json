@@ -1,41 +1,25 @@
 {
   "name": "linuxdaymilano",
   "description": "Manifestazione italiana dedicata a GNU/Linux, al software libero, alla cultura aperta e alla condivisione",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "author": "Kowalski7cc <kowalski.7cc@gmail.com>",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.2",
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-brands-svg-icons": "^6.5.2",
-    "@fortawesome/free-regular-svg-icons": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@astrojs/react": "^5.0.3",
+    "@astrojs/sitemap": "^3.7.2",
+    "@iconify-json/fa6-regular": "^1.2.4",
+    "@iconify-json/fa6-solid": "^1.2.4",
+    "@popperjs/core": "^2.11.8",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "astro": "^6.1.8",
     "bootstrap": "^5.3.7",
-    "gatsby": "^5.14.5",
-    "gatsby-plugin-image": "^3.14.0",
-    "gatsby-plugin-brotli": "^2.1.0",
-    "gatsby-plugin-catch-links": "^5.14.0",
-    "gatsby-plugin-manifest": "^5.14.0",
-    "gatsby-plugin-canonical-urls": "^5.14.0",
-    "gatsby-plugin-netlify": "^5.1.1",
-    "gatsby-plugin-nprogress": "^5.14.0",
-    "gatsby-plugin-offline": "^6.14.0",
-    "gatsby-plugin-react-helmet": "^6.14.0",
-    "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sass": "^6.14.0",
-    "gatsby-plugin-sharp": "^5.14.0",
-    "gatsby-plugin-sitemap": "^6.14.0",
-    "gatsby-remark-images": "^7.14.0",
-    "gatsby-source-filesystem": "^5.14.0",
-    "gatsby-transformer-json": "^5.14.0",
-    "gatsby-transformer-remark": "^6.14.0",
-    "gatsby-transformer-sharp": "^5.14.0",
-    "gatsby-transformer-yaml": "^5.14.0",
-    "react-bootstrap": "^2.10.10",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.89.2",
-    "sharp": "^0.34.3",
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "react-bootstrap": "^3.0.0-beta.5",
+    "react-dom": "^18.3.1",
+    "sass-embedded": "^1.89.2",
+    "unplugin-icons": "^23.0.1",
+    "vite-imagetools": "^10.0.0"
   },
   "keywords": [
     "kowalski7cc"
@@ -43,19 +27,19 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build --verbose",
-    "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop -H 0.0.0.0 -o --inspect",
-    "debug": "node --nolazy --inspect-brk node_modules/.bin/gatsby develop",
-    "clean": "gatsby clean",
+    "build": "astro build",
     "lint": "prettier --check \"**/*.{js,jsx,json,md,yml}\"",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,yml}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve -H 0.0.0.0 -o",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "format": "prettier --write \"**/*.{astro,js,jsx,json,md,yml}\"",
+    "start": "astro dev",
+    "serve": "astro preview -H 0.0.0.0 -o",
+    "dev": "astro dev"
   },
   "devDependencies": {
-    "gatsby-cli": "5.13.3",
-    "prettier": "^3.3.2"
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.1"
+  },
+  "overrides": {
+    "vite": "^7"
   },
   "repository": {
     "type": "git",

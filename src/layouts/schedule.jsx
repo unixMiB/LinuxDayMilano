@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { graphql, navigate } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Dropdown from "react-bootstrap/Dropdown";
-import Seo from "../components/seo";
-import Header from "../components/header";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+
+import Star from "~icons/fa6-regular/star";
+import StarSolid from "~icons/fa6-solid/star";
+import Video from "~icons/fa6-solid/video";
+import Download from "~icons/fa6-solid/download";
+import PersonDigging from "~icons/fa6-solid/person-digging";
+
+import { default as siteMetadata } from "@assets/siteMetadata.yml";
 
 const Talks = ({
   scheduleData,
   showStarred,
   starredTalksForYear,
   toggleTalkStar,
-  showDescriptions,
 }) => {
   const [data, setData] = useState(scheduleData);
   const [modalData, setModalData] = useState({
@@ -43,22 +45,13 @@ const Talks = ({
   };
 
   const StarToggle = ({ title }) => (
-    <FontAwesomeIcon
-      icon={
-        starredTalksForYear?.includes(title)
-          ? icon({
-              name: "star",
-              family: "classic",
-              style: "solid",
-            })
-          : icon({
-              name: "star",
-              family: "classic",
-              style: "regular",
-            })
-      }
-      onClick={(e) => handleStarClick(title, e)}
-    />
+    <>
+      {starredTalksForYear?.includes(title) ? (
+        <StarSolid onClick={(e) => handleStarClick(title, e)} />
+      ) : (
+        <Star onClick={(e) => handleStarClick(title, e)} />
+      )}
+    </>
   );
 
   return (
@@ -107,28 +100,14 @@ const Talks = ({
             </Button>
           </div>
           <div className='d-flex flex-end gap-1'>
-            {!(modalData.video === "" || modalData.video === null) && (
+            {modalData?.video && (
               <Button target='_blank' href={modalData.video} variant='warning'>
-                <FontAwesomeIcon
-                  icon={icon({
-                    name: "video",
-                    family: "classic",
-                    style: "solid",
-                  })}
-                />{" "}
-                Video
+                <Video /> Video
               </Button>
             )}
-            {!(modalData.slides === "" || modalData.slides === null) && (
+            {modalData?.slides && (
               <Button target='_blank' href={modalData.slides} variant='warning'>
-                <FontAwesomeIcon
-                  icon={icon({
-                    name: "download",
-                    family: "classic",
-                    style: "solid",
-                  })}
-                />{" "}
-                Slides
+                <Download /> Slides
               </Button>
             )}
             <Button
@@ -147,18 +126,21 @@ const Talks = ({
       </Modal>
       {data.map((i, k) => {
         return (
-          <Row key={k} className='pb-1 gx-1'>
-            <Col lg={1} md={12} className='pb-1 mr-1'>
+          <Row key={k} className='pb-4'>
+            <Col lg={1} md={12} className='pb-4 mr-2'>
               <h5 className='schedule-time'>{i.time}</h5>
             </Col>
             {i.talks.map((t, u) => {
               if ("development" === activeEnv) console.log(showStarred);
               return !showStarred || starredTalksForYear?.includes(t.title) ? (
-                <Col key={u} sm={showDescriptions ? 12 : ""} className='pb-0'>
+                <Col key={u} sm={12} md className='pb-4'>
                   <div
-                    className='border border-success h-100 d-flex flex-column'
+                    onKeyPress={() => replaceModalItem(t)}
+                    onClick={() => replaceModalItem(t)}
+                    className='event border rounded h-100 d-flex flex-column'
                     style={{
                       padding: "1rem",
+                      cursor: "pointer",
                       pageBreakInside: "avoid",
                       breakInside: "avoid",
                     }}
@@ -173,22 +155,13 @@ const Talks = ({
                         <h6>{t.author}</h6>
                       </Col>
                     </Row>
-                    {showDescriptions && (
-                      <Row className='mt-2'>
-                        <Col>
-                          <h6>{t.description}</h6>
-                        </Col>
-                      </Row>
-                    )}
                     <Row className='d-flex flex-grow-1' />
                     <Row className='mt-3 align-items-center'>
                       <Col className='align-bottom text-start'>
                         {t.duration}
                       </Col>
-                      <Col className='align-bottom text-end justify-content-end'>
-                        {t.room}
-                      </Col>
-                      <Col className='d-flex gap-1 justify-content-end d-none'>
+                      <Col className='align-bottom text-center'>{t.room}</Col>
+                      <Col className='d-flex gap-1 justify-content-end'>
                         <Button
                           variant='warning'
                           onClick={(e) => handleStarClick(t.title, e)}
@@ -208,13 +181,10 @@ const Talks = ({
   );
 };
 
-const activeEnv =
-  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+const activeEnv = import.meta.env.MODE || process.env.NODE_ENV || "development";
 
-const Page = ({ data }) => {
-  const allSchedules = data.allSchedulesYaml.nodes;
-  const [showDescriptions, setShowDescriptions] = useState(false);
-  const [schedData, setSchedData] = useState(allSchedules[0]);
+const Page = ({ allSchedules }) => {
+  const [schedData, setSchedData] = useState(allSchedules[0].data);
   const [starredTalks, setStarredTalks] = useState({});
   const [showStarred, setShowStarred] = useState(false);
 
@@ -241,42 +211,32 @@ const Page = ({ data }) => {
 
   useEffect(() => {
     if (year) {
-      allSchedules.forEach((i) => {
-        if (i.year === year) {
-          setSchedData(i);
-        }
-      });
+      setSchedData(
+        allSchedules.find((i) => {
+          return i.data.year === year;
+        }).data
+      );
     }
   }, [year, allSchedules]);
 
-  if ("development" === activeEnv)
-    console.log("schedData: " + JSON.stringify(schedData));
+  if ("development" === activeEnv) console.log("schedData: ", schedData);
 
   return (
-    <div>
-      <div className='d-none my-3'>
-        <Header />
-      </div>
-      <Seo title='Programma' />
-      <main id='index' className='text-body'>
-        <Container fluid>
+    <>
+      <section id='calendar' className='text-body'>
+        <Container>
           <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
             <h2 className='text-md-left text-center'>
-              Linux Day Milano {schedData?.year} -{" "}
-              {!showStarred ? "Programma della giornata" : "Agenda personale"}
+              Programma della giornata
             </h2>
 
             <div className='d-flex flex-row gap-3 d-print-none'>
               <Button
+                className='d-none'
+                href='/schedule-printable'
                 variant='warning'
-                onClick={() => {
-                  setShowDescriptions((showDescriptions) => !showDescriptions);
-                  localStorage.setItem("showDescriptions", !showDescriptions);
-                }}
               >
-                {showDescriptions
-                  ? "Nascondi descrizioni"
-                  : "Mostra descrizioni"}
+                Versione stampabile
               </Button>
               <Button
                 variant='warning'
@@ -287,7 +247,7 @@ const Page = ({ data }) => {
               >
                 {showStarred ? "Tutte le talk" : "Agenda personale"}
               </Button>
-              {data.site.siteMetadata.switches.year_switcher ? (
+              {siteMetadata.switches.year_switcher ? (
                 <Dropdown className='d-block d-md-inline d-print-none'>
                   <Dropdown.Toggle
                     className='w-100 w-sm-auto'
@@ -300,14 +260,14 @@ const Page = ({ data }) => {
                       <Dropdown.Item
                         key={i}
                         onClick={() => {
-                          navigate(
-                            typeof window !== "undefined" &&
-                              window.location.pathname + "?year=" + s.year
-                          );
-                          setSchedData(allSchedules[i]);
+                          //TODO
+                          const url = new URL(window.location);
+                          url.searchParams.set("year", s.data.year);
+                          window.history.pushState({}, "", url);
+                          setSchedData(allSchedules[i].data);
                         }}
                       >
-                        {s.year}
+                        {s.data.year}
                       </Dropdown.Item>
                     ))}
                   </Dropdown.Menu>
@@ -325,7 +285,6 @@ const Page = ({ data }) => {
               scheduleData={schedData?.schedule}
               showStarred={showStarred}
               starredTalksForYear={starredTalks[schedData?.year]}
-              showDescriptions={showDescriptions}
               toggleTalkStar={(title) => {
                 setStarredTalks((current) => {
                   let next;
@@ -356,15 +315,7 @@ const Page = ({ data }) => {
             />
           ) : (
             <div className='text-center py-4'>
-              <FontAwesomeIcon
-                style={{ fontSize: "5em" }}
-                icon={icon({
-                  name: "person-digging",
-                  family: "classic",
-                  style: "solid",
-                })}
-                className='pb-2'
-              />
+              <PersonDigging style={{ fontSize: "5em" }} className='pb-2' />
               <h3>
                 Ci sono eventi per questa giornata, sono solo in fase di
                 organizzazione.
@@ -376,50 +327,9 @@ const Page = ({ data }) => {
             </div>
           )}
         </Container>
-      </main>
-    </div>
+      </section>
+    </>
   );
 };
-
-export const query = graphql`
-  {
-    allSchedulesYaml(sort: { order: DESC, fields: year }) {
-      nodes {
-        year
-        schedule {
-          time
-          talks {
-            title
-            description
-            author
-            room
-            duration
-            slides
-            video
-          }
-        }
-      }
-    }
-
-    site {
-      siteMetadata {
-        event {
-          year: date(formatString: "YYYY")
-          time
-          text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
-        }
-        contacts {
-          email
-          website
-        }
-        switches {
-          schedule
-          cfp
-          year_switcher
-        }
-      }
-    }
-  }
-`;
 
 export default Page;

@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { graphql, navigate } from "gatsby";
-import Layout from "../components/layout";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Dropdown from "react-bootstrap/Dropdown";
-import Seo from "../components/seo";
-import Hero from "../components/hero";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import Header from "../components/header";
 
 const Talks = ({
   scheduleData,
   showStarred,
   starredTalksForYear,
   toggleTalkStar,
+  showDescriptions,
 }) => {
   const [data, setData] = useState(scheduleData);
   const [modalData, setModalData] = useState({
@@ -147,21 +143,18 @@ const Talks = ({
       </Modal>
       {data.map((i, k) => {
         return (
-          <Row key={k} className='pb-4'>
-            <Col lg={1} md={12} className='pb-4 mr-2'>
+          <Row key={k} className='pb-1 gx-1'>
+            <Col lg={1} md={12} className='pb-1 mr-1'>
               <h5 className='schedule-time'>{i.time}</h5>
             </Col>
             {i.talks.map((t, u) => {
               if ("development" === activeEnv) console.log(showStarred);
               return !showStarred || starredTalksForYear?.includes(t.title) ? (
-                <Col key={u} sm={12} md className='pb-4'>
+                <Col key={u} sm={showDescriptions ? 12 : ""} className='pb-0'>
                   <div
-                    onKeyPress={() => replaceModalItem(t)}
-                    onClick={() => replaceModalItem(t)}
-                    className='event border rounded h-100 d-flex flex-column'
+                    className='border border-success h-100 d-flex flex-column'
                     style={{
                       padding: "1rem",
-                      cursor: "pointer",
                       pageBreakInside: "avoid",
                       breakInside: "avoid",
                     }}
@@ -176,13 +169,22 @@ const Talks = ({
                         <h6>{t.author}</h6>
                       </Col>
                     </Row>
+                    {showDescriptions && (
+                      <Row className='mt-2'>
+                        <Col>
+                          <h6>{t.description}</h6>
+                        </Col>
+                      </Row>
+                    )}
                     <Row className='d-flex flex-grow-1' />
                     <Row className='mt-3 align-items-center'>
                       <Col className='align-bottom text-start'>
                         {t.duration}
                       </Col>
-                      <Col className='align-bottom text-center'>{t.room}</Col>
-                      <Col className='d-flex gap-1 justify-content-end'>
+                      <Col className='align-bottom text-end justify-content-end'>
+                        {t.room}
+                      </Col>
+                      <Col className='d-flex gap-1 justify-content-end d-none'>
                         <Button
                           variant='warning'
                           onClick={(e) => handleStarClick(t.title, e)}
@@ -205,9 +207,9 @@ const Talks = ({
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
 
-const Page = ({ data }) => {
-  const allSchedules = data.allSchedulesYaml.nodes;
-  const [schedData, setSchedData] = useState(allSchedules[0]);
+const Page = ({ allSchedules }) => {
+  const [showDescriptions, setShowDescriptions] = useState(false);
+  const [schedData, setSchedData] = useState(allSchedules[0].data);
   const [starredTalks, setStarredTalks] = useState({});
   const [showStarred, setShowStarred] = useState(false);
 
@@ -246,170 +248,131 @@ const Page = ({ data }) => {
     console.log("schedData: " + JSON.stringify(schedData));
 
   return (
-    <Layout>
-      <Seo title='Programma' />
-      <main id='index'>
-        <Hero className='d-none' />
-        <section id='calendar' className='text-body'>
-          <Container>
-            <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
-              <h2 className='text-md-left text-center'>
-                Programma della giornata
-              </h2>
+    <div>
+      <div className='d-none my-3'>
+        <Header />
+      </div>
+      <main id='index' className='text-body'>
+        <Container fluid>
+          <div className='d-flex flex-column flex-md-row justify-content-between align-items-center align-middle mb-5'>
+            <h2 className='text-md-left text-center'>
+              Linux Day Milano {schedData?.year} -{" "}
+              {!showStarred ? "Programma della giornata" : "Agenda personale"}
+            </h2>
 
-              <div className='d-flex flex-row gap-3 d-print-none'>
-                <Button
-                  className='d-none'
-                  href='/schedule-printable'
-                  variant='warning'
-                >
-                  Versione stampabile
-                </Button>
-                <Button
-                  variant='warning'
-                  onClick={() => {
-                    setShowStarred((curr) => !curr);
-                    localStorage.setItem("showStarred", !showStarred);
-                  }}
-                >
-                  {showStarred ? "Tutte le talk" : "Agenda personale"}
-                </Button>
-                {data.site.siteMetadata.switches.year_switcher ? (
-                  <Dropdown className='d-block d-md-inline d-print-none'>
-                    <Dropdown.Toggle
-                      className='w-100 w-sm-auto'
-                      variant='warning'
-                    >
-                      Anno {schedData?.year}
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      {allSchedules.map((s, i) => (
-                        <Dropdown.Item
-                          key={i}
-                          onClick={() => {
-                            navigate(
-                              typeof window !== "undefined" &&
-                                window.location.pathname +
-                                  "?year=" +
-                                  s.year +
-                                  "#calendar"
-                            );
-                            setSchedData(allSchedules[i]);
-                          }}
-                        >
-                          {s.year}
-                        </Dropdown.Item>
-                      ))}
-                    </Dropdown.Menu>
-                  </Dropdown>
-                ) : (
-                  <small className='d-none d-sm-block'>
-                    Anno {schedData?.year}
-                  </small>
-                )}
-              </div>
-            </div>
-
-            {schedData?.schedule.length ? (
-              <Talks
-                scheduleData={schedData?.schedule}
-                showStarred={showStarred}
-                starredTalksForYear={starredTalks[schedData?.year]}
-                toggleTalkStar={(title) => {
-                  setStarredTalks((current) => {
-                    let next;
-
-                    if (current[schedData?.year]?.includes(title)) {
-                      next = {
-                        ...current,
-                        [schedData?.year]: current[schedData?.year].filter(
-                          (t) => t !== title
-                        ),
-                      };
-                    } else {
-                      next = {
-                        ...current,
-                        [schedData?.year]: [
-                          ...(current[schedData?.year] || []),
-                          title,
-                        ],
-                      };
-                    }
-
-                    localStorage.setItem("starredTalks", JSON.stringify(next));
-
-                    return next;
-                  });
+            <div className='d-flex flex-row gap-3 d-print-none'>
+              <Button
+                variant='warning'
+                onClick={() => {
+                  setShowDescriptions((showDescriptions) => !showDescriptions);
+                  localStorage.setItem("showDescriptions", !showDescriptions);
                 }}
-                key={schedData?.schedule}
+              >
+                {showDescriptions
+                  ? "Nascondi descrizioni"
+                  : "Mostra descrizioni"}
+              </Button>
+              <Button
+                variant='warning'
+                onClick={() => {
+                  setShowStarred((curr) => !curr);
+                  localStorage.setItem("showStarred", !showStarred);
+                }}
+              >
+                {showStarred ? "Tutte le talk" : "Agenda personale"}
+              </Button>
+              {data.site.siteMetadata.switches.year_switcher ? (
+                <Dropdown className='d-block d-md-inline d-print-none'>
+                  <Dropdown.Toggle
+                    className='w-100 w-sm-auto'
+                    variant='warning'
+                  >
+                    Anno {schedData?.year}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    {allSchedules.map((s, i) => (
+                      <Dropdown.Item
+                        key={i}
+                        onClick={() => {
+                          navigate(
+                            typeof window !== "undefined" &&
+                              window.location.pathname + "?year=" + s.year
+                          );
+                          setSchedData(allSchedules[i]);
+                        }}
+                      >
+                        {s.year}
+                      </Dropdown.Item>
+                    ))}
+                  </Dropdown.Menu>
+                </Dropdown>
+              ) : (
+                <small className='d-none d-sm-block'>
+                  Anno {schedData?.year}
+                </small>
+              )}
+            </div>
+          </div>
+
+          {schedData?.schedule.length ? (
+            <Talks
+              scheduleData={schedData?.schedule}
+              showStarred={showStarred}
+              starredTalksForYear={starredTalks[schedData?.year]}
+              showDescriptions={showDescriptions}
+              toggleTalkStar={(title) => {
+                setStarredTalks((current) => {
+                  let next;
+
+                  if (current[schedData?.year]?.includes(title)) {
+                    next = {
+                      ...current,
+                      [schedData?.year]: current[schedData?.year].filter(
+                        (t) => t !== title
+                      ),
+                    };
+                  } else {
+                    next = {
+                      ...current,
+                      [schedData?.year]: [
+                        ...(current[schedData?.year] || []),
+                        title,
+                      ],
+                    };
+                  }
+
+                  localStorage.setItem("starredTalks", JSON.stringify(next));
+
+                  return next;
+                });
+              }}
+              key={schedData?.schedule}
+            />
+          ) : (
+            <div className='text-center py-4'>
+              <FontAwesomeIcon
+                style={{ fontSize: "5em" }}
+                icon={icon({
+                  name: "person-digging",
+                  family: "classic",
+                  style: "solid",
+                })}
+                className='pb-2'
               />
-            ) : (
-              <div className='text-center py-4'>
-                <FontAwesomeIcon
-                  style={{ fontSize: "5em" }}
-                  icon={icon({
-                    name: "person-digging",
-                    family: "classic",
-                    style: "solid",
-                  })}
-                  className='pb-2'
-                />
-                <h3>
-                  Ci sono eventi per questa giornata, sono solo in fase di
-                  organizzazione.
-                </h3>
-                <p>
-                  Puoi usare il selettore per leggere il programma degli anni
-                  precedenti o ricontrolla tra qualche giorno!
-                </p>
-              </div>
-            )}
-          </Container>
-        </section>
+              <h3>
+                Ci sono eventi per questa giornata, sono solo in fase di
+                organizzazione.
+              </h3>
+              <p>
+                Puoi usare il selettore per leggere il programma degli anni
+                precedenti o ricontrolla tra qualche giorno!
+              </p>
+            </div>
+          )}
+        </Container>
       </main>
-    </Layout>
+    </div>
   );
 };
-
-export const query = graphql`
-  {
-    allSchedulesYaml(sort: { order: DESC, fields: year }) {
-      nodes {
-        year
-        schedule {
-          time
-          talks {
-            title
-            description
-            author
-            room
-            duration
-            slides
-            video
-          }
-        }
-      }
-    }
-
-    site {
-      siteMetadata {
-        event {
-          year: date(formatString: "YYYY")
-          time
-          text: date(formatString: "dddd DD MMMM YYYY", locale: "It")
-        }
-        contacts {
-          email
-          website
-        }
-        switches {
-          schedule
-          cfp
-          year_switcher
-        }
-      }
-    }
-  }
-`;
 
 export default Page;

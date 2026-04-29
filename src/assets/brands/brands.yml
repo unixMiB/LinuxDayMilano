@@ -1,50 +1,50 @@
 sponsors:
   - name: Red Hat
     website: https://redhat.com/
-    logo: RedHat A@8x.png
+    logo: RedHat A@8x
   # - name: SUSE
   #   website: https://www.suse.com/
-  #   logo: SUSE@8x.png
+  #   logo: SUSE@8x
   - name: EXTRAORDY
     website: https://extraordy.com/
-    logo: Extraordy-WeAreProject@8x.png
+    logo: Extraordy-WeAreProject@8x
   # - name: Bosch Rexroth AG
-  #   logo: Bosch Rexroth AG@8x.png
+  #   logo: Bosch Rexroth AG@8x
   #   website: https://www.boschrexroth.com/
   # - name: Bicocca
   #   website: https://www.unimib.it/
-  #   logo: Universita Milano Bicocca.png
+  #   logo: Universita Milano Bicocca
   - name: GitHub
     website: https://gh.io/linuxmilan2023
-    logo: GitHub.png
+    logo: GitHub
 patrocini:
   - name: Italian Linux Society
     website: https://www.ils.org/
-    logo: ILS@8x.png
+    logo: ILS@8x
   # - name: Libre Italia
   #   website: https://libreitalia.org/
-  #   logo: LibreItalia.png
+  #   logo: LibreItalia
   - name: POuL
-    logo: POuL@8x.png
+    logo: POuL@8x
     website: https://poul.org/
   - name: PCOfficina
     website: https://www.pcofficina.org/
-    logo: PCOfficina@8x.png
+    logo: PCOfficina@8x
   - name: VIMELUG
     website: https://www.vimelug.org/
-    logo: Vimelug@8x.png
+    logo: Vimelug@8x
   # - name: Libre Office
   #   website: https://it.libreoffice.org/
-  #   logo: LibreOffice@8x.png
+  #   logo: LibreOffice@8x
   # - name: Joomla User Group Milano Centro
-  #   logo: JUG Milano@8x.png
+  #   logo: JUG Milano@8x
   #   website: https://www.joomla.it/joomla-user-group/jug-milano-centro.html
   # - name: WordPress Meetup Milano
-  #   logo: WordPress Meetup Milano@8x.png
+  #   logo: WordPress Meetup Milano@8x
   #   website: https://www.meetup.com/it-IT/wordpress-meetup-milano/
 referrals:
   - name: GitHub Campus Experts
     website: https://githubcampus.expert/
-    logo: GH Campus Experts 1@8x.png
+    logo: GH Campus Experts 1@8x
     comment: Da quando ho conosciuto questa community ho sempre trovato persone competenti e appassionate. Invito tutti a partecipare al Linux Day Milano all'università Bicocca per venire a conoscerli ✨
     author: Federico Grandi, GitHub Campus Expert

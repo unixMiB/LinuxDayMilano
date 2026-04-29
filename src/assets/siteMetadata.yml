@@ -1,0 +1,44 @@
+description: >-
+  Manifestazione italiana dedicata a GNU/Linux, al software libero, alla cultura
+  aperta e alla condivisione.
+keywords: "Linux Day, Milano, GNU, GNU/Linux, Open Source, Software Libero, Condivisione"
+author: "ILS Milano (https://poul.org/)"
+theme: "#343a40"
+siteUrl: "https://linuxdaymilano.org/"
+switches:
+  schedule: true
+  cfp: false
+  cfp_submit: false
+  cfs: false
+  stand_submit: false
+  sponsor_submit: true
+  year_switcher: true
+  sponsors: true
+event:
+  date: 2025-10-25T07:00:00.000+02:00
+  dateOptions:
+    weekday: long
+    year: numeric
+    month: long
+    day: numeric
+  time: "9:00"
+  organizer: POuL
+  topic: ""
+  cfp: "https://survey.linux.it/index.php/653441?lang=it"
+  cfs: "https://survey.linux.it/index.php/511682?lang=it"
+  sponsor: "https://www.ils.org/sponsorizzazioni/"
+  arguments:
+    - "Linux, software e hardware Open Source"
+    - Open Source nel mondo dell'istruzione
+    - Alternative open a software proprietari
+    - Innovazione nel mondo dell'Open Source
+    - L'apprendimento mediante il Do It Yourself
+    - Programmazione e tecniche di sviluppo
+contacts:
+  email: linuxday@unixmib.org
+  website: "https://poul.org/"
+  place:
+    name: "Politecnico di Milano, Campus Leonardo"
+    street: "Piazza Leonardo da Vinci, 32"
+    building: Edificio 3 - Campus Leonardo
+    cap: 20133 Milano MI
