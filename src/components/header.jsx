@@ -7,7 +7,9 @@ const Header = ({ allSchedulesYaml }) => {
   const year = siteMetadata.event.date.getFullYear();
   const organizer = siteMetadata.organizer;
   const switches = siteMetadata.switches;
-  const previousYear = allSchedulesYaml.map((node) => node.data.year)[1];
+  const previousYear = allSchedulesYaml
+    .map((node) => node.data.year)
+    .reverse()[1];
   const params = switches.schedule
     ? ""
     : "?" + new URLSearchParams({ year: previousYear });
