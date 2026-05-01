@@ -30,7 +30,6 @@ jobs:
         name: Install dependencies
       - run: npm run build
         name: Build Astro
-      
 
   lint:
     name: Lint
