@@ -14,6 +14,7 @@ switches:
   sponsor_submit: true
   year_switcher: true
   sponsors: false
+  deadline: true
 event:
   date: 2026-10-24T07:00:00.000+02:00
   dateOptions:
@@ -42,3 +43,16 @@ contacts:
     street: "Via Bonardi 9"
     building: Edificio 13 - Trifoglio - Campus via Bonardi
     cap: 20133 Milano MI
+timeline:
+  - deadline: 9/16 maggio 2026
+    name: Apertura form
+    description:
+  - deadline: 14 settembre 2026
+    name: Chiusura stand
+    description:
+  - deadline: 20 settebre 2026
+    name: Chiusura CfP
+    description:
+  - deadline: 3 ottobre 2026
+    name: Selezione dei talk (mail+calendario)
+    description:
