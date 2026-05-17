@@ -14,6 +14,7 @@ switches:
   sponsor_submit: true
   year_switcher: true
   sponsors: false
+  deadline: true
 event:
   date: 2026-10-24T07:00:00.000+02:00
   dateOptions:
@@ -42,3 +43,16 @@ contacts:
     street: "Via Bonardi 9"
     building: Edificio 13 - Trifoglio - Campus via Bonardi
     cap: 20133 Milano MI
+timeline:
+  - deadline: 18 maggio 2026
+    name: Apertura dei form di iscrizione per stand e relatori
+    description: Da questa data sono aperti i moduli compilabili per inviare proposte di talk e richieste di stand
+  - deadline: 14 settembre 2026
+    name: Ultimo giorno di prenotazione degli stand
+    description: Data massima inclusiva per inviare la richiesta per ottenere uno stand
+  - deadline: 20 settebre 2026
+    name: Chiusura della call for paper
+    description: Data massima inclusiva per inviare la propria candidatura per un intervento
+  - deadline: 3 ottobre 2026
+    name: Selezione dei talk
+    description: Invieremo le conferme ai relatori selezionati e pubblicheremo il calendario sul sito

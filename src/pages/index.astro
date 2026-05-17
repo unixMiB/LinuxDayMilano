@@ -1,16 +1,16 @@
 ---
 import Layout from "../layouts/layout.astro";
 import Sponsors from "../components/Sponsors.astro";
+import Timeline from "../components/Timeline.astro";
 
 import { default as data } from "@assets/siteMetadata.yml";
 
-const isPast = new Date(siteMetadata.event.date) <= new Date();
+const isPast = new Date(data.event.date) <= new Date();
 import { Button, Container, Row, Col, Alert } from "react-bootstrap";
 import watch from "@assets/watch.svg";
 
 import talkSubscription from "@assets/images/talk-subscription.png";
 
-import { default as siteMetadata } from "@assets/siteMetadata.yml";
 import { Image } from "astro:assets";
 ---
 
@@ -42,9 +42,9 @@ import { Image } from "astro:assets";
               <br />
               <span>
                 {
-                  siteMetadata.event.date.toLocaleDateString(
+                  data.event.date.toLocaleDateString(
                     "it-IT",
-                    siteMetadata.event.dateOptions
+                    data.event.dateOptions
                   )
                 }
               </span>
@@ -59,11 +59,10 @@ import { Image } from "astro:assets";
             </p>
             <p>
               {
-                siteMetadata.event.topic && (
+                data.event.topic && (
                   <span>
-                    L'edizione {siteMetadata.event.date.getFullYear()} è
-                    dedicata
-                    {" " + siteMetadata.event.topic}
+                    L'edizione {data.event.date.getFullYear()} è dedicata
+                    {" " + data.event.topic}
                   </span>
                 )
               }
@@ -85,7 +84,7 @@ import { Image } from "astro:assets";
           ,<br />
           puoi seguirci anche su social tradizionali come:{" "}
           <a href='https://x.com/unixmib'>@unixMiB su Twitter</a>{" "}
-          (#LinuxDayMilano{siteMetadata.event.year}){" e "}
+          (#LinuxDayMilano{data.event.year}){" e "}
           <a href='https://www.facebook.com/unixmib'> @unixmib su Facebook </a>
           .
         </p>
@@ -96,26 +95,22 @@ import { Image } from "astro:assets";
         </p>
         <p>
           Usa l'hashtag ufficiale #LinuxDay
-          {siteMetadata.event.year} e le foto migliori saranno ricondivise!
+          {data.event.year} e le foto migliori saranno ricondivise!
         </p>
       </div>
     </Container>
   </section>
 
-  <section class='bg-dark d-none' id='timeline'>
-    <Container>
-      <h2 class='pb-5 text-uppercase'>Timeline organizzativa</h2>
-      <div class='fs-5'>
-        <ol class='timeline'>
-          <li>lunedì 20 giugno - Apertura call for papers</li>
-          <li>
-            venerdì 27 settembre - Chiusura call for papers e richieste stands
-          </li>
-          <li>{siteMetadata.event.text} - Linux Day Milano</li>
-        </ol>
-      </div>
-    </Container>
-  </section>
+  {
+    data.switches.deadline && (
+      <section id='timeline'>
+        <Container>
+          <h2 class='pb-5 text-uppercase'>Timeline organizzativa</h2>
+          <Timeline />
+        </Container>
+      </section>
+    )
+  }
 
   <section id='schedule' class=''>
     <Container>
@@ -130,7 +125,7 @@ import { Image } from "astro:assets";
         </Col>
         <Col sm='8'>
           {
-            siteMetadata.switches.cfp ? (
+            data.switches.cfp ? (
               <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
             ) : (
               <h2 style={{ textTransform: "uppercase" }}>
@@ -140,11 +135,11 @@ import { Image } from "astro:assets";
           }
 
           {
-            siteMetadata.switches.cfp && (
+            data.switches.cfp && (
               <div>
                 <div class='pb-4'>
                   <p>
-                    {siteMetadata.event.cfp && (
+                    {data.event.cfp && (
                       <Alert variant='info'>
                         Abbiamo aperto la call-for-speakers!
                       </Alert>
@@ -178,9 +173,9 @@ import { Image } from "astro:assets";
                       })}
                     </p> */}
 
-                  {siteMetadata.event.cfp ? (
+                  {data.event.cfp ? (
                     <Button
-                      href={siteMetadata.event.cfp}
+                      href={data.event.cfp}
                       className='btn-lg'
                       variant='warning'
                       target='_blank'
@@ -194,16 +189,16 @@ import { Image } from "astro:assets";
                     </Button>
                   )}
                 </div>
-                {siteMetadata.switches.stand_submit && (
+                {data.switches.stand_submit && (
                   <div class='pb-4'>
                     <p>
                       Sei una associazione no profit o una azienda sponsor di
                       Italian Linux Society che lavora con l'open source?
                       Compila il form qui sotto per fare richiesta di uno stand.
                     </p>
-                    {siteMetadata.event.cfs ? (
+                    {data.event.cfs ? (
                       <Button
-                        href={siteMetadata.event.cfs}
+                        href={data.event.cfs}
                         className='btn-lg'
                         variant='warning'
                         target='_blank'
@@ -219,20 +214,20 @@ import { Image } from "astro:assets";
                   </div>
                 )}
 
-                {siteMetadata.switches.sponsor_submit && (
+                {data.switches.sponsor_submit && (
                   <div class='pb-4'>
                     <p>
                       Non ti preoccupare se la tua azienda non è ancora sponsor,
                       siamo sempre aperti a nuove collaborazioni e saremo felici
                       di valutare la tua richiesta!
                     </p>
-                    {siteMetadata.event.sponsor ? (
+                    {data.event.sponsor ? (
                       <Button
                         className='btn-lg'
                         variant='warning'
                         target='_blank'
                         rel='noopener'
-                        href={siteMetadata.event.sponsor}
+                        href={data.event.sponsor}
                       >
                         Diventa sponsor
                       </Button>
@@ -248,13 +243,13 @@ import { Image } from "astro:assets";
           }
 
           {
-            siteMetadata.switches.schedule && (
+            data.switches.schedule && (
               <>
                 <p>
                   <strong>Ecco in breve alcuni dei nostri talk:</strong>
                 </p>{" "}
                 <ul>
-                  {siteMetadata.event.arguments.map((topic) => {
+                  {data.event.arguments.map((topic) => {
                     return <li>{topic}</li>;
                   })}
                 </ul>
@@ -265,7 +260,7 @@ import { Image } from "astro:assets";
             )
           }
           {
-            siteMetadata.switches.cfs && (
+            data.switches.cfs && (
               <>
                 <br />
                 <br />
