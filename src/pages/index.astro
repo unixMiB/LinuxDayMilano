@@ -176,7 +176,7 @@ import { Image } from "astro:assets";
                   {data.event.cfp ? (
                     <Button
                       href={data.event.cfp}
-                      className='btn-lg'
+                      className='btn-lg col-12 col-md-auto'
                       variant='warning'
                       target='_blank'
                       rel='noopener'
@@ -184,7 +184,7 @@ import { Image } from "astro:assets";
                       Presenta un intervento
                     </Button>
                   ) : (
-                    <Button className='btn-lg' variant='warning' disabled>
+                    <Button className='btn-lg col-12 col-md-auto' variant='warning' disabled>
                       Presto disponibile
                     </Button>
                   )}
@@ -199,7 +199,7 @@ import { Image } from "astro:assets";
                     {data.event.cfs ? (
                       <Button
                         href={data.event.cfs}
-                        className='btn-lg'
+                        className='btn-lg col-12 col-md-auto'
                         variant='warning'
                         target='_blank'
                         rel='noopener'
@@ -207,7 +207,7 @@ import { Image } from "astro:assets";
                         Richiedi uno stand
                       </Button>
                     ) : (
-                      <Button className='btn-lg' variant='warning' disabled>
+                      <Button className='btn-lg col-12 col-md-auto' variant='warning' disabled>
                         Presto disponibile
                       </Button>
                     )}
@@ -223,7 +223,7 @@ import { Image } from "astro:assets";
                     </p>
                     {data.event.sponsor ? (
                       <Button
-                        className='btn-lg'
+                        className='btn-lg col-12 col-md-auto'
                         variant='warning'
                         target='_blank'
                         rel='noopener'
@@ -232,7 +232,7 @@ import { Image } from "astro:assets";
                         Diventa sponsor
                       </Button>
                     ) : (
-                      <Button className='btn-lg' variant='warning' disabled>
+                      <Button className='btn-lg col-12 col-md-auto' variant='warning' disabled>
                         Presto disponibile
                       </Button>
                     )}
@@ -267,7 +267,7 @@ import { Image } from "astro:assets";
                 <Button
                   className='btn-lg'
                   variant='warning'
-                  href='https://survey.linux.it/index.php/443825'
+                  href={data.event.cfs}
                 >
                   Richiedi uno stand o diventa sponsor
                 </Button>
