@@ -1,46 +1,21 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Logo from "../assets/foot.svg";
-import { Link } from "gatsby";
+import { Nav, Navbar, Container } from "react-bootstrap";
+import Logo from "@assets/foot.svg";
+import { default as siteMetadata } from "@assets/siteMetadata.yml";
 
-const Header = () => {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          event {
-            year: date(formatString: "YYYY")
-            organizer
-          }
-          switches {
-            schedule
-            cfp
-            sponsors
-          }
-        }
-      }
-
-      allSchedulesYaml(sort: { order: DESC, fields: year }) {
-        nodes {
-          year
-        }
-      }
-    }
-  `);
-
-  const year = data.site.siteMetadata.event.year;
-  const organizer = data.site.siteMetadata.organizer;
-  const switches = data.site.siteMetadata.switches;
-  const previousYear = data.allSchedulesYaml.nodes.map((node) => node.year)[1];
+const Header = ({ allSchedulesYaml }) => {
+  const year = siteMetadata.event.date.getFullYear();
+  const organizer = siteMetadata.organizer;
+  const switches = siteMetadata.switches;
+  const previousYear = allSchedulesYaml
+    .map((node) => node.data.year)
+    .reverse()[1];
   const params = switches.schedule
     ? ""
     : "?" + new URLSearchParams({ year: previousYear });
 
   return (
-    <header className='d-print-none'>
+    <>
       <Navbar
         id='navbar'
         collapseOnSelect
@@ -51,17 +26,13 @@ const Header = () => {
         }}
       >
         <Container>
-          <Navbar.Brand
-            as={Link}
-            className='brand d-flex align-items-center'
-            href='/'
-          >
+          <Navbar.Brand className='brand d-flex align-items-center' href='/'>
             <img
-              src={Logo}
-              style={{ fontSize: "1.5em" }}
+              src={Logo.src}
+              style={{ fontSize: "1.5em", height: "1em" }}
               aria-hidden='true'
               alt=''
-              className='logo me-2 svg-inline--fa'
+              className='logo me-2'
             />
             LD
             <span>MI {year}</span>
@@ -72,33 +43,23 @@ const Header = () => {
             className='justify-content-end'
           >
             <Nav>
-              <Nav.Link as={Link} href='/#explore'>
-                Evento
-              </Nav.Link>
+              <Nav.Link href='/#explore'>Evento</Nav.Link>
               {switches.cfp && (
-                <Nav.Link as={Link} href='/#schedule'>
-                  Call for papers
-                </Nav.Link>
+                <Nav.Link href='/#schedule'>Call for papers</Nav.Link>
               )}
-              <Nav.Link as={Link} href={`/schedule/${params}#calendar`}>
+              <Nav.Link href={`/schedule/${params}#calendar`}>
                 {switches.schedule ? "Programma" : "Programma precedente"}
               </Nav.Link>
-              <Nav.Link as={Link} href='/codeofconduct'>
-                Code of Conduct
-              </Nav.Link>
+              <Nav.Link href='/codeofconduct'>Code of Conduct</Nav.Link>
               {switches.sponsors && (
-                <Nav.Link as={Link} href='/#sponsors'>
-                  Patrocini e sponsor
-                </Nav.Link>
+                <Nav.Link href='/#sponsors'>Patrocini e sponsor</Nav.Link>
               )}
-              <Nav.Link as={Link} href='/#contattaci'>
-                Contatti
-              </Nav.Link>
+              <Nav.Link href='/#contattaci'>Contatti</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </header>
+    </>
   );
 };
 

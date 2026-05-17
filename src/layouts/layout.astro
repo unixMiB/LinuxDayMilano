@@ -1,0 +1,94 @@
+---
+import Footer from "../components/footer.astro";
+import Header from "../components/header";
+
+import { getCollection } from "astro:content";
+
+import "../styles/main.scss";
+
+import { default as data } from "@assets/siteMetadata.yml";
+import Hero from "../components/hero.astro";
+import Favicon from "@assets/favicon_foot_transparent.svg";
+
+export enum HeroEnum {
+  show,
+  hide,
+  small,
+}
+
+interface Props {
+  description?: string;
+  lang?: string;
+  meta?: string;
+  title?: string;
+  hero?: HeroEnum;
+  id: string;
+}
+
+const {
+  description,
+  lang,
+  meta,
+  title,
+  id,
+  hero = HeroEnum.show,
+} = Astro.props;
+
+const metaDescription = description || data.description;
+const siteTitle = title == null ? data.title : `${title} - ${data.title}`;
+
+const allSchedulesYaml = await getCollection("schedules");
+
+const isProd = import.meta.env.MODE === "production";
+---
+
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='generator' content={Astro.generator} />
+
+    <link rel='icon' href={Favicon.src} />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='description' content='Sito ufficiale del Linux Day Milano' />
+    <meta name='theme-color' content='#212529' />
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta
+      name='apple-mobile-web-app-status-bar-style'
+      content='black-translucent'
+    />
+    <meta
+      name='apple-mobile-web-app-title'
+      content={isProd ? "LDMI" : "LDMI λ"}
+    />
+
+    <meta name='keywords' content={data.keywords} />
+    <meta name='application-name' content={data.title} />
+    <meta name='author' content={data.author} />
+    <meta name='description' content={metaDescription} />
+    <meta name='og:title' content={siteTitle} />
+    <meta name='og:description' content={metaDescription} />
+    <meta name='og:type' content='website' />
+    <meta name='og:locale' content='it_IT' />
+    <meta name='twitter:card' content='summary' />
+    <meta name='twitter:creator' content={data.author} />
+    <meta name='twitter:title' content={siteTitle} />
+    <meta name='twitter:description' content={metaDescription} />
+
+    <title>{isProd ? "Linux Day Milano" : "Linux Day Milano λ"}</title>
+  </head>
+
+  <body>
+    <div class='d-flex flex-column' style={{ minHeight: "100vh" }}>
+      <header class='d-print-none'>
+        <Header client:load allSchedulesYaml={allSchedulesYaml} />
+      </header>
+      <div class='container-fluid flex-grow-1' style={{ padding: 0 }}>
+        <main id={id}>
+          {hero !== HeroEnum.hide && <Hero small={hero === HeroEnum.small} />}
+          <slot />
+        </main>
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

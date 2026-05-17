@@ -1,0 +1,282 @@
+---
+import Layout from "../layouts/layout.astro";
+import Sponsors from "../components/Sponsors.astro";
+import Timeline from "../components/Timeline.astro";
+
+import { default as data } from "@assets/siteMetadata.yml";
+
+const isPast = new Date(data.event.date) <= new Date();
+import { Button, Container, Row, Col, Alert } from "react-bootstrap";
+import watch from "@assets/watch.svg";
+
+import talkSubscription from "@assets/images/talk-subscription.png";
+
+import { Image } from "astro:assets";
+---
+
+<Layout id='index'>
+  <section id='explore'>
+    <div>
+      <div class='watch'>
+        <Image
+          alt=''
+          class='img-fluid'
+          role='presentation'
+          src={watch}
+          height='316'
+          width='256'
+          style={{
+            height: "316px",
+            width: "256px",
+          }}
+        />
+      </div>
+      <Container className='front' style={{ position: "sticky" }}>
+        <div class='d-flex justify-content-center'>
+          <div class='col-lg-7'>
+            {" "}
+            {/* TODO FIX ME */}
+            <h2 style={{ textTransform: "uppercase" }}>
+              Il Linux Day <span>Milano</span> si{" "}
+              {isPast ? "è svolto" : "svolgerà"} il
+              <br />
+              <span>
+                {
+                  data.event.date.toLocaleDateString(
+                    "it-IT",
+                    data.event.dateOptions
+                  )
+                }
+              </span>
+            </h2>
+            <p>
+              Torna la principale manifestazione italiana dedicata a GNU/Linux,
+              al software libero, alla cultura aperta e alla condivisione.
+              <br />
+              Al Linux Day Milano potrai trovare tanti talk, presentazioni, workshop
+              inerenti a tantissimi temi interessanti per gli appassionati di Linux,
+              Software Libero, e tanto altro!
+            </p>
+            <p>
+              {
+                data.event.topic && (
+                  <span>
+                    L'edizione {data.event.date.getFullYear()} è dedicata
+                    {" " + data.event.topic}
+                  </span>
+                )
+              }
+            </p>
+          </div>
+        </div>
+      </Container>
+    </div>
+  </section>
+
+  <section class='bg-dark' id='socials-cta'>
+    <Container>
+      <h2 class='pb-5 text-uppercase'>Condividi i momenti migliori</h2>
+      <div>
+        <p>
+          Segui l'evento sul social network libero Mastodon (accessibile da
+          qualsiasi piattaforma federata ActivityPub):{" "}
+          <a href='https://mastodon.uno/@unixmib'>@unixmib@mastodon.uno</a>
+          ,<br />
+          puoi seguirci anche su social tradizionali come:{" "}
+          <a href='https://x.com/unixmib'>@unixMiB su Twitter</a>{" "}
+          (#LinuxDayMilano{data.event.year}){" e "}
+          <a href='https://www.facebook.com/unixmib'> @unixmib su Facebook </a>
+          .
+        </p>
+        <p>
+          Oppure iscriviti al nostro{" "}
+          <a href='https://t.me/unixmib_info'>canale telegram</a> per rimanere aggiornato
+          anche sui nostri eventi futuri.
+        </p>
+        <p>
+          Usa l'hashtag ufficiale #LinuxDay
+          {data.event.year} e le foto migliori saranno ricondivise!
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  {
+    data.switches.deadline && (
+      <section id='timeline'>
+        <Container>
+          <h2 class='pb-5 text-uppercase'>Timeline organizzativa</h2>
+          <Timeline />
+        </Container>
+      </section>
+    )
+  }
+
+  <section id='schedule' class=''>
+    <Container>
+      <Row>
+        <Col sm='4'>
+          <Image
+            alt=''
+            class='img-fluid mb-4 mb-sm-0'
+            role='presentation'
+            src={talkSubscription}
+          />
+        </Col>
+        <Col sm='8'>
+          {
+            data.switches.cfp ? (
+              <h2 style={{ textTransform: "uppercase" }}>Call for paper</h2>
+            ) : (
+              <h2 style={{ textTransform: "uppercase" }}>
+                Programma della giornata
+              </h2>
+            )
+          }
+
+          {
+            data.switches.cfp && (
+              <div>
+                <div class='pb-4'>
+                  <p>
+                    {data.event.cfp && (
+                      <Alert variant='info'>
+                        Abbiamo aperto la call-for-speakers!
+                      </Alert>
+                    )}
+                    Ecco cosa devi sapere se vuoi presentare qualcosa al Linux
+                    Day Milano.
+                  </p>
+                  <p>
+                    Siamo interessati a tutti i generi di talk e presentazioni
+                    inerenti (anche in piccola parte) al mondo Linux, del
+                    Software Libero e dello Sviluppo Software Open Source.
+                  </p>
+                  <p>
+                    Alcuni argomenti che piacciono a chi viene al Linux Day:
+                    Linux, Software Libero, Sviluppo Software, Machine Learning,
+                    Big Data, Self-hosting, Privacy, Retro Gaming, Storia
+                    dell'informatica, Do It Yourself ...
+                  </p>
+                  <p>
+                    Sei anche il benvenuto se vuoi presentare un tuo progetto o
+                    mostrare una tua invenzione.
+                  </p>
+                  <p>Per tutti i dettagli prosegui al link qui sotto.</p>
+                  {/* <p class='fw-bold'>
+                      Deadline{" "}
+                      {new Date("2023-09-21").toLocaleDateString("it-IT", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </p> */}
+
+                  {data.event.cfp ? (
+                    <Button
+                      href={data.event.cfp}
+                      className='btn-lg'
+                      variant='warning'
+                      target='_blank'
+                      rel='noopener'
+                    >
+                      Presenta un intervento
+                    </Button>
+                  ) : (
+                    <Button className='btn-lg' variant='warning' disabled>
+                      Presto disponibile
+                    </Button>
+                  )}
+                </div>
+                {data.switches.stand_submit && (
+                  <div class='pb-4'>
+                    <p>
+                      Sei una associazione no profit o una azienda sponsor di
+                      Italian Linux Society che lavora con l'open source?
+                      Compila il form qui sotto per fare richiesta di uno stand.
+                    </p>
+                    {data.event.cfs ? (
+                      <Button
+                        href={data.event.cfs}
+                        className='btn-lg'
+                        variant='warning'
+                        target='_blank'
+                        rel='noopener'
+                      >
+                        Richiedi uno stand
+                      </Button>
+                    ) : (
+                      <Button className='btn-lg' variant='warning' disabled>
+                        Presto disponibile
+                      </Button>
+                    )}
+                  </div>
+                )}
+
+                {data.switches.sponsor_submit && (
+                  <div class='pb-4'>
+                    <p>
+                      Non ti preoccupare se la tua azienda non è ancora sponsor,
+                      siamo sempre aperti a nuove collaborazioni e saremo felici
+                      di valutare la tua richiesta!
+                    </p>
+                    {data.event.sponsor ? (
+                      <Button
+                        className='btn-lg'
+                        variant='warning'
+                        target='_blank'
+                        rel='noopener'
+                        href={data.event.sponsor}
+                      >
+                        Diventa sponsor
+                      </Button>
+                    ) : (
+                      <Button className='btn-lg' variant='warning' disabled>
+                        Presto disponibile
+                      </Button>
+                    )}
+                  </div>
+                )}
+              </div>
+            )
+          }
+
+          {
+            data.switches.schedule && (
+              <>
+                <p>
+                  <strong>Ecco in breve alcuni dei nostri talk:</strong>
+                </p>{" "}
+                <ul>
+                  {data.event.arguments.map((topic) => {
+                    return <li>{topic}</li>;
+                  })}
+                </ul>
+                <Button href='/schedule' className='btn-lg' variant='warning'>
+                  Guarda il programma
+                </Button>
+              </>
+            )
+          }
+          {
+            data.switches.cfs && (
+              <>
+                <br />
+                <br />
+                <Button
+                  className='btn-lg'
+                  variant='warning'
+                  href='https://survey.linux.it/index.php/443825'
+                >
+                  Richiedi uno stand o diventa sponsor
+                </Button>
+              </>
+            )
+          }
+        </Col>
+      </Row>
+    </Container>
+  </section>
+  {data.switches.sponsors && <Sponsors />}
+</Layout>

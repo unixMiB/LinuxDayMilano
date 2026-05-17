@@ -51,7 +51,7 @@
 
     &#explore {
       background-color: #c34c39;
-      background-image: url(../assets/images/event-bg.jpg);
+      background-image: url(@assets/images/event-bg.jpg);
       padding: 5rem 1rem;
 
       @include media-breakpoint-down(sm) {
@@ -75,21 +75,29 @@
 
       .text {
         font-size: 1.25rem;
+
         @include media-breakpoint-down(md) {
           padding-left: 2.5rem;
         }
+
         @include media-breakpoint-up(lg) {
           padding-left: 10rem;
         }
+
         @include media-breakpoint-up(xl) {
           padding-left: 25rem;
         }
+
         padding-right: 1rem;
       }
 
       .front {
         z-index: 999 !important;
       }
+    }
+
+    &#timeline {
+      background-color: #c34c39;
     }
 
     &#schedule {
@@ -104,16 +112,20 @@
         display: inline-block;
         margin-right: 2.5rem;
         max-width: 400px;
+
         @include media-breakpoint-down(md) {
           display: none;
         }
       }
+
       .text {
         font-size: 1.25rem;
+
         @include media-breakpoint-down(md) {
           padding-left: 4rem;
           padding-right: 4rem;
         }
+
         @include media-breakpoint-down(sm) {
           padding: 0 1rem;
         }
@@ -122,6 +134,7 @@
           display: none;
         }
       }
+
       .hide-col {
         @include media-breakpoint-down(sm) {
           visibility: hidden;

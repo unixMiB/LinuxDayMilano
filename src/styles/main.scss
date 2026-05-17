@@ -1,7 +1,6 @@
-@import "node_modules/@fortawesome/fontawesome-svg-core/styles";
 @import "values";
 $color-mode-type: media-query;
-@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/bootstrap";
 @import "base";
 
 @import "pages/index";
@@ -9,3 +8,8 @@ $color-mode-type: media-query;
 @import "components/header.scss";
 @import "components/footer.scss";
 @import "components/hero.scss";
+
+@view-transition {
+    navigation: auto;
+    /* enabled! */
+}
