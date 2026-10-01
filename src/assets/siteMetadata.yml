@@ -6,11 +6,11 @@ author: "ILS Milano (POuL & UnixMiB)"
 theme: "#343a40"
 siteUrl: "https://linuxdaymilano.org/"
 switches:
-  schedule: false
-  cfp: true
+  schedule: true
+  cfp: false
   cfp_submit: false
-  cfs: true
-  stand_submit: true
+  cfs: false
+  stand_submit: false
   sponsor_submit: true
   year_switcher: true
   sponsors: false
