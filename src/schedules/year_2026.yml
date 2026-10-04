@@ -216,7 +216,7 @@ schedule:
         author: "Roberto Innocenti e Antonio Verni - Power Progress Community"
         room: "T.1.2"
         duration: 45 min
-      - title: Routing automatico degli LLM su Kubernetes: locale o cloud? Decide il gateway
+      - title: "Routing automatico degli LLM su Kubernetes: locale o cloud? Decide il gateway"
         description: >
           Gli LLM entrano nei workflow di operations, ma ogni chiamata verso un modello esterno è un problema di costi, latenza e sovranità del dato. In questo talk mostro come costruire su Kubernetes un gateway OpenAI-compatible che decide automaticamente dove eseguire ogni richiesta: un modello locale servito con vLLM per le richieste di routine, un modello SOTA esterno solo quando serve e solo se il contenuto lo consente. Due filtri guidano il routing: un Efficiency Gate che valuta complessità e costo, e un Privacy Gate che intercetta PII e dati riservati imponendo l'esecuzione locale. Tutto open source: Kuadrant (Authorino e Limitador) per policy e rate limiting, LiteLLM come proxy verso i modelli, Presidio per rilevare i dati sensibili, Ansible per l'automazione. Vedremo architettura, scelte di design, una demo e le lezioni apprese sul triage automatico degli incidenti. Target: SRE, platform engineer e chi vuole usare gli LLM in produzione senza cedere il controllo dei dati.
         author: "Amedeo Salvati - Red Hat"
