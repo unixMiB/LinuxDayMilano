@@ -13,6 +13,7 @@ import Download from "~icons/fa6-solid/download";
 import PersonDigging from "~icons/fa6-solid/person-digging";
 
 import { default as siteMetadata } from "@assets/siteMetadata.yml";
+import "../styles/print.scss";
 
 const Talks = ({
   scheduleData,
@@ -126,7 +127,7 @@ const Talks = ({
       </Modal>
       {data.map((i, k) => {
         return (
-          <Row key={k} className='pb-4'>
+          <Row key={k} className='pb-4 print-row'>
             <Col lg={1} md={12} className='pb-4 mr-2'>
               <h5 className='schedule-time'>{i.time}</h5>
             </Col>

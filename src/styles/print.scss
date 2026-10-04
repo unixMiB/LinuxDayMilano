@@ -1,0 +1,60 @@
+@media print {
+    header {
+        display: none !important;
+    }
+
+    html {
+        zoom: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .print-row {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    // first page has no margin top, the rest have 2cm
+    @page {
+        margin-top: 2cm;
+        margin-bottom: 2cm;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    @page :first {
+        margin-top: 0;
+    }
+    
+
+    #calendar .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    picture {
+        display: none;
+    }
+
+    .hero {
+        padding: 1;
+        text-shadow: none;
+        background-color: white;
+        padding-bottom: 0;
+        border-color: none;
+    }
+
+    .calendar {
+        background-color: white;
+    }
+
+    .hero h1.title,
+    .hero .title.h1,
+    small,
+    .hero .subtitle {
+        color: black;
+        text-shadow: none;
+    }
+}
