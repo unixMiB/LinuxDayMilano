@@ -1,1 +1,223 @@
 year: 2026
+schedule:
+  - time: "9:00"
+    talks:
+      - title: "Opening Keynote"
+        description: "Discorso di apertura del Linux Day"
+        author: "POuL"
+        room: "T.1.1"
+        duration: 30 min
+  - time: "9:30"
+    talks:
+      - title: "Kubernetes@home: Beyond Docker Compose"
+        description: >
+          Kubernetes è un nome che tutti abbiamo già sentito, e che nel senso comune rimanda al mondo enterprise: molti server, centinaia, se non migliaia, di servizi da gestire. E se ti dicessi che Kubernetes può essere la risposta a diversi problemi di self-hosting, e che può trovare posto anche su un singolo server del tuo homelab?
+          
+          Insieme cercheremo di capire cosa sia veramente Kubernetes, in cosa sia diverso dal Docker Compose che già usi e cosa voglia dire in pratica tenerlo in casa, anche su hardware dalle risorse limitate. Così potrai decidere se farlo diventare il cuore del tuo homelab.
+        author: "Roberto Bochet"
+        room: "T.1.1"
+        duration: 45 min
+      - title: "Da zero a root: comprendere e spiegare le vulnerabilità Use-After-Free (UAF), un grave problema di sicurezza."
+        description: >
+          Le vulnerabilità di tipo "Use After Free" (UAF) rappresentano una tipologia insidiosa e pericolosa di difetto nella gestione della memoria, capace di causare gravi violazioni della sicurezza. Quando un programma continua a utilizzare un'area di memoria dopo che questa è stata deallocata, si espone a comportamenti imprevisti, crash e persino all'esecuzione remota di codice. Tali vulnerabilità sono particolarmente diffuse nei linguaggi privi di meccanismi di sicurezza automatica per la gestione della memoria, come C o C++,  e possono essere sfruttate dagli attaccanti per iniettare codice malevolo o accedere a dati sensibili.
+          
+          In questo intervento analizzeremo le cause alla base delle vulnerabilità UAF, le modalità con cui possono essere sfruttate (con dimostrazioni pratiche) e le migliori pratiche,  basate sull'utilizzo di OpensSource, per prevenirle, al fine di proteggere le applicazioni e garantire una sicurezza solida.
+        author: "Maurizio Barbaro - Red Hat"
+        room: "T.1.2"
+        duration: 45 min
+      - title: "Introduzione a vLLM: come l'Open Source ha rivoluzionato il serving degli LLM"
+        description: >
+          Il serving dei Large Language Model in produzione presenta una sfida infrastrutturale critica: la gestione della VRAM. L'allocazione contigua del KV Cache porta a una grave frammentazione della memoria GPU, limitando throughput e concorrenza.
+          In questo talk esploreremo vLLM, l'engine open source che ha rivoluzionato l'inferenza degli LLM introducendo il concetto di PagedAttention e di come questa architettura applica i principi della memoria virtuale e della paginazione dei Sistemi Operativi alla memoria GPU.
+          Analizzeremo come vLLM elimina lo spreco della VRAM consentendo un Continuous Batching ad altissima efficienza. Concluderemo con una live demo pratica per osservare la PagedAttention in azione e confrontarne le metriche di throughput rispetto agli approcci tradizionali.
+        author: "Nicola Bertoli - Red Hat"
+        room: "T.1.3"
+        duration: 45 min
+  - time: "10:30"
+    talks:
+      - title: "Un homelab ricostruibile in ogni momento"
+        description: >
+          Un homelab spesso nasce come una macchina configurata a mano e finisce per diventare difficile da aggiornare, riparare e ricostruire. Lo stesso vale per laptop e altri sistemi.
+          In questo talk parleremo di come gestisco questi sistemi trattandoli come configurazioni versionate e riproducibili. Vedremo come usare bootc per definire il sistema operativo tramite una container image, Quadlet e systemd per eseguire i servizi con Podman, Ansible per applicare la configurazione e SOPS per gestire i segreti senza conservarli in chiaro.
+          Completeremo il quadro con Nebula, per collegare in modo sicuro macchine distribuite senza dipendere dalla rete locale o da un provider VPN esterno.
+        author: "Fabio Alessandro \"Fale\" Locati"
+        room: "T.1.1"
+        duration: 45 min
+      - title: "Malware reverse engineering su Linux - per comprendere un attaccante"
+        description: >
+          L’intervento presenterà un approccio alla difesa dal ransomware basato sulla ricerca e sulla comprensione del comportamento dell’attaccante, prima ancora che sull’utilizzo dei singoli strumenti di sicurezza. Verranno presentati i risultati dello studio di alcune tra le principali famiglie di ransomware, mettendo in evidenza le caratteristiche e i comportamenti ricorrenti: modalità di esecuzione, persistenza, utilizzo dei privilegi, discovery, movimento laterale, cifratura, evasione, interferenza con backup e sistemi di recupero e caratteristiche delle catene di attacco, inclusi loader e componenti preparatori.
+          
+          Il target è costituito principalmente da imprese, professionisti e responsabili IT, con un linguaggio accessibile anche a un pubblico non specialista. L’obiettivo è mostrare come trasformare la conoscenza delle minacce in strategie concrete di prevenzione, rilevamento, contenimento e recupero, proteggendo la continuità operativa senza ostacolare il normale lavoro.
+        author: "Luke de Avalon von Tempo - RanGuard"
+        room: "T.1.2"
+        duration: 45 min
+      - title: "Il formato Open Document, un pilastro invisibile della sovranità digitale"
+        description: >
+          Il formato Open Document Format (ODF) è diventato uno standard ISO/IEC nel 2006. Oggi è l'unico standard aperto per i formati di documento presente sul mercato; protegge gli utenti dalla dipendenza da formati proprietari e garantisce il pieno controllo sui contenuti. In quanto tale, costituisce un pilastro invisibile della sovranità digitale, poiché la maggior parte degli utenti non associa il formato dei documenti alle libertà digitali.
+        author: "Italo Vignoli - LibreOffice"
+        room: "T.1.3"
+        duration: 45 min
+  - time: "11:30"
+    talks:
+      - title: "Break"
+        duration: 15 min
+  - time: "11:45"
+    talks:
+      - title: "Dove è finito il mio pacchetto? Reti virtuali Linux tra container, VM e Open vSwitch"
+        description: >
+          Quando avviamo un container o una macchina virtuale, Linux crea interfacce dai nomi misteriosi: coppie veth, dispositivi TAP, bridge. Tutto funziona, finché un pacchetto non decide di sparire.
+          
+          In questo talk seguiremo il percorso di un pacchetto dentro una semplice rete virtuale, scoprendo quali componenti Linux incontra prima di raggiungere un altro container, una VM o la rete fisica. Partiremo da network namespace, veth, TAP e bridge, poi costruiremo passo passo una piccola rete con Open vSwitch, lo switch virtuale alla base di molte piattaforme cloud (OpenShift, OpenStack, etc), per capire cosa lo distingue dal bridge Linux e quando conviene usarlo.
+          
+          Infine provocheremo di proposito un "guasto" e cercheremo il punto in cui il traffico si interrompe, con strumenti comuni come ip, tcpdump e ovs-vsctl.
+          
+          Non serve conoscere Open vSwitch o OpenFlow: l'obiettivo non è imparare comandi, ma capire cosa succede dietro le quinte quando Linux collega container e VM.
+        author: "Timothy Redaelli - Red Hat"
+        room: "T.1.1"
+        duration: 45 min
+      - title: "From CI to Compromise: Inside a Real Python Supply Chain Attack"
+        description: >
+          Modern AI development depends heavily on third-party libraries, but these dependencies are becoming prime attack vectors.
+          
+          In this talk, I will walk through a real-world supply chain incident involving LiteLLM, where a compromised GitHub Actions workflow exposed a PyPI publishing token, creating the potential to distribute malicious packages at scale. We will break down the full attack chain, from CI secret exfiltration to how Python packages can execute code during installation.
+          Beyond the incident itself, this session focuses on practical defense. Attendees will learn how to detect suspicious package behavior, secure CI/CD pipelines, and reduce trust in dependency management. The goal is to equip developers with concrete strategies to identify and mitigate modern supply chain threats before they impact production systems.
+        author: "Suyash Nalawade - Red Hat"
+        room: "T.1.2"
+        duration: 45 min
+      - title: "Come migrare una PMI italiana da Windows a Linux: caso reale da Bergamo"
+        description: >
+          Un racconto pratico di una migrazione reale completata nel 2026 per una PMI lombarda di cinque postazioni. Dal primo contatto con il cliente alla settimana di formazione on-site, passando per i problemi tecnici reali: driver Epson WF-C579R su Kubuntu 26.04 con driverless IPP, RustDesk su VPS self-hosted come soluzione per il remote desktop su Wayland, configurazione Samba per la scansione in rete, stack completo con Nextcloud, Mattermost, pfSense e WireGuard. Non teoria — quello che succede davvero quando porti Linux in un ufficio che non sa cosa sia Linux. Il talk include anche la dimensione umana della migrazione: resistenza al cambiamento, formazione del personale, e perché essere presenti fisicamente la prima settimana fa la differenza tra successo e fallimento.
+        author: "Mišo Oroz - Zerolock"
+        room: "T.1.3"
+        duration: 45 min
+  - time: "12:45"
+    talks:
+      - title: "Pausa pranzo"
+        duration: 60 min
+  - time: "13:45"
+    talks:
+      - title: "RedundaNet: community-run distributed storage"
+        description: >
+          What if a storage network had no company behind it — just people who trust each other, a few Raspberry Pis behind home routers, and a Git repo as the only source of truth?
+          RedundaNet is an open-source, community-run storage network built on Tahoe-LAFS, a Tinc mesh VPN and GPG identities. Files are encrypted client-side and erasure-coded across volunteer nodes: no host can read them, no single machine can lose them. Joining is a pull request: a bot verifies your key, CI validates the manifest, a human merges.
+          Through a network that has run in production for months, we'll cover why Tahoe-LAFS fits an untrusted-host threat model (and what a dormant upstream costs), how a Git manifest replaces a central authority, and the war stories: an update that silently detached a 1TB disk, a fingerprint-collision hole, a self-updater that rolls back, a replication census that turned "it's redundant" into a number.
+          Live demo: we take a node down and download the file anyway.
+        author: "Alessandro De Filippo - Celonis"
+        room: "T.1.1"
+        duration: 45 min
+      - title: "Ghostmaxxing, ma si inganna il riconoscimento facciale?"
+        description: >
+          c'è sviluppo costante e in crescita di sistemi per ingannare il riconoscimento facciale; in questo talk parlerò di come funziona quella pipeline, come funzionano gli attacchi, e introdurrò un laboratorio pubblico creato per valutare queste tecnologie. l'obiettivo è fornire un canale di verifica, scambio, e miglioramento collettivo di questa conoscenza che altrimenti è difficilmente verificabile. bonus points: integrazione nel fediverso e canali di whistleblowing.
+        author: "vecna"
+        room: "T.1.2"
+        duration: 45 min
+      - title: "Le difficoltà di chi vuole passare a Linux spiegate a noi esperti"
+        description: >
+          Viviamo Linux da anni. Ma chi inizia oggi, quali problemi ha ?
+          Abbiamo installato Linux a quasi un centinaio di nuovi utenti, e le sorprese non sono mancate. 
+          Condividerò con voi i problemi e le emozioni di chi inizia oggi, e come le abbiamo affrontate.
+          Perchè per diffondere Linux tra gli utenti, oggi, è diverso.
+          E noi possiamo aiutarli meglio se sappiamo cosa risolvere prima.
+        author: "Valentino Spataro - Caffe20.it podcast"
+        room: "T.1.3"
+        duration: 45 min
+  - time: "14:45"
+    talks:
+      - title: "5 cose che Bash sa fare che non sai che sa fare"
+        description: >
+          Nel talk, dopo una breve introduzione su Bash e il concetto di fork(), parlerò di 5 cose che sa fare nativamente (ovvero senza l'ausilio delle coreutils), che spesso vengono relegate a binari esterni, rendendo lo script meno portabile e più lento.
+        author: "jep"
+        room: "T.1.1"
+        duration: 45 min
+      - title: "Quando i fotoni ribaltano i bit: come difendersi dalla Silent Data Corruption?"
+        description: >
+          Cosa succede quando un raggio cosmico o il degrado del silicio invertono un bit in RAM o SSD senza generare errori? È la Silent Data Corruption (SDC), la minaccia invisibile che degrada i dati in produzione all'insaputa di dev e sysadmin.
+          
+          Questo talk esplora le tecnologie hardware e software su Linux a protezione delle aree chiave:
+          • RAM: Rilevamento degli errori hardware, gestione delle eccezioni di sistema e isolamento dinamico delle pagine di memoria corrotte.
+          • Storage: Diagnostica preventiva dei dischi, protocolli di integrità end-to-end e moduli kernel per la verifica continua dei blocchi.
+          • File System: Confronto architetturale tra vari modelli di filesystem e tecnologie specifiche.
+          * Backup: Come assicuriamo la sicurezza delle copia di sicurezza?
+          
+          Smetti di fidarti ciecamente dello storage, non aspettare che un bit flip fermi i tuoi sistemi: vieni a scoprire come garantirti l'integrità e proteggere i tuoi dati!
+        author: "Andrea Perotti - PCOfficina"
+        room: "T.1.2"
+        duration: 45 min
+      - title: "Creatività Open Source"
+        description: >
+          Non lasciate che il monopolio di un'azienda poco onesta vi fermi dallo scagionare la vostra creatività artistica! Scoprite le alternative libere ed open source per continuare a creare opere d'arte
+        author: "Nat Bassett - POuL"
+        room: "T.1.3"
+        duration: 45 min
+  - time: "15:45"
+    talks:
+      - title: "Break"
+        duration: 15 min
+  - time: "16:00"
+    talks:
+      - title: "È mio questo pacchetto? Com'è fatto un Package manager"
+        description: >
+          Linux e altri sistemi UNIX-like hanno per loro natura una struttura modulare, pertanto è sempre stata una sfida come gestire gli aggiornamenti e le installazioni in maniera efficiente. Il talk ha il fine di descrivere il processo evolutivo per cui siamo arrivati a gestire i pacchetti su un sistema Linux.
+          Gli argomenti che verranno trattati sono, in ordine: cos'è un Package Manager e perché è essenziale conoscerlo della propria distribuzione. Si proseguirà facendo un rapido confronto tra i più famosi. Infine verrà trattato in maniera più descrittiva il processo di creazione di pacchetti nei vari metodi di distribuzione.
+          Tutto questo sarà utile per utenti alle prime armi per mantenere in maniera più consapevole il proprio sistema.
+        author: "Daniele Basso - Politecnico Open unix Labs"
+        room: "T.1.1"
+        duration: 45 min
+      - title: "Meshtastic for Dummies: comunicazione off-grid libera"
+        description: >
+          Cosa succede quando uniamo moduli radio da 30 euro, un'app per smartphone e il protocollo open-source Meshtastic? Nasce una rete di comunicazione indipendente, crittografata e, soprattutto, libera.
+          
+          Spesso il mondo delle radiofrequenze spaventa, ma Meshtastic sta cambiando le regole del gioco. Questo talk esplorerà il fenomeno concentrandosi sulla sua incredibile facilità d'uso e sullo stato attuale della rete it Italia, un'infrastruttura mesh costruita dal basso, tetto dopo tetto. Vedremo come configurare un nodo in pochi minuti direttamente dal telefono e come la community sta democratizzando l'accesso alle comunicazioni off-grid. Non serve essere radioamatori per riprendersi la proprietà dei propri messaggi: basta la curiosità
+        author: "Lorenzo Andreasi - POuL"
+        room: "T.1.2"
+        duration: 45 min
+      - title: "Sviluppare videogiochi è semplice (con Godot)!"
+        description: >
+          Pensi che per sviluppare un gioco serva essere un cervellone? Se aprire un motore di gioco ti intimidisce, questo workshop è per te. Partiremo dalle basi di Godot e svilupperemo insieme un piccolo gioco, passo dopo passo. Non è richiesta esperienza nello sviluppo di videogiochi: l’obiettivo è dimostrare che si può iniziare anche senza sapere già tutto e superare la paura del primo progetto
+        author: "Andriy Odlyvanyy"
+        room: "T.1.3"
+        duration: 60 min
+  - time: "17:00"
+    talks:
+      - title: "Contribuisci anche tu al kernel Linux!"
+        description: >
+          Vuoi contribuire al kernel Linux ma non sai dove cominciare? Questa breve e accessibile guida ti mostrerà come: 1) mettere in piedi da zero un sistema in locale per sviluppare, 2) cercare qualcosa su cui lavorare, 3) fare modifiche al kernel e testarle, 4) inviare una patch (incrociando le dita). Dopo questo talk avrai le idee chiare su come procedere e diventare in poco tempo un "kernel contributor".
+        author: "Rigel Di Scala"
+        room: "T.1.1"
+        duration: 45 min
+      - title: "Ong RAnge e low power Internet Of Things, Weather Report ed altro su una rete alternativa,software open source in radio trasmission ,svx link sistem"
+        description: >
+          Si presenterà il sistema LO.RA e relative applicazioni software realizzate, il sistema di interconnessione di nodi radio tramite sistema Linux swx Link in ambito di sperimentazione radioamatoriale
+        author: "RADIOAMATEUR LO.RA SYSTEM AND SWX LINK OPEN SOURCE - C.I.S.A.R. SEZIONE OROBIE"
+        room: "T.1.2"
+        duration: 45 min
+      - title: "Sviluppare videogiochi è semplice (con Godot)!"
+        description: >
+          Pensi che per sviluppare un gioco serva essere un cervellone? Se aprire un motore di gioco ti intimidisce, questo workshop è per te. Partiremo dalle basi di Godot e svilupperemo insieme un piccolo gioco, passo dopo passo. Non è richiesta esperienza nello sviluppo di videogiochi: l’obiettivo è dimostrare che si può iniziare anche senza sapere già tutto e superare la paura del primo progetto
+        author: "Andriy Odlyvanyy"
+        room: "T.1.3"
+        duration: 60 min
+  - time: "18:00"
+    talks:
+      - title: "A scatola chiusa: Test Coverage di binari nativi con eBPF"
+        description: >
+          Misurare quanto codice viene effettivamente eseguito durante i test di integrazione è facile se possiedi i sorgenti e puoi ricompilare.
+          Ma cosa succede se devi testare un binario legacy chiuso, un tool di terze parti o un intero ambiente in cui la ricompilazione è impraticabile ?
+          In questo talk vedremo come la tecnologia eBPF cambia completamente le regole del gioco. Presenterò funkoverage, un tool open-source scritto in Go che permette di ottenere il code coverage a livello di singola funzione su qualsiasi binario ELF, senza toccare una riga di codice e con un overhead trascurabile (< 2%).
+          Dimostreremo live il tracciamento su binari standard di sistema, mostrando come sia possibile fare QA moderno a livello di kernel su qualsiasi software nativo.
+        author: "Andrea Manzini - SUSE"
+        room: "T.1.1"
+        duration: 45 min
+      - title: "Le Libertà del Software Libero applicate alle architetture di apprendimento automatico"
+        description: >
+          Faremo chiarezza sulla differenza concettuale e politica tra il vero Software Libero (che garantisce le 4 libertà fondamentali) e le licenze proprietarie mascherate da "Open Source" gestite dalle Big Tech, dove vengono rilasciati solo i pesi del modello (Open Weights) nascondendo i dati di addestramento, il codice e le risorse necessarie a replicarlo.
+          Pratiche di sovranità e alternative locali: Vedremo come sia possibile eseguire e controllare architetture di apprendimento automatico sui nostri apparati, sfruttando runtime liberi e ottimizzati (come llama.cpp, Ollama e framework open source), per de-centralizzare l'elaborazione, proteggere la riservatezza dei dati ed evitare l'intermediazione coatta delle API proprietarie.
+          Accenno anche alle Traiettorie Generative e di Allineamento , alla natura del software e dei dati e di infrastruttura materiale e l'hardware.
+        author: "Roberto Innocenti e Antonio Verni - Power Progress Community"
+        room: "T.1.2"
+        duration: 45 min
+  - time: "19:00"
+    talks:
+      - title: "Chiusura del Linux Day e foto di gruppo"
+        description: "Chiusura della giornata, foto di gruppo, saluti finali e smontaggio."
+        duration: 30 min
