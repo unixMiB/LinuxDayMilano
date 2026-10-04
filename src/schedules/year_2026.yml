@@ -35,12 +35,16 @@ schedule:
         duration: 45 min
   - time: "10:30"
     talks:
-      - title: "Un homelab ricostruibile in ogni momento"
+      - title: "Dove è finito il mio pacchetto? Reti virtuali Linux tra container, VM e Open vSwitch"
         description: >
-          Un homelab spesso nasce come una macchina configurata a mano e finisce per diventare difficile da aggiornare, riparare e ricostruire. Lo stesso vale per laptop e altri sistemi.
-          In questo talk parleremo di come gestisco questi sistemi trattandoli come configurazioni versionate e riproducibili. Vedremo come usare bootc per definire il sistema operativo tramite una container image, Quadlet e systemd per eseguire i servizi con Podman, Ansible per applicare la configurazione e SOPS per gestire i segreti senza conservarli in chiaro.
-          Completeremo il quadro con Nebula, per collegare in modo sicuro macchine distribuite senza dipendere dalla rete locale o da un provider VPN esterno.
-        author: "Fabio Alessandro \"Fale\" Locati"
+          Quando avviamo un container o una macchina virtuale, Linux crea interfacce dai nomi misteriosi: coppie veth, dispositivi TAP, bridge. Tutto funziona, finché un pacchetto non decide di sparire.
+          
+          In questo talk seguiremo il percorso di un pacchetto dentro una semplice rete virtuale, scoprendo quali componenti Linux incontra prima di raggiungere un altro container, una VM o la rete fisica. Partiremo da network namespace, veth, TAP e bridge, poi costruiremo passo passo una piccola rete con Open vSwitch, lo switch virtuale alla base di molte piattaforme cloud (OpenShift, OpenStack, etc), per capire cosa lo distingue dal bridge Linux e quando conviene usarlo.
+          
+          Infine provocheremo di proposito un "guasto" e cercheremo il punto in cui il traffico si interrompe, con strumenti comuni come ip, tcpdump e ovs-vsctl.
+          
+          Non serve conoscere Open vSwitch o OpenFlow: l'obiettivo non è imparare comandi, ma capire cosa succede dietro le quinte quando Linux collega container e VM.
+        author: "Timothy Redaelli - Red Hat"
         room: "T.1.1"
         duration: 45 min
       - title: "Malware reverse engineering su Linux - per comprendere un attaccante"
@@ -63,16 +67,13 @@ schedule:
         duration: 15 min
   - time: "11:45"
     talks:
-      - title: "Dove è finito il mio pacchetto? Reti virtuali Linux tra container, VM e Open vSwitch"
+      - title: "A scatola chiusa: Test Coverage di binari nativi con eBPF"
         description: >
-          Quando avviamo un container o una macchina virtuale, Linux crea interfacce dai nomi misteriosi: coppie veth, dispositivi TAP, bridge. Tutto funziona, finché un pacchetto non decide di sparire.
-          
-          In questo talk seguiremo il percorso di un pacchetto dentro una semplice rete virtuale, scoprendo quali componenti Linux incontra prima di raggiungere un altro container, una VM o la rete fisica. Partiremo da network namespace, veth, TAP e bridge, poi costruiremo passo passo una piccola rete con Open vSwitch, lo switch virtuale alla base di molte piattaforme cloud (OpenShift, OpenStack, etc), per capire cosa lo distingue dal bridge Linux e quando conviene usarlo.
-          
-          Infine provocheremo di proposito un "guasto" e cercheremo il punto in cui il traffico si interrompe, con strumenti comuni come ip, tcpdump e ovs-vsctl.
-          
-          Non serve conoscere Open vSwitch o OpenFlow: l'obiettivo non è imparare comandi, ma capire cosa succede dietro le quinte quando Linux collega container e VM.
-        author: "Timothy Redaelli - Red Hat"
+          Misurare quanto codice viene effettivamente eseguito durante i test di integrazione è facile se possiedi i sorgenti e puoi ricompilare.
+          Ma cosa succede se devi testare un binario legacy chiuso, un tool di terze parti o un intero ambiente in cui la ricompilazione è impraticabile ?
+          In questo talk vedremo come la tecnologia eBPF cambia completamente le regole del gioco. Presenterò funkoverage, un tool open-source scritto in Go che permette di ottenere il code coverage a livello di singola funzione su qualsiasi binario ELF, senza toccare una riga di codice e con un overhead trascurabile (< 2%).
+          Dimostreremo live il tracciamento su binari standard di sistema, mostrando come sia possibile fare QA moderno a livello di kernel su qualsiasi software nativo.
+        author: "Andrea Manzini - SUSE"
         room: "T.1.1"
         duration: 45 min
       - title: "From CI to Compromise: Inside a Real Python Supply Chain Attack"
@@ -199,13 +200,12 @@ schedule:
         duration: 60 min
   - time: "18:00"
     talks:
-      - title: "A scatola chiusa: Test Coverage di binari nativi con eBPF"
+      - title: "Un homelab ricostruibile in ogni momento"
         description: >
-          Misurare quanto codice viene effettivamente eseguito durante i test di integrazione è facile se possiedi i sorgenti e puoi ricompilare.
-          Ma cosa succede se devi testare un binario legacy chiuso, un tool di terze parti o un intero ambiente in cui la ricompilazione è impraticabile ?
-          In questo talk vedremo come la tecnologia eBPF cambia completamente le regole del gioco. Presenterò funkoverage, un tool open-source scritto in Go che permette di ottenere il code coverage a livello di singola funzione su qualsiasi binario ELF, senza toccare una riga di codice e con un overhead trascurabile (< 2%).
-          Dimostreremo live il tracciamento su binari standard di sistema, mostrando come sia possibile fare QA moderno a livello di kernel su qualsiasi software nativo.
-        author: "Andrea Manzini - SUSE"
+          Un homelab spesso nasce come una macchina configurata a mano e finisce per diventare difficile da aggiornare, riparare e ricostruire. Lo stesso vale per laptop e altri sistemi.
+          In questo talk parleremo di come gestisco questi sistemi trattandoli come configurazioni versionate e riproducibili. Vedremo come usare bootc per definire il sistema operativo tramite una container image, Quadlet e systemd per eseguire i servizi con Podman, Ansible per applicare la configurazione e SOPS per gestire i segreti senza conservarli in chiaro.
+          Completeremo il quadro con Nebula, per collegare in modo sicuro macchine distribuite senza dipendere dalla rete locale o da un provider VPN esterno.
+        author: "Fabio Alessandro \"Fale\" Locati"
         room: "T.1.1"
         duration: 45 min
       - title: "Le Libertà del Software Libero applicate alle architetture di apprendimento automatico"
