@@ -172,7 +172,7 @@ schedule:
         author: "Lorenzo Andreasi - Politecnico Open unix Labs"
         room: "T.1.2"
         duration: 45 min
-      - title: "Sviluppare videogiochi è semplice (con Godot)!"
+      - title: "Sviluppare videogiochi è semplice (con Godot)! - Parte 1"
         description: >
           Pensi che per sviluppare un gioco serva essere un cervellone? Se aprire un motore di gioco ti intimidisce, questo workshop è per te. Partiremo dalle basi di Godot e svilupperemo insieme un piccolo gioco, passo dopo passo. Non è richiesta esperienza nello sviluppo di videogiochi: l’obiettivo è dimostrare che si può iniziare anche senza sapere già tutto e superare la paura del primo progetto
         author: "Andriy Odlyvanyy"
@@ -192,7 +192,7 @@ schedule:
         author: "RADIOAMATEUR LO.RA SYSTEM AND SWX LINK OPEN SOURCE - C.I.S.A.R. SEZIONE OROBIE"
         room: "T.1.2"
         duration: 45 min
-      - title: "Sviluppare videogiochi è semplice (con Godot)!"
+      - title: "Sviluppare videogiochi è semplice (con Godot)! - Parte 2"
         description: >
           Pensi che per sviluppare un gioco serva essere un cervellone? Se aprire un motore di gioco ti intimidisce, questo workshop è per te. Partiremo dalle basi di Godot e svilupperemo insieme un piccolo gioco, passo dopo passo. Non è richiesta esperienza nello sviluppo di videogiochi: l’obiettivo è dimostrare che si può iniziare anche senza sapere già tutto e superare la paura del primo progetto
         author: "Andriy Odlyvanyy"
