@@ -172,12 +172,12 @@ schedule:
         author: "Lorenzo Andreasi - Politecnico Open unix Labs"
         room: "T.1.2"
         duration: 45 min
-      - title: "Sviluppare videogiochi è semplice (con Godot)! - Parte 1"
+      - title: "Routing automatico degli LLM su Kubernetes: locale o cloud? Decide il gateway"
         description: >
-          Pensi che per sviluppare un gioco serva essere un cervellone? Se aprire un motore di gioco ti intimidisce, questo workshop è per te. Partiremo dalle basi di Godot e svilupperemo insieme un piccolo gioco, passo dopo passo. Non è richiesta esperienza nello sviluppo di videogiochi: l’obiettivo è dimostrare che si può iniziare anche senza sapere già tutto e superare la paura del primo progetto
-        author: "Andriy Odlyvanyy"
+          Gli LLM entrano nei workflow di operations, ma ogni chiamata verso un modello esterno è un problema di costi, latenza e sovranità del dato. In questo talk mostro come costruire su Kubernetes un gateway OpenAI-compatible che decide automaticamente dove eseguire ogni richiesta: un modello locale servito con vLLM per le richieste di routine, un modello SOTA esterno solo quando serve e solo se il contenuto lo consente. Due filtri guidano il routing: un Efficiency Gate che valuta complessità e costo, e un Privacy Gate che intercetta PII e dati riservati imponendo l'esecuzione locale. Tutto open source: Kuadrant (Authorino e Limitador) per policy e rate limiting, LiteLLM come proxy verso i modelli, Presidio per rilevare i dati sensibili, Ansible per l'automazione. Vedremo architettura, scelte di design, una demo e le lezioni apprese sul triage automatico degli incidenti. Target: SRE, platform engineer e chi vuole usare gli LLM in produzione senza cedere il controllo dei dati.
+        author: "Amedeo Salvati - Red Hat"
         room: "T.1.3"
-        duration: 60 min
+        duration: 45 min
   - time: "17:00"
     talks:
       - title: "Contribuisci anche tu al kernel Linux!"
@@ -192,12 +192,14 @@ schedule:
         author: "RADIOAMATEUR LO.RA SYSTEM AND SWX LINK OPEN SOURCE - C.I.S.A.R. SEZIONE OROBIE"
         room: "T.1.2"
         duration: 45 min
-      - title: "Sviluppare videogiochi è semplice (con Godot)! - Parte 2"
+      - title: "Le Libertà del Software Libero applicate alle architetture di apprendimento automatico"
         description: >
-          Pensi che per sviluppare un gioco serva essere un cervellone? Se aprire un motore di gioco ti intimidisce, questo workshop è per te. Partiremo dalle basi di Godot e svilupperemo insieme un piccolo gioco, passo dopo passo. Non è richiesta esperienza nello sviluppo di videogiochi: l’obiettivo è dimostrare che si può iniziare anche senza sapere già tutto e superare la paura del primo progetto
-        author: "Andriy Odlyvanyy"
+          Faremo chiarezza sulla differenza concettuale e politica tra il vero Software Libero (che garantisce le 4 libertà fondamentali) e le licenze proprietarie mascherate da "Open Source" gestite dalle Big Tech, dove vengono rilasciati solo i pesi del modello (Open Weights) nascondendo i dati di addestramento, il codice e le risorse necessarie a replicarlo.
+          Pratiche di sovranità e alternative locali: Vedremo come sia possibile eseguire e controllare architetture di apprendimento automatico sui nostri apparati, sfruttando runtime liberi e ottimizzati (come llama.cpp, Ollama e framework open source), per de-centralizzare l'elaborazione, proteggere la riservatezza dei dati ed evitare l'intermediazione coatta delle API proprietarie.
+          Accenno anche alle Traiettorie Generative e di Allineamento , alla natura del software e dei dati e di infrastruttura materiale e l'hardware.
+        author: "Roberto Innocenti e Antonio Verni - Power Progress Community"
         room: "T.1.3"
-        duration: 60 min
+        duration: 45 min
   - time: "18:00"
     talks:
       - title: "Un homelab ricostruibile in ogni momento"
@@ -208,20 +210,13 @@ schedule:
         author: "Fabio Alessandro \"Fale\" Locati"
         room: "T.1.1"
         duration: 45 min
-      - title: "Le Libertà del Software Libero applicate alle architetture di apprendimento automatico"
+      - title: "Quiz \"Quanto sei pingu\" - Italian Linux Society"
         description: >
-          Faremo chiarezza sulla differenza concettuale e politica tra il vero Software Libero (che garantisce le 4 libertà fondamentali) e le licenze proprietarie mascherate da "Open Source" gestite dalle Big Tech, dove vengono rilasciati solo i pesi del modello (Open Weights) nascondendo i dati di addestramento, il codice e le risorse necessarie a replicarlo.
-          Pratiche di sovranità e alternative locali: Vedremo come sia possibile eseguire e controllare architetture di apprendimento automatico sui nostri apparati, sfruttando runtime liberi e ottimizzati (come llama.cpp, Ollama e framework open source), per de-centralizzare l'elaborazione, proteggere la riservatezza dei dati ed evitare l'intermediazione coatta delle API proprietarie.
-          Accenno anche alle Traiettorie Generative e di Allineamento , alla natura del software e dei dati e di infrastruttura materiale e l'hardware.
-        author: "Roberto Innocenti e Antonio Verni - Power Progress Community"
-        room: "T.1.2"
-        duration: 45 min
-      - title: "Routing automatico degli LLM su Kubernetes: locale o cloud? Decide il gateway"
-        description: >
-          Gli LLM entrano nei workflow di operations, ma ogni chiamata verso un modello esterno è un problema di costi, latenza e sovranità del dato. In questo talk mostro come costruire su Kubernetes un gateway OpenAI-compatible che decide automaticamente dove eseguire ogni richiesta: un modello locale servito con vLLM per le richieste di routine, un modello SOTA esterno solo quando serve e solo se il contenuto lo consente. Due filtri guidano il routing: un Efficiency Gate che valuta complessità e costo, e un Privacy Gate che intercetta PII e dati riservati imponendo l'esecuzione locale. Tutto open source: Kuadrant (Authorino e Limitador) per policy e rate limiting, LiteLLM come proxy verso i modelli, Presidio per rilevare i dati sensibili, Ansible per l'automazione. Vedremo architettura, scelte di design, una demo e le lezioni apprese sul triage automatico degli incidenti. Target: SRE, platform engineer e chi vuole usare gli LLM in produzione senza cedere il controllo dei dati.
-        author: "Amedeo Salvati - Red Hat"
+          Il quizzone sul software libero atterra a Milano nella sua prima edizione: azzecca più risposte possibili per conquistare il "Trofeo Pingu" o fallisci epicamente provandoci.
+          Copyright, volontariato, distro-hopping, GNU, bestie varie, community, associazionismo, LUG, GLUG, Wikidata, AI proprietarie, brevetti, ... la sai?
+        author: "Valerio Bozzolan - Italian Linux Society"
         room: "T.1.3"
-        duration: 45 min
+        duration: 60 min
   - time: "19:00"
     talks:
       - title: "Chiusura del Linux Day e foto di gruppo"
