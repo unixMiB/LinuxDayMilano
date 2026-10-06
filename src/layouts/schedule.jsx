@@ -66,6 +66,7 @@ const Talks = ({
           }));
         }}
         size='lg'
+        fullscreen='sm-down'
         aria-labelledby='contained-modal-title-vcenter'
         centered
       >
