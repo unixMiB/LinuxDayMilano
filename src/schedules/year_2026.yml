@@ -127,7 +127,7 @@ schedule:
       - title: "5 cose che Bash sa fare che non sai che sa fare"
         description: >
           Nel talk, dopo una breve introduzione su Bash e il concetto di fork(), parlerò di 5 cose che sa fare nativamente (ovvero senza l'ausilio delle coreutils), che spesso vengono relegate a binari esterni, rendendo lo script meno portabile e più lento.
-        author: "jep"
+        author: "jep - Politecnico Open unix Labs"
         room: "T.1.1"
         duration: 45 min
       - title: "Quando i fotoni ribaltano i bit: come difendersi dalla Silent Data Corruption?"
