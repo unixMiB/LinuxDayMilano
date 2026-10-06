@@ -124,12 +124,13 @@ schedule:
         duration: 45 min
   - time: "14:45"
     talks:
-      - title: "5 cose che Bash sa fare che non sai che sa fare"
+      - title: "Quiz \"Quanto sei pingu\" - Italian Linux Society"
         description: >
-          Nel talk, dopo una breve introduzione su Bash e il concetto di fork(), parlerò di 5 cose che sa fare nativamente (ovvero senza l'ausilio delle coreutils), che spesso vengono relegate a binari esterni, rendendo lo script meno portabile e più lento.
-        author: "jep - Politecnico Open unix Labs"
+          Il quizzone sul software libero atterra a Milano nella sua prima edizione: azzecca più risposte possibili per conquistare il "Trofeo Pingu" o fallisci epicamente provandoci.
+          Copyright, volontariato, distro-hopping, GNU, bestie varie, community, associazionismo, LUG, GLUG, Wikidata, AI proprietarie, brevetti, ... la sai?
+        author: "Valerio Bozzolan - Italian Linux Society"
         room: "T.1.1"
-        duration: 45 min
+        duration: 60 min
       - title: "Quando i fotoni ribaltano i bit: come difendersi dalla Silent Data Corruption?"
         description: >
           Cosa succede quando un raggio cosmico o il degrado del silicio invertono un bit in RAM o SSD senza generare errori? È la Silent Data Corruption (SDC), la minaccia invisibile che degrada i dati in produzione all'insaputa di dev e sysadmin.
@@ -210,13 +211,12 @@ schedule:
         author: "Fabio Alessandro \"Fale\" Locati"
         room: "T.1.1"
         duration: 45 min
-      - title: "Quiz \"Quanto sei pingu\" - Italian Linux Society"
+      - title: "5 cose che Bash sa fare che non sai che sa fare"
         description: >
-          Il quizzone sul software libero atterra a Milano nella sua prima edizione: azzecca più risposte possibili per conquistare il "Trofeo Pingu" o fallisci epicamente provandoci.
-          Copyright, volontariato, distro-hopping, GNU, bestie varie, community, associazionismo, LUG, GLUG, Wikidata, AI proprietarie, brevetti, ... la sai?
-        author: "Valerio Bozzolan - Italian Linux Society"
-        room: "T.1.3"
-        duration: 60 min
+          Nel talk, dopo una breve introduzione su Bash e il concetto di fork(), parlerò di 5 cose che sa fare nativamente (ovvero senza l'ausilio delle coreutils), che spesso vengono relegate a binari esterni, rendendo lo script meno portabile e più lento.
+        author: "jep - Politecnico Open unix Labs"
+        room: "T.1.2"
+        duration: 45 min
   - time: "19:00"
     talks:
       - title: "Chiusura del Linux Day e foto di gruppo"
