@@ -8,7 +8,7 @@ import MapMarketAlt from "~icons/fa6-solid/map-location-dot";
 import ChevronRight from "~icons/fa6-solid/chevron-right";
 
 import { default as siteMetadata } from "@assets/siteMetadata.yml";
-import Location from "@assets/images/politecnico.jpg?aspect=3:1&position=bottom";
+import Location from "@assets/images/politecnico.jpg";
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
 
@@ -39,12 +39,14 @@ const params = siteMetadata.switches.schedule
       zIndex: -1,
       overflow: "hidden",
       objectFit: "cover",
+      objectPosition: "bottom",
       maxWidth: "none",
     }}
     src={Location}
-    width={1}
-    height={3}
+    layout='fixed'
+    widths={[240, 320, 480, 540, 640, 720, 960, 1280, 1600, 1920, 2560, 3840]}
     sizes='100vw'
+    loading="eager"
     alt=''
     aria-hidden='true'
   />
