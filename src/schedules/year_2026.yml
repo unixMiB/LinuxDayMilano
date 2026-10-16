@@ -55,7 +55,7 @@ schedule:
         author: "Daniele Basso - Politecnico Open unix Labs"
         room: "T.1.2"
         duration: 45 min
-  - time: "11F:30"
+  - time: "11:30"
     talks:
       - title: "Break"
         duration: 15 min
@@ -181,7 +181,7 @@ schedule:
         author: "Rigel Di Scala"
         room: "T.1.1"
         duration: 45 min
-      - title: "Ong RAnge e low power Internet Of Things, Weather Report ed altro su una rete alternativa,software open source in radio trasmission ,svx link sistem"
+      - title: "LOng RAnge e low power Internet Of Things, Weather Report ed altro su una rete alternativa,software open source in radio trasmission ,svx link sistem"
         description: >
           Si presenterà il sistema LO.RA e relative applicazioni software realizzate, il sistema di interconnessione di nodi radio tramite sistema Linux swx Link in ambito di sperimentazione radioamatoriale
         author: "RADIOAMATEUR LO.RA SYSTEM AND SWX LINK OPEN SOURCE - C.I.S.A.R. SEZIONE OROBIE"
