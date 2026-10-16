@@ -47,21 +47,15 @@ schedule:
         author: "Timothy Redaelli - Red Hat"
         room: "T.1.1"
         duration: 45 min
-      - title: "Malware reverse engineering su Linux - per comprendere un attaccante"
+      - title: "È mio questo pacchetto? Com'è fatto un Package manager"
         description: >
-          L’intervento presenterà un approccio alla difesa dal ransomware basato sulla ricerca e sulla comprensione del comportamento dell’attaccante, prima ancora che sull’utilizzo dei singoli strumenti di sicurezza. Verranno presentati i risultati dello studio di alcune tra le principali famiglie di ransomware, mettendo in evidenza le caratteristiche e i comportamenti ricorrenti: modalità di esecuzione, persistenza, utilizzo dei privilegi, discovery, movimento laterale, cifratura, evasione, interferenza con backup e sistemi di recupero e caratteristiche delle catene di attacco, inclusi loader e componenti preparatori.
-          
-          Il target è costituito principalmente da imprese, professionisti e responsabili IT, con un linguaggio accessibile anche a un pubblico non specialista. L’obiettivo è mostrare come trasformare la conoscenza delle minacce in strategie concrete di prevenzione, rilevamento, contenimento e recupero, proteggendo la continuità operativa senza ostacolare il normale lavoro.
-        author: "Luke de Avalon von Tempo - RanGuard"
+          Linux e altri sistemi UNIX-like hanno per loro natura una struttura modulare, pertanto è sempre stata una sfida come gestire gli aggiornamenti e le installazioni in maniera efficiente. Il talk ha il fine di descrivere il processo evolutivo per cui siamo arrivati a gestire i pacchetti su un sistema Linux.
+          Gli argomenti che verranno trattati sono, in ordine: cos'è un Package Manager e perché è essenziale conoscerlo della propria distribuzione. Si proseguirà facendo un rapido confronto tra i più famosi. Infine verrà trattato in maniera più descrittiva il processo di creazione di pacchetti nei vari metodi di distribuzione.
+          Tutto questo sarà utile per utenti alle prime armi per mantenere in maniera più consapevole il proprio sistema.
+        author: "Daniele Basso - Politecnico Open unix Labs"
         room: "T.1.2"
         duration: 45 min
-      - title: "Il formato Open Document, un pilastro invisibile della sovranità digitale"
-        description: >
-          Il formato Open Document Format (ODF) è diventato uno standard ISO/IEC nel 2006. Oggi è l'unico standard aperto per i formati di documento presente sul mercato; protegge gli utenti dalla dipendenza da formati proprietari e garantisce il pieno controllo sui contenuti. In quanto tale, costituisce un pilastro invisibile della sovranità digitale, poiché la maggior parte degli utenti non associa il formato dei documenti alle libertà digitali.
-        author: "Italo Vignoli - LibreOffice"
-        room: "T.1.3"
-        duration: 45 min
-  - time: "11:30"
+  - time: "11F:30"
     talks:
       - title: "Break"
         duration: 15 min
@@ -157,12 +151,12 @@ schedule:
         duration: 15 min
   - time: "16:00"
     talks:
-      - title: "È mio questo pacchetto? Com'è fatto un Package manager"
+      - title: "Malware reverse engineering su Linux - per comprendere un attaccante"
         description: >
-          Linux e altri sistemi UNIX-like hanno per loro natura una struttura modulare, pertanto è sempre stata una sfida come gestire gli aggiornamenti e le installazioni in maniera efficiente. Il talk ha il fine di descrivere il processo evolutivo per cui siamo arrivati a gestire i pacchetti su un sistema Linux.
-          Gli argomenti che verranno trattati sono, in ordine: cos'è un Package Manager e perché è essenziale conoscerlo della propria distribuzione. Si proseguirà facendo un rapido confronto tra i più famosi. Infine verrà trattato in maniera più descrittiva il processo di creazione di pacchetti nei vari metodi di distribuzione.
-          Tutto questo sarà utile per utenti alle prime armi per mantenere in maniera più consapevole il proprio sistema.
-        author: "Daniele Basso - Politecnico Open unix Labs"
+          L’intervento presenterà un approccio alla difesa dal ransomware basato sulla ricerca e sulla comprensione del comportamento dell’attaccante, prima ancora che sull’utilizzo dei singoli strumenti di sicurezza. Verranno presentati i risultati dello studio di alcune tra le principali famiglie di ransomware, mettendo in evidenza le caratteristiche e i comportamenti ricorrenti: modalità di esecuzione, persistenza, utilizzo dei privilegi, discovery, movimento laterale, cifratura, evasione, interferenza con backup e sistemi di recupero e caratteristiche delle catene di attacco, inclusi loader e componenti preparatori.
+          
+          Il target è costituito principalmente da imprese, professionisti e responsabili IT, con un linguaggio accessibile anche a un pubblico non specialista. L’obiettivo è mostrare come trasformare la conoscenza delle minacce in strategie concrete di prevenzione, rilevamento, contenimento e recupero, proteggendo la continuità operativa senza ostacolare il normale lavoro.
+        author: "Luke de Avalon von Tempo - RanGuard"
         room: "T.1.1"
         duration: 45 min
       - title: "Meshtastic for Dummies: comunicazione off-grid libera"
