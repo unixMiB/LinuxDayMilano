@@ -100,12 +100,6 @@ schedule:
         author: "Alessandro De Filippo - Celonis"
         room: "T.1.1"
         duration: 45 min
-      - title: "Ghostmaxxing, ma si inganna il riconoscimento facciale?"
-        description: >
-          c'è sviluppo costante e in crescita di sistemi per ingannare il riconoscimento facciale; in questo talk parlerò di come funziona quella pipeline, come funzionano gli attacchi, e introdurrò un laboratorio pubblico creato per valutare queste tecnologie. l'obiettivo è fornire un canale di verifica, scambio, e miglioramento collettivo di questa conoscenza che altrimenti è difficilmente verificabile. bonus points: integrazione nel fediverso e canali di whistleblowing.
-        author: "vecna"
-        room: "T.1.2"
-        duration: 45 min
       - title: "Le difficoltà di chi vuole passare a Linux spiegate a noi esperti"
         description: >
           Viviamo Linux da anni. Ma chi inizia oggi, quali problemi ha ?
