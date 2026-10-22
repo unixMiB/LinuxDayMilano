@@ -1,0 +1,17 @@
+---
+import * as privacy from "../assets/privacy.md";
+const compiled = await privacy.compiledContent();
+import Layout, { HeroEnum } from "../layouts/layout.astro";
+import { Container } from "react-bootstrap";
+---
+
+<Layout id='privacy' title='Privacy policy' hero={HeroEnum.small}>
+  <section id='' class='text-body'>
+    <Container className='py-5'>
+      <h2 style={{ textTransform: "uppercase" }}>Privacy policy</h2>
+      <div class='pt-3'>
+        <Fragment set:html={compiled} />
+      </div>
+    </Container>
+  </section>
+</Layout>
