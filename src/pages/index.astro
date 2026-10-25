@@ -5,8 +5,9 @@ import Timeline from "../components/Timeline.astro";
 
 import { default as data } from "@assets/siteMetadata.yml";
 
-const isPast = new Date(data.event.date) <= new Date();
+
 import { Button, Container, Row, Col, Alert } from "react-bootstrap";
+import DateText from "../components/datetext.jsx";
 import watch from "@assets/watch.svg";
 
 import talkSubscription from "@assets/images/talk-subscription.png";
@@ -37,17 +38,7 @@ import { Image } from "astro:assets";
             {" "}
             {/* TODO FIX ME */}
             <h2 style={{ textTransform: "uppercase" }}>
-              Il Linux Day <span>Milano</span> si{" "}
-              {isPast ? "è svolto" : "svolgerà"} il
-              <br />
-              <span>
-                {
-                  data.event.date.toLocaleDateString(
-                    "it-IT",
-                    data.event.dateOptions
-                  )
-                }
-              </span>
+              <DateText />
             </h2>
             <p>
               Torna la principale manifestazione italiana dedicata a GNU/Linux,
